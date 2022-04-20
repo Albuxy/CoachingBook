@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CoachingBook
+
+  Created by Alba Torra Di Capua on 10/4/22.
+  
+*/
+
+//MARK: - Login Screen
+"user_login" = "User";
+"password_login" = "Password";
+"login_signIn" = "Sign in";
