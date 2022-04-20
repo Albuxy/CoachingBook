@@ -12,36 +12,51 @@ struct LoginScreen: View {
     // MARK: - Login Properties
     @State private var user = ""
     @State private var password = ""
+    
+    @State var openApp = false
 
     var body: some View {
-        VStack(spacing: 60){
-            Image("Logo")
-                .resizable()
-                .frame(width: 300, height: 130)
-            
-            VStack(spacing: 30) {
-
-                // MARK: - Fields Login
-                TextFieldGeneral(defaultTextFiled: "user_login",
-                                 stringTextField: $user)
+        NavigationView {
+            VStack(spacing: 60){
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 300, height: 130)
                 
-                SecureFieldGeneral(defaultTextFiled: "password_login",
-                                   stringTextField: $password)
+                VStack(spacing: 30) {
 
-                // MARK: - Button
-                Button(action: {}) {
-                    Text("login_signIn")
-                        .font(.system(size: 16))
-                        .bold()
-                }.buttonStyle(
-                    ButtonGeneralStyle(textColor: Color("blueColor"),
-                                       backgroundColor: Color("lightBlueColor"),
-                                       disabled: false)
-                )
+                    // MARK: - Fields Login
+                    TextFieldGeneral(defaultTextFiled: "user_login",
+                                     stringTextField: $user)
+                    
+                    SecureFieldGeneral(defaultTextFiled: "password_login",
+                                       stringTextField: $password)
+
+                    // MARK: - Button
+
+                    NavigationLink(
+                      destination: ProfileCoachScreen(), isActive: self.$openApp
+                    ) {
+                        Button(action: {
+                            self.openApp.toggle()
+                        }) {
+                            Text("login_signIn")
+                                .font(.system(size: 16))
+                                .bold()
+                        }.buttonStyle(
+                            SmallButtonStyle(textColor: Color.white,
+                                             backgroundColor: Color("blueColor"),
+                                             disabled: false)
+                        )
+                    }
+                }
             }
+            .padding(.top, 100)
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
+            .navigationBarHidden(true)
+            .navigationAppearance(
+                backgroundColor: .white, foregroundColor: .black
+            )
         }
-        .padding(.top, 100)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
     }
 }
 

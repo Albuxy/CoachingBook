@@ -13,41 +13,54 @@ struct CoachCard: View {
     var name: String
     var email: String
 
+    @State var navigateToPersonalInformation = false
+
     var body: some View {
-        VStack(alignment: .trailing, spacing: 0){
-            Button(action: {}) {
-                Image("ic_edit_info")
-                    .resizable()
-                    .frame(width: 22, height: 22)
-                    .background(Color.clear)
-            }
-            .padding(.top, 10)
-            VStack(alignment: .center, spacing: 10) {
-                Image(imageString)
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                    .border(.gray)
-                    .cornerRadius(4)
-                VStack(alignment: .center, spacing: 10) {
-                    Text(name)
-                        .font(.system(size: 20))
-                        .foregroundColor(.black)
-                    Text(email)
-                        .font(.system(size: 16))
-                        .bold()
-                        .foregroundColor(.gray)
-                }
-            }
-            .padding(.top)
-        }
-        .frame(width: 285, height: 200, alignment: .top)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .strokeBorder(Color("blueColor"), lineWidth: 3)
-                .background(
-                    RoundedRectangle(cornerRadius: 20).fill(Color.white)
+        ZStack{
+            VStack(alignment: .trailing, spacing: 0){
+                NavigationLink(
+                    destination: CoachInformationScreen(imageString: imageString),
+                  isActive: $navigateToPersonalInformation,
+                  label: {
+                      Button(action: {
+                          navigateToPersonalInformation.toggle()
+                      }) {
+                          Image("ic_edit_info")
+                              .resizable()
+                              .frame(width: 22, height: 22)
+                              .background(Color.clear)
+                      }
+                      .padding(.top, 10)
+                      .padding(.trailing, -10)
+                  }
                 )
-        )
+                VStack(alignment: .center, spacing: 10) {
+                    Image(imageString)
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .border(.gray)
+                        .cornerRadius(4)
+                    VStack(alignment: .center, spacing: 10) {
+                        Text(name)
+                            .font(.system(size: 20))
+                            .foregroundColor(.black)
+                        Text(email)
+                            .font(.system(size: 16))
+                            .bold()
+                            .foregroundColor(.gray)
+                    }
+                }
+                .padding(.top)
+            }
+            .frame(width: 285, height: 200, alignment: .top)
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .strokeBorder(Color("blueColor"), lineWidth: 3)
+                    .background(
+                        RoundedRectangle(cornerRadius: 20).fill(Color.white)
+                    )
+            )
+        }
     }
 }
 

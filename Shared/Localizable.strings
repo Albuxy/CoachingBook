@@ -12,8 +12,24 @@
 "login_signIn" = "Sign in";
 
 //MARK: - Coach Screen
+"coach_profile" = "Profile";
 "coach_dashboard" = "Dashboard";
 "coach_feedback_events" = "Feedback Events";
 "coach_contacts" = "Contacts";
 "coach_logout" = "Logout";
 "remove_account" = "Remove account";
+
+//Coach Information
+"coach_information" = "Coach information";
+"coach_basic_information" = "Basic information";
+"coach_surname" = "Surname";
+"coach_full_name" = "Full Name";
+"coach_dateOfBirth" = "Date of birth";
+"coach_dateOfBirth_choose" = "Choose";
+"coach_gender" = "Gender";
+"coach_gender_male" = "Male";
+"coach_gender_female" = "Female";
+"coach_contact_detail" = "Contact detail";
+"coach_mobile_number" = "Mobile Number";
+"coach_email" = "Email";
+"button_save_details" = "Save details";
