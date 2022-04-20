@@ -14,10 +14,10 @@ struct LoginScreen: View {
     @State private var password = ""
 
     var body: some View {
-        VStack(spacing: 50){
+        VStack(spacing: 60){
             Image("Logo")
                 .resizable()
-                .frame(width: 250, height: 100)
+                .frame(width: 300, height: 130)
             
             VStack(spacing: 30) {
 
@@ -40,9 +40,8 @@ struct LoginScreen: View {
                 )
             }
         }
-        .padding(.top, 80)
-        .padding([.leading, .trailing], 20)
-        .frame(width: 360, height: 700, alignment: .top)
+        .padding(.top, 100)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
     }
 }
 

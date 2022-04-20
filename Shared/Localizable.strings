@@ -10,3 +10,10 @@
 "user_login" = "User";
 "password_login" = "Password";
 "login_signIn" = "Sign in";
+
+//MARK: - Coach Screen
+"coach_dashboard" = "Dashboard";
+"coach_feedback_events" = "Feedback Events";
+"coach_contacts" = "Contacts";
+"coach_logout" = "Logout";
+"remove_account" = "Remove account";
