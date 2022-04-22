@@ -36,6 +36,22 @@
 		84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF42811C7AC0014E4DA /* ExtensionsView.swift */; };
 		84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF7281214640014E4DA /* RadioButtonView.swift */; };
 		84845DF9281214650014E4DA /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF7281214640014E4DA /* RadioButtonView.swift */; };
+		84845DFC2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */; };
+		84845DFD2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */; };
+		84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */; };
+		84845E002812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */; };
+		84845E022812FC460014E4DA /* TrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E012812FC460014E4DA /* TrainingData.swift */; };
+		84845E032812FC460014E4DA /* TrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E012812FC460014E4DA /* TrainingData.swift */; };
+		84845E052812FC720014E4DA /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E042812FC720014E4DA /* TrainingModel.swift */; };
+		84845E062812FC720014E4DA /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E042812FC720014E4DA /* TrainingModel.swift */; };
+		84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E0928133B5D0014E4DA /* MatchModel.swift */; };
+		84845E0B28133B5D0014E4DA /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E0928133B5D0014E4DA /* MatchModel.swift */; };
+		84845E0E28133C2E0014E4DA /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E0D28133C2E0014E4DA /* MatchData.swift */; };
+		84845E0F28133C2E0014E4DA /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E0D28133C2E0014E4DA /* MatchData.swift */; };
+		84845E1128133CA70014E4DA /* MatchDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1028133CA70014E4DA /* MatchDashboardCard.swift */; };
+		84845E1228133CA70014E4DA /* MatchDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1028133CA70014E4DA /* MatchDashboardCard.swift */; };
+		84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */; };
+		84845E1528133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +95,14 @@
 		84359749280B32E80013B61B /* ProfileCoachScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoachScreen.swift; sourceTree = "<group>"; };
 		84845DF42811C7AC0014E4DA /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		84845DF7281214640014E4DA /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniDashboardCard.swift; sourceTree = "<group>"; };
+		84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDashboardCard.swift; sourceTree = "<group>"; };
+		84845E012812FC460014E4DA /* TrainingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingData.swift; sourceTree = "<group>"; };
+		84845E042812FC720014E4DA /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
+		84845E0928133B5D0014E4DA /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		84845E0D28133C2E0014E4DA /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		84845E1028133CA70014E4DA /* MatchDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDashboardCard.swift; sourceTree = "<group>"; };
+		84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardOnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +226,40 @@
 				84359746280363DD0013B61B /* CoachCard.swift */,
 				84359749280B32E80013B61B /* ProfileCoachScreen.swift */,
 				841BAE022810796B0033EF4C /* CoachInformationScreen.swift */,
+				84845DFA2812EEA00014E4DA /* Dashboard */,
 			);
 			path = Coach;
+			sourceTree = "<group>";
+		};
+		84845DFA2812EEA00014E4DA /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */,
+				84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */,
+				84845E0828133B2D0014E4DA /* Training */,
+				84845E0C28133C100014E4DA /* Match */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		84845E0828133B2D0014E4DA /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */,
+				84845E042812FC720014E4DA /* TrainingModel.swift */,
+				84845E012812FC460014E4DA /* TrainingData.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		84845E0C28133C100014E4DA /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				84845E1028133CA70014E4DA /* MatchDashboardCard.swift */,
+				84845E0928133B5D0014E4DA /* MatchModel.swift */,
+				84845E0D28133C2E0014E4DA /* MatchData.swift */,
+			);
+			path = Match;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,11 +425,19 @@
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
 				84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
+				84845E0E28133C2E0014E4DA /* MatchData.swift in Sources */,
 				84359724280225F80013B61B /* CoachingBookApp.swift in Sources */,
 				841BAE032810796B0033EF4C /* CoachInformationScreen.swift in Sources */,
+				84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
+				84845E1128133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */,
+				84845DFC2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */,
+				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
+				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
+				84845E022812FC460014E4DA /* TrainingData.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
+				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
 				8435973C2802D0300013B61B /* LoginScreen.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachScreen.swift in Sources */,
@@ -387,13 +451,21 @@
 			files = (
 				84359748280363DD0013B61B /* CoachCard.swift in Sources */,
 				84359727280225F80013B61B /* ContentView.swift in Sources */,
+				84845E1228133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
+				84845E032812FC460014E4DA /* TrainingData.swift in Sources */,
+				84845E002812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
+				84845E1528133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
+				84845E062812FC720014E4DA /* TrainingModel.swift in Sources */,
 				84845DF9281214650014E4DA /* RadioButtonView.swift in Sources */,
 				84359725280225F80013B61B /* CoachingBookApp.swift in Sources */,
+				84845DFD2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */,
+				84845E0F28133C2E0014E4DA /* MatchData.swift in Sources */,
 				841BAE042810796B0033EF4C /* CoachInformationScreen.swift in Sources */,
 				8435973D2802D0300013B61B /* LoginScreen.swift in Sources */,
 				8435974B280B32E90013B61B /* ProfileCoachScreen.swift in Sources */,
 				843597402802D6480013B61B /* Styles.swift in Sources */,
+				84845E0B28133B5D0014E4DA /* MatchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

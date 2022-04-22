@@ -38,3 +38,18 @@ struct MediumButtonStyle: ButtonStyle {
             .disabled(false)
     }
 }
+
+struct SuperSmallButtonStyle: ButtonStyle {
+    var textColor: Color
+    var backgroundColor: Color
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(textColor)
+            .padding()
+            .frame(width: 80, height: 26)
+            .background(backgroundColor)
+            .cornerRadius(8.0)
+            .disabled(false)
+    }
+}

@@ -27,10 +27,16 @@ struct ProfileCoachScreen: View {
                               email: "emailCoach@gmail.com")
                         .padding(.top, 30)
                 }
-                VStack(alignment: .center, spacing: 26){
-                    ButtonProfileScreen(image: "ic_dashboard",
-                                        name: "coach_dashboard",
-                                        booleanToChange: $navigateToDashboard)
+                VStack(alignment: .center, spacing: 26) {
+                    NavigationLink(
+                      destination: DashboardOnBoardingView(),
+                      isActive: $navigateToDashboard,
+                      label: {
+                          ButtonProfileScreen(image: "ic_dashboard",
+                                              name: "coach_dashboard",
+                                              booleanToChange: $navigateToDashboard)
+                      }
+                    )
                     ButtonProfileScreen(image: "ic_feedback",
                                         name: "coach_feedback_events",
                                         booleanToChange: $navigateToFeedback)

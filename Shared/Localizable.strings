@@ -32,4 +32,6 @@
 "coach_contact_detail" = "Contact detail";
 "coach_mobile_number" = "Mobile Number";
 "coach_email" = "Email";
+
 "button_save_details" = "Save details";
+"button_go_uppercased" = "GO";
