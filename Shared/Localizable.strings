@@ -25,7 +25,7 @@
 "coach_surname" = "Surname";
 "coach_full_name" = "Full Name";
 "coach_dateOfBirth" = "Date of birth";
-"coach_dateOfBirth_choose" = "Choose";
+"choose_title" = "Choose";
 "coach_gender" = "Gender";
 "coach_gender_male" = "Male";
 "coach_gender_female" = "Female";
@@ -33,5 +33,30 @@
 "coach_mobile_number" = "Mobile Number";
 "coach_email" = "Email";
 
+"coach_dashboard_title" = "Start your preparation";
+"coach_dashboard_subtitle" = "Start preparing your sessions to be ready for the date.";
+
+//Training
+"training_preparation" = "Training preparation";
+"games_uppercased" = "GAMES";
+"sessions_uppercased" = "SESSIONS";
+"training_uppercased" = "TRAINING";
+"training_information" = "Information";
+"training_objects_needed" = "Objects needed";
+"training_information_title" = "Information";
+"objects_needed_title" = "Objects needed";
+"Indoor_Outdoor_title" ="Indoor/Outdoor";
+"Indoor_title" ="Indoor";
+"Outdoor_title" ="Outdoor";
+"documents_uploaded_title" = "Documents uploaded";
+"training_players_information" = "Players information";
+"assistant_players_title" = "Assistant players";
+"non_assistant_players_title" = "Non-Assistant players";
+"actions_title" = "Actions";
+"cancel_session_title" = "Cancel session";
+
+
+//Buttons
 "button_save_details" = "Save details";
 "button_go_uppercased" = "GO";
+"button_remove_session" = "Remove session";

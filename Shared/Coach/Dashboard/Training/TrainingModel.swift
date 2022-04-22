@@ -13,5 +13,7 @@ struct Training: Identifiable {
     var id = UUID()
     var title: String
     var date: String
+    var players: Int
+    var documentsUploaded: Int
     var imageSession = "Training_session"
 }

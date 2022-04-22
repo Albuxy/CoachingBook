@@ -15,11 +15,11 @@ struct MatchDashboardCard: View {
         VStack(spacing: 15){
             VStack {
                 VStack(alignment: .leading, spacing: 16){
-                    Text("GAMES")
+                    Text("games_uppercased")
                         .font(.system(size: 28))
                         .bold()
                         .frame(width: 280, height: 20, alignment: .leading)
-                    Text("SESSIONS")
+                    Text("sessions_uppercased")
                         .font(.system(size: 28))
                         .foregroundColor(Color("darkRedColor"))
                         .bold()
@@ -35,9 +35,7 @@ struct MatchDashboardCard: View {
             .frame(width: UIScreen.main.bounds.width / 1.2, height: 220, alignment: .top)
             VStack(alignment: .center, spacing: 15){
                 ForEach(matches.prefix(3)) { item in
-                    MiniDashboardCard(imageString: item.imageSession,
-                                      name: item.title,
-                                      date: item.date)
+                    MiniMatchSessionCard(currentMatchSession: item)
                 }
             }
         }

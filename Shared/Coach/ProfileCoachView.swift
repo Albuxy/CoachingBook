@@ -1,5 +1,5 @@
 //
-//  ProfileCoachScreen.swift
+//  ProfileCoachView.swift
 //  CoachingBook
 //
 //  Created by Alba Torra Di Capua on 16/4/22.

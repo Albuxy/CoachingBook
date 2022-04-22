@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841BAE032810796B0033EF4C /* CoachInformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationScreen.swift */; };
-		841BAE042810796B0033EF4C /* CoachInformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationScreen.swift */; };
+		841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
+		841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE062810846B0033EF4C /* DatePickerTextField.swift */; };
 		841BAE09281084910033EF4C /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE08281084910033EF4C /* CustomButtons.swift */; };
 		84359715280225F80013B61B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359714280225F80013B61B /* Tests_iOS.swift */; };
@@ -23,21 +23,21 @@
 		84359729280225F80013B61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843596FE280225F70013B61B /* Assets.xcassets */; };
 		843597392802CFD20013B61B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843597382802CFD20013B61B /* Localizable.strings */; };
 		8435973A2802CFD20013B61B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843597382802CFD20013B61B /* Localizable.strings */; };
-		8435973C2802D0300013B61B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973B2802D0300013B61B /* LoginScreen.swift */; };
-		8435973D2802D0300013B61B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973B2802D0300013B61B /* LoginScreen.swift */; };
+		8435973C2802D0300013B61B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973B2802D0300013B61B /* LoginView.swift */; };
+		8435973D2802D0300013B61B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973B2802D0300013B61B /* LoginView.swift */; };
 		8435973F2802D6480013B61B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973E2802D6480013B61B /* Styles.swift */; };
 		843597402802D6480013B61B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435973E2802D6480013B61B /* Styles.swift */; };
 		843597422802DFAA0013B61B /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843597412802DFAA0013B61B /* CustomViews.swift */; };
 		84359747280363DD0013B61B /* CoachCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359746280363DD0013B61B /* CoachCard.swift */; };
 		84359748280363DD0013B61B /* CoachCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359746280363DD0013B61B /* CoachCard.swift */; };
-		8435974A280B32E90013B61B /* ProfileCoachScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachScreen.swift */; };
-		8435974B280B32E90013B61B /* ProfileCoachScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachScreen.swift */; };
+		8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
+		8435974B280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
 		84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF42811C7AC0014E4DA /* ExtensionsView.swift */; };
 		84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF42811C7AC0014E4DA /* ExtensionsView.swift */; };
 		84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF7281214640014E4DA /* RadioButtonView.swift */; };
 		84845DF9281214650014E4DA /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF7281214640014E4DA /* RadioButtonView.swift */; };
-		84845DFC2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */; };
-		84845DFD2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */; };
+		84845DFC2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniTrainingSessionCard.swift */; };
+		84845DFD2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFB2812EF090014E4DA /* MiniTrainingSessionCard.swift */; };
 		84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */; };
 		84845E002812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */; };
 		84845E022812FC460014E4DA /* TrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E012812FC460014E4DA /* TrainingData.swift */; };
@@ -52,6 +52,12 @@
 		84845E1228133CA70014E4DA /* MatchDashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1028133CA70014E4DA /* MatchDashboardCard.swift */; };
 		84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */; };
 		84845E1528133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */; };
+		84845E172813472E0014E4DA /* TrainingPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E162813472D0014E4DA /* TrainingPreparationView.swift */; };
+		84845E182813472E0014E4DA /* TrainingPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E162813472D0014E4DA /* TrainingPreparationView.swift */; };
+		84845E1A281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E19281347E80014E4DA /* TrainingSessionHeaderCard.swift */; };
+		84845E1B281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E19281347E80014E4DA /* TrainingSessionHeaderCard.swift */; };
+		84845E1E28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1D28136A9F0014E4DA /* MiniMatchSessionCard.swift */; };
+		84845E1F28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E1D28136A9F0014E4DA /* MiniMatchSessionCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		841BAE022810796B0033EF4C /* CoachInformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInformationScreen.swift; sourceTree = "<group>"; };
+		841BAE022810796B0033EF4C /* CoachInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInformationView.swift; sourceTree = "<group>"; };
 		841BAE062810846B0033EF4C /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		841BAE08281084910033EF4C /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		843596FC280225F40013B61B /* CoachingBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingBookApp.swift; sourceTree = "<group>"; };
@@ -88,14 +94,14 @@
 		84359720280225F80013B61B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		84359722280225F80013B61B /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		843597382802CFD20013B61B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		8435973B2802D0300013B61B /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		8435973B2802D0300013B61B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8435973E2802D6480013B61B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		843597412802DFAA0013B61B /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		84359746280363DD0013B61B /* CoachCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCard.swift; sourceTree = "<group>"; };
-		84359749280B32E80013B61B /* ProfileCoachScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoachScreen.swift; sourceTree = "<group>"; };
+		84359749280B32E80013B61B /* ProfileCoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoachView.swift; sourceTree = "<group>"; };
 		84845DF42811C7AC0014E4DA /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		84845DF7281214640014E4DA /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
-		84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniDashboardCard.swift; sourceTree = "<group>"; };
+		84845DFB2812EF090014E4DA /* MiniTrainingSessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTrainingSessionCard.swift; sourceTree = "<group>"; };
 		84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDashboardCard.swift; sourceTree = "<group>"; };
 		84845E012812FC460014E4DA /* TrainingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingData.swift; sourceTree = "<group>"; };
 		84845E042812FC720014E4DA /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 		84845E0D28133C2E0014E4DA /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		84845E1028133CA70014E4DA /* MatchDashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDashboardCard.swift; sourceTree = "<group>"; };
 		84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardOnBoardingView.swift; sourceTree = "<group>"; };
+		84845E162813472D0014E4DA /* TrainingPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPreparationView.swift; sourceTree = "<group>"; };
+		84845E19281347E80014E4DA /* TrainingSessionHeaderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionHeaderCard.swift; sourceTree = "<group>"; };
+		84845E1D28136A9F0014E4DA /* MiniMatchSessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMatchSessionCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +149,10 @@
 		841BAE05281084550033EF4C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				841BAE062810846B0033EF4C /* DatePickerTextField.swift */,
 				843597412802DFAA0013B61B /* CustomViews.swift */,
 				841BAE08281084910033EF4C /* CustomButtons.swift */,
 				84845DF7281214640014E4DA /* RadioButtonView.swift */,
+				841BAE062810846B0033EF4C /* DatePickerTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -215,7 +224,7 @@
 		84359744280363B30013B61B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8435973B2802D0300013B61B /* LoginScreen.swift */,
+				8435973B2802D0300013B61B /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -224,8 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				84359746280363DD0013B61B /* CoachCard.swift */,
-				84359749280B32E80013B61B /* ProfileCoachScreen.swift */,
-				841BAE022810796B0033EF4C /* CoachInformationScreen.swift */,
+				84359749280B32E80013B61B /* ProfileCoachView.swift */,
+				841BAE022810796B0033EF4C /* CoachInformationView.swift */,
 				84845DFA2812EEA00014E4DA /* Dashboard */,
 			);
 			path = Coach;
@@ -234,7 +243,6 @@
 		84845DFA2812EEA00014E4DA /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				84845DFB2812EF090014E4DA /* MiniDashboardCard.swift */,
 				84845E1328133FF50014E4DA /* DashboardOnBoardingView.swift */,
 				84845E0828133B2D0014E4DA /* Training */,
 				84845E0C28133C100014E4DA /* Match */,
@@ -245,9 +253,11 @@
 		84845E0828133B2D0014E4DA /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */,
 				84845E042812FC720014E4DA /* TrainingModel.swift */,
 				84845E012812FC460014E4DA /* TrainingData.swift */,
+				84845DFB2812EF090014E4DA /* MiniTrainingSessionCard.swift */,
+				84845DFE2812F8C40014E4DA /* TrainingDashboardCard.swift */,
+				84845E1C281347F70014E4DA /* Preparation */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -255,11 +265,21 @@
 		84845E0C28133C100014E4DA /* Match */ = {
 			isa = PBXGroup;
 			children = (
-				84845E1028133CA70014E4DA /* MatchDashboardCard.swift */,
 				84845E0928133B5D0014E4DA /* MatchModel.swift */,
 				84845E0D28133C2E0014E4DA /* MatchData.swift */,
+				84845E1D28136A9F0014E4DA /* MiniMatchSessionCard.swift */,
+				84845E1028133CA70014E4DA /* MatchDashboardCard.swift */,
 			);
 			path = Match;
+			sourceTree = "<group>";
+		};
+		84845E1C281347F70014E4DA /* Preparation */ = {
+			isa = PBXGroup;
+			children = (
+				84845E162813472D0014E4DA /* TrainingPreparationView.swift */,
+				84845E19281347E80014E4DA /* TrainingSessionHeaderCard.swift */,
+			);
+			path = Preparation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,21 +447,24 @@
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
 				84845E0E28133C2E0014E4DA /* MatchData.swift in Sources */,
 				84359724280225F80013B61B /* CoachingBookApp.swift in Sources */,
-				841BAE032810796B0033EF4C /* CoachInformationScreen.swift in Sources */,
+				841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */,
 				84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
+				84845E172813472E0014E4DA /* TrainingPreparationView.swift in Sources */,
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
 				84845E1128133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */,
-				84845DFC2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */,
+				84845E1E28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */,
+				84845DFC2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84845E022812FC460014E4DA /* TrainingData.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
-				8435973C2802D0300013B61B /* LoginScreen.swift in Sources */,
-				8435974A280B32E90013B61B /* ProfileCoachScreen.swift in Sources */,
+				8435973C2802D0300013B61B /* LoginView.swift in Sources */,
+				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
+				84845E1A281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,18 +476,21 @@
 				84359727280225F80013B61B /* ContentView.swift in Sources */,
 				84845E1228133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
+				84845E182813472E0014E4DA /* TrainingPreparationView.swift in Sources */,
 				84845E032812FC460014E4DA /* TrainingData.swift in Sources */,
 				84845E002812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84845E1528133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
 				84845E062812FC720014E4DA /* TrainingModel.swift in Sources */,
 				84845DF9281214650014E4DA /* RadioButtonView.swift in Sources */,
 				84359725280225F80013B61B /* CoachingBookApp.swift in Sources */,
-				84845DFD2812EF0A0014E4DA /* MiniDashboardCard.swift in Sources */,
+				84845DFD2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */,
 				84845E0F28133C2E0014E4DA /* MatchData.swift in Sources */,
-				841BAE042810796B0033EF4C /* CoachInformationScreen.swift in Sources */,
-				8435973D2802D0300013B61B /* LoginScreen.swift in Sources */,
-				8435974B280B32E90013B61B /* ProfileCoachScreen.swift in Sources */,
+				84845E1F28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */,
+				841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */,
+				8435973D2802D0300013B61B /* LoginView.swift in Sources */,
+				8435974B280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				843597402802D6480013B61B /* Styles.swift in Sources */,
+				84845E1B281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,
 				84845E0B28133B5D0014E4DA /* MatchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

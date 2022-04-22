@@ -1,5 +1,5 @@
 //
-//  LoginScreen.swift
+//  LoginView.swift
 //  CoachingBook
 //
 //  Created by Alba Torra Di Capua on 10/4/22.

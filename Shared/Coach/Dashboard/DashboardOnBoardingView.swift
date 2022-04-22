@@ -16,10 +16,10 @@ struct DashboardOnBoardingView: View {
         ZStack {
             VStack(spacing: 0){
                 VStack(spacing: 10){
-                    Text("Start your preparation")
+                    Text("coach_dashboard_title")
                         .font(.system(size: 26))
                         .bold()
-                    Text("Start preparing your sessions to be ready for the date.")
+                    Text("coach_dashboard_subtitle")
                         .font(.system(size: 18))
                         .multilineTextAlignment(.center)
                 }
@@ -35,7 +35,7 @@ struct DashboardOnBoardingView: View {
             .padding([.leading, .trailing], 20)
             .background(Color("cremaColor"))
         }
-        .navigationBarTitle(Text("Dashboard"), displayMode: .inline)
+        .navigationBarTitle(Text("coach_dashboard"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

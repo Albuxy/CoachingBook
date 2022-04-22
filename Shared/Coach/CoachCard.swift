@@ -52,13 +52,14 @@ struct CoachCard: View {
                 }
                 .padding(.top)
             }
-            .frame(width: 285, height: 200, alignment: .top)
+            .frame(width: 300, height: 200, alignment: .top)
             .background(
                 RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(Color("blueColor"), lineWidth: 3)
                     .background(
                         RoundedRectangle(cornerRadius: 20).fill(Color.white)
                     )
+                    .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
             )
         }
     }
