@@ -12,12 +12,13 @@ struct CoachInformationScreen: View {
     // MARK: - Coach Information Properties
     @State private var surname = ""
     @State private var full_name = ""
+    @State private var imageString = ""
     @State private var date: Date?
     @State private var gender = ""
     @State private var mobile_number = ""
     @State private var email = ""
     
-    var imageString: String
+    var coach: Coach?
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
@@ -107,7 +108,9 @@ struct CoachInformationScreen: View {
                         .frame(width: UIScreen.main.bounds.width,
                                height: 120)
                     // MARK: - Button
-                    Button(action: {}) {
+                    Button(action: {
+                        presentation.wrappedValue.dismiss()
+                    }) {
                         Text("button_save_details")
                             .font(.system(size: 16))
                             .bold()
@@ -162,6 +165,6 @@ struct TextFieldWithTitleGeneral: View {
 
 struct CoachInformationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CoachInformationScreen(imageString: "ic_women")
+        CoachInformationScreen()
     }
 }

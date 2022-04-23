@@ -36,7 +36,13 @@ struct TrainingPreparationView: View {
                     VStack(spacing: 40) {
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "training_information_title")
-                            ButtonWithArrow(nameButton: "objects_needed_title", booleanToChange: $navigateToObjectsNeeded)
+                            NavigationLink(
+                            destination: ObjectsNeededView(),
+                              isActive: $navigateToObjectsNeeded,
+                              label: {
+                                  ButtonWithArrow(nameButton: "objects_needed_title", booleanToChange: $navigateToObjectsNeeded)
+                              }
+                            )
                             DropDownView(title: "Indoor_Outdoor_title", value: $selectedOption, placeholder: "Choose", dropDownList: ["Indoor", "Outdoor"])
                             TextWithCounter(title: "documents_uploaded_title", number: currentTraining.documentsUploaded)
                         }

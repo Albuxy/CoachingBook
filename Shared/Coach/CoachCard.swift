@@ -9,9 +9,7 @@ import SwiftUI
 
 struct CoachCard: View {
 
-    var imageString: String
-    var name: String
-    var email: String
+    var coach = coachData
 
     @State var navigateToPersonalInformation = false
 
@@ -19,7 +17,7 @@ struct CoachCard: View {
         ZStack{
             VStack(alignment: .trailing, spacing: 0){
                 NavigationLink(
-                    destination: CoachInformationScreen(imageString: imageString),
+                    destination: CoachInformationScreen(),
                   isActive: $navigateToPersonalInformation,
                   label: {
                       Button(action: {
@@ -35,16 +33,16 @@ struct CoachCard: View {
                   }
                 )
                 VStack(alignment: .center, spacing: 10) {
-                    Image(imageString)
+                    Image(coach.imageString)
                         .resizable()
                         .frame(width: 60, height: 60)
                         .border(.gray)
                         .cornerRadius(4)
                     VStack(alignment: .center, spacing: 10) {
-                        Text(name)
+                        Text(coach.full_name + coach.surname)
                             .font(.system(size: 20))
                             .foregroundColor(.black)
-                        Text(email)
+                        Text(coach.email)
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(.gray)

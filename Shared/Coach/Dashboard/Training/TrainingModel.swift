@@ -16,4 +16,5 @@ struct Training: Identifiable {
     var players: Int
     var documentsUploaded: Int
     var imageSession = "Training_session"
+    var objectsNeeded: [String : Int]?
 }

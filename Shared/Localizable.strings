@@ -55,6 +55,18 @@
 "actions_title" = "Actions";
 "cancel_session_title" = "Cancel session";
 
+//Objects needed
+"objects_needed_title" = "Objects needed";
+"objects_selection_title" = "Objects selection";
+"objects_selection_subtitle" = "Select all the objects that will be needed for this training session.
+Also write the number of each one of them";
+"objects_select_numer" = "Write the number needed";
+"object_cone_title" = "Cones";
+"object_bench_title" = "Benchs";
+"object_ladder_title" = "Ladder";
+"object_ring_title" = "Rings";
+"object_tennis_ball_title" = "Tennis balls";
+"object_bibs_vest_title" = "Bibs Vest";
 
 //Buttons
 "button_save_details" = "Save details";

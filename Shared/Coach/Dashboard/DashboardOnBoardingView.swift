@@ -22,6 +22,7 @@ struct DashboardOnBoardingView: View {
                     Text("coach_dashboard_subtitle")
                         .font(.system(size: 18))
                         .multilineTextAlignment(.center)
+                        .lineSpacing(8)
                 }
                 TabView(){
                     TrainingDashboardCard()
@@ -29,7 +30,6 @@ struct DashboardOnBoardingView: View {
                 }
                 .accentColor(Color("blueColor"))
                 .tabViewStyle(PageTabViewStyle())
-                
             }
             .padding(.top, 20)
             .padding([.leading, .trailing], 20)

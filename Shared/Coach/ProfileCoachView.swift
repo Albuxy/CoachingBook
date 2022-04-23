@@ -22,9 +22,7 @@ struct ProfileCoachScreen: View {
                         .foregroundColor(Color("blueColor"))
                         .frame(width: UIScreen.main.bounds.width,
                                height: 180)
-                    CoachCard(imageString: "ic_women",
-                              name: "Coach name",
-                              email: "emailCoach@gmail.com")
+                    CoachCard()
                         .padding(.top, 30)
                 }
                 VStack(alignment: .center, spacing: 26) {
