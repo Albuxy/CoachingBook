@@ -66,6 +66,8 @@
 		84845E2B2814039E0014E4DA /* ObjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E292814039E0014E4DA /* ObjectsModel.swift */; };
 		84845E2D2814186E0014E4DA /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E2C2814186D0014E4DA /* CoachModel.swift */; };
 		84845E2E2814186E0014E4DA /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E2C2814186D0014E4DA /* CoachModel.swift */; };
+		84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E3028159FB50014E4DA /* CancelTrainningView.swift */; };
+		84845E3228159FB50014E4DA /* CancelTrainningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E3028159FB50014E4DA /* CancelTrainningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,7 @@
 		84845E262814033B0014E4DA /* ObjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCard.swift; sourceTree = "<group>"; };
 		84845E292814039E0014E4DA /* ObjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsModel.swift; sourceTree = "<group>"; };
 		84845E2C2814186D0014E4DA /* CoachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachModel.swift; sourceTree = "<group>"; };
+		84845E3028159FB50014E4DA /* CancelTrainningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTrainningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,13 +292,22 @@
 		84845E1C281347F70014E4DA /* Preparation */ = {
 			isa = PBXGroup;
 			children = (
+				84845E2F28159F6D0014E4DA /* Object */,
 				84845E162813472D0014E4DA /* TrainingPreparationView.swift */,
 				84845E19281347E80014E4DA /* TrainingSessionHeaderCard.swift */,
+				84845E3028159FB50014E4DA /* CancelTrainningView.swift */,
+			);
+			path = Preparation;
+			sourceTree = "<group>";
+		};
+		84845E2F28159F6D0014E4DA /* Object */ = {
+			isa = PBXGroup;
+			children = (
 				84845E232814004E0014E4DA /* ObjectsNeededView.swift */,
 				84845E262814033B0014E4DA /* ObjectCard.swift */,
 				84845E292814039E0014E4DA /* ObjectsModel.swift */,
 			);
-			path = Preparation;
+			path = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +493,7 @@
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
+				84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */,
 				8435973C2802D0300013B61B /* LoginView.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
@@ -511,6 +524,7 @@
 				841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */,
 				8435973D2802D0300013B61B /* LoginView.swift in Sources */,
 				84845E2E2814186E0014E4DA /* CoachModel.swift in Sources */,
+				84845E3228159FB50014E4DA /* CancelTrainningView.swift in Sources */,
 				8435974B280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				843597402802D6480013B61B /* Styles.swift in Sources */,
 				84845E1B281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,

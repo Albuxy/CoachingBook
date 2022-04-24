@@ -68,6 +68,16 @@ Also write the number of each one of them";
 "object_tennis_ball_title" = "Tennis balls";
 "object_bibs_vest_title" = "Bibs Vest";
 
+//Cancel training
+"cancel_training_title" = "Cancel Training";
+"training_cancellation_title" = "Training cancellation";
+"training_cancellation_subtitle" = "Choose the reason why the training has been canceled";
+"reason_rain_title" = "Rain";
+"reason_vacation_title" = "Vacation";
+"reason_injuries_title" = "Injueries";
+"reason_other_title" = "Other";
+"write_reason_title" = "Write here the reason";
+
 //Buttons
 "button_save_details" = "Save details";
 "button_go_uppercased" = "GO";

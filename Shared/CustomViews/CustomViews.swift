@@ -70,3 +70,28 @@ struct SecureFieldGeneral: View {
     }
 }
 
+struct RadioButtonWithName: View {
+
+    var title: String
+    var color: Color
+    var booleanToChange: Bool
+    let callback: (String)->()
+
+    var body: some View {
+        Button(action:{
+            self.callback(self.title)
+        }) {
+            HStack(alignment: .center) {
+                Text(LocalizedStringKey(title))
+                    .foregroundColor(.black)
+                    .font(Font.system(size: 20))
+                Spacer()
+                Image(systemName: self.booleanToChange ? "largecircle.fill.circle" : "circle")
+                    .resizable()
+                    .frame(width: 21, height: 21)
+                    .clipShape(Circle())
+                    .foregroundColor(color)
+            }
+        }
+    }
+}

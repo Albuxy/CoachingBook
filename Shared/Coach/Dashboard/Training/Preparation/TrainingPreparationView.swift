@@ -53,7 +53,13 @@ struct TrainingPreparationView: View {
                         }
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "actions_title")
-                            ButtonWithArrow(nameButton: "cancel_session_title", booleanToChange: $navigateToCancelSession)
+                            NavigationLink(
+                            destination: CancelTrainningView(),
+                              isActive: $navigateToCancelSession,
+                              label: {
+                                  ButtonWithArrow(nameButton: "cancel_session_title", booleanToChange: $navigateToCancelSession)
+                              }
+                            )
                         }
                     }
                 }
