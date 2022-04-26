@@ -67,10 +67,14 @@ Also write the number of each one of them";
 "object_ring_title" = "Rings";
 "object_tennis_ball_title" = "Tennis balls";
 "object_bibs_vest_title" = "Bibs Vest";
+
 //Player selection
+"assistant_players_title" = "Assistant players";
 "player_selection_title" = "Players selection";
-"player_selection_subtitle" = "Mark with a tick the players who will
-attend to the training";
+"player_selection_subtitle" = "Mark with a tick the players who will attend to the training";
+"non_assistant_players_title" = "Non-Assistant players";
+"non_player_selection_title" = "Players non attending to the session";
+"non_player_selection_subtitle" = "List of players who do not attend training. \nOne by one enter the reason why they are missing.";
 
 //Cancel training
 "cancel_training_title" = "Cancel Training";
@@ -84,5 +88,6 @@ attend to the training";
 
 //Buttons
 "button_save_details" = "Save details";
+"button_done" = "Done";
 "button_go_uppercased" = "GO";
 "button_remove_session" = "Remove session";

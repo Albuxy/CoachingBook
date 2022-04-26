@@ -63,7 +63,7 @@ struct AssistantPlayersView: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color("blueMediumColor"), Color("blueLightColor")]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("training_preparation"), displayMode: .inline)
+        .navigationBarTitle(Text("assistant_players_title"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

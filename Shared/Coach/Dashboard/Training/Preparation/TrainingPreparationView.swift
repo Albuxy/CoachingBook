@@ -55,7 +55,13 @@ struct TrainingPreparationView: View {
                                   ButtonWithArrow(nameButton: "assistant_players_title", booleanToChange: $navigateToAssistantePlayers)
                               }
                             )
-                            ButtonWithArrow(nameButton: "non_assistant_players_title", booleanToChange: $navigateToNonAssistantePlayers)
+                            NavigationLink(
+                              destination: Non_Assistant_players(playersList: playersNotAssistData),
+                              isActive: $navigateToNonAssistantePlayers,
+                              label: {
+                                  ButtonWithArrow(nameButton: "non_assistant_players_title", booleanToChange: $navigateToNonAssistantePlayers)
+                              }
+                            )
                         }
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "actions_title")
