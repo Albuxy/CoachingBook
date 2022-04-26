@@ -13,35 +13,21 @@ struct TrainingSessionHeaderCard: View {
     @State var addNewFile = false
 
     var body: some View {
-        ZStack{
-            VStack(alignment: .trailing, spacing: 0){
-                VStack(alignment: .center, spacing: 12) {
-                    Text(trainingSession.title)
-                        .font(.system(size: 23))
-                        .foregroundColor(.black)
-                        .bold()
-                    Text(trainingSession.date)
-                        .font(.system(size: 20))
-                        .bold()
-                        .foregroundColor(.gray)
-                    Text("Players: " + "\(trainingSession.playersAssisting.count)")
-                        .font(.system(size: 15))
-                        .foregroundColor(.black)
-                }
-                .padding(.top)
-                .padding(.trailing, 55)
-                Button(action: {
-                    addNewFile.toggle()
-                }) {
-                    Image("Add_file")
-                        .resizable()
-                        .frame(width: 22, height: 22)
-                        .background(Color.clear)
-                }
-                .padding(.top, 8)
-                .padding(.trailing, 20)
+        ZStack {
+            VStack(alignment: .center, spacing: 12){
+                Text(trainingSession.title)
+                    .font(.system(size: 23))
+                    .foregroundColor(.black)
+                    .bold()
+                Text(trainingSession.date)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.gray)
+                Text("Players: " + "\(trainingSession.playersAssisting.count)")
+                    .font(.system(size: 15))
+                    .foregroundColor(.black)
             }
-            .frame(width: 300, height: 150, alignment: .topTrailing)
+            .frame(width: 300, height: 150, alignment: .center)
             .background(
                 RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(Color.clear, lineWidth: 1)

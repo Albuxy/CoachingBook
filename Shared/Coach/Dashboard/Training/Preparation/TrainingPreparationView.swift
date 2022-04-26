@@ -14,7 +14,8 @@ struct TrainingPreparationView: View {
 
     var currentTraining: Training
 
-    @State var selectedOption = ""
+    @State var selectedOptionIndoorOutdoor = ""
+    @State var importanceLevel = ""
 
     @State var navigateToObjectsNeeded = false
     @State var navigateToAssistantePlayers = false
@@ -43,8 +44,8 @@ struct TrainingPreparationView: View {
                                   ButtonWithArrow(nameButton: "objects_needed_title", booleanToChange: $navigateToObjectsNeeded)
                               }
                             )
-                            DropDownView(title: "Indoor_Outdoor_title", value: $selectedOption, placeholder: "Choose", dropDownList: ["Indoor", "Outdoor"])
-                            TextWithCounter(title: "documents_uploaded_title", number: currentTraining.documentsUploaded)
+                            DropDownViewDown(title: "Indoor_Outdoor_title", value: $selectedOptionIndoorOutdoor)
+                            DropDownViewLeft(title: "importance_level_title", value: $importanceLevel)
                         }
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "training_players_information")
@@ -154,10 +155,40 @@ struct TextWithCounter: View {
 
 struct DropDownView: View {
 
-    var title: String
     @Binding var value: String
     var placeholder: String
     var dropDownList: [String]
+
+    var body: some View {
+        Menu {
+            ForEach(dropDownList, id: \.self){ client in
+                Button(client) {
+                    self.value = client
+                }
+            }
+        } label: {
+            VStack(spacing: 5){
+                HStack{
+                    Text(value.isEmpty ? placeholder : value)
+                        .foregroundColor(value.isEmpty ? .gray : .black)
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(Color.black)
+                        .font(Font.system(size: 18))
+                        .padding(.trailing, -10)
+                }
+                .padding(.horizontal)
+            }
+            .padding(8)
+            .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+        }
+    }
+}
+
+struct DropDownViewDown: View {
+
+    var title: String
+    @Binding var value: String
 
     var body: some View {
         VStack(spacing: 10){
@@ -165,28 +196,32 @@ struct DropDownView: View {
                 .font(.system(size: 18))
                 .foregroundColor(.black)
                 .frame(width: 320, alignment: .leading)
-            Menu {
-                ForEach(dropDownList, id: \.self){ client in
-                    Button(client) {
-                        self.value = client
-                    }
-                }
-            } label: {
-                VStack(spacing: 5){
-                    HStack{
-                        Text(value.isEmpty ? placeholder : value)
-                            .foregroundColor(value.isEmpty ? .gray : .black)
-                        Spacer()
-                        Image(systemName: "chevron.down")
-                            .foregroundColor(Color.black)
-                            .font(Font.system(size: 18))
-                    }
-                    .padding(.horizontal)
-                }
+            DropDownView(value: $value,
+                         placeholder: "Choose",
+                         dropDownList: ["Indoor", "Outdoor"])
                 .frame(width: UIScreen.main.bounds.width / 1.30, height: 40)
-                .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
-            }
         }
+    }
+}
+
+struct DropDownViewLeft: View {
+
+    var title: String
+    @Binding var value: String
+
+    var body: some View {
+        HStack(spacing: 0){
+            Text(LocalizedStringKey(title))
+                .font(.system(size: 18))
+                .foregroundColor(.black)
+            Spacer()
+            DropDownView(value: $value,
+                         placeholder: "None",
+                         dropDownList: ["Low", "Medium", "High"])
+                .frame(width: 140, height: 40)
+        }
+        .frame(width: UIScreen.main.bounds.width / 1.3, height: 40)
+        
     }
 }
         
