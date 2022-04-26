@@ -1,5 +1,5 @@
 //
-//  Non-Assistant players.swift
+//  NonAssistantPlayersView.swift
 //  CoachingBook (iOS)
 //
 //  Created by Alba Torra Di Capua on 26/4/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Non_Assistant_players: View {
+struct NonAssistantPlayersView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
@@ -53,7 +53,7 @@ struct Non_Assistant_players: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color("blueMediumColor"), Color("blueLightColor")]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("non-assistant_players_title"), displayMode: .inline)
+        .navigationBarTitle(Text("non_assistant_players_title"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -67,6 +67,6 @@ struct Non_Assistant_players: View {
 
 struct Non_Assistant_players_Previews: PreviewProvider {
     static var previews: some View {
-        Non_Assistant_players(playersList: playersNotAssistData)
+        NonAssistantPlayersView(playersList: playersNotAssistData)
     }
 }

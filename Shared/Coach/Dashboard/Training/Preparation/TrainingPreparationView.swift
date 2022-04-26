@@ -56,7 +56,7 @@ struct TrainingPreparationView: View {
                               }
                             )
                             NavigationLink(
-                              destination: Non_Assistant_players(playersList: playersNotAssistData),
+                              destination: NonAssistantPlayersView(playersList: playersNotAssistData),
                               isActive: $navigateToNonAssistantePlayers,
                               label: {
                                   ButtonWithArrow(nameButton: "non_assistant_players_title", booleanToChange: $navigateToNonAssistantePlayers)

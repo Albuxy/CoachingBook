@@ -76,6 +76,14 @@ Also write the number of each one of them";
 "non_player_selection_title" = "Players non attending to the session";
 "non_player_selection_subtitle" = "List of players who do not attend training. \nOne by one enter the reason why they are missing.";
 
+//Reason for non attending
+"for_non_attendance_reason_title" = "Reason for non attendance";
+"non_attendance_reason_title" = "Reason for non attending";
+"non_attendance_reason_subtitle" = "Select the reason or briefly write the reason why the player is missing.";
+"reason_injurie" = "Injurie / Illness";
+"reason_appointment" = "Appointment";
+"reason_without_explanation" = "Without explanation";
+
 //Cancel training
 "cancel_training_title" = "Cancel Training";
 "training_cancellation_title" = "Training cancellation";
@@ -83,11 +91,14 @@ Also write the number of each one of them";
 "reason_rain_title" = "Rain";
 "reason_vacation_title" = "Vacation";
 "reason_injuries_title" = "Injueries";
-"reason_other_title" = "Other";
 "write_reason_title" = "Write here the reason";
+
+//General
+"reason_other_title" = "Other";
 
 //Buttons
 "button_save_details" = "Save details";
+"button_save_reason" = "Save reason";
 "button_done" = "Done";
 "button_go_uppercased" = "GO";
 "button_remove_session" = "Remove session";
