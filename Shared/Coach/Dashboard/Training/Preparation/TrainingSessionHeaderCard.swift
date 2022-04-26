@@ -24,7 +24,7 @@ struct TrainingSessionHeaderCard: View {
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.gray)
-                    Text("Players: " + "\(trainingSession.players)")
+                    Text("Players: " + "\(trainingSession.playersAssisting.count)")
                         .font(.system(size: 15))
                         .foregroundColor(.black)
                 }

@@ -13,8 +13,9 @@ struct Training: Identifiable {
     var id = UUID()
     var title: String
     var date: String
-    var players: Int
+    var playersAssisting: [Player]
+    var playersNonAssisting: [Player]
     var documentsUploaded: Int
     var imageSession = "Training_session"
-    var objectsNeeded: [String : Int]?
+    var objectsNeeded: [String : String]?
 }

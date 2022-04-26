@@ -67,6 +67,10 @@ Also write the number of each one of them";
 "object_ring_title" = "Rings";
 "object_tennis_ball_title" = "Tennis balls";
 "object_bibs_vest_title" = "Bibs Vest";
+//Player selection
+"player_selection_title" = "Players selection";
+"player_selection_subtitle" = "Mark with a tick the players who will
+attend to the training";
 
 //Cancel training
 "cancel_training_title" = "Cancel Training";
