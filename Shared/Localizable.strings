@@ -107,7 +107,14 @@ Also write the number of each one of them";
 //Buttons
 "button_save_details" = "Save details";
 "button_save_reason" = "Save reason";
+"button_remove" = "Remove";
+"button_cancel" = "Cancel";
+"button_log_out" = "Log out";
 "button_done" = "Done";
 "button_go_uppercased" = "GO";
 "button_remove_session" = "Remove session";
 "button_remove_match" = "Remove match";
+
+//Messages
+"confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";
+"confirmation_log_out" = "Are you sure you want to log out";

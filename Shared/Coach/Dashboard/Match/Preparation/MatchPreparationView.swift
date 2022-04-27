@@ -21,6 +21,8 @@ struct MatchPreparationView: View {
     @State var navigateToAssistantePlayers = false
     @State var navigateToNonAssistantePlayers = false
 
+    @State var removeMatch = false
+
     var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .center, spacing: 25) {
@@ -73,7 +75,7 @@ struct MatchPreparationView: View {
                     }
                 }
                 .frame(height: 525)
-                RemoveButton(stringButton: "button_remove_match")
+                RemoveButton(stringButton: "button_remove_match", booleanToChange: $removeMatch)
                     .padding(.top, -10)
             }
         }

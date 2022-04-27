@@ -11,9 +11,12 @@ import SwiftUI
 struct RemoveButton: View {
 
     var stringButton: String
+    @Binding var booleanToChange: Bool
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            booleanToChange.toggle()
+        }) {
             HStack (spacing: 38){
                 Image("ic_cancel_red")
                     .resizable()

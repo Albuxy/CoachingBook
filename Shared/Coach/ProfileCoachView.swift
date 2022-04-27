@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ProfileCoachScreen: View {
 
+    //MARK: - Presentation Propertiers
+    @Environment(\.presentationMode) var presentation
+
     @State var navigateToDashboard = false
     @State var navigateToFeedback = false
     @State var navigateToContacts = false
     @State var navigateToLogout = false
+
+    @State var removeAccount = false
 
     var body: some View {
         ZStack {
@@ -45,9 +50,39 @@ struct ProfileCoachScreen: View {
                                         name: "coach_logout",
                                         booleanToChange: $navigateToLogout)
                 }
-                RemoveButton(stringButton: "remove_account")
+                Spacer()
+                RemoveButton(stringButton: "remove_account", booleanToChange: $removeAccount)
+                .alert(
+                  isPresented: $removeAccount,
+                  content: {
+                    Alert(
+                      title: Text("Remove account"),
+                      message: Text("confirmation_remove_account"),
+                      primaryButton: .cancel(
+                        Text("button_cancel"),
+                        action: {}),
+                      secondaryButton: .destructive(
+                        Text("button_remove"),
+                        action: {
+                          presentation.wrappedValue.dismiss()
+                        }))
+                  })
             }
-            .padding(.top, -85)
+            .alert(
+              isPresented: $navigateToLogout,
+              content: {
+                Alert(
+                  title: Text("button_log_out"),
+                  message: Text("confirmation_log_out"),
+                  primaryButton: .cancel(
+                    Text("button_cancel"),
+                    action: {}),
+                  secondaryButton: .destructive(
+                    Text("button_log_out"),
+                    action: {
+                      presentation.wrappedValue.dismiss()
+                    }))
+              })
         }
         .navigationBarTitle(Text("coach_profile"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)

@@ -21,6 +21,8 @@ struct TrainingPreparationView: View {
     @State var navigateToAssistantePlayers = false
     @State var navigateToNonAssistantePlayers = false
     @State var navigateToCancelSession = false
+    
+    @State var removeTraining = false
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -79,7 +81,7 @@ struct TrainingPreparationView: View {
                     }
                 }
                 .frame(height: 510)
-                RemoveButton(stringButton: "button_remove_session")
+                RemoveButton(stringButton: "button_remove_session", booleanToChange: $removeTraining)
             }
         }
         .padding(.top, 60)
