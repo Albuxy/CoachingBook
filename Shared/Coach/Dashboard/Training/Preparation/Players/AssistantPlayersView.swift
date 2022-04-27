@@ -13,6 +13,7 @@ struct AssistantPlayersView: View {
     @Environment(\.presentationMode) var presentation
     
     var playersList: [Player]
+    var colors: [Color]
 
     var body: some View {
         ZStack {
@@ -60,7 +61,7 @@ struct AssistantPlayersView: View {
         }
         .padding(.top, 40)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("blueMediumColor"), Color("blueLightColor")]),
+        .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
         .navigationBarTitle(Text("assistant_players_title"), displayMode: .inline)
@@ -95,6 +96,6 @@ struct RowForPlayer: View {
 }
 struct AssistantPlayersView_Previews: PreviewProvider {
     static var previews: some View {
-        AssistantPlayersView(playersList: playersData)
+        AssistantPlayersView(playersList: playersData, colors: [Color("blueMediumColor"), Color("blueLightColor")])
     }
 }

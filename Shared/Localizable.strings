@@ -93,6 +93,14 @@ Also write the number of each one of them";
 "reason_injuries_title" = "Injueries";
 "write_reason_title" = "Write here the reason";
 
+//Match
+"match_preparation" = "Match preparation";
+"select_number_periods" = "Select the number of periods";
+"cancel_match_title" = "Cancel Match";
+"match_cancellation_title" = "Match cancellation";
+"match_cancellation_reason" = "Choose the team who cancelled the match:";
+"match_cancellation_team" = "Select the reason why has been cancelled:";
+
 //General
 "reason_other_title" = "Other";
 
@@ -102,3 +110,4 @@ Also write the number of each one of them";
 "button_done" = "Done";
 "button_go_uppercased" = "GO";
 "button_remove_session" = "Remove session";
+"button_remove_match" = "Remove match";

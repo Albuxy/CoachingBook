@@ -24,14 +24,14 @@ struct TrainingPreparationView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            VStack(alignment: .center, spacing: 30) {
+            VStack(alignment: .center, spacing: 25) {
                 ZStack(alignment: .top) {
                     Rectangle()
                         .foregroundColor(Color("secondBlueColor"))
                         .frame(width: UIScreen.main.bounds.width,
                                height: 140)
                     TrainingSessionHeaderCard(trainingSession: currentTraining)
-                        .padding(.top, 40)
+                        .padding(.top, 30)
                 }
                 ScrollView {
                     VStack(spacing: 40) {
@@ -50,14 +50,16 @@ struct TrainingPreparationView: View {
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "training_players_information")
                             NavigationLink(
-                              destination: AssistantPlayersView(playersList: currentTraining.playersAssisting),
+                              destination: AssistantPlayersView(playersList: currentTraining.playersAssisting,
+                                                                colors: [Color("blueMediumColor"), Color("blueLightColor")]),
                               isActive: $navigateToAssistantePlayers,
                               label: {
                                   ButtonWithArrow(nameButton: "assistant_players_title", booleanToChange: $navigateToAssistantePlayers)
                               }
                             )
                             NavigationLink(
-                              destination: NonAssistantPlayersView(playersList: playersNotAssistData),
+                              destination: NonAssistantPlayersView(playersList: playersNotAssistData,
+                                                                   colors: [Color("blueMediumColor"), Color("blueLightColor")]),
                               isActive: $navigateToNonAssistantePlayers,
                               label: {
                                   ButtonWithArrow(nameButton: "non_assistant_players_title", booleanToChange: $navigateToNonAssistantePlayers)

@@ -13,6 +13,7 @@ struct NonAssistantPlayersView: View {
     @Environment(\.presentationMode) var presentation
 
     var playersList: [Player]
+    var colors: [Color]
 
     var body: some View {
         ZStack {
@@ -31,7 +32,7 @@ struct NonAssistantPlayersView: View {
                 ScrollView {
                     VStack(spacing: 30){
                         ForEach(playersList) { item in
-                            PlayerNonAssistingCard(player: item)
+                            PlayerNonAssistingCard(player: item, colors: colors)
                         }
                     }
                 }
@@ -50,7 +51,7 @@ struct NonAssistantPlayersView: View {
         }
         .padding(.top, 40)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
-        .background(LinearGradient(gradient: Gradient(colors: [Color("blueMediumColor"), Color("blueLightColor")]),
+        .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
         .navigationBarTitle(Text("non_assistant_players_title"), displayMode: .inline)
@@ -67,6 +68,6 @@ struct NonAssistantPlayersView: View {
 
 struct Non_Assistant_players_Previews: PreviewProvider {
     static var previews: some View {
-        NonAssistantPlayersView(playersList: playersNotAssistData)
+        NonAssistantPlayersView(playersList: playersNotAssistData, colors: [Color("blueMediumColor"), Color("blueLightColor")])
     }
 }

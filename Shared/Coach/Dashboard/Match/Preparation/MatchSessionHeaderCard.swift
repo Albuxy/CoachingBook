@@ -1,28 +1,28 @@
 //
-//  TrainingSessionHeaderCard.swift
-//  CoachingBook
+//  MatchSessionHeaderCard.swift
+//  CoachingBook (iOS)
 //
-//  Created by Alba Torra Di Capua on 22/4/22.
+//  Created by Alba Torra Di Capua on 27/4/22.
 //
 
 import SwiftUI
 
-struct TrainingSessionHeaderCard: View {
+struct MatchSessionHeaderCard: View {
 
-    var trainingSession: Training
+    var matchSession: Match
 
     var body: some View {
         ZStack {
             VStack(alignment: .center, spacing: 12){
-                Text(trainingSession.title)
+                Text(matchSession.title)
                     .font(.system(size: 23))
                     .foregroundColor(.black)
                     .bold()
-                Text(trainingSession.date)
+                Text(matchSession.date)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
-                Text("Players: " + "\(trainingSession.playersAssisting.count)")
+                Text("Players: " + "\(matchSession.playersAssisting.count)")
                     .font(.system(size: 15))
                     .foregroundColor(.black)
             }
@@ -39,8 +39,8 @@ struct TrainingSessionHeaderCard: View {
     }
 }
 
-struct TrainingSessionHeaderCard_Previews: PreviewProvider {
+struct MatchSessionHeaderCard_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingSessionHeaderCard(trainingSession: trainingData[0])
+        MatchSessionHeaderCard(matchSession: matchData[0])
     }
 }

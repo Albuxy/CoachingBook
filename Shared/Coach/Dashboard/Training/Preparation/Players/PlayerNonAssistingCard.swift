@@ -11,10 +11,11 @@ struct PlayerNonAssistingCard: View {
 
     var player: Player
     @State var navigateToReasonScreen = false
+    var colors: [Color]
 
     var body: some View {
         NavigationLink(
-          destination: ReasonForNonAttendanceView(player: player),
+          destination: ReasonForNonAttendanceView(player: player, colors: colors),
           isActive: $navigateToReasonScreen,
           label: {
               Button {
@@ -66,6 +67,6 @@ struct PlayerNonAssistingCard: View {
 
 struct PlayerNonAssistingCard_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerNonAssistingCard(player: playersData[0])
+        PlayerNonAssistingCard(player: playersData[0], colors: [Color("blueMediumColor"), Color("blueLightColor")])
     }
 }

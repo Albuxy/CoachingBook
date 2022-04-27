@@ -35,7 +35,7 @@ struct MiniMatchSessionCard: View {
                 .frame(height: 2)
                 .background(Color("blueColor"))
             NavigationLink(
-                destination: EmptyView(),
+              destination: MatchPreparationView(currentMatch: currentMatchSession),
               isActive: $navigateToPreparation,
               label: {
                   Button(action: {
