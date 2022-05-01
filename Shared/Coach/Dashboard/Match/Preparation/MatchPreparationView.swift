@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MatchPreparationView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
+    @Environment(\.managedObjectContext) var managedObjectContext
 
-    var currentMatch: Match
+    @Binding var currentMatch: Match
     
-    @State var numberOfPeriods = ""
+    @State var numberOfPeriods = 0
     @State var importanceLevel = ""
 
     @State var navigateToCancelSession = false
     @State var navigateToAssistantePlayers = false
     @State var navigateToNonAssistantePlayers = false
+    @State var navigateToPrepareEntries = false
 
     @State var removeMatch = false
 
@@ -39,8 +42,8 @@ struct MatchPreparationView: View {
                         VStack(spacing: 10){
                             TrainingTitleWithLineView(title: "training_information_title")
                             TeamHeaderView(currentMatch: currentMatch)
-                            OptionsPeriodsView(numberOfPeriods: numberOfPeriods)
-                            DropDownViewLeft(title: "importance_level_title", value: $importanceLevel)
+                            OptionsPeriodsView(numberOfPeriods: currentMatch.numberOfPeriods != 0 ? currentMatch.numberOfPeriods : numberOfPeriods)
+                            DropDownViewLeft(title: "importance_level_title", placeHolder: !currentMatch.importanceLevel.isEmpty ? currentMatch.importanceLevel : "None" , value: $importanceLevel)
                                 .padding(.top, 8)
                         }
                         VStack(spacing: 20){
@@ -61,6 +64,13 @@ struct MatchPreparationView: View {
                                   ButtonWithArrow(nameButton: "non_assistant_players_title", booleanToChange: $navigateToNonAssistantePlayers)
                               }
                             )
+                            NavigationLink(
+                              destination: EntriesMatchView(match: currentMatch),
+                              isActive: $navigateToPrepareEntries,
+                              label: {
+                                  ButtonWithArrow(nameButton: "prepare_entries_title", booleanToChange: $navigateToPrepareEntries)
+                              }
+                            )
                         }
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "actions_title")
@@ -74,7 +84,7 @@ struct MatchPreparationView: View {
                         }
                     }
                 }
-                .frame(height: 525)
+                .frame(height: 535)
                 RemoveButton(stringButton: "button_remove_match", booleanToChange: $removeMatch)
                     .padding(.top, -10)
             }
@@ -88,7 +98,20 @@ struct MatchPreparationView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-        })
+        }, trailing:
+            Button(action: {
+                saveDetailsMatch()
+                presentation.wrappedValue.dismiss()
+            }) {
+            Text("Save")
+              .foregroundColor(.black)
+              .bold()
+            })
+    }
+
+    func saveDetailsMatch() {
+        currentMatch.numberOfPeriods = numberOfPeriods
+        currentMatch.importanceLevel = importanceLevel
     }
 }
 
@@ -100,20 +123,20 @@ struct TeamHeaderView: View {
         HStack(spacing: 20){
             Image(currentMatch.imageTeam1)
                 .resizable()
-                .frame(width: 70, height: 70)
+                .frame(width: 50, height: 50)
             Text("VS")
                 .font(.system(size: 24))
             Image(currentMatch.imageTeam2)
                 .resizable()
-                .frame(width: 70, height: 70)
+                .frame(width: 50, height: 50)
         }
     }
 }
 
 struct OptionsPeriodsView: View {
     
-    var optionsPeriods: [String] = ["4", "6", "8"]
-    @State var numberOfPeriods = ""
+    var optionsPeriods: [Int] = [4, 6, 8]
+    @State var numberOfPeriods = 0
     
     var body: some View {
         VStack(spacing: 15){
@@ -122,6 +145,7 @@ struct OptionsPeriodsView: View {
             HStack(spacing: 40){
                 ForEach(optionsPeriods, id: \.self) { item in
                     OptionsView(title: item,
+                                placeholder: "\(numberOfPeriods)",
                                 booleanToChange: $numberOfPeriods.wrappedValue == item ? true : false,
                                 callback: { selected in
                                     self.numberOfPeriods = selected
@@ -134,17 +158,18 @@ struct OptionsPeriodsView: View {
 
 struct OptionsView: View {
 
-    var title: String
+    var title: Int
+    var placeholder: String
     var booleanToChange: Bool
-    let callback: (String)->()
+    let callback: (Int)->()
 
     var body: some View {
         Button {
             self.callback(title)
         } label: {
-            Text(title)
-                .padding([.leading, .trailing], 15)
-                .padding([.top, .bottom], 10)
+            Text(title == 0 ? placeholder : "\(title)")
+                .padding([.leading, .trailing], 10)
+                .padding([.top, .bottom], 5)
                 .foregroundColor(self.booleanToChange ? Color.white : Color.black)
         }
        .background(
@@ -159,7 +184,8 @@ struct OptionsView: View {
 }
 
 struct MatchPreparationView_Previews: PreviewProvider {
+    @State static var value = matchData[0]
     static var previews: some View {
-        MatchPreparationView(currentMatch: matchData[0])
+        MatchPreparationView(currentMatch: $value)
     }
 }

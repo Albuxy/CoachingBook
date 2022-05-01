@@ -15,7 +15,7 @@ struct Training: Identifiable {
     var date: String
     var playersAssisting: [Player]
     var playersNonAssisting: [Player]
-    var importanceLevel: Int = 0
+    var importanceLevel: String = ""
     var imageSession = "Training_session"
     var objectsNeeded: [String : String]?
 }

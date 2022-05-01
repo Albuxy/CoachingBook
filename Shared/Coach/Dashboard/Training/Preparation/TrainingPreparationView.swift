@@ -47,7 +47,7 @@ struct TrainingPreparationView: View {
                               }
                             )
                             DropDownViewDown(title: "Indoor_Outdoor_title", value: $selectedOptionIndoorOutdoor)
-                            DropDownViewLeft(title: "importance_level_title", value: $importanceLevel)
+                            DropDownViewLeft(title: "importance_level_title", placeHolder: !currentTraining.importanceLevel.isEmpty ? currentTraining.importanceLevel : "None", value: $importanceLevel)
                         }
                         VStack(spacing: 20){
                             TrainingTitleWithLineView(title: "training_players_information")
@@ -211,6 +211,7 @@ struct DropDownViewDown: View {
 struct DropDownViewLeft: View {
 
     var title: String
+    var placeHolder: String
     @Binding var value: String
 
     var body: some View {
@@ -220,7 +221,7 @@ struct DropDownViewLeft: View {
                 .foregroundColor(.black)
             Spacer()
             DropDownView(value: $value,
-                         placeholder: "None",
+                         placeholder: placeHolder,
                          dropDownList: ["Low", "Medium", "High"])
                 .frame(width: 140, height: 40)
         }

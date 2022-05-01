@@ -100,6 +100,9 @@ Also write the number of each one of them";
 "match_cancellation_title" = "Match cancellation";
 "match_cancellation_reason" = "Choose the team who cancelled the match:";
 "match_cancellation_team" = "Select the reason why has been cancelled:";
+"prepare_entries_title" = "Prepare entries";
+"match_entries_title" = "Entries match";
+"match_entries_subtitle" = "Prepare the exits for your party. \nSelect 5 players in each of the periods.";
 
 //General
 "reason_other_title" = "Other";

@@ -31,7 +31,7 @@ struct AssistantPlayersView: View {
                     VStack(spacing: 30){
                         ForEach(playersList) { item in
                             RowForPlayer(imageString: item.image,
-                                         fullName: item.fullName,
+                                         fullName: item.name + item.surname,
                                          checked: item.isChecked)
                         }
                     }
@@ -94,6 +94,7 @@ struct RowForPlayer: View {
         }
     }
 }
+
 struct AssistantPlayersView_Previews: PreviewProvider {
     static var previews: some View {
         AssistantPlayersView(playersList: playersData, colors: [Color("blueMediumColor"), Color("blueLightColor")])

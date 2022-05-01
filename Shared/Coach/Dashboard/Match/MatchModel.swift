@@ -17,6 +17,7 @@ struct Match: Identifiable {
     var imageTeam2: String = "ic_team"
     var playersAssisting: [Player]
     var playersNonAssisting: [Player]
-    var importanceLevel: Int = 0
+    var importanceLevel: String = "Medium"
+    var numberOfPeriods: Int = 6
     var imageSession = "Match_session"
 }

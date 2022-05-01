@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MiniMatchSessionCard: View {
 
-    var currentMatchSession: Match
+    @Binding var currentMatchSession: Match
 
     @State var navigateToPreparation = false
     
@@ -35,7 +35,7 @@ struct MiniMatchSessionCard: View {
                 .frame(height: 2)
                 .background(Color("blueColor"))
             NavigationLink(
-              destination: MatchPreparationView(currentMatch: currentMatchSession),
+              destination: MatchPreparationView(currentMatch: $currentMatchSession),
               isActive: $navigateToPreparation,
               label: {
                   Button(action: {
@@ -65,7 +65,8 @@ struct MiniMatchSessionCard: View {
 }
 
 struct MiniMatchSessionCard_Previews: PreviewProvider {
+    @State static var value = matchData[0]
     static var previews: some View {
-        MiniMatchSessionCard(currentMatchSession: matchData[0])
+        MiniMatchSessionCard(currentMatchSession: $value)
     }
 }

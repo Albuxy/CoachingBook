@@ -8,27 +8,37 @@
 import Foundation
 
 let playersData: [Player] = [
-    Player(fullName: "Name Player 1",
+    Player(name: "Name 1",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 2",
+    Player(name: "Name 2",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 3",
+    Player(name: "Name 3",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 4",
+    Player(name: "Name 4",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 5",
+    Player(name: "Name 5",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 6",
+    Player(name: "Name 6",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 7",
+    Player(name: "Name 7",
+           surname: "Player",
            image: "ic_player")
 ]
 
 let playersNotAssistData: [Player] = [
-    Player(fullName: "Name Player 1",
+    Player(name: "Name 3",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 2",
+    Player(name: "Name 5",
+           surname: "Player",
            image: "ic_player"),
-    Player(fullName: "Name Player 3",
-           image: "ic_player"),
+    Player(name: "Name 6",
+           surname: "Player",
+           image: "ic_player")
 ]

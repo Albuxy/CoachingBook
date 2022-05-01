@@ -11,7 +11,8 @@ import SwiftUI
 //Model for Player
 struct Player: Identifiable {
     var id = UUID()
-    var fullName: String
+    var name: String
+    var surname: String
     var image: String
     var date: String?
     var gender: String?

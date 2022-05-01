@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MatchDashboardCard: View {
 
-    var matches: [Match] = matchData
+    @State var matches: [Match] = matchData
 
     var body: some View {
         VStack(spacing: 15){
@@ -34,7 +34,7 @@ struct MatchDashboardCard: View {
             .padding(.top, 30)
             .frame(width: UIScreen.main.bounds.width / 1.2, height: 220, alignment: .top)
             VStack(alignment: .center, spacing: 15){
-                ForEach(matches.prefix(3)) { item in
+                ForEach($matches.prefix(3)) { item in
                     MiniMatchSessionCard(currentMatchSession: item)
                 }
             }

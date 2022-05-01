@@ -13,7 +13,7 @@ let trainingData: [Training] = [
              date: "30/05/2022",
              playersAssisting: playersData,
              playersNonAssisting: [],
-             importanceLevel: 0,
+             importanceLevel: "",
              objectsNeeded: ["object_cone_title" : "3"]),
     Training(title: "Training Session 2",
              date: "24/06/2022",
@@ -23,7 +23,7 @@ let trainingData: [Training] = [
              date: "31/06/2022",
              playersAssisting: playersData,
              playersNonAssisting: [],
-             importanceLevel: 2),
+             importanceLevel: ""),
     Training(title: "Training Session 4",
              date: "03/07/2022",
              playersAssisting: playersData,
@@ -32,5 +32,5 @@ let trainingData: [Training] = [
              date: "12/07/2022",
              playersAssisting: playersData,
              playersNonAssisting: [],
-             importanceLevel: 1)
+             importanceLevel: "")
 ]
