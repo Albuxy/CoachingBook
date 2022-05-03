@@ -47,7 +47,7 @@ struct ProfileCoachScreen: View {
                                         name: "coach_feedback_events",
                                         booleanToChange: $navigateToFeedback)
                     NavigationLink(
-                        destination: GeneralContactView(contactModel: coachContactsModel, coach: $coach),
+                        destination: GeneralContactView(contactModel: coachContactsModel, coach: coach),
                       isActive: $navigateToContacts,
                       label: {
                           ButtonProfileScreen(image: "ic_contacts",

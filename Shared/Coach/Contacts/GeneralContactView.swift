@@ -13,7 +13,7 @@ struct GeneralContactView: View {
     @Environment(\.presentationMode) var presentation
     
     @ObservedObject var contactModel = ContactsDetailModel()
-    @Binding var coach: Coach
+    @State var coach: Coach
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
@@ -26,7 +26,7 @@ struct GeneralContactView: View {
                 )
             GeometryReader { _ in
                 SwitchContactView(userScreenEntry: $contactModel.showSection,
-                                  currentCoach: $coach)
+                                  currentCoach: coach)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -44,9 +44,8 @@ struct GeneralContactView: View {
 }
 
 struct GeneralContactView_Previews: PreviewProvider {
-    @State static var value = coachData
     static var previews: some View {
-        GeneralContactView(coach: $value)
+        GeneralContactView(coach: coachData)
     }
 }
 

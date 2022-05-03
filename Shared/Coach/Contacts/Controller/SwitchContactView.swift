@@ -15,25 +15,23 @@ struct SwitchContactView: View {
 
   @Binding var userScreenEntry: ContactEntries
 
-  @Binding var currentCoach: Coach
+  @State var currentCoach: Coach
 
   var body: some View {
      VStack {
         switch self.userScreenEntry {
         case .contacts:
-            ContactsListView(coach: $currentCoach)
+            ContactsListView(contacts: currentCoach.contacts)
         case .favourites:
-            FavouritesContactsView(coach: $currentCoach)
+            FavouritesContactsView(contacts: currentCoach.contacts)
         }
      }
   }
 }
 
-
 struct SwitchContactView_Previews: PreviewProvider {
     @State static var value: ContactEntries = .contacts
-    @State static var value2 = coachData
     static var previews: some View {
-        SwitchContactView(userScreenEntry: $value, currentCoach: $value2)
+        SwitchContactView(userScreenEntry: $value, currentCoach: coachData)
     }
 }

@@ -14,7 +14,7 @@ struct Contact: Identifiable {
     var gender: Gender
     var image: String?
     var phoneNumber: String
-    var adrees: String?
+    var adress: String?
     var city: String?
     var email: String?
     var isFavourite: Bool = false

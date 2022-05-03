@@ -90,7 +90,7 @@ Also write the number of each one of them";
 "training_cancellation_subtitle" = "Choose the reason why the training has been canceled";
 "reason_rain_title" = "Rain";
 "reason_vacation_title" = "Vacation";
-"reason_injuries_title" = "Injueries";
+"reason_injuries_title" = "Injuries";
 "write_reason_title" = "Write here the reason";
 
 //Match
@@ -108,6 +108,12 @@ Also write the number of each one of them";
 "contacts_title" = "Contacts";
 "list_of_contacts_title" = "List of contacts";
 "favourites_title" = "Favourites";
+"list_of_favourites_title" = "List of favourites";
+"contact_information_title" = "Contact information";
+"contact_adress_title" = "Adress";
+"contact_city_title" = "City";
+"contact_email_title" = "Email";
+"contact_phone_title" = "Phone number";
 
 //General
 "reason_other_title" = "Other";
@@ -122,6 +128,7 @@ Also write the number of each one of them";
 "button_go_uppercased" = "GO";
 "button_remove_session" = "Remove session";
 "button_remove_match" = "Remove match";
+"button_remove_contact" = "Remove contact";
 
 //Messages
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";

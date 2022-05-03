@@ -15,7 +15,7 @@ struct CoachCard: View {
 
     var body: some View {
         ZStack{
-            VStack(alignment: .trailing, spacing: 0){
+            VStack(alignment: .trailing, spacing: -5){
                 NavigationLink(
                     destination: CoachInformationScreen(),
                   isActive: $navigateToPersonalInformation,
@@ -32,12 +32,18 @@ struct CoachCard: View {
                       .padding(.trailing, -10)
                   }
                 )
-                VStack(alignment: .center, spacing: 10) {
+                VStack(alignment: .center, spacing: 15) {
                     Image(coach.imageString)
                         .resizable()
-                        .frame(width: 60, height: 60)
-                        .border(.gray)
-                        .cornerRadius(4)
+                        .frame(width: 50, height: 50)
+                        .padding(6)
+                        .background(
+                            RoundedRectangle(cornerRadius: 40)
+                                .strokeBorder(Color("blueColor"), lineWidth: 1)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 40).fill(Color.white)
+                                )
+                        )
                     VStack(alignment: .center, spacing: 10) {
                         Text(coach.full_name + coach.surname)
                             .font(.system(size: 20))

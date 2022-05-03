@@ -14,8 +14,8 @@ struct CustomPickerContactBar: View {
 
   var body: some View {
 
-    let item1 = SegmentItem(title: "Contacts", selectionIndex: .contacts)
-    let item2 = SegmentItem(title: "Favourites", selectionIndex: .favourites)
+    let item1 = SegmentItem(title: "contacts_title", selectionIndex: .contacts)
+    let item2 = SegmentItem(title: "favourites_title", selectionIndex: .favourites)
 
     return VStack {
       SegmentControl(selection: selection, items: [item1, item2])

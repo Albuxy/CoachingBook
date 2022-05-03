@@ -35,6 +35,8 @@
 		844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1128217DEB003FE836 /* GeneralContactView.swift */; };
 		844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1328217E4E003FE836 /* SwitchContactView.swift */; };
 		844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A15282180DE003FE836 /* CustomPickerContacts.swift */; };
+		844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A19282188E3003FE836 /* ContactInformationView.swift */; };
+		844B6A1C28218926003FE836 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1B28218926003FE836 /* ContactCard.swift */; };
 		8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF03281E8D9200D59063 /* EntriesMatchView.swift */; };
 		8481AF07282046DF00D59063 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF06282046DE00D59063 /* ContactModel.swift */; };
 		8481AF092820481C00D59063 /* ContactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF082820481C00D59063 /* ContactsData.swift */; };
@@ -131,6 +133,8 @@
 		844B6A1128217DEB003FE836 /* GeneralContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralContactView.swift; sourceTree = "<group>"; };
 		844B6A1328217E4E003FE836 /* SwitchContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchContactView.swift; sourceTree = "<group>"; };
 		844B6A15282180DE003FE836 /* CustomPickerContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerContacts.swift; sourceTree = "<group>"; };
+		844B6A19282188E3003FE836 /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
+		844B6A1B28218926003FE836 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
 		8481AF03281E8D9200D59063 /* EntriesMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesMatchView.swift; sourceTree = "<group>"; };
 		8481AF06282046DE00D59063 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		8481AF082820481C00D59063 /* ContactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsData.swift; sourceTree = "<group>"; };
@@ -315,6 +319,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		844B6A1D28218955003FE836 /* Contact Information */ = {
+			isa = PBXGroup;
+			children = (
+				844B6A1B28218926003FE836 /* ContactCard.swift */,
+				844B6A19282188E3003FE836 /* ContactInformationView.swift */,
+			);
+			path = "Contact Information";
+			sourceTree = "<group>";
+		};
 		8481AF052820464800D59063 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +336,7 @@
 				844B6A1128217DEB003FE836 /* GeneralContactView.swift */,
 				844B6A17282181F5003FE836 /* Sections */,
 				844B6A1828218206003FE836 /* Controller */,
+				844B6A1D28218955003FE836 /* Contact Information */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -587,6 +601,7 @@
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
 				84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */,
 				8481AF07282046DF00D59063 /* ContactModel.swift in Sources */,
+				844B6A1C28218926003FE836 /* ContactCard.swift in Sources */,
 				84845E1128133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84AED8CE281892B200F98A7C /* ReasonForNonAttendanceView.swift in Sources */,
 				84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */,
@@ -603,6 +618,7 @@
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
 				84AED8C22815B5DF00F98A7C /* PlayerModel.swift in Sources */,
 				84AED8CA281846D500F98A7C /* NonAssistantPlayersView.swift in Sources */,
+				844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */,
 				84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */,
 				8435973C2802D0300013B61B /* LoginView.swift in Sources */,
 				844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */,
