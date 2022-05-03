@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoachCard: View {
 
-    var coach = coachData
+    @Binding var coach: Coach
 
     @State var navigateToPersonalInformation = false
 

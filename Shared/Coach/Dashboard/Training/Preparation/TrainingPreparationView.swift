@@ -38,7 +38,7 @@ struct TrainingPreparationView: View {
                 ScrollView {
                     VStack(spacing: 40) {
                         VStack(spacing: 20){
-                            TrainingTitleWithLineView(title: "training_information_title")
+                            TitleWithLineView(title: "training_information_title")
                             NavigationLink(
                             destination: ObjectsNeededView(),
                               isActive: $navigateToObjectsNeeded,
@@ -50,7 +50,7 @@ struct TrainingPreparationView: View {
                             DropDownViewLeft(title: "importance_level_title", placeHolder: !currentTraining.importanceLevel.isEmpty ? currentTraining.importanceLevel : "None", value: $importanceLevel)
                         }
                         VStack(spacing: 20){
-                            TrainingTitleWithLineView(title: "training_players_information")
+                            TitleWithLineView(title: "training_players_information")
                             NavigationLink(
                               destination: AssistantPlayersView(playersList: currentTraining.playersAssisting,
                                                                 colors: [Color("blueMediumColor"), Color("blueLightColor")]),
@@ -69,7 +69,7 @@ struct TrainingPreparationView: View {
                             )
                         }
                         VStack(spacing: 20){
-                            TrainingTitleWithLineView(title: "actions_title")
+                            TitleWithLineView(title: "actions_title")
                             NavigationLink(
                             destination: CancelTrainningView(),
                               isActive: $navigateToCancelSession,
@@ -97,7 +97,7 @@ struct TrainingPreparationView: View {
     }
 }
 
-struct TrainingTitleWithLineView: View {
+struct TitleWithLineView: View {
 
     var title: String
 

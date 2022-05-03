@@ -18,6 +18,7 @@ struct Coach: Identifiable {
     var gender: String
     var mobileNumber: String
     var email: String
+    var contacts: [Contact] = contactsData
     //var teams: [Int]
 }
 

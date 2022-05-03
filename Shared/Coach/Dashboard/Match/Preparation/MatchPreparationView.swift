@@ -40,14 +40,14 @@ struct MatchPreparationView: View {
                 ScrollView {
                     VStack(spacing: 30) {
                         VStack(spacing: 10){
-                            TrainingTitleWithLineView(title: "training_information_title")
+                            TitleWithLineView(title: "training_information_title")
                             TeamHeaderView(currentMatch: currentMatch)
                             OptionsPeriodsView(numberOfPeriods: currentMatch.numberOfPeriods != 0 ? currentMatch.numberOfPeriods : numberOfPeriods)
                             DropDownViewLeft(title: "importance_level_title", placeHolder: !currentMatch.importanceLevel.isEmpty ? currentMatch.importanceLevel : "None" , value: $importanceLevel)
                                 .padding(.top, 8)
                         }
                         VStack(spacing: 20){
-                            TrainingTitleWithLineView(title: "training_players_information")
+                            TitleWithLineView(title: "training_players_information")
                             NavigationLink(
                               destination: AssistantPlayersView(playersList: currentMatch.playersAssisting,
                                                                 colors: [Color("greenMediumColor"), Color("greenLightColor")]),
@@ -73,7 +73,7 @@ struct MatchPreparationView: View {
                             )
                         }
                         VStack(spacing: 20){
-                            TrainingTitleWithLineView(title: "actions_title")
+                            TitleWithLineView(title: "actions_title")
                             NavigationLink(
                             destination: CancelMatchView(),
                               isActive: $navigateToCancelSession,

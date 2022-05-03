@@ -32,7 +32,15 @@
 		84359748280363DD0013B61B /* CoachCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359746280363DD0013B61B /* CoachCard.swift */; };
 		8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
 		8435974B280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
+		844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1128217DEB003FE836 /* GeneralContactView.swift */; };
+		844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1328217E4E003FE836 /* SwitchContactView.swift */; };
+		844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A15282180DE003FE836 /* CustomPickerContacts.swift */; };
 		8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF03281E8D9200D59063 /* EntriesMatchView.swift */; };
+		8481AF07282046DF00D59063 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF06282046DE00D59063 /* ContactModel.swift */; };
+		8481AF092820481C00D59063 /* ContactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF082820481C00D59063 /* ContactsData.swift */; };
+		8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF0A2820497600D59063 /* ContactsListView.swift */; };
+		8481AF0D28215CC900D59063 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF0C28215CC900D59063 /* SearchBarView.swift */; };
+		8481AF0F282179B300D59063 /* FavouritesContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF0E282179B200D59063 /* FavouritesContactsView.swift */; };
 		84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF42811C7AC0014E4DA /* ExtensionsView.swift */; };
 		84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF42811C7AC0014E4DA /* ExtensionsView.swift */; };
 		84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845DF7281214640014E4DA /* RadioButtonView.swift */; };
@@ -120,7 +128,15 @@
 		843597412802DFAA0013B61B /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		84359746280363DD0013B61B /* CoachCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCard.swift; sourceTree = "<group>"; };
 		84359749280B32E80013B61B /* ProfileCoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoachView.swift; sourceTree = "<group>"; };
+		844B6A1128217DEB003FE836 /* GeneralContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralContactView.swift; sourceTree = "<group>"; };
+		844B6A1328217E4E003FE836 /* SwitchContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchContactView.swift; sourceTree = "<group>"; };
+		844B6A15282180DE003FE836 /* CustomPickerContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerContacts.swift; sourceTree = "<group>"; };
 		8481AF03281E8D9200D59063 /* EntriesMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesMatchView.swift; sourceTree = "<group>"; };
+		8481AF06282046DE00D59063 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		8481AF082820481C00D59063 /* ContactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsData.swift; sourceTree = "<group>"; };
+		8481AF0A2820497600D59063 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
+		8481AF0C28215CC900D59063 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		8481AF0E282179B200D59063 /* FavouritesContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesContactsView.swift; sourceTree = "<group>"; };
 		84845DF42811C7AC0014E4DA /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		84845DF7281214640014E4DA /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 		84845DFB2812EF090014E4DA /* MiniTrainingSessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTrainingSessionCard.swift; sourceTree = "<group>"; };
@@ -191,6 +207,7 @@
 				84845DF7281214640014E4DA /* RadioButtonView.swift */,
 				841BAE062810846B0033EF4C /* DatePickerTextField.swift */,
 				84AED8C72818360500F98A7C /* CheckBoxView.swift */,
+				8481AF0C28215CC900D59063 /* SearchBarView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -275,8 +292,39 @@
 				84359749280B32E80013B61B /* ProfileCoachView.swift */,
 				841BAE022810796B0033EF4C /* CoachInformationView.swift */,
 				84845DFA2812EEA00014E4DA /* Dashboard */,
+				8481AF052820464800D59063 /* Contacts */,
 			);
 			path = Coach;
+			sourceTree = "<group>";
+		};
+		844B6A17282181F5003FE836 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				8481AF0A2820497600D59063 /* ContactsListView.swift */,
+				8481AF0E282179B200D59063 /* FavouritesContactsView.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		844B6A1828218206003FE836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				844B6A1328217E4E003FE836 /* SwitchContactView.swift */,
+				844B6A15282180DE003FE836 /* CustomPickerContacts.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8481AF052820464800D59063 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				8481AF06282046DE00D59063 /* ContactModel.swift */,
+				8481AF082820481C00D59063 /* ContactsData.swift */,
+				844B6A1128217DEB003FE836 /* GeneralContactView.swift */,
+				844B6A17282181F5003FE836 /* Sections */,
+				844B6A1828218206003FE836 /* Controller */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		84845DFA2812EEA00014E4DA /* Dashboard */ = {
@@ -526,6 +574,7 @@
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
 				84AED8D328199F5800F98A7C /* MatchPreparationView.swift in Sources */,
+				8481AF0D28215CC900D59063 /* SearchBarView.swift in Sources */,
 				84845E0E28133C2E0014E4DA /* MatchData.swift in Sources */,
 				84AED8C42815B64D00F98A7C /* PlayerData.swift in Sources */,
 				84845E242814004E0014E4DA /* ObjectsNeededView.swift in Sources */,
@@ -537,6 +586,7 @@
 				84845E272814033C0014E4DA /* ObjectCard.swift in Sources */,
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
 				84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */,
+				8481AF07282046DF00D59063 /* ContactModel.swift in Sources */,
 				84845E1128133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84AED8CE281892B200F98A7C /* ReasonForNonAttendanceView.swift in Sources */,
 				84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */,
@@ -546,6 +596,7 @@
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84AED8CC281848A900F98A7C /* PlayerNonAssistingCard.swift in Sources */,
+				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				84845E022812FC460014E4DA /* TrainingData.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
@@ -554,8 +605,13 @@
 				84AED8CA281846D500F98A7C /* NonAssistantPlayersView.swift in Sources */,
 				84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */,
 				8435973C2802D0300013B61B /* LoginView.swift in Sources */,
+				844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */,
+				8481AF0F282179B300D59063 /* FavouritesContactsView.swift in Sources */,
+				844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
+				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
+				8481AF092820481C00D59063 /* ContactsData.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
 				84845E1A281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,
 			);
