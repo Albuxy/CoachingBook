@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileCoachScreen: View {
+struct ProfileCoachView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
@@ -24,7 +24,7 @@ struct ProfileCoachScreen: View {
 
     var body: some View {
         ZStack {
-            VStack(spacing: 50) {
+            VStack(spacing: 40) {
                 ZStack(alignment: .top){
                     Rectangle()
                         .foregroundColor(Color("blueColor"))
@@ -59,8 +59,8 @@ struct ProfileCoachScreen: View {
                                         name: "coach_logout",
                                         booleanToChange: $navigateToLogout)
                 }
-                Spacer()
                 RemoveButton(stringButton: "remove_account", booleanToChange: $removeAccount)
+                    .padding(.top, 70)
                 .alert(
                   isPresented: $removeAccount,
                   content: {
@@ -77,6 +77,7 @@ struct ProfileCoachScreen: View {
                         }))
                   })
             }
+            .padding(.top, 90)
             .alert(
               isPresented: $navigateToLogout,
               content: {
@@ -93,8 +94,6 @@ struct ProfileCoachScreen: View {
                     }))
               })
         }
-        .navigationBarTitle(Text("coach_profile"), displayMode: .inline)
-        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -126,6 +125,6 @@ struct ButtonProfileScreen: View {
 
 struct ProfileCoachScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCoachScreen()
+        ProfileCoachView()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginScreen: View {
+struct LoginView: View {
 
     // MARK: - Login Properties
     @State private var user = ""
@@ -34,7 +34,7 @@ struct LoginScreen: View {
                     // MARK: - Button
 
                     NavigationLink(
-                      destination: ProfileCoachScreen(), isActive: self.$openApp
+                      destination: MenuControllerView(), isActive: self.$openApp
                     ) {
                         Button(action: {
                             self.openApp.toggle()
@@ -62,6 +62,6 @@ struct LoginScreen: View {
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        LoginView()
     }
 }

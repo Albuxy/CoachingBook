@@ -71,6 +71,6 @@ struct CoachCard: View {
 
 struct CoachCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCoachScreen()
+        ProfileCoachView()
     }
 }
