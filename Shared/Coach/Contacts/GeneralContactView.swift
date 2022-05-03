@@ -15,6 +15,8 @@ struct GeneralContactView: View {
     @ObservedObject var contactModel = ContactsDetailModel()
     @State var coach: Coach
     
+    @State var navigateToAddContact = false
+    
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
           VStack(alignment: .center, spacing: 0) {
@@ -39,7 +41,22 @@ struct GeneralContactView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-        })
+          }, trailing:
+            NavigationLink(
+              destination: AddContactView(coach: $coach),
+              isActive: $navigateToAddContact,
+              label: {
+                  Button(action: {
+                      navigateToAddContact.toggle()
+                  }) {
+                    Image(systemName: "person.fill.badge.plus")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.black)
+                }
+              }
+            )
+        )
     }
 }
 

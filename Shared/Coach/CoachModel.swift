@@ -19,7 +19,7 @@ struct Coach: Identifiable {
     var mobileNumber: String
     var email: String
     var contacts: [Contact] = contactsData
-    //var teams: [Int]
+    var teams: [Team]
 }
 
 var coachData: Coach {
@@ -29,5 +29,6 @@ var coachData: Coach {
           dateOfBirth: Date(),
           gender: "Women",
           mobileNumber: "753627674",
-          email: "coachName@gmail.com")
+          email: "coachName@gmail.com",
+          teams: teamsData)
 }

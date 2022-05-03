@@ -110,22 +110,29 @@ Also write the number of each one of them";
 "favourites_title" = "Favourites";
 "list_of_favourites_title" = "List of favourites";
 "contact_information_title" = "Contact information";
-"contact_adress_title" = "Adress";
+"add_contact_title" = "Add contact";
+"relation_player_title" = "Relation with player";
+"contact_name_title" = "Name";
+"contact_phone_title" = "Phone number";
+"contact_gender_title" = "Gender";
 "contact_city_title" = "City";
 "contact_email_title" = "Email";
-"contact_phone_title" = "Phone number";
+"contact_relation_title" = "Select type of relation";
+"contact_team_title" = "Select team";
+"contact_player_title" = "Select player";
 
 //General
 "reason_other_title" = "Other";
 
 //Buttons
-"button_save_details" = "Save details";
-"button_save_reason" = "Save reason";
 "button_remove" = "Remove";
 "button_cancel" = "Cancel";
 "button_log_out" = "Log out";
 "button_done" = "Done";
 "button_go_uppercased" = "GO";
+"button_save_details" = "Save details";
+"button_save_reason" = "Save reason";
+"button_save_contact" = "Save contact";
 "button_remove_session" = "Remove session";
 "button_remove_match" = "Remove match";
 "button_remove_contact" = "Remove contact";

@@ -12,6 +12,7 @@ struct ContactInformationView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    @State var listOfContacts = contactsData
     var currentContact: Contact
     
     @State var removeContact = false
@@ -27,9 +28,9 @@ struct ContactInformationView: View {
                     .padding(.top, 30)
             }
             VStack(alignment: .center, spacing: 26){
-                if let adress = currentContact.adress {
-                    CustomRowInformationContact(title: "contact_adress_title",
-                                                subtitle: adress)
+                if let gender = currentContact.gender {
+                    CustomRowInformationContact(title: "contact_gender_title",
+                                                subtitle: getGenderInString(gender: gender))
                 }
                 if let city = currentContact.city {
                     CustomRowInformationContact(title: "contact_city_title",
@@ -44,7 +45,33 @@ struct ContactInformationView: View {
             }.frame(width: UIScreen.main.bounds.width / 1.4,
                     height: UIScreen.main.bounds.height / 2,
                     alignment: .topLeading)
-            RemoveButton(stringButton: "button_remove_contact", booleanToChange: $removeContact)
+            //Button Remove COntact
+            Button(action: {
+                listOfContacts.removeAll { contact in
+                    contact.full_name == currentContact.full_name
+                }
+                presentation.wrappedValue.dismiss()
+            }) {
+                HStack (spacing: 38){
+                    Image("ic_cancel_red")
+                        .resizable()
+                        .frame(width: 21, height: 21)
+                    Text("button_remove_contact")
+                        .font(.system(size: 16))
+                        .bold()
+                        .foregroundColor(.black)
+                }
+                .padding(.leading, 25)
+                .frame(width: UIScreen.main.bounds.width / 1.35, height: 30, alignment: .leading)
+            }
+            .padding(5)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .strokeBorder(Color("redColor"), lineWidth: 3)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8).fill(Color("redColor").opacity(0.22))
+                    )
+            )
         }
         .navigationBarTitle(Text("contact_information_title"), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
@@ -54,6 +81,17 @@ struct ContactInformationView: View {
                   .resizable()
                   .frame(width: 35, height: 35)
         })
+    }
+    
+    func getGenderInString(gender: Gender) -> String {
+        switch gender {
+        case .male:
+            return "Male"
+        case .female:
+            return "Female"
+        case .other:
+            return "Other"
+        }
     }
 }
 
