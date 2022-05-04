@@ -150,7 +150,6 @@
 
 //Language
 "settings_language" = "Language";
-"settings_language_footer" = "Choose interface language.";
 
 //MARK: General
 "reason_other_title" = "Other";

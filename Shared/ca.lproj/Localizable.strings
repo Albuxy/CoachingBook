@@ -1,0 +1,172 @@
+/* 
+  Localizable.strings
+  CoachingBook
+
+  Created by Alba Torra Di Capua on 10/4/22.
+  
+*/
+
+//MARK: - Login Screen
+"user_login" = "Usuari";
+"password_login" = "Contrasenya";
+"login_signIn" = "Entra";
+
+//MARK: - Menu
+"menu_home" = "Principal";
+"menu_profile" = "Perfil";
+"menu_team" = "Equip";
+"menu_calendar" = "Calendari";
+"menu_settings" = "Configuracio";
+"menu_logout" = "Sortir";
+
+//MARK: - Coach Screen
+"coach_profile" = "Perfil";
+"coach_dashboard" = "Panel";
+"coach_feedback_events" = "Events feedback";
+"coach_contacts" = "Contactes";
+"coach_logout" = "Sortir";
+"remove_account" = "Eliminar compte";
+
+//Coach Information
+"coach_information" = "Informacio entrenador";
+"coach_basic_information" = "Informacio basica";
+"coach_surname" = "Cognom";
+"coach_full_name" = "Nop complet";
+"coach_dateOfBirth" = "Data de naixement";
+"choose_title" = "Escull";
+"coach_gender" = "Genere";
+"coach_gender_male" = "Home";
+"coach_gender_female" = "Dona";
+"coach_contact_detail" = "Detalls de contacte";
+"coach_mobile_number" = "Numero de telefon";
+"coach_email" = "Email";
+
+"coach_dashboard_title" = "Comença la teva preparació";
+"coach_dashboard_subtitle" = "Comenceu a preparar les vostres sessions per estar a punt per a la data.";
+
+//Training
+"training_preparation" = "Preparació deL entrenament";
+"games_uppercased" = "PARTITS";
+"sessions_uppercased" = "SESSIONS";
+"training_uppercased" = "ENTRENAMENTS";
+"training_information" = "Informacio";
+"training_objects_needed" = "Objectes necesaris";
+"training_information_title" = "Informacio";
+"objects_needed_title" = "Objectes necesaris";
+"Indoor_Outdoor_title" ="Indoor/Outdoor";
+"Indoor_title" ="Indoor";
+"players_title" ="Jugadors: ";
+"Outdoor_title" ="Outdoor";
+"importance_level_title" = "Nivell d'importancia";
+"training_players_information" = "Informacion dels jugadors";
+"assistant_players_title" = "Jugadores que atendran";
+"non_assistant_players_title" = "Jugadores que no atendran";
+"actions_title" = "Acciones";
+"cancel_session_title" = "Cancel·lar sesion";
+
+//Objects needed
+"objects_selection_title" = "Seleccion de objetos";
+"objects_selection_subtitle" = "Selecciona todos los objetos que necesitaras para la sesion de entrenamiento. \nEscribe el numero que necesitaras.";
+"objects_select_numer" = "Write the number needed";
+"object_cone_title" = "Conos";
+"object_bench_title" = "Bancos";
+"object_ladder_title" = "Escaleras";
+"object_ring_title" = "Aros";
+"object_tennis_ball_title" = "Pelotas de tenis";
+"object_bibs_vest_title" = "Armilla";
+
+//Player selection
+"assistant_players_title" = "Jugadors que atendran";
+"player_selection_title" = "Seleccio de jugadors";
+"player_selection_subtitle" = "Marca amb un tick els jugadors que atendran a la sessio";
+"non_assistant_players_title" = "Jugadors que no atendran";
+"non_player_selection_title" = "Jugadors que no atendran a la sessio";
+"non_player_selection_subtitle" = "Introdueix la rao per la qual no asistiran un per un.";
+
+//Reason for non attending
+"for_non_attendance_reason_title" = "Rao por no atendre";
+"non_attendance_reason_title" = "Rao por no atendre";
+"non_attendance_reason_subtitle" = "Selecciona la raó o explica el perque el jugador no atendrà.";
+"reason_injurie" = "Lesió / Enfermetat";
+"reason_appointment" = "Cita";
+"reason_without_explanation" = "Sense explicació";
+
+//Cancel training
+"cancel_training_title" = "Cancel·lar entrenament";
+"training_cancellation_title" = "Cancel·lació entrenament";
+"training_cancellation_subtitle" = "Escull la raó per la qual el entrenament s'ha cancel·lat.";
+"reason_rain_title" = "Pluja";
+"reason_vacation_title" = "Vacances";
+"reason_injuries_title" = "Lesions";
+"write_reason_title" = "Escriu la raó";
+
+//Match
+"match_preparation" = "Preparació del partit";
+"select_number_periods" = "Selecciona el número de periodes";
+"cancel_match_title" = "Cancel·lar partit";
+"match_cancellation_title" = "Cancel·lació partit";
+"match_cancellation_team" = "Escull l'equip que ha cancel·lat el partit:";
+"match_cancellation_reason" = "Selecciona la raó per la qual s'ha cancel·lat:";
+"prepare_entries_title" = "Preparar sortides";
+"match_entries_title" = "Sortides del partit";
+"match_entries_subtitle" = "Prepara les sortides pel partit. \nSelecciona 5 jugadors per a cada uno dels periodes.";
+
+//Contacts
+"contacts_title" = "Contactes";
+"list_of_contacts_title" = "Llista de contactes";
+"favourites_title" = "Favorits";
+"list_of_favourites_title" = "Llista de favorits";
+"contact_information_title" = "Informació de contacte";
+"add_contact_title" = "Afegir contacte";
+"relation_player_title" = "Relació amb el jugador";
+"contact_name_title" = "Nom";
+"contact_phone_title" = "Número de telefon";
+"contact_gender_title" = "Génere";
+"contact_city_title" = "Ciutat";
+"contact_email_title" = "Email";
+"contact_relation_title" = "Selecciona el tipus de relacio";
+"contact_team_title" = "Selecciona l'equip";
+"contact_player_title" = "Selecciona jugador";
+"father_title" = "Pare";
+"mother_title" = "Mare";
+"related_to_title" = "No definit";
+
+//MARK: Settings
+"settings_account_title" = "Compte";
+"change_password_title" = "Canviar contrasenya";
+"change_password_subtitle" = "Establiu la contrasenya nova per al vostre compte i podreu accedir a totes les funcions.";
+"current_password" = "Contrasenya actual";
+"new_password" = "Nova contrasenya";
+"confirm_password" = "Confirmar contrasenya";
+"remove_account_title" = "Eliminar compte";
+"remove_account_subtitle1" = "Aquesta acció que estàs a punt de fer és destructiva i no podràs tornar enrere.";
+"remove_account_subtitle2" = "En prémer aquest botó, eliminarà permanentment el compte, incloses totes les dades emmagatzemades.";
+"settings_notifications_title" = "Notificacions";
+"settings_language_title" = "Canviar d'idioma";
+"settings_news_title" = "Novetates per a tu";
+"settings_account_acitivity_title" = "Activitat de la compte";
+"settings_update_matches_title" = "Actualitzacio en partits";
+
+//Language
+"settings_language" = "Idioma";
+
+//MARK: General
+"reason_other_title" = "Altre";
+
+//MARK: Buttons
+"button_remove" = "Eliminar";
+"button_cancel" = "Cancel·lar";
+"button_log_out" = "Sortir";
+"button_done" = "Fet";
+"button_save" = "Guardar";
+"button_go_uppercased" = "SOMMHI";
+"button_save_details" = "Guardar detalls";
+"button_save_reason" = "Guardar raó";
+"button_save_contact" = "Guardar contacto";
+"button_remove_session" = "Eliminar sessio";
+"button_remove_match" = "Eliminar partit";
+"button_remove_contact" = "Eliminar contacte";
+
+//Messages
+"confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";
+"confirmation_log_out" = "Estàs segur que vols sortir?";

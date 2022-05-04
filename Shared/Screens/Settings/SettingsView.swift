@@ -72,6 +72,8 @@ struct SettingsView: View {
             return "English"
         case .spanish:
             return "Español"
+        case .catalan:
+            return "Catalan"
         }
     }
 }
@@ -138,6 +140,11 @@ struct DropDownLanguageView: View {
                     LocalizationService.shared.language = .spanish
                 } label: {
                     Text("Español")
+                }
+                Button {
+                    LocalizationService.shared.language = .catalan
+                } label: {
+                    Text("Catalan")
                 }
             } label: {
                 VStack(spacing: 5){
