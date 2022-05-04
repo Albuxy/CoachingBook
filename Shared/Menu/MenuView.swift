@@ -43,23 +43,23 @@ struct MenuView: View {
 
           VStack(alignment: .center, spacing: 10) {
               menuButtonEntry(
-                name: "Home", image: "ic_home", imageSelected: "ic_home",
+                name: "menu_home", image: "ic_home", imageSelected: "ic_home",
                 isDisabled: false, entryMenu: .home)
               menuButtonEntry(
-                name: "Profile", image: "ic_profile", imageSelected: "ic_profile", isDisabled: false,
+                name: "menu_profile", image: "ic_profile", imageSelected: "ic_profile", isDisabled: false,
                 entryMenu: .profile)
               menuButtonEntry(
-                name: "Team", image: "ic_teams", imageSelected: "ic_teams", isDisabled: false,
+                name: "menu_team", image: "ic_teams", imageSelected: "ic_teams", isDisabled: false,
                 entryMenu: .team)
               menuButtonEntry(
-                name: "Calendar", image: "ic_calendar", imageSelected: "ic_calendar", isDisabled: false,
+                name: "menu_calendar", image: "ic_calendar", imageSelected: "ic_calendar", isDisabled: false,
                 entryMenu: .calendar)
               menuButtonEntry(
-                name: "Settings", image: "ic_settings", imageSelected: "ic_settings",
+                name: "menu_settings", image: "ic_settings", imageSelected: "ic_settings",
                 isDisabled: false,
                 entryMenu: .settings)
               menuButtonEntry(
-                name: "Logout", image: "ic_logout", imageSelected: "ic_logout", isDisabled: false,
+                name: "menu_logout", image: "ic_logout", imageSelected: "ic_logout", isDisabled: false,
                 entryMenu: .logout)
           }
           .padding(.horizontal)

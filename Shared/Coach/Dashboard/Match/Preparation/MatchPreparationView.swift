@@ -57,7 +57,7 @@ struct MatchPreparationView: View {
                               }
                             )
                             NavigationLink(
-                              destination: NonAssistantPlayersView(playersList: playersNotAssistData,
+                              destination: NonAssistantPlayersView(playersListData: playersNotAssistData,
                                                                    colors: [Color("greenMediumColor"), Color("greenLightColor")]),
                               isActive: $navigateToNonAssistantePlayers,
                               label: {

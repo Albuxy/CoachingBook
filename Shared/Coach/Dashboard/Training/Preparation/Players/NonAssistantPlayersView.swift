@@ -12,7 +12,7 @@ struct NonAssistantPlayersView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
 
-    var playersList: [Player]
+    var playersListData: [Player]
     var colors: [Color]
 
     var body: some View {
@@ -30,11 +30,12 @@ struct NonAssistantPlayersView: View {
                 }
                 .padding([.leading, .trailing], 20)
                 ScrollView {
-                    VStack(spacing: 30){
-                        ForEach(playersList) { item in
-                            PlayerNonAssistingCard(player: item, colors: colors)
+                        VStack(spacing: 30){
+                            ForEach(playersListData) { item in
+                                PlayerNonAssistingCard(player: item,
+                                                       colors: colors)
+                            }
                         }
-                    }
                 }
                 Spacer()
                 // MARK: - Button
@@ -68,6 +69,6 @@ struct NonAssistantPlayersView: View {
 
 struct Non_Assistant_players_Previews: PreviewProvider {
     static var previews: some View {
-        NonAssistantPlayersView(playersList: playersNotAssistData, colors: [Color("blueMediumColor"), Color("blueLightColor")])
+        NonAssistantPlayersView(playersListData: playersNotAssistData, colors: [Color("blueMediumColor"), Color("blueLightColor")])
     }
 }

@@ -11,6 +11,14 @@
 "password_login" = "Password";
 "login_signIn" = "Sign in";
 
+//MARK: - Menu
+"menu_home" = "Home";
+"menu_profile" = "Profile";
+"menu_team" = "Team";
+"menu_calendar" = "Calendar";
+"menu_settings" = "Settings";
+"menu_logout" = "Logout";
+
 //MARK: - Coach Screen
 "coach_profile" = "Profile";
 "coach_dashboard" = "Dashboard";
@@ -121,10 +129,19 @@ Also write the number of each one of them";
 "contact_team_title" = "Select team";
 "contact_player_title" = "Select player";
 
-//General
+//MARK: Settings
+"settings_account_title" = "Account";
+"change_password_title" = "Change password";
+"remove_account_title" = "Remove account";
+"settings_notifications_title" = "Notifications";
+"settings_news_title" = "News for you";
+"settings_account_acitivity_title" = "Account activity";
+"settings_update_matches_title" = "Update in matches";
+
+//MARK: General
 "reason_other_title" = "Other";
 
-//Buttons
+//MARK: Buttons
 "button_remove" = "Remove";
 "button_cancel" = "Cancel";
 "button_log_out" = "Log out";

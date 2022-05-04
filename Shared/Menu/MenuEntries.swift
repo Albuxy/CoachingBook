@@ -34,24 +34,24 @@ struct MenuSwitchView: View {
         EmptyView()
           .navigationBarItems(
             leading:
-              NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Home"))
+              NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_home"))
       case .profile:
         ProfileCoachView()
           .navigationBarItems(
             leading:
-              NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Profile"))
+              NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
         EmptyView()
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Team"))
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))
       case .calendar:
         EmptyView()
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Calendar"))
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
       case .settings:
-        EmptyView()
+        SettingsView()
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Settings"))
@@ -77,7 +77,7 @@ struct NavigationBarWithMenuIcon: View {
           .frame(width: 21, height: 21)
       }
       Spacer()
-      Text(titleBar)
+      Text(LocalizedStringKey(titleBar))
         .fontWeight(.semibold)
         .foregroundColor(.black)
     }
