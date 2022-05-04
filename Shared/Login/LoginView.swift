@@ -53,10 +53,13 @@ struct LoginView: View {
             .padding(.top, 100)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
             .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
             .navigationAppearance(
                 backgroundColor: .white, foregroundColor: .black
             )
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

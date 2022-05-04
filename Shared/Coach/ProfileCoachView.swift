@@ -59,23 +59,6 @@ struct ProfileCoachView: View {
                                         name: "coach_logout",
                                         booleanToChange: $navigateToLogout)
                 }
-                RemoveButton(stringButton: "remove_account", booleanToChange: $removeAccount)
-                    .padding(.top, 70)
-                .alert(
-                  isPresented: $removeAccount,
-                  content: {
-                    Alert(
-                      title: Text("Remove account"),
-                      message: Text("confirmation_remove_account"),
-                      primaryButton: .cancel(
-                        Text("button_cancel"),
-                        action: {}),
-                      secondaryButton: .destructive(
-                        Text("button_remove"),
-                        action: {
-                          presentation.wrappedValue.dismiss()
-                        }))
-                  })
             }
             .padding(.top, 90)
             .alert(

@@ -139,6 +139,8 @@
 "new_password" = "Nueva contraseña";
 "confirm_password" = "Confirma contraseña";
 "remove_account_title" = "Eliminar cuenta";
+"remove_account_subtitle1" = "Esta acción que estás a punto de realizar es destructiva y no podrás volver atrás.";
+"remove_account_subtitle2" = "Al presionar este botón, eliminará permanentemente su cuenta, incluidos todos sus datos almacenados.";
 "settings_notifications_title" = "Notificaciones";
 "settings_language_title" = "Cambiar idioma";
 "settings_news_title" = "Novedades para ti";

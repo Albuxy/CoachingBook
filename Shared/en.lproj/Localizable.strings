@@ -140,6 +140,8 @@
 "new_password" = "New password";
 "confirm_password" = "Confirm password";
 "remove_account_title" = "Remove account";
+"remove_account_subtitle1" = "This action that you are about to perform is destructive and you will not be able to go back.";
+"remove_account_subtitle2" = "Pressing this button, you will  permanently delete your account, including all your stored data.";
 "settings_notifications_title" = "Notifications";
 "settings_language_title" = "Change language";
 "settings_news_title" = "News for you";

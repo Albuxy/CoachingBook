@@ -34,8 +34,14 @@ struct SettingsView: View {
                                               booleanToChange: $navigateToChangePassword)
                           }
                         )
-                        ButtonWithArrow(nameButton: "remove_account_title".localized(language),
-                                        booleanToChange: $navigateToRemoveAccount)
+                        NavigationLink(
+                          destination: RemoveAccountView(),
+                          isActive: $navigateToRemoveAccount,
+                          label: {
+                              ButtonWithArrow(nameButton: "remove_account_title".localized(language),
+                                              booleanToChange: $navigateToRemoveAccount)
+                          }
+                        )
                         DropDownLanguageView(title: "settings_language_title",
                                              language: getStringForLanguage(language: language))
                     }
