@@ -47,7 +47,7 @@ struct SuperSmallButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(textColor)
             .padding()
-            .frame(width: 80, height: 26)
+            .frame(width: 100, height: 26)
             .background(backgroundColor)
             .cornerRadius(8.0)
             .disabled(false)

@@ -21,7 +21,7 @@ struct RemoveButton: View {
                 Image("ic_cancel_red")
                     .resizable()
                     .frame(width: 21, height: 21)
-                Text(LocalizedStringKey(stringButton))
+                Text(stringButton.localized(LocalizationService.shared.language))
                     .font(.system(size: 16))
                     .bold()
                     .foregroundColor(.black)

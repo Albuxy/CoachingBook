@@ -75,7 +75,7 @@ struct MatchPreparationView: View {
                         VStack(spacing: 20){
                             TitleWithLineView(title: "actions_title")
                             NavigationLink(
-                            destination: CancelMatchView(),
+                            destination: CancelMatchView(currentMatch: currentMatch),
                               isActive: $navigateToCancelSession,
                               label: {
                                   ButtonWithArrow(nameButton: "cancel_session_title", booleanToChange: $navigateToCancelSession)
@@ -91,7 +91,7 @@ struct MatchPreparationView: View {
         }
         .padding(.top, 60)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
-        .navigationBarTitle(Text("match_preparation"), displayMode: .inline)
+        .navigationBarTitle(Text("match_preparation".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -103,7 +103,7 @@ struct MatchPreparationView: View {
                 saveDetailsMatch()
                 presentation.wrappedValue.dismiss()
             }) {
-            Text("Save")
+            Text("button_save".localized(LocalizationService.shared.language))
               .foregroundColor(.black)
               .bold()
             })

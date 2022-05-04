@@ -114,7 +114,7 @@ struct ButtonProfileScreen: View {
                     .padding(8)
                     .background(Color("blueColor"))
                     .cornerRadius(56)
-                Text(LocalizedStringKey(name))
+                Text(name.localized(LocalizationService.shared.language))
                     .font(.system(size: 23))
                     .foregroundColor(.black)
             }

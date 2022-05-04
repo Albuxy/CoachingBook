@@ -34,7 +34,7 @@ struct CoachInformationScreen: View {
                         .padding()
                         .border(.gray)
                     // MARK: - Basic Information
-                    Text("coach_basic_information")
+                    Text("coach_basic_information".localized(LocalizationService.shared.language))
                         .font(.system(size: 21))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -47,19 +47,21 @@ struct CoachInformationScreen: View {
                         TextFieldWithTitleGeneral(defaultTextFiled: "coach_full_name",
                                          stringTextField: $full_name)
                         VStack(alignment: .leading, spacing: 5){
-                            Text("coach_dateOfBirth")
-                            DatePickerTextField(placeholder: "Choose",
+                            Text("coach_dateOfBirth"
+                                    .localized(LocalizationService.shared.language))
+                            DatePickerTextField(placeholder: "Choose".lowercased().localized(LocalizationService.shared.language),
                                                 date: self.$date)
                                 .padding(.leading, 10)
                                 .frame(width: 320, height: 50, alignment: .center)
                                 .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
                         }
                         VStack(alignment: .leading, spacing: 5){
-                            Text("coach_gender")
+                            Text("coach_gender"
+                                    .localized(LocalizationService.shared.language))
                             HStack(spacing: 18){
                                 RadioButtonField(
                                     id: "Male",
-                                    label: "Male",
+                                    label: "coach_gender_male",
                                     color:.black,
                                     bgColor: .black,
                                     isMarked: $gender.wrappedValue == "Male" ? true : false,
@@ -69,7 +71,7 @@ struct CoachInformationScreen: View {
                                 )
                                 RadioButtonField(
                                     id: "Female",
-                                    label: "Female",
+                                    label: "coach_gender_female",
                                     color:.black,
                                     bgColor: .black,
                                     isMarked: $gender.wrappedValue == "Female" ? true : false,
@@ -82,7 +84,8 @@ struct CoachInformationScreen: View {
                     }
 
                     // MARK: - Contact Setail
-                    Text("coach_contact_detail")
+                    Text("coach_contact_detail"
+                            .localized(LocalizationService.shared.language))
                         .font(.system(size: 21))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -111,7 +114,7 @@ struct CoachInformationScreen: View {
                     Button(action: {
                         presentation.wrappedValue.dismiss()
                     }) {
-                        Text("button_save_details")
+                        Text("button_save_details".localized(LocalizationService.shared.language))
                             .font(.system(size: 16))
                             .bold()
                     }.buttonStyle(
@@ -120,7 +123,7 @@ struct CoachInformationScreen: View {
                 }.padding(.top, 750)
               )
         }
-        .navigationBarTitle(Text("coach_information"), displayMode: .inline)
+        .navigationBarTitle(Text("coach_information".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -138,7 +141,7 @@ struct TextFieldWithTitleGeneral: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
-            Text(LocalizedStringKey(defaultTextFiled))
+            Text(defaultTextFiled.localized(LocalizationService.shared.language))
             TextField("", text: $stringTextField)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))

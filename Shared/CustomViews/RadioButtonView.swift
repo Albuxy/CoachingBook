@@ -49,7 +49,7 @@ struct RadioButtonField: View {
                     .frame(width: 21, height: 21)
                     .clipShape(Circle())
                     .foregroundColor(self.bgColor)
-                Text(label)
+                Text(label.localized(LocalizationService.shared.language))
                     .font(Font.system(size: textSize))
                 Spacer()
             }.foregroundColor(self.color)

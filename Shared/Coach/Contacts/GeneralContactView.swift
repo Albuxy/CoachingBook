@@ -35,7 +35,7 @@ struct GeneralContactView: View {
           }
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle(Text("contacts_title"), displayMode: .inline)
+        .navigationBarTitle(Text("contacts_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
               Image("left_arrow")

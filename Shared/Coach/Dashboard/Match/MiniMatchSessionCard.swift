@@ -41,7 +41,7 @@ struct MiniMatchSessionCard: View {
                   Button(action: {
                       navigateToPreparation.toggle()
                   }) {
-                      Text("button_go_uppercased")
+                      Text("button_go_uppercased".localized(LocalizationService.shared.language))
                           .font(.system(size: 15))
                           .bold()
                   }

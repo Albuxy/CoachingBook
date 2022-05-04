@@ -27,7 +27,7 @@ struct PlayerNonAssistingCard: View {
                           .frame(width: 51, height: 56)
                           .padding(.leading, 15)
                       VStack(alignment: .leading, spacing: 8){
-                          Text(player.name + player.surname)
+                          Text(player.name + " " + player.surname)
                               .font(.system(size: 18))
                               .foregroundColor(.black)
                           Text("Filled")

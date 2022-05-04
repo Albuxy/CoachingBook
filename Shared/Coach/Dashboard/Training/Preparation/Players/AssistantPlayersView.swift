@@ -19,19 +19,20 @@ struct AssistantPlayersView: View {
         ZStack {
             VStack(spacing: 20){
                 VStack(spacing: 20){
-                    Text("player_selection_title")
-                        .font(.system(size: 24))
+                    Text("player_selection_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 23))
                         .bold()
-                    Text("player_selection_subtitle")
-                        .font(.system(size: 18))
+                    Text("player_selection_subtitle".localized(LocalizationService.shared.language))
+                        .font(.system(size: 19))
                         .multilineTextAlignment(.center)
                         .lineSpacing(8)
+                        .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                 }
                 ScrollView {
                     VStack(spacing: 30){
                         ForEach(playersList) { item in
                             RowForPlayer(imageString: item.image,
-                                         fullName: item.name + item.surname,
+                                         fullName: item.name + "  " + item.surname,
                                          checked: item.isChecked)
                         }
                     }
@@ -51,7 +52,7 @@ struct AssistantPlayersView: View {
                 Button(action: {
                     presentation.wrappedValue.dismiss()
                 }) {
-                    Text("button_save_details")
+                    Text("button_save_details".localized(LocalizationService.shared.language))
                         .font(.system(size: 16))
                         .bold()
                 }.buttonStyle(
@@ -64,7 +65,7 @@ struct AssistantPlayersView: View {
         .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("assistant_players_title"), displayMode: .inline)
+        .navigationBarTitle(Text("assistant_players_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

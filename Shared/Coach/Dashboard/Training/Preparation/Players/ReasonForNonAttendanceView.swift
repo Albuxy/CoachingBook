@@ -33,33 +33,33 @@ struct ReasonForNonAttendanceView: View {
                         .frame(width: UIScreen.main.bounds.width / 1.28, alignment: .leading)
                 }
                 VStack(spacing: 30){
-                    RadioButtonWithName(title: LocalizedStringKey("reason_injurie").toString(),
+                    RadioButtonWithName(title: "reason_injurie",
                                         color: Color("blueColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Injurie / Illness" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_injurie".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
-                    RadioButtonWithName(title: LocalizedStringKey("reason_appointment").toString(),
+                    RadioButtonWithName(title: "reason_appointment",
                                         color: Color("blueColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Appointment" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_appointment".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
-                    RadioButtonWithName(title: LocalizedStringKey("reason_without_explanation").toString(),
+                    RadioButtonWithName(title: "reason_without_explanation",
                                         color: Color("blueColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Without explanation" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_without_explanation".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
                     VStack(spacing: 10){
-                        RadioButtonWithName(title: LocalizedStringKey("reason_other_title").toString(),
+                        RadioButtonWithName(title: "reason_other_title",
                                             color: Color("blueColor"),
-                                            booleanToChange: $reasonSelected.wrappedValue == "Other" ? true : false,
+                                            booleanToChange: $reasonSelected.wrappedValue == "reason_other_title".localized(LocalizationService.shared.language) ? true : false,
                                             callback: { selected in
                                                 self.reasonSelected = selected
                                             })
-                        if reasonSelected == "Other" {
-                            TextField(LocalizedStringKey("write_reason_title").toString(), text: $otherReasonSelected)
+                        if reasonSelected == "reason_other_title".localized(LocalizationService.shared.language) {
+                            TextField("write_reason_title".localized(LocalizationService.shared.language), text: $otherReasonSelected)
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width / 1.28, height: 100, alignment: .top)
                                 .background(
@@ -77,7 +77,7 @@ struct ReasonForNonAttendanceView: View {
                     Button(action: {
                         presentation.wrappedValue.dismiss()
                     }) {
-                        Text("button_save_reason")
+                        Text("button_save_reason".localized(LocalizationService.shared.language))
                             .font(.system(size: 16))
                             .bold()
                     }.buttonStyle(
@@ -92,7 +92,7 @@ struct ReasonForNonAttendanceView: View {
         .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("for_non_attendance_reason_title"), displayMode: .inline)
+        .navigationBarTitle(Text("for_non_attendance_reason_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

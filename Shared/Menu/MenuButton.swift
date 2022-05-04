@@ -42,7 +42,7 @@ struct MenuButton: View {
                     .resizable()
                     .frame(width: 25, height: 25)
             }
-              Text(LocalizedStringKey(name))
+              Text(name.localized(LocalizationService.shared.language))
                  .foregroundColor(.white)
                  .font(.system(size: 18))
           }

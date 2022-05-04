@@ -15,11 +15,13 @@ struct TrainingDashboardCard: View {
         VStack(spacing: 15){
             VStack {
                 VStack(alignment: .leading, spacing: 16){
-                    Text("training_uppercased")
+                    Text("training_uppercased"
+                            .localized(LocalizationService.shared.language))
                         .font(.system(size: 28))
                         .bold()
                         .frame(width: 280, height: 20, alignment: .leading)
-                    Text("sessions_uppercased")
+                    Text("sessions_uppercased"
+                            .localized(LocalizationService.shared.language))
                         .font(.system(size: 28))
                         .foregroundColor(Color("blueColor"))
                         .bold()

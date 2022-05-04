@@ -15,29 +15,34 @@ struct SettingsView: View {
     @State var toggleNews = false
     @State var toggleActivity = false
     @State var toggleUpdate = false
+
+    @AppStorage("language")
+    public var language = LocalizationService.shared.language
     
     var body: some View {
         ZStack {
             VStack(spacing: 40) {
                 VStack(spacing: 20) {
                     TitleWithLineSettings(imageString: "ic_account_blue",
-                                          title: "settings_account_title")
+                                          title: "settings_account_title".localized(language))
                     VStack(spacing: 20) {
-                        ButtonWithArrow(nameButton: "change_password_title",
+                        ButtonWithArrow(nameButton: "change_password_title".localized(language),
                                         booleanToChange: $navigateToChangePassword)
-                        ButtonWithArrow(nameButton: "remove_account_title",
+                        ButtonWithArrow(nameButton: "remove_account_title".localized(language),
                                         booleanToChange: $navigateToRemoveAccount)
+                        DropDownLanguageView(title: "settings_language_title",
+                                             language: getStringForLanguage(language: language))
                     }
                 }
                 VStack(spacing: 20) {
                     TitleWithLineSettings(imageString: "ic_notifications",
-                                          title: "settings_notifications_title")
+                                          title: "settings_notifications_title".localized(language))
                     VStack(spacing: 20) {
-                        ToggleWithTitle(title: "settings_news_title",
+                        ToggleWithTitle(title: "settings_news_title".localized(language),
                                         boolToChange: $toggleNews)
-                        ToggleWithTitle(title: "settings_account_acitivity_title",
+                        ToggleWithTitle(title: "settings_account_acitivity_title".localized(language),
                                         boolToChange: $toggleActivity)
-                        ToggleWithTitle(title: "settings_update_matches_title",
+                        ToggleWithTitle(title: "settings_update_matches_title".localized(language),
                                         boolToChange: $toggleUpdate)
                         
                     }
@@ -46,6 +51,15 @@ struct SettingsView: View {
         }
         .padding(.top, 120)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.2 ,alignment: .top)
+    }
+    
+    func getStringForLanguage(language: Language) -> String{
+        switch language {
+        case .english_us:
+            return "English (US)"
+        case .spanish:
+            return "Español"
+        }
     }
 }
 
@@ -60,7 +74,7 @@ struct TitleWithLineSettings: View {
                 Image(imageString)
                     .resizable()
                     .frame(width: 30, height: 30)
-                Text(LocalizedStringKey(title))
+                Text(title)
                     .font(.system(size: 19))
                     .bold()
                 
@@ -88,6 +102,50 @@ struct ToggleWithTitle: View {
         }
         .frame(width: 320)
     }
+}
+
+struct DropDownLanguageView: View {
+
+    var title: String
+    var language: String
+
+    var body: some View {
+        HStack{
+            Text(title.localized(LocalizationService.shared.language))
+                .font(.system(size: 18))
+                .foregroundColor(.black)
+            Spacer()
+            Menu {
+                Button {
+                    LocalizationService.shared.language = .english_us
+                } label: {
+                    Text("English (US)")
+                }
+                Button {
+                    LocalizationService.shared.language = .spanish
+                } label: {
+                    Text("Español")
+                }
+            } label: {
+                VStack(spacing: 5){
+                    HStack{
+                        Text(language)
+                            .foregroundColor(.black)
+                    }
+                    .padding(.horizontal)
+                }
+                .padding(8)
+                .frame(width: 150)
+                .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+            }
+        }
+        .frame(width: UIScreen.main.bounds.width / 1.3, height: 40)
+    }
+}
+
+enum Language: String {
+    case english_us = "en"
+    case spanish = "es"
 }
 
 struct SettingsView_Previews: PreviewProvider {

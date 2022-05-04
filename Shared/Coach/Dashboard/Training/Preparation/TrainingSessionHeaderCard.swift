@@ -22,7 +22,7 @@ struct TrainingSessionHeaderCard: View {
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
-                Text("Players: " + "\(trainingSession.playersAssisting.count)")
+                Text("players_title".localized(LocalizationService.shared.language) + "\(trainingSession.playersAssisting.count)")
                     .font(.system(size: 15))
                     .foregroundColor(.black)
             }

@@ -1,0 +1,167 @@
+/* 
+  Localizable.strings
+  CoachingBook
+
+  Created by Alba Torra Di Capua on 10/4/22.
+  
+*/
+
+//MARK: - Login Screen
+"user_login" = "Usuario";
+"password_login" = "Contraseña";
+"login_signIn" = "Entrar";
+
+//MARK: - Menu
+"menu_home" = "Principal";
+"menu_profile" = "Perfil";
+"menu_team" = "Equipo";
+"menu_calendar" = "Calendario";
+"menu_settings" = "Ajustes";
+"menu_logout" = "Salir";
+
+//MARK: - Coach Screen
+"coach_profile" = "Perfil";
+"coach_dashboard" = "Panel";
+"coach_feedback_events" = "Eventos feedback";
+"coach_contacts" = "Contactos";
+"coach_logout" = "Salir";
+"remove_account" = "Eliminar cuenta";
+
+//Coach Information
+"coach_information" = "Informacion entrenador";
+"coach_basic_information" = "Informacion basica";
+"coach_surname" = "Apellido";
+"coach_full_name" = "Nombre completo";
+"coach_dateOfBirth" = "Año de nacimiento";
+"choose_title" = "Escoger";
+"coach_gender" = "Genero";
+"coach_gender_male" = "Hombre";
+"coach_gender_female" = "Mujer";
+"coach_contact_detail" = "Detalles de contacto";
+"coach_mobile_number" = "Numero de telefono";
+"coach_email" = "Email";
+
+"coach_dashboard_title" = "Empieza tu preparacion";
+"coach_dashboard_subtitle" = "Empieza a preparar tus sesiones para estar preparado para la fecha.";
+
+//Training
+"training_preparation" = "Preparacion entrenamiento";
+"games_uppercased" = "PARTIDOS";
+"sessions_uppercased" = "SESIONES";
+"training_uppercased" = "ENTRENAMIENTOS";
+"training_information" = "Informacion";
+"training_objects_needed" = "Objetos necesarios";
+"training_information_title" = "Informacion";
+"objects_needed_title" = "Objetos necesarios";
+"Indoor_Outdoor_title" ="Indoor/Outdoor";
+"players_title" ="Jugadores: ";
+"Indoor_title" ="Indoor";
+"Outdoor_title" ="Outdoor";
+"importance_level_title" = "Nivel de importancia";
+"training_players_information" = "Informacion de jugadores";
+"assistant_players_title" = "Jugadores que asistiran";
+"non_assistant_players_title" = "Jugadores que no asistiran";
+"actions_title" = "Acciones";
+"cancel_session_title" = "Cancelar sesion";
+
+//Objects needed
+"objects_selection_title" = "Seleccion de objetos";
+"objects_selection_subtitle" = "Selecciona todos los objetos que necesitaras para la sesion de entrenamiento. \nEscribe el numero que necesitaras.";
+"objects_select_numer" = "Write the number needed";
+"object_cone_title" = "Conos";
+"object_bench_title" = "Bancos";
+"object_ladder_title" = "Escaleras";
+"object_ring_title" = "Aros";
+"object_tennis_ball_title" = "Pelotas de tenis";
+"object_bibs_vest_title" = "Chalecos";
+
+//Player selection
+"assistant_players_title" = "Jugadores que asistiran";
+"player_selection_title" = "Seleccion de jugadores";
+"player_selection_subtitle" = "Marca con un tick los jugadores que van a asistir a la sesion";
+"non_assistant_players_title" = "Jugadores que no asistiran";
+"non_player_selection_title" = "Jugadores que no asistiran a la sesion";
+"non_player_selection_subtitle" = "Introduce la razon por la cual no asistirán uno por uno.";
+
+//Reason for non attending
+"for_non_attendance_reason_title" = "Razon por no atender";
+"non_attendance_reason_title" = "Razon por no atender";
+"non_attendance_reason_subtitle" = "Selecciona la razon o explica el porque el jugador no asistirá.";
+"reason_injurie" = "Lesion / Enfermedad";
+"reason_appointment" = "Cita";
+"reason_without_explanation" = "Sin explicación";
+
+//Cancel training
+"cancel_training_title" = "Cancel entrenamiento";
+"training_cancellation_title" = "Cancelación de entrenamiento";
+"training_cancellation_subtitle" = "Escoge la razon por la cual el entrenamiento se ha cancelado.";
+"reason_rain_title" = "Lluvia";
+"reason_vacation_title" = "Vacaciones";
+"reason_injuries_title" = "Lesiones";
+"write_reason_title" = "Escribe la razon";
+
+//Match
+"match_preparation" = "Preparacion del partido";
+"select_number_periods" = "Selecciona el numero de periodos";
+"cancel_match_title" = "Cancelar partido";
+"match_cancellation_title" = "Cancelación partido";
+"match_cancellation_team" = "Escoge el equipo que ha cancelado el partido:";
+"match_cancellation_reason" = "Selecciona la razon por la cual se ha cancelado:";
+"prepare_entries_title" = "Preparar salidas";
+"match_entries_title" = "Salidas del partido";
+"match_entries_subtitle" = "Prepara las salidas para el partido. \nSelecciona 5 jugadores para cada uno de los periodos.";
+
+//Contacts
+"contacts_title" = "Contactos";
+"list_of_contacts_title" = "Lista de contactos";
+"favourites_title" = "Favoritos";
+"list_of_favourites_title" = "Lista de favoritos";
+"contact_information_title" = "Informacion de contacto";
+"add_contact_title" = "Añadir contacto";
+"relation_player_title" = "Relación con el jugador";
+"contact_name_title" = "Nombre";
+"contact_phone_title" = "Numero de telefono";
+"contact_gender_title" = "Genero";
+"contact_city_title" = "Ciudad";
+"contact_email_title" = "Email";
+"contact_relation_title" = "Selecciona el tipo de relacion";
+"contact_team_title" = "Selecciona equipo";
+"contact_player_title" = "Selecciona jugador";
+"father_title" = "Padre";
+"mother_title" = "Madre";
+"related_to_title" = "Relacionado con";
+
+//MARK: Settings
+"settings_account_title" = "Cuenta";
+"change_password_title" = "Cambiar contraseña";
+"remove_account_title" = "Eliminar cuenta";
+"settings_notifications_title" = "Notificaciones";
+"settings_language_title" = "Cambiar idioma";
+"settings_news_title" = "Novedades para ti";
+"settings_account_acitivity_title" = "Actividad de la cuenta";
+"settings_update_matches_title" = "Actualizacion en partidos";
+
+//Language
+"settings_language" = "Idioma";
+"settings_language_footer" = "Elija el idioma de la interfaz.";
+
+//MARK: General
+"reason_other_title" = "Otro";
+
+//MARK: Buttons
+"button_remove" = "Eliminar";
+"button_cancel" = "Cancelar";
+"button_log_out" = "Log out";
+"button_done" = "Hecho";
+"button_save" = "Guardar";
+"button_go_uppercased" = "VAMOS";
+"button_save_details" = "Guardar detalles";
+"button_save_reason" = "Guardar razon";
+"button_save_contact" = "Guardar contacto";
+"button_remove_session" = "Eliminar sesion";
+"button_remove_match" = "Eliminar partido";
+"button_remove_contact" = "Eliminar contacto";
+
+//Messages
+"confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";
+"confirmation_log_out" = "Estas seguro que quieres salir?";

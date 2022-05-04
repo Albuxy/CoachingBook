@@ -16,10 +16,12 @@ struct DashboardOnBoardingView: View {
         ZStack {
             VStack(spacing: 0){
                 VStack(spacing: 10){
-                    Text("coach_dashboard_title")
+                    Text("coach_dashboard_title"
+                            .localized(LocalizationService.shared.language))
                         .font(.system(size: 26))
                         .bold()
-                    Text("coach_dashboard_subtitle")
+                    Text("coach_dashboard_subtitle"
+                            .localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
                         .multilineTextAlignment(.center)
                         .lineSpacing(8)
@@ -35,7 +37,7 @@ struct DashboardOnBoardingView: View {
             .padding([.leading, .trailing], 20)
             .background(Color("cremaColor"))
         }
-        .navigationBarTitle(Text("coach_dashboard"), displayMode: .inline)
+        .navigationBarTitle(Text("coach_dashboard".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

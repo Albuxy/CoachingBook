@@ -54,7 +54,7 @@ struct MenuSwitchView: View {
         SettingsView()
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "Settings"))
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_settings"))
       case .logout:
         LoginView()
       }
@@ -77,7 +77,7 @@ struct NavigationBarWithMenuIcon: View {
           .frame(width: 21, height: 21)
       }
       Spacer()
-      Text(LocalizedStringKey(titleBar))
+      Text(titleBar.localized(LocalizationService.shared.language))
         .fontWeight(.semibold)
         .foregroundColor(.black)
     }

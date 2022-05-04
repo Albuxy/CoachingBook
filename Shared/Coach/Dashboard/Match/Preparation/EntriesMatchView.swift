@@ -19,10 +19,10 @@ struct EntriesMatchView: View {
     var body: some View {
         VStack(spacing: 40){
             VStack(spacing: 20){
-                Text("match_entries_title")
+                Text("match_entries_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 24))
                     .bold()
-                Text("match_entries_subtitle")
+                Text("match_entries_subtitle".localized(LocalizationService.shared.language))
                     .font(.system(size: 18))
                     .multilineTextAlignment(.center)
                     .lineSpacing(8)
@@ -38,7 +38,7 @@ struct EntriesMatchView: View {
             Button(action: {
                 presentation.wrappedValue.dismiss()
             }) {
-                Text("button_save_details")
+                Text("button_save_details".localized(LocalizationService.shared.language))
                     .font(.system(size: 16))
                     .bold()
             }.buttonStyle(
@@ -50,7 +50,7 @@ struct EntriesMatchView: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color("greenMediumColor"), Color("greenLightColor")]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("match_entries_title"), displayMode: .inline)
+        .navigationBarTitle(Text("match_entries_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -94,7 +94,6 @@ struct GridStack<Content: View>: View {
 struct RowColumnView: View {
     @State var isChecked:Bool = false
     func toggle(){isChecked = !isChecked}
-
 
     var body: some View {
         Image(systemName: isChecked ? "clear.fill" : "square")

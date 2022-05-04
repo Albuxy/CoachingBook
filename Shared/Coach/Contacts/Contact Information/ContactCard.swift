@@ -49,7 +49,7 @@ struct ContactCard: View {
                             .font(.system(size: 20))
                             .foregroundColor(.black)
                         HStack(spacing: 5){
-                            Text(getStringForRelation(relation: currentContact.relation))
+                            Text(getStringForRelation(relation: currentContact.relation).localized(LocalizationService.shared.language))
                                 .font(.system(size: 18))
                                 .foregroundColor(.gray)
                             Text(currentContact.playerRelated.name)
@@ -76,11 +76,11 @@ struct ContactCard: View {
     func getStringForRelation(relation: RelationTypeWithContact) -> String {
         switch relation {
         case .father:
-            return "Father"
+            return "father_title"
         case .mother:
-            return "Mother"
+            return "mother_title"
         case .other:
-            return "Related to"
+            return "related_to_title"
         }
     }
     

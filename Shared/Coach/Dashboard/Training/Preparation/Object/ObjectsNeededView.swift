@@ -18,13 +18,14 @@ struct ObjectsNeededView: View {
         ZStack {
             VStack(spacing: 20){
                 VStack(spacing: 10){
-                    Text("objects_selection_title")
-                        .font(.system(size: 24))
+                    Text("objects_selection_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 23))
                         .bold()
-                    Text("objects_selection_subtitle")
+                    Text("objects_selection_subtitle".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
+                        .frame(width: UIScreen.main.bounds.width / 1.15, alignment: .leading)
                 }
                 ScrollView {
                     VStack {
@@ -33,13 +34,12 @@ struct ObjectsNeededView: View {
                         }
                     }
                 }
-                .padding(.top, 10)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.60, alignment: .top)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.70, alignment: .top)
                 // MARK: - Button
                 Button(action: {
                     presentation.wrappedValue.dismiss()
                 }) {
-                    Text("button_save_details")
+                    Text("button_save_details".localized(LocalizationService.shared.language))
                         .font(.system(size: 16))
                         .bold()
                 }.buttonStyle(
@@ -53,7 +53,7 @@ struct ObjectsNeededView: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color("blueMediumColor"), Color("blueLightColor")]),
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("objects_needed_title"), displayMode: .inline)
+        .navigationBarTitle(Text("objects_needed_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

@@ -17,16 +17,18 @@ struct NonAssistantPlayersView: View {
 
     var body: some View {
         ZStack {
-            VStack(spacing: 40){
+            VStack(spacing: 30){
                 VStack(alignment: .leading, spacing: 30){
-                    Text("non_player_selection_title")
-                        .font(.system(size: 24))
+                    Text("non_player_selection_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 22))
                         .bold()
+                        .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                     
-                    Text("non_player_selection_subtitle")
+                    Text("non_player_selection_subtitle".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
+                        .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                 }
                 .padding([.leading, .trailing], 20)
                 ScrollView {
@@ -42,7 +44,7 @@ struct NonAssistantPlayersView: View {
                 Button(action: {
                     presentation.wrappedValue.dismiss()
                 }) {
-                    Text("button_done")
+                    Text("button_done".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
                         .bold()
                 }.buttonStyle(
@@ -55,7 +57,7 @@ struct NonAssistantPlayersView: View {
         .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing))
-        .navigationBarTitle(Text("non_assistant_players_title"), displayMode: .inline)
+        .navigationBarTitle(Text("non_assistant_players_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

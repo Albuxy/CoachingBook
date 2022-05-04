@@ -30,7 +30,7 @@ struct ContactInformationView: View {
             VStack(alignment: .center, spacing: 26){
                 if let gender = currentContact.gender {
                     CustomRowInformationContact(title: "contact_gender_title",
-                                                subtitle: getGenderInString(gender: gender))
+                                                subtitle: getGenderInString(gender: gender).localized(LocalizationService.shared.language))
                 }
                 if let city = currentContact.city {
                     CustomRowInformationContact(title: "contact_city_title",
@@ -56,7 +56,7 @@ struct ContactInformationView: View {
                     Image("ic_cancel_red")
                         .resizable()
                         .frame(width: 21, height: 21)
-                    Text("button_remove_contact")
+                    Text("button_remove_contact".localized(LocalizationService.shared.language))
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(.black)
@@ -73,7 +73,7 @@ struct ContactInformationView: View {
                     )
             )
         }
-        .navigationBarTitle(Text("contact_information_title"), displayMode: .inline)
+        .navigationBarTitle(Text("contact_information_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -86,11 +86,11 @@ struct ContactInformationView: View {
     func getGenderInString(gender: Gender) -> String {
         switch gender {
         case .male:
-            return "Male"
+            return "coach_gender_male"
         case .female:
-            return "Female"
+            return "coach_gender_female"
         case .other:
-            return "Other"
+            return "reason_other_title"
         }
     }
 }
@@ -102,7 +102,7 @@ struct CustomRowInformationContact: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            Text(LocalizedStringKey(title))
+            Text(title.localized(LocalizationService.shared.language))
                 .font(.system(size: 20))
                 .foregroundColor(.gray)
             Text(subtitle)

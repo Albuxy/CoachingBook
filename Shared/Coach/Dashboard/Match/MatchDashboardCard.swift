@@ -15,11 +15,11 @@ struct MatchDashboardCard: View {
         VStack(spacing: 15){
             VStack {
                 VStack(alignment: .leading, spacing: 16){
-                    Text("games_uppercased")
+                    Text("games_uppercased".localized(LocalizationService.shared.language))
                         .font(.system(size: 28))
                         .bold()
                         .frame(width: 280, height: 20, alignment: .leading)
-                    Text("sessions_uppercased")
+                    Text("sessions_uppercased".localized(LocalizationService.shared.language))
                         .font(.system(size: 28))
                         .foregroundColor(Color("darkRedColor"))
                         .bold()

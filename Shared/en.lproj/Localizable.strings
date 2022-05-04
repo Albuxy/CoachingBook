@@ -55,6 +55,7 @@
 "objects_needed_title" = "Objects needed";
 "Indoor_Outdoor_title" ="Indoor/Outdoor";
 "Indoor_title" ="Indoor";
+"players_title" ="Players: ";
 "Outdoor_title" ="Outdoor";
 "importance_level_title" = "Importance level";
 "training_players_information" = "Players information";
@@ -66,8 +67,7 @@
 //Objects needed
 "objects_needed_title" = "Objects needed";
 "objects_selection_title" = "Objects selection";
-"objects_selection_subtitle" = "Select all the objects that will be needed for this training session.
-Also write the number of each one of them";
+"objects_selection_subtitle" = "Select all the objects that will be needed for this training session. \nAlso write the number of each one of them.";
 "objects_select_numer" = "Write the number needed";
 "object_cone_title" = "Cones";
 "object_bench_title" = "Benchs";
@@ -82,7 +82,7 @@ Also write the number of each one of them";
 "player_selection_subtitle" = "Mark with a tick the players who will attend to the training";
 "non_assistant_players_title" = "Non-Assistant players";
 "non_player_selection_title" = "Players non attending to the session";
-"non_player_selection_subtitle" = "List of players who do not attend training. \nOne by one enter the reason why they are missing.";
+"non_player_selection_subtitle" = "One by one enter the reason why they are missing.";
 
 //Reason for non attending
 "for_non_attendance_reason_title" = "Reason for non attendance";
@@ -106,8 +106,8 @@ Also write the number of each one of them";
 "select_number_periods" = "Select the number of periods";
 "cancel_match_title" = "Cancel Match";
 "match_cancellation_title" = "Match cancellation";
-"match_cancellation_reason" = "Choose the team who cancelled the match:";
-"match_cancellation_team" = "Select the reason why has been cancelled:";
+"match_cancellation_team" = "Choose the team who cancelled the match:";
+"match_cancellation_reason" = "Select the reason why has been cancelled:";
 "prepare_entries_title" = "Prepare entries";
 "match_entries_title" = "Entries match";
 "match_entries_subtitle" = "Prepare the exits for your party. \nSelect 5 players in each of the periods.";
@@ -128,15 +128,23 @@ Also write the number of each one of them";
 "contact_relation_title" = "Select type of relation";
 "contact_team_title" = "Select team";
 "contact_player_title" = "Select player";
+"father_title" = "Father";
+"mother_title" = "Mother";
+"related_to_title" = "Related to";
 
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";
 "remove_account_title" = "Remove account";
 "settings_notifications_title" = "Notifications";
+"settings_language_title" = "Change language";
 "settings_news_title" = "News for you";
 "settings_account_acitivity_title" = "Account activity";
 "settings_update_matches_title" = "Update in matches";
+
+//Language
+"settings_language" = "Language";
+"settings_language_footer" = "Choose interface language.";
 
 //MARK: General
 "reason_other_title" = "Other";
@@ -146,6 +154,7 @@ Also write the number of each one of them";
 "button_cancel" = "Cancel";
 "button_log_out" = "Log out";
 "button_done" = "Done";
+"button_save" = "Save";
 "button_go_uppercased" = "GO";
 "button_save_details" = "Save details";
 "button_save_reason" = "Save reason";

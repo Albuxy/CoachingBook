@@ -46,8 +46,10 @@ struct TrainingPreparationView: View {
                                   ButtonWithArrow(nameButton: "objects_needed_title", booleanToChange: $navigateToObjectsNeeded)
                               }
                             )
-                            DropDownViewDown(title: "Indoor_Outdoor_title", value: $selectedOptionIndoorOutdoor)
-                            DropDownViewLeft(title: "importance_level_title", placeHolder: !currentTraining.importanceLevel.isEmpty ? currentTraining.importanceLevel : "None", value: $importanceLevel)
+                            DropDownViewDown(title: "Indoor_Outdoor_title",
+                                             value: $selectedOptionIndoorOutdoor)
+                            DropDownViewLeft(title: "importance_level_title",
+                                             placeHolder: !currentTraining.importanceLevel.isEmpty ? currentTraining.importanceLevel : "None", value: $importanceLevel)
                         }
                         VStack(spacing: 20){
                             TitleWithLineView(title: "training_players_information")
@@ -86,7 +88,7 @@ struct TrainingPreparationView: View {
         }
         .padding(.top, 60)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
-        .navigationBarTitle(Text("training_preparation"), displayMode: .inline)
+        .navigationBarTitle(Text("training_preparation".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -103,7 +105,7 @@ struct TitleWithLineView: View {
 
     var body: some View {
         VStack {
-            Text(LocalizedStringKey(title))
+            Text(title.localized(LocalizationService.shared.language))
                 .font(.system(size: 19))
                 .bold()
                 .frame(width: UIScreen.main.bounds.width / 1.30, alignment: .leading)
@@ -124,7 +126,7 @@ struct ButtonWithArrow: View {
             booleanToChange.toggle()
         }) {
             HStack(){
-                Text(LocalizedStringKey(nameButton))
+                Text(nameButton.localized(LocalizationService.shared.language))
                     .font(.system(size: 18))
                     .foregroundColor(.black)
                 Spacer()
@@ -144,7 +146,7 @@ struct TextWithCounter: View {
 
     var body: some View {
         HStack{
-            Text(LocalizedStringKey(title))                           .font(.system(size: 18))
+            Text(title.localized(LocalizationService.shared.language))                     .font(.system(size: 18))
                 .foregroundColor(.black)
             Spacer()
             Text("\(number)")
@@ -173,7 +175,9 @@ struct DropDownView: View {
         } label: {
             VStack(spacing: 5){
                 HStack{
-                    Text(value.isEmpty ? placeholder : value)
+                    Text(value.isEmpty
+                         ? placeholder.localized(LocalizationService.shared.language)
+                         : value.localized(LocalizationService.shared.language))
                         .foregroundColor(value.isEmpty ? .gray : .black)
                     Spacer()
                     Image(systemName: "chevron.down")
@@ -201,7 +205,7 @@ struct DropDownViewDown: View {
                 .foregroundColor(.black)
                 .frame(width: 320, alignment: .leading)
             DropDownView(value: $value,
-                         placeholder: "Choose",
+                         placeholder: "choose_title",
                          dropDownList: ["Indoor", "Outdoor"])
                 .frame(width: UIScreen.main.bounds.width / 1.30, height: 40)
         }

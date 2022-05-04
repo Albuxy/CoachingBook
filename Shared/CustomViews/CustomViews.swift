@@ -79,10 +79,10 @@ struct RadioButtonWithName: View {
 
     var body: some View {
         Button(action:{
-            self.callback(self.title)
+            self.callback(self.title.localized(LocalizationService.shared.language))
         }) {
             HStack(alignment: .center) {
-                Text(LocalizedStringKey(title))
+                Text(title.localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(Font.system(size: 20))
                 Spacer()

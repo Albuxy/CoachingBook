@@ -17,7 +17,7 @@ struct CoachCard: View {
         ZStack{
             VStack(alignment: .trailing, spacing: -5){
                 NavigationLink(
-                    destination: CoachInformationScreen(),
+                  destination: CoachInformationScreen(),
                   isActive: $navigateToPersonalInformation,
                   label: {
                       Button(action: {

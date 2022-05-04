@@ -14,7 +14,7 @@ struct Match: Identifiable {
     var title: String
     var date: String
     var imageTeam1: String = "ic_team"
-    var imageTeam2: String = "ic_team"
+    var imageTeam2: String = "ic_team2"
     var playersAssisting: [Player]
     var playersNonAssisting: [Player]
     var importanceLevel: String = "Medium"

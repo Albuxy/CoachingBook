@@ -67,7 +67,7 @@ struct CustomRowContact: View {
                               .font(.system(size: 21))
                               .foregroundColor(.black)
                           HStack(spacing: 5){
-                              Text(getStringForRelation(relation: contact.relation))
+                              Text(getStringForRelation(relation: contact.relation).localized(LocalizationService.shared.language))
                                   .font(.system(size: 18))
                                   .foregroundColor(.gray)
                               Text(contact.playerRelated.name)
@@ -97,11 +97,11 @@ struct CustomRowContact: View {
     func getStringForRelation(relation: RelationTypeWithContact) -> String {
         switch relation {
         case .father:
-            return "Father"
+            return "father_title"
         case .mother:
-            return "Mother"
+            return "mother_title"
         case .other:
-            return "Related to"
+            return "related_to_title"
         }
     }
 

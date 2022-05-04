@@ -19,7 +19,7 @@ struct ObjectCard: View {
                 Image(item.imageObject)
                     .resizable()
                     .frame(width: 41, height: 41)
-                Text(LocalizedStringKey(item.titleObject))
+                Text(item.titleObject.localized(LocalizationService.shared.language))
                 Spacer()
                 Button {
                     isSelected.toggle()
@@ -34,7 +34,7 @@ struct ObjectCard: View {
             .padding()
             if isSelected {
                 VStack{
-                    Text("objects_select_numer")
+                    Text("objects_select_numer".localized(LocalizationService.shared.language))
                         .font(.system(size: 14))
                         .foregroundColor(.black)
                     TextField("0", text: $number_selected)

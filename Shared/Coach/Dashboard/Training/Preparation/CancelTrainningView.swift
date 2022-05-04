@@ -19,43 +19,47 @@ struct CancelTrainningView: View {
         ZStack {
             VStack(spacing: 40){
                 VStack(spacing: 20){
-                    Text("training_cancellation_title")
-                        .font(.system(size: 24))
+                    Text("training_cancellation_title"
+                            .localized(LocalizationService.shared.language))
+                        .font(.system(size: 23))
                         .bold()
-                        .frame(width: UIScreen.main.bounds.width / 1.28, alignment: .leading)
-                    Text("training_cancellation_subtitle")
-                        .font(.system(size: 18))
+                        .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
+                    Text("training_cancellation_subtitle"
+                            .localized(LocalizationService.shared.language))
+                        .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
+                        .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                 }
                 VStack(spacing: 30){
-                    RadioButtonWithName(title: LocalizedStringKey("reason_rain_title").toString(),
+                    RadioButtonWithName(title: "reason_rain_title",
                                         color: Color("brownDarkColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Rain" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_rain_title".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
-                    RadioButtonWithName(title: LocalizedStringKey("reason_vacation_title").toString(),
+                    RadioButtonWithName(title: "reason_vacation_title",
                                         color: Color("brownDarkColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Vacation" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_vacation_title".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
-                    RadioButtonWithName(title: LocalizedStringKey("reason_injuries_title").toString(),
+                    RadioButtonWithName(title: "reason_injuries_title",
                                         color: Color("brownDarkColor"),
-                                        booleanToChange: $reasonSelected.wrappedValue == "Injuries" ? true : false,
+                                        booleanToChange: $reasonSelected.wrappedValue == "reason_injuries_title".localized(LocalizationService.shared.language) ? true : false,
                                         callback: { selected in
                                             self.reasonSelected = selected
                                         })
                     VStack(spacing: 10){
-                        RadioButtonWithName(title: LocalizedStringKey("reason_other_title").toString(),
+                        RadioButtonWithName(title: "reason_other_title",
                                             color: Color("brownDarkColor"),
-                                            booleanToChange: $reasonSelected.wrappedValue == "Other" ? true : false,
+                                            booleanToChange: $reasonSelected.wrappedValue == "reason_other_title".localized(LocalizationService.shared.language) ? true : false,
                                             callback: { selected in
                                                 self.reasonSelected = selected
                                             })
-                        if reasonSelected == "Other" {
-                            TextField(LocalizedStringKey("write_reason_title").toString(), text: $otherReasonSelected)
+                        if reasonSelected == "reason_other_title".localized(LocalizationService.shared.language) {
+                            TextField("write_reason_title"
+                                        .localized(LocalizationService.shared.language), text: $otherReasonSelected)
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width / 1.28, height: 100, alignment: .top)
                                 .background(
@@ -73,7 +77,8 @@ struct CancelTrainningView: View {
                     Button(action: {
                         presentation.wrappedValue.dismiss()
                     }) {
-                        Text("cancel_training_title")
+                        Text("cancel_training_title"
+                                .localized(LocalizationService.shared.language))
                             .font(.system(size: 16))
                             .bold()
                     }.buttonStyle(
@@ -86,7 +91,7 @@ struct CancelTrainningView: View {
         .padding(.top, 50)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
         .background(LinearGradient(gradient: Gradient(colors: [Color("orangeDarkColor"), Color("orangeLightColor")]), startPoint: .leading, endPoint: .trailing))
-        .navigationBarTitle(Text("cancel_training_title"), displayMode: .inline)
+        .navigationBarTitle(Text("cancel_training_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {

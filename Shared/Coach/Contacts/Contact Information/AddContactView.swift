@@ -43,8 +43,8 @@ struct AddContactView: View {
                                                imageString: "ic_name",
                                                stringTextField: $name)
                             DropDownOptionsField(imageString: "",
-                                                 placeholder: "Gender",
-                                                 dropDownList: ["Male", "Female", "Other"],
+                                                 placeholder: "contact_gender_title",
+                                                 dropDownList: ["coach_gender_male", "coach_gender_female", "reason_other_title"],
                                                  value: $gender)
                             ImageWithTextField(defaultString: "contact_phone_title",
                                                imageString: "ic_phone",
@@ -61,7 +61,7 @@ struct AddContactView: View {
                         VStack(spacing: 30){
                             DropDownOptionsField(imageString: "ic_typeRelation",
                                                  placeholder: "contact_relation_title",
-                                                 dropDownList: ["Other", "Mother", "Father"],
+                                                 dropDownList: ["reason_other_title", "mother_title", "father_title"],
                                                  value: $relation)
                             DropDownOptionsField(imageString: "ic_selectTeam",
                                                  placeholder: "contact_team_title",
@@ -85,7 +85,7 @@ struct AddContactView: View {
                     coach.contacts.append(newContact)
                     presentation.wrappedValue.dismiss()
                 } label: {
-                    Text("button_save_contact")
+                    Text("button_save_contact".localized(LocalizationService.shared.language))
                         .font(.system(size: 16))
                         .bold()
                 }.buttonStyle(
@@ -95,7 +95,7 @@ struct AddContactView: View {
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1)
         .background(Color("lightBlueColor"))
-        .navigationBarTitle(Text("add_contact_title"), displayMode: .inline)
+        .navigationBarTitle(Text("add_contact_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
@@ -106,9 +106,9 @@ struct AddContactView: View {
     }
                        
     func changeToGender(gender: String) -> Gender {
-        if gender == "Male" {
+        if gender == "coach_gender_male".localized(LocalizationService.shared.language) {
             return .male
-        } else if gender == "Female" {
+        } else if gender == "coach_gender_female".localized(LocalizationService.shared.language) {
             return .female
         } else {
             return .other
@@ -116,9 +116,9 @@ struct AddContactView: View {
     }
     
     func changeToRelation(relation: String) -> RelationTypeWithContact {
-        if relation == "Father" {
+        if relation == "father_title".localized(LocalizationService.shared.language) {
             return .father
-        } else if relation == "Mother" {
+        } else if relation == "mother_title".localized(LocalizationService.shared.language) {
             return .mother
         } else {
             return .other
@@ -135,7 +135,7 @@ struct AddContactView: View {
 
 struct ImageWithTextField: View {
     
-    var defaultString: LocalizedStringKey
+    var defaultString: String
     var imageString: String
     @Binding var stringTextField: String
     
@@ -144,7 +144,7 @@ struct ImageWithTextField: View {
             Image(imageString)
                 .resizable()
                 .frame(width: 32, height: 32)
-            TextField(defaultString.toString(), text: $stringTextField)
+            TextField(defaultString.localized(LocalizationService.shared.language), text: $stringTextField)
                 .padding()
                 .frame(width: 265, height: 45, alignment: .leading)
                 .background(
@@ -178,7 +178,7 @@ struct ImageWithTextField: View {
 struct DropDownOptionsField: View {
     
     var imageString: String
-    var placeholder: LocalizedStringKey
+    var placeholder: String
     var dropDownList: [String]
     @Binding var value: String
 
@@ -189,14 +189,14 @@ struct DropDownOptionsField: View {
                 .frame(width: 32, height: 32)
             Menu {
                 ForEach(dropDownList, id: \.self){ client in
-                    Button(client) {
+                    Button(client.localized(LocalizationService.shared.language)) {
                         self.value = client
                     }
                 }
             } label: {
                 VStack(spacing: 5){
                     HStack{
-                        Text(value.isEmpty ? placeholder.toString() : value)
+                        Text(value.isEmpty ? placeholder.localized(LocalizationService.shared.language) : value.localized(LocalizationService.shared.language))
                             .foregroundColor(value.isEmpty ? .gray : .black)
                         Spacer()
                         Image(systemName: "chevron.down")

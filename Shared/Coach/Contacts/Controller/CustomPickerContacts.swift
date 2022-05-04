@@ -58,7 +58,7 @@ struct SegmentButton: View {
     Button(action: {
       self.selection.showSection = self.selectionIndex
     }) {
-      Text(LocalizedStringKey(text))
+      Text(text.localized(LocalizationService.shared.language))
         .font(.system(size: 14))
         .frame(width: 126, height: 30, alignment: /*@START_MENU_TOKEN@*/ .center /*@END_MENU_TOKEN@*/)
     }
