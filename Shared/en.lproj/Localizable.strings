@@ -135,6 +135,10 @@
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";
+"change_password_subtitle" = "Set the new password for your accound and you can access all the feature";
+"current_password" = "Current password";
+"new_password" = "New password";
+"confirm_password" = "Confirm password";
 "remove_account_title" = "Remove account";
 "settings_notifications_title" = "Notifications";
 "settings_language_title" = "Change language";

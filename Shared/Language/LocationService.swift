@@ -29,3 +29,8 @@ class LocalizationService {
         }
     }
 }
+
+enum Language: String {
+    case english_us = "en"
+    case spanish = "es"
+}

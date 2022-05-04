@@ -14,7 +14,7 @@ struct TextFieldGeneral: View {
     @Binding var stringTextField: String
 
     var body: some View {
-        TextField(LocalizedStringKey(defaultTextFiled), text: $stringTextField)
+        TextField(defaultTextFiled.localized(LocalizationService.shared.language), text: $stringTextField)
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
             .padding()
@@ -41,13 +41,20 @@ struct TextFieldGeneral: View {
 
 struct SecureFieldGeneral: View {
 
-    var defaultTextFiled: LocalizedStringKey
+    var defaultTextFiled: String
     @Binding var stringTextField: String
 
     var body: some View {
-        SecureField(defaultTextFiled, text: $stringTextField)
+        SecureField(defaultTextFiled.localized(LocalizationService.shared.language), text: $stringTextField)
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color("lightGrayColor"), lineWidth: 1)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.white)
+                    )
+            )
             .padding()
             .overlay(
                 HStack {

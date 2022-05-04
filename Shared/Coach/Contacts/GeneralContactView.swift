@@ -51,7 +51,7 @@ struct GeneralContactView: View {
                   }) {
                     Image(systemName: "person.fill.badge.plus")
                         .resizable()
-                        .frame(width: 30, height: 30)
+                        .frame(width: 25, height: 25)
                         .foregroundColor(.black)
                 }
               }

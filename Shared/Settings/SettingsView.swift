@@ -26,8 +26,14 @@ struct SettingsView: View {
                     TitleWithLineSettings(imageString: "ic_account_blue",
                                           title: "settings_account_title".localized(language))
                     VStack(spacing: 20) {
-                        ButtonWithArrow(nameButton: "change_password_title".localized(language),
-                                        booleanToChange: $navigateToChangePassword)
+                        NavigationLink(
+                          destination: ChangePasswordView(),
+                          isActive: $navigateToChangePassword,
+                          label: {
+                              ButtonWithArrow(nameButton: "change_password_title".localized(language),
+                                              booleanToChange: $navigateToChangePassword)
+                          }
+                        )
                         ButtonWithArrow(nameButton: "remove_account_title".localized(language),
                                         booleanToChange: $navigateToRemoveAccount)
                         DropDownLanguageView(title: "settings_language_title",
@@ -50,13 +56,14 @@ struct SettingsView: View {
             }
         }
         .padding(.top, 120)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.2 ,alignment: .top)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height ,alignment: .top)
+        .background(Color("lightBlueColor"))
     }
     
     func getStringForLanguage(language: Language) -> String{
         switch language {
         case .english_us:
-            return "English (US)"
+            return "English"
         case .spanish:
             return "Español"
         }
@@ -119,7 +126,7 @@ struct DropDownLanguageView: View {
                 Button {
                     LocalizationService.shared.language = .english_us
                 } label: {
-                    Text("English (US)")
+                    Text("English")
                 }
                 Button {
                     LocalizationService.shared.language = .spanish
@@ -131,21 +138,28 @@ struct DropDownLanguageView: View {
                     HStack{
                         Text(language)
                             .foregroundColor(.black)
+                        Spacer()
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(Color.black)
+                            .font(Font.system(size: 18))
+                            .padding(.trailing, -10)
                     }
                     .padding(.horizontal)
                 }
                 .padding(8)
                 .frame(width: 150)
-                .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(Color.black.opacity(0.7), lineWidth: 1)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.white)
+                        )
+                )
             }
         }
         .frame(width: UIScreen.main.bounds.width / 1.3, height: 40)
     }
-}
-
-enum Language: String {
-    case english_us = "en"
-    case spanish = "es"
 }
 
 struct SettingsView_Previews: PreviewProvider {

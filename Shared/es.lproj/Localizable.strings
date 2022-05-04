@@ -129,11 +129,15 @@
 "contact_player_title" = "Selecciona jugador";
 "father_title" = "Padre";
 "mother_title" = "Madre";
-"related_to_title" = "Relacionado con";
+"related_to_title" = "No definido";
 
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";
+"change_password_subtitle" = "Establezca la nueva contraseña para su cuenta y podrá acceder a todas las funciones.";
+"current_password" = "Contraseña actual";
+"new_password" = "Nueva contraseña";
+"confirm_password" = "Confirma contraseña";
 "remove_account_title" = "Eliminar cuenta";
 "settings_notifications_title" = "Notificaciones";
 "settings_language_title" = "Cambiar idioma";

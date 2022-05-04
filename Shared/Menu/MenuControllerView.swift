@@ -16,7 +16,6 @@ struct MenuControllerView: View {
           GeometryReader { _ in
             MenuSwitchView(menuModel: menuModel, userMenuEntry: $menuModel.showSection)
           }
-          .background(Color.gray.opacity(0.3))
           .opacity(self.menuModel.showMenu ? 0.1 : 1.0)
           .onTapGesture {
             self.menuModel.showMenu = false
