@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ButtonGeneralStyle: ButtonStyle {
+struct SmallButtonStyle: ButtonStyle {
     var textColor: Color
     var backgroundColor: Color
     var disabled: Bool
@@ -21,5 +21,35 @@ struct ButtonGeneralStyle: ButtonStyle {
             .background(backgroundColor)
             .cornerRadius(12.0)
             .disabled(disabled)
+    }
+}
+
+struct MediumButtonStyle: ButtonStyle {
+    var textColor: Color
+    var backgroundColor: Color
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(textColor)
+            .padding()
+            .frame(width: UIScreen.main.bounds.width / 1.25, height: 40)
+            .background(backgroundColor)
+            .cornerRadius(8.0)
+            .disabled(false)
+    }
+}
+
+struct SuperSmallButtonStyle: ButtonStyle {
+    var textColor: Color
+    var backgroundColor: Color
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(textColor)
+            .padding()
+            .frame(width: 80, height: 26)
+            .background(backgroundColor)
+            .cornerRadius(8.0)
+            .disabled(false)
     }
 }
