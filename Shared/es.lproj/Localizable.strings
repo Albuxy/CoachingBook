@@ -136,6 +136,13 @@
 "team_players_title" = "Jugadores";
 "team_stats_title" = "Estadisticas";
 "team_events_title" = "Eventos";
+"list_of_players_title" = "Lista de jugadores";
+"position_title" = "Posicion: ";
+"position_base" = "Base";
+"position_escolta" = "Escolta";
+"position_alero" = "Alero";
+"position_alapivot" = "Ala-pivot";
+"position_pivot" = "Pivot";
 
 //MARK: Settings
 "settings_account_title" = "Cuenta";

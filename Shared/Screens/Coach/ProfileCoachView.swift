@@ -12,7 +12,7 @@ struct ProfileCoachView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
-    @State var coach = coachData
+    @Binding var coach : Coach
     @StateObject var coachContactsModel = ContactsDetailModel()
 
     @State var navigateToDashboard = false
@@ -107,7 +107,8 @@ struct ButtonProfileScreen: View {
 }
 
 struct ProfileCoachScreen_Previews: PreviewProvider {
+    @State static var value = coachData
     static var previews: some View {
-        ProfileCoachView()
+        ProfileCoachView(coach: $value)
     }
 }

@@ -39,9 +39,15 @@ struct TeamPrincipalView: View {
                     ButtonCardTeamView(title: "team_title",
                                        imageString: "ic_info_team",
                                        booleanToChange: $navigateToTeamScreen)
-                    ButtonCardTeamView(title: "team_players_title",
-                                       imageString: "ic_players_team",
-                                       booleanToChange: $navigateToPlayersScreen)
+                    NavigationLink(
+                      destination: ListPlayersView(listOfPlayers: team.players),
+                      isActive: $navigateToPlayersScreen,
+                      label: {
+                          ButtonCardTeamView(title: "team_players_title",
+                                             imageString: "ic_players_team",
+                                             booleanToChange: $navigateToPlayersScreen)
+                      }
+                    )
                 }
                 HStack(spacing: 40){
                     ButtonCardTeamView(title: "team_stats_title",
@@ -53,7 +59,8 @@ struct TeamPrincipalView: View {
                 }
             }
         }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
+        .padding(.top, 94)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
     }
 }

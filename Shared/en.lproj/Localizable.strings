@@ -137,6 +137,13 @@
 "team_players_title" = "Players";
 "team_stats_title" = "Stats";
 "team_events_title" = "Events";
+"list_of_players_title" = "List of players";
+"position_title" = "Position: ";
+"position_base" = "Point guard";
+"position_escolta" = "Shooting guard";
+"position_alero" = "Small forward";
+"position_alapivot" = "Power forward";
+"position_pivot" = "Center";
 
 //MARK: Settings
 "settings_account_title" = "Account";

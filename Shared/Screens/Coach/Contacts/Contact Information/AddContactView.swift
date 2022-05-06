@@ -28,7 +28,7 @@ struct AddContactView: View {
         team.name
     }
     
-    let playersList: [String] = playersData1.map { player in
+    let playersList: [String] = playersData.map { player in
         player.name
     }
     
@@ -218,30 +218,6 @@ struct DropDownOptionsField: View {
         }
     }
 }
-
-let playersData1: [Player] = [
-    Player(name: "Name 1",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 2",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 3",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 4",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 5",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 6",
-           surname: "Player",
-           image: "ic_player"),
-    Player(name: "Name 7",
-           surname: "Player",
-           image: "ic_player")
-]
 
 struct AddContactView_Previews: PreviewProvider {
     @State static var coach = coachData

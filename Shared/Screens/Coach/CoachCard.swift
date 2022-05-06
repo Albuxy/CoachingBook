@@ -70,7 +70,8 @@ struct CoachCard: View {
 }
 
 struct CoachCard_Previews: PreviewProvider {
+    @State static var value = coachData
     static var previews: some View {
-        ProfileCoachView()
+        ProfileCoachView(coach: $value)
     }
 }
