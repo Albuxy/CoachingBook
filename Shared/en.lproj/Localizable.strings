@@ -132,6 +132,12 @@
 "mother_title" = "Mother";
 "related_to_title" = "Related to";
 
+//MARK: Team
+"team_title" = "Team";
+"team_players_title" = "Players";
+"team_stats_title" = "Stats";
+"team_events_title" = "Events";
+
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";
@@ -167,6 +173,7 @@
 "button_remove_session" = "Remove session";
 "button_remove_match" = "Remove match";
 "button_remove_contact" = "Remove contact";
+"button_remove_team" = "Remove team";
 
 //Messages
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";

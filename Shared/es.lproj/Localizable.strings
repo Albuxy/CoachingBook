@@ -131,6 +131,12 @@
 "mother_title" = "Madre";
 "related_to_title" = "No definido";
 
+//MARK: Team
+"team_title" = "Equipo";
+"team_players_title" = "Jugadores";
+"team_stats_title" = "Estadisticas";
+"team_events_title" = "Eventos";
+
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";
@@ -167,6 +173,7 @@
 "button_remove_session" = "Eliminar sesion";
 "button_remove_match" = "Eliminar partido";
 "button_remove_contact" = "Eliminar contacto";
+"button_remove_team" = "Eliminar equipo";
 
 //Messages
 "confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";

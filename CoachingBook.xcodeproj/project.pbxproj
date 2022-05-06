@@ -84,6 +84,7 @@
 		84AD5A0D2822A971007EACDE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A0C2822A970007EACDE /* LocationService.swift */; };
 		84AD5A102822E01A007EACDE /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A0F2822E01A007EACDE /* ChangePasswordView.swift */; };
 		84AD5A122822EBDF007EACDE /* RemoveAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A112822EBDF007EACDE /* RemoveAccountView.swift */; };
+		84AD5A1928255E83007EACDE /* TeamPrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */; };
 		84AED8C22815B5DF00F98A7C /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C12815B5DF00F98A7C /* PlayerModel.swift */; };
 		84AED8C62815BA7C00F98A7C /* AssistantPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C52815BA7C00F98A7C /* AssistantPlayersView.swift */; };
 		84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C72818360500F98A7C /* CheckBoxView.swift */; };
@@ -172,6 +173,7 @@
 		84AD5A0F2822E01A007EACDE /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		84AD5A112822EBDF007EACDE /* RemoveAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAccountView.swift; sourceTree = "<group>"; };
 		84AD5A1328232556007EACDE /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPrincipalView.swift; sourceTree = "<group>"; };
 		84AED8C12815B5DF00F98A7C /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		84AED8C52815BA7C00F98A7C /* AssistantPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantPlayersView.swift; sourceTree = "<group>"; };
 		84AED8C72818360500F98A7C /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 		84AD59F82821B5C3007EACDE /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -464,12 +467,12 @@
 			isa = PBXGroup;
 			children = (
 				84845E2C2814186D0014E4DA /* CoachModel.swift */,
+				84AD59F92821B601007EACDE /* TeamModel.swift */,
+				84AED8C12815B5DF00F98A7C /* PlayerModel.swift */,
 				84845E042812FC720014E4DA /* TrainingModel.swift */,
 				84845E0928133B5D0014E4DA /* MatchModel.swift */,
 				84845E292814039E0014E4DA /* ObjectsModel.swift */,
-				84AED8C12815B5DF00F98A7C /* PlayerModel.swift */,
 				8481AF06282046DE00D59063 /* ContactModel.swift */,
-				84AD59F92821B601007EACDE /* TeamModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
+				84AD5A1928255E83007EACDE /* TeamPrincipalView.swift in Sources */,
 				84845E1A281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

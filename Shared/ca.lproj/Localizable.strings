@@ -131,6 +131,12 @@
 "mother_title" = "Mare";
 "related_to_title" = "No definit";
 
+//MARK: Team
+"team_title" = "Equip";
+"team_players_title" = "Jugadors";
+"team_stats_title" = "Estadisticas";
+"team_events_title" = "Events";
+
 //MARK: Settings
 "settings_account_title" = "Compte";
 "change_password_title" = "Canviar contrasenya";
@@ -166,6 +172,7 @@
 "button_remove_session" = "Eliminar sessio";
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";
+"button_remove_team" = "Eliminar equip";
 
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";
