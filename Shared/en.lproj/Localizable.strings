@@ -1,0 +1,173 @@
+/* 
+  Localizable.strings
+  CoachingBook
+
+  Created by Alba Torra Di Capua on 10/4/22.
+  
+*/
+
+//MARK: - Login Screen
+"user_login" = "User";
+"password_login" = "Password";
+"login_signIn" = "Sign in";
+
+//MARK: - Menu
+"menu_home" = "Home";
+"menu_profile" = "Profile";
+"menu_team" = "Team";
+"menu_calendar" = "Calendar";
+"menu_settings" = "Settings";
+"menu_logout" = "Logout";
+
+//MARK: - Coach Screen
+"coach_profile" = "Profile";
+"coach_dashboard" = "Dashboard";
+"coach_feedback_events" = "Feedback Events";
+"coach_contacts" = "Contacts";
+"coach_logout" = "Logout";
+"remove_account" = "Remove account";
+
+//Coach Information
+"coach_information" = "Coach information";
+"coach_basic_information" = "Basic information";
+"coach_surname" = "Surname";
+"coach_full_name" = "Full Name";
+"coach_dateOfBirth" = "Date of birth";
+"choose_title" = "Choose";
+"coach_gender" = "Gender";
+"coach_gender_male" = "Male";
+"coach_gender_female" = "Female";
+"coach_contact_detail" = "Contact detail";
+"coach_mobile_number" = "Mobile Number";
+"coach_email" = "Email";
+
+"coach_dashboard_title" = "Start your preparation";
+"coach_dashboard_subtitle" = "Start preparing your sessions to be ready for the date.";
+
+//Training
+"training_preparation" = "Training preparation";
+"games_uppercased" = "GAMES";
+"sessions_uppercased" = "SESSIONS";
+"training_uppercased" = "TRAINING";
+"training_information" = "Information";
+"training_objects_needed" = "Objects needed";
+"training_information_title" = "Information";
+"objects_needed_title" = "Objects needed";
+"Indoor_Outdoor_title" ="Indoor/Outdoor";
+"Indoor_title" ="Indoor";
+"players_title" ="Players: ";
+"Outdoor_title" ="Outdoor";
+"importance_level_title" = "Importance level";
+"training_players_information" = "Players information";
+"assistant_players_title" = "Assistant players";
+"non_assistant_players_title" = "Non-Assistant players";
+"actions_title" = "Actions";
+"cancel_session_title" = "Cancel session";
+
+//Objects needed
+"objects_needed_title" = "Objects needed";
+"objects_selection_title" = "Objects selection";
+"objects_selection_subtitle" = "Select all the objects that will be needed for this training session. \nAlso write the number of each one of them.";
+"objects_select_numer" = "Write the number needed";
+"object_cone_title" = "Cones";
+"object_bench_title" = "Benchs";
+"object_ladder_title" = "Ladder";
+"object_ring_title" = "Rings";
+"object_tennis_ball_title" = "Tennis balls";
+"object_bibs_vest_title" = "Bibs Vest";
+
+//Player selection
+"assistant_players_title" = "Assistant players";
+"player_selection_title" = "Players selection";
+"player_selection_subtitle" = "Mark with a tick the players who will attend to the training";
+"non_assistant_players_title" = "Non-Assistant players";
+"non_player_selection_title" = "Players non attending to the session";
+"non_player_selection_subtitle" = "One by one enter the reason why they are missing.";
+
+//Reason for non attending
+"for_non_attendance_reason_title" = "Reason for non attendance";
+"non_attendance_reason_title" = "Reason for non attending";
+"non_attendance_reason_subtitle" = "Select the reason or briefly write the reason why the player is missing.";
+"reason_injurie" = "Injurie / Illness";
+"reason_appointment" = "Appointment";
+"reason_without_explanation" = "Without explanation";
+
+//Cancel training
+"cancel_training_title" = "Cancel Training";
+"training_cancellation_title" = "Training cancellation";
+"training_cancellation_subtitle" = "Choose the reason why the training has been canceled";
+"reason_rain_title" = "Rain";
+"reason_vacation_title" = "Vacation";
+"reason_injuries_title" = "Injuries";
+"write_reason_title" = "Write here the reason";
+
+//Match
+"match_preparation" = "Match preparation";
+"select_number_periods" = "Select the number of periods";
+"cancel_match_title" = "Cancel Match";
+"match_cancellation_title" = "Match cancellation";
+"match_cancellation_team" = "Choose the team who cancelled the match:";
+"match_cancellation_reason" = "Select the reason why has been cancelled:";
+"prepare_entries_title" = "Prepare entries";
+"match_entries_title" = "Entries match";
+"match_entries_subtitle" = "Prepare the exits for your party. \nSelect 5 players in each of the periods.";
+
+//Contacts
+"contacts_title" = "Contacts";
+"list_of_contacts_title" = "List of contacts";
+"favourites_title" = "Favourites";
+"list_of_favourites_title" = "List of favourites";
+"contact_information_title" = "Contact information";
+"add_contact_title" = "Add contact";
+"relation_player_title" = "Relation with player";
+"contact_name_title" = "Name";
+"contact_phone_title" = "Phone number";
+"contact_gender_title" = "Gender";
+"contact_city_title" = "City";
+"contact_email_title" = "Email";
+"contact_relation_title" = "Select type of relation";
+"contact_team_title" = "Select team";
+"contact_player_title" = "Select player";
+"father_title" = "Father";
+"mother_title" = "Mother";
+"related_to_title" = "Related to";
+
+//MARK: Settings
+"settings_account_title" = "Account";
+"change_password_title" = "Change password";
+"change_password_subtitle" = "Set the new password for your accound and you can access all the feature";
+"current_password" = "Current password";
+"new_password" = "New password";
+"confirm_password" = "Confirm password";
+"remove_account_title" = "Remove account";
+"remove_account_subtitle1" = "This action that you are about to perform is destructive and you will not be able to go back.";
+"remove_account_subtitle2" = "Pressing this button, you will  permanently delete your account, including all your stored data.";
+"settings_notifications_title" = "Notifications";
+"settings_language_title" = "Change language";
+"settings_news_title" = "News for you";
+"settings_account_acitivity_title" = "Account activity";
+"settings_update_matches_title" = "Update in matches";
+
+//Language
+"settings_language" = "Language";
+
+//MARK: General
+"reason_other_title" = "Other";
+
+//MARK: Buttons
+"button_remove" = "Remove";
+"button_cancel" = "Cancel";
+"button_log_out" = "Log out";
+"button_done" = "Done";
+"button_save" = "Save";
+"button_go_uppercased" = "GO";
+"button_save_details" = "Save details";
+"button_save_reason" = "Save reason";
+"button_save_contact" = "Save contact";
+"button_remove_session" = "Remove session";
+"button_remove_match" = "Remove match";
+"button_remove_contact" = "Remove contact";
+
+//Messages
+"confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";
+"confirmation_log_out" = "Are you sure you want to log out";
