@@ -145,6 +145,12 @@
 "position_alapivot" = "Power forward";
 "position_pivot" = "Center";
 
+//Player
+"player_information_title" = "Player information";
+"personal_details_title" = "Personal detail";
+"team_details_title" = "Team detail";
+"individual_stats_title" = "Individual stats";
+
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";
@@ -166,6 +172,7 @@
 
 //MARK: General
 "reason_other_title" = "Other";
+"write_title" = "Write";
 
 //MARK: Buttons
 "button_remove" = "Remove";

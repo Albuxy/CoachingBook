@@ -20,9 +20,11 @@ struct EntriesMatchView: View {
         VStack(spacing: 40){
             VStack(spacing: 20){
                 Text("match_entries_title".localized(LocalizationService.shared.language))
+                    .foregroundColor(.black)
                     .font(.system(size: 24))
                     .bold()
                 Text("match_entries_subtitle".localized(LocalizationService.shared.language))
+                    .foregroundColor(.black)
                     .font(.system(size: 18))
                     .multilineTextAlignment(.center)
                     .lineSpacing(8)
@@ -72,6 +74,7 @@ struct GridStack<Content: View>: View {
             ForEach(0 ..< rows, id: \.self) { row in
                 HStack(spacing: 10){
                     Text(playersList[row].name)
+                        .foregroundColor(.black)
                         .font(.system(size: 20))
                     HStack(spacing: -2){
                         ForEach(0 ..< columns, id: \.self) { column in

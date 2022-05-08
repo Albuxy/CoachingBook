@@ -23,11 +23,13 @@ struct ReasonForNonAttendanceView: View {
             VStack(spacing: 50){
                 VStack(spacing: 20){
                     Text("non_attendance_reason_title")
+                        .foregroundColor(.black)
                         .font(.system(size: 24))
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.28, alignment: .leading)
                     Text("non_attendance_reason_subtitle")
                         .font(.system(size: 18))
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
                         .frame(width: UIScreen.main.bounds.width / 1.28, alignment: .leading)
@@ -59,7 +61,10 @@ struct ReasonForNonAttendanceView: View {
                                                 self.reasonSelected = selected
                                             })
                         if reasonSelected == "reason_other_title".localized(LocalizationService.shared.language) {
-                            TextField("write_reason_title".localized(LocalizationService.shared.language), text: $otherReasonSelected)
+                            TextField("", text: $otherReasonSelected)
+                                .foregroundColor(.black)
+                                .placeholder(Text("write_reason_title".localized(LocalizationService.shared.language))
+                                    .foregroundColor(.gray), show: otherReasonSelected.isEmpty)
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width / 1.28, height: 100, alignment: .top)
                                 .background(

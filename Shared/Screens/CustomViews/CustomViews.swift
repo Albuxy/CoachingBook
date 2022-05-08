@@ -14,7 +14,10 @@ struct TextFieldGeneral: View {
     @Binding var stringTextField: String
 
     var body: some View {
-        TextField(defaultTextFiled.localized(LocalizationService.shared.language), text: $stringTextField)
+        TextField("", text: $stringTextField)
+            .foregroundColor(.black)
+            .placeholder(Text(defaultTextFiled.localized(LocalizationService.shared.language))
+                        .foregroundColor(.gray), show: stringTextField.isEmpty)
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
             .padding()
@@ -46,6 +49,9 @@ struct SecureFieldGeneral: View {
 
     var body: some View {
         SecureField(defaultTextFiled.localized(LocalizationService.shared.language), text: $stringTextField)
+            .foregroundColor(.black)
+            .placeholder(Text(defaultTextFiled.localized(LocalizationService.shared.language))
+                    .foregroundColor(.gray), show: stringTextField.isEmpty)
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 10)

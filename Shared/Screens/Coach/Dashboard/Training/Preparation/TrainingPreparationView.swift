@@ -85,6 +85,7 @@ struct TrainingPreparationView: View {
                 .frame(height: 510)
                 RemoveButton(stringButton: "button_remove_session", booleanToChange: $removeTraining)
             }
+            .background(.white)
         }
         .padding(.top, 60)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
@@ -106,6 +107,7 @@ struct TitleWithLineView: View {
     var body: some View {
         VStack {
             Text(title.localized(LocalizationService.shared.language))
+                .foregroundColor(.black)
                 .font(.system(size: 19))
                 .bold()
                 .frame(width: UIScreen.main.bounds.width / 1.30, alignment: .leading)

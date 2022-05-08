@@ -21,9 +21,11 @@ struct TeamPrincipalView: View {
             HStack(spacing: 100){
                 VStack(alignment: .leading, spacing: 20){
                     Text(team.name)
+                        .foregroundColor(.black)
                         .font(.system(size: 30))
                         .bold()
                     Text(team.category)
+                        .foregroundColor(.black)
                         .font(.system(size: 21))
                 }
                 Image(team.logoString)

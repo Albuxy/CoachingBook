@@ -22,11 +22,13 @@ struct ChangePasswordView: View {
                 VStack(spacing: 30){
                     Text("change_password_title"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.30, alignment: .leading)
                     Text("change_password_subtitle"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
@@ -55,6 +57,7 @@ struct ChangePasswordView: View {
         .padding(.top, 90)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("lightBlueColor").opacity(0.7))
+        .background(.white)
         .navigationBarTitle(Text("change_password_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(

@@ -144,7 +144,10 @@ struct ImageWithTextField: View {
             Image(imageString)
                 .resizable()
                 .frame(width: 32, height: 32)
-            TextField(defaultString.localized(LocalizationService.shared.language), text: $stringTextField)
+            TextField("", text: $stringTextField)
+                .foregroundColor(Color.black)
+                .placeholder(Text(defaultString.localized(LocalizationService.shared.language))
+                            .foregroundColor(.gray), show: stringTextField.isEmpty)
                 .padding()
                 .frame(width: 265, height: 45, alignment: .leading)
                 .background(

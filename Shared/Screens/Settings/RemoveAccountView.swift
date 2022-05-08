@@ -21,17 +21,20 @@ struct RemoveAccountView: View {
                 VStack(spacing: 50){
                     Text("remove_account_title"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.25, alignment: .leading)
                     Text("remove_account_subtitle1"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
                         .frame(width: UIScreen.main.bounds.width / 1.25, alignment: .leading)
                     Text("remove_account_subtitle2"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
@@ -83,6 +86,7 @@ struct RemoveAccountView: View {
         .padding(.top, 90)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("lightBlueColor").opacity(0.7))
+        .background(.white)
         .navigationBarTitle(Text("remove_account_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(

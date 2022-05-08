@@ -22,10 +22,12 @@ struct CancelMatchView: View {
             VStack(spacing: 40){
                 VStack(spacing: 20){
                     Text("match_cancellation_title".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.28, alignment: .center)
                     Text("match_cancellation_team".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
@@ -45,6 +47,7 @@ struct CancelMatchView: View {
                 }
                 VStack(spacing: 30){
                     Text("match_cancellation_reason".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
@@ -78,7 +81,10 @@ struct CancelMatchView: View {
                                                 self.reasonSelected = selected
                                             })
                         if reasonSelected == "reason_other_title".localized(LocalizationService.shared.language) {
-                            TextField("write_reason_title".localized(LocalizationService.shared.language), text: $otherReasonSelected)
+                            TextField("", text: $otherReasonSelected)
+                                .foregroundColor(.black)
+                                .placeholder(Text("write_reason_title".localized(LocalizationService.shared.language))
+                                .foregroundColor(.gray), show: otherReasonSelected.isEmpty)
                                 .padding()
                                 .frame(width: UIScreen.main.bounds.width / 1.28, height: 100, alignment: .top)
                                 .background(
@@ -136,7 +142,7 @@ struct OptionsTeamSelectView: View {
         }
         .overlay(RoundedRectangle(cornerRadius: 2.0)
                     .strokeBorder(self.booleanToChange
-                                  ? Color("blueColor")
+                                  ? Color("brownDarkColor")
                                   : Color.clear, style: StrokeStyle(lineWidth: 3.0)))
 
     }

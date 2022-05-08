@@ -19,10 +19,12 @@ struct DashboardOnBoardingView: View {
                     Text("coach_dashboard_title"
                             .localized(LocalizationService.shared.language))
                         .font(.system(size: 26))
+                        .foregroundColor(.black)
                         .bold()
                     Text("coach_dashboard_subtitle"
                             .localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                         .lineSpacing(8)
                 }

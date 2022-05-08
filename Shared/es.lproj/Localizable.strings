@@ -144,6 +144,12 @@
 "position_alapivot" = "Ala-pivot";
 "position_pivot" = "Pivot";
 
+//Player
+"player_information_title" = "Informacion del jugador";
+"personal_details_title" = "Detalles personales";
+"team_details_title" = "Detalles con el equipo";
+"individual_stats_title" = "Estadisticas individuales";
+
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";
@@ -166,6 +172,7 @@
 
 //MARK: General
 "reason_other_title" = "Otro";
+"write_title" = "Escribe";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";

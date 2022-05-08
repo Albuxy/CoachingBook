@@ -12,6 +12,7 @@ struct LoginView: View {
     // MARK: - Login Properties
     @State private var user = ""
     @State private var password = ""
+    @State private var keyboardHeight: CGFloat = 0
     
     @State var openApp = false
 
@@ -52,6 +53,7 @@ struct LoginView: View {
             }
             .padding(.top, 100)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
+            .background(Color.white)
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .navigationAppearance(

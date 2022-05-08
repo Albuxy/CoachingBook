@@ -86,6 +86,9 @@
 		84AD5A122822EBDF007EACDE /* RemoveAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A112822EBDF007EACDE /* RemoveAccountView.swift */; };
 		84AD5A1928255E83007EACDE /* TeamPrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */; };
 		84AD5A1B282571DE007EACDE /* ListPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A1A282571DE007EACDE /* ListPlayersView.swift */; };
+		84AD5A1E282580AE007EACDE /* PlayerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A1D282580AE007EACDE /* PlayerInformationView.swift */; };
+		84AD5A2028259D02007EACDE /* PersonalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A1F28259D01007EACDE /* PersonalDetailView.swift */; };
+		84AD5A222825A121007EACDE /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD5A212825A121007EACDE /* ViewModifier.swift */; };
 		84AED8C22815B5DF00F98A7C /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C12815B5DF00F98A7C /* PlayerModel.swift */; };
 		84AED8C62815BA7C00F98A7C /* AssistantPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C52815BA7C00F98A7C /* AssistantPlayersView.swift */; };
 		84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8C72818360500F98A7C /* CheckBoxView.swift */; };
@@ -176,6 +179,9 @@
 		84AD5A1328232556007EACDE /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPrincipalView.swift; sourceTree = "<group>"; };
 		84AD5A1A282571DE007EACDE /* ListPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersView.swift; sourceTree = "<group>"; };
+		84AD5A1D282580AE007EACDE /* PlayerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInformationView.swift; sourceTree = "<group>"; };
+		84AD5A1F28259D01007EACDE /* PersonalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailView.swift; sourceTree = "<group>"; };
+		84AD5A212825A121007EACDE /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		84AED8C12815B5DF00F98A7C /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		84AED8C52815BA7C00F98A7C /* AssistantPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantPlayersView.swift; sourceTree = "<group>"; };
 		84AED8C72818360500F98A7C /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				841BAE062810846B0033EF4C /* DatePickerTextField.swift */,
 				84AED8C72818360500F98A7C /* CheckBoxView.swift */,
 				8481AF0C28215CC900D59063 /* SearchBarView.swift */,
+				84AD5A212825A121007EACDE /* ViewModifier.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -409,6 +416,7 @@
 			children = (
 				84AD5A1828255E83007EACDE /* TeamPrincipalView.swift */,
 				84AD5A1A282571DE007EACDE /* ListPlayersView.swift */,
+				84AD5A1C28258097007EACDE /* Player */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -485,6 +493,15 @@
 			children = (
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		84AD5A1C28258097007EACDE /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				84AD5A1D282580AE007EACDE /* PlayerInformationView.swift */,
+				84AD5A1F28259D01007EACDE /* PersonalDetailView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		84AED8C02815B56500F98A7C /* Players */ = {
@@ -707,13 +724,16 @@
 				8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
+				84AD5A1E282580AE007EACDE /* PlayerInformationView.swift in Sources */,
 				84AED8CC281848A900F98A7C /* PlayerNonAssistingCard.swift in Sources */,
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
+				84AD5A222825A121007EACDE /* ViewModifier.swift in Sources */,
 				84AED8C22815B5DF00F98A7C /* PlayerModel.swift in Sources */,
+				84AD5A2028259D02007EACDE /* PersonalDetailView.swift in Sources */,
 				84AED8CA281846D500F98A7C /* NonAssistantPlayersView.swift in Sources */,
 				844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */,
 				84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */,
@@ -928,6 +948,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N446A369P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -957,6 +978,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N446A369P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -88,6 +88,7 @@ struct MatchPreparationView: View {
                 RemoveButton(stringButton: "button_remove_match", booleanToChange: $removeMatch)
                     .padding(.top, -10)
             }
+            .background(.white)
         }
         .padding(.top, 60)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
@@ -125,6 +126,7 @@ struct TeamHeaderView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text("VS")
+                .foregroundColor(.black)
                 .font(.system(size: 24))
             Image(currentMatch.imageTeam2)
                 .resizable()
@@ -141,6 +143,7 @@ struct OptionsPeriodsView: View {
     var body: some View {
         VStack(spacing: 15){
             Text("select_number_periods")
+                .foregroundColor(.black)
                .frame(width: UIScreen.main.bounds.width / 1.3, alignment: .leading)
             HStack(spacing: 40){
                 ForEach(optionsPeriods, id: \.self) { item in

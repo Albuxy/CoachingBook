@@ -90,6 +90,7 @@ struct TitleWithLineSettings: View {
                     .resizable()
                     .frame(width: 30, height: 30)
                 Text(title)
+                    .foregroundColor(.black)
                     .font(.system(size: 19))
                     .bold()
                 

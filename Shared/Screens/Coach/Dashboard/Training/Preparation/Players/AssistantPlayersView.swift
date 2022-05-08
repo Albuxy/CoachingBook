@@ -20,10 +20,12 @@ struct AssistantPlayersView: View {
             VStack(spacing: 20){
                 VStack(spacing: 20){
                     Text("player_selection_title".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                     Text("player_selection_subtitle".localized(LocalizationService.shared.language))
                         .font(.system(size: 19))
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                         .lineSpacing(8)
                         .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
@@ -89,6 +91,7 @@ struct RowForPlayer: View {
                     .frame(width: 34, height: 34)
                 Text(fullName)
                     .font(.system(size: 21))
+                    .foregroundColor(.black)
             }
             Spacer()
             CheckBoxView(isChecked: checked)

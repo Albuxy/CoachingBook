@@ -21,11 +21,13 @@ struct CancelTrainningView: View {
                 VStack(spacing: 20){
                     Text("training_cancellation_title"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                     Text("training_cancellation_subtitle"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 19))
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)

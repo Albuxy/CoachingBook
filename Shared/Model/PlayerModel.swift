@@ -14,8 +14,7 @@ struct Player: Identifiable {
     var name: String
     var surname: String
     var image: String
-    var date: String?
-    var gender: String?
+    var date: String
     var contactNumber: String?
     var position: Position
     var dorsal: Int
@@ -56,36 +55,43 @@ let playersData: [Player] = [
     Player(name: "Maria",
            surname: "Jolen",
            image: "ic_player",
+           date: "11-08-2001",
            position: .base,
            dorsal: 2),
     Player(name: "Clara",
            surname: "Suri",
            image: "ic_player",
+           date: "11-08-2001",
            position: .pivot,
            dorsal: 3),
     Player(name: "Sofia",
            surname: "Torres",
            image: "ic_player",
+           date: "11-08-2001",
            position: .alero,
            dorsal: 4),
     Player(name: "Laura",
            surname: "Malino",
            image: "ic_player",
+           date: "11-08-2001",
            position: .escolta,
            dorsal: 6),
     Player(name: "Natalia",
            surname: "Habas",
            image: "ic_player",
+           date: "11-08-2001",
            position: .alapivot,
            dorsal: 7),
     Player(name: "Ana",
            surname: "Rodriguez",
            image: "ic_player",
+           date: "11-08-2001",
            position: .pivot,
            dorsal: 8),
     Player(name: "Nuria",
            surname: "Polo",
            image: "ic_player",
+           date: "11-08-2001",
            position: .base,
            dorsal: 9)
 ]
@@ -94,16 +100,19 @@ let playersNotAssistData: [Player] = [
     Player(name: "Roberta",
            surname: "Habas",
            image: "ic_player",
+           date: "11-08-2001",
            position: .base,
            dorsal: 16),
     Player(name: "Julia",
            surname: "Polo",
            image: "ic_player",
+           date: "11-08-2001",
            position: .base,
            dorsal: 16),
     Player(name: "Maria",
            surname: "Puentes",
            image: "ic_player",
+           date: "11-08-2001",
            position: .base,
            dorsal: 16)
 ]

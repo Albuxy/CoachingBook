@@ -134,7 +134,7 @@
 //MARK: Team
 "team_title" = "Equip";
 "team_players_title" = "Jugadors";
-"team_stats_title" = "Estadisticas";
+"team_stats_title" = "Estadistiques";
 "team_events_title" = "Events";
 "list_of_players_title" = "Llista de jugadors";
 "position_title" = "Posició: ";
@@ -143,6 +143,12 @@
 "position_alero" = "Aler";
 "position_alapivot" = "Ala-pivot";
 "position_pivot" = "Pivot";
+
+//Player
+"player_information_title" = "Informacio del jugador";
+"personal_details_title" = "Detalls personals";
+"team_details_title" = "Detalls amb l'equip";
+"individual_stats_title" = "Estadistiques individuals";
 
 //MARK: Settings
 "settings_account_title" = "Compte";
@@ -165,6 +171,7 @@
 
 //MARK: General
 "reason_other_title" = "Altre";
+"write_title" = "Escriu";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";
