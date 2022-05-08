@@ -46,8 +46,14 @@ struct PlayerInformationView: View {
                                                   booleanToChange: $navigateToTeamDetail)
                       }
                     )
-                    ButtonPlayerInformation(string: "individual_stats_title",
-                                            booleanToChange: $navigateToIndividualStats)
+                    NavigationLink(
+                      destination: StatsPlayerEmptyView(),
+                      isActive: $navigateToIndividualStats,
+                      label: {
+                          ButtonPlayerInformation(string: "individual_stats_title",
+                                                  booleanToChange: $navigateToIndividualStats)
+                      }
+                    )
                 }
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)

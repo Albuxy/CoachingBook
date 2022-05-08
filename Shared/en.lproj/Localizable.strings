@@ -152,6 +152,10 @@
 "team_details_title" = "Team detail";
 "individual_stats_title" = "Individual stats";
 
+//Stats
+"stats_empty_title" = "No Stats Ready";
+"stats_empty_subtitle" = "Start giving information about this player in training and matches";
+
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";

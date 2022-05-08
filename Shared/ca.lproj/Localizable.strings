@@ -151,6 +151,10 @@
 "team_details_title" = "Detalls amb l'equip";
 "individual_stats_title" = "Estadistiques individuals";
 
+//Stats
+"stats_empty_title" = "No hi ha estadistiques llestes";
+"stats_empty_subtitle" = "Comença a donar informació sobre aquest jugador en entrenaments i partits";
+
 //MARK: Settings
 "settings_account_title" = "Compte";
 "change_password_title" = "Canviar contrasenya";
