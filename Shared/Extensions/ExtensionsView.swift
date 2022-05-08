@@ -144,53 +144,40 @@ extension String {
     }
 }
 
+extension UIHostingController {
+    convenience public init(rootView: Content, ignoreSafeArea: Bool) {
+        self.init(rootView: rootView)
 
-struct KeyboardAvoiderPreferenceReader: ViewModifier {
-    
-    let tag: Int
-    
-    func body(content: Content) -> some View {
-        
-        content
-            .background(
-                GeometryReader { geometry in
-                    Rectangle()
-                        .fill(Color.clear)
-                        .preference(
-                            key: KeyboardAvoiderPreferenceKey.self,
-                            value: [
-                                KeyboardAvoiderPreference(tag: self.tag, rect: geometry.frame(in: .global))
-                        ])
+        if ignoreSafeArea {
+            disableSafeArea()
+        }
+    }
+
+    func disableSafeArea() {
+        guard let viewClass = object_getClass(view) else { return }
+
+        let viewSubclassName = String(cString: class_getName(viewClass)).appending("_IgnoreSafeArea")
+        if let viewSubclass = NSClassFromString(viewSubclassName) {
+            object_setClass(view, viewSubclass)
+        }
+        else {
+            guard let viewClassNameUtf8 = (viewSubclassName as NSString).utf8String else { return }
+            guard let viewSubclass = objc_allocateClassPair(viewClass, viewClassNameUtf8, 0) else { return }
+
+            if let method = class_getInstanceMethod(UIView.self, #selector(getter: UIView.safeAreaInsets)) {
+                let safeAreaInsets: @convention(block) (AnyObject) -> UIEdgeInsets = { _ in
+                    return .zero
                 }
-            )
-    }
-}
+                class_addMethod(viewSubclass, #selector(getter: UIView.safeAreaInsets), imp_implementationWithBlock(safeAreaInsets), method_getTypeEncoding(method))
+            }
 
-extension View {
-    
-    func avoidKeyboard(tag: Int) -> some View {
-        self.modifier(KeyboardAvoiderPreferenceReader(tag: tag))
-    }
- }
+            if let method2 = class_getInstanceMethod(viewClass, NSSelectorFromString("keyboardWillShowWithNotification:")) {
+                let keyboardWillShow: @convention(block) (AnyObject, AnyObject) -> Void = { _, _ in }
+                class_addMethod(viewSubclass, NSSelectorFromString("keyboardWillShowWithNotification:"), imp_implementationWithBlock(keyboardWillShow), method_getTypeEncoding(method2))
+            }
 
-struct KeyboardAvoiderPreference: Equatable {
-    
-    let tag: Int
-    let rect: CGRect
-    
-    static func == (lhs: KeyboardAvoiderPreference, rhs: KeyboardAvoiderPreference) -> Bool {
-        print("y: \(lhs.rect.minY) vs \(rhs.rect.minY)")
-       return  lhs.tag == rhs.tag && (lhs.rect.minY == rhs.rect.minY)
-    }
-}
-
-struct KeyboardAvoiderPreferenceKey: PreferenceKey {
-    
-    typealias Value = [KeyboardAvoiderPreference]
-    
-    static var defaultValue: [KeyboardAvoiderPreference] = []
-    
-    static func reduce(value: inout [KeyboardAvoiderPreference], nextValue: () -> [KeyboardAvoiderPreference]) {
-         value.append(contentsOf: nextValue())
+            objc_registerClassPair(viewSubclass)
+            object_setClass(view, viewSubclass)
+        }
     }
 }
