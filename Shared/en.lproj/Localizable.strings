@@ -146,6 +146,18 @@
 "position_pivot" = "Center";
 "dorsal_player_title" = "Dorsal";
 
+//Information
+"team_information_title" = "Team information";
+"training_sessions_title" = "Training sessions";
+"local_matches_title" = "Local matches";
+"days_title" = "Days";
+"hour_title" = "Hour";
+"monday_title" = "Monday";
+"tuesday_title" = "Tuesday";
+"wednesday_title" = "Wednesday";
+"thursday_title" = "Thursday";
+"friday_title" = "Friday";
+
 //Player
 "player_information_title" = "Player information";
 "personal_details_title" = "Personal detail";

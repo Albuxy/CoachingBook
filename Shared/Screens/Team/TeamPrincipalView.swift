@@ -38,9 +38,15 @@ struct TeamPrincipalView: View {
             .border(Color("secondBlueColor"))
             VStack(spacing: 40){
                 HStack(spacing: 40) {
-                    ButtonCardTeamView(title: "team_title",
-                                       imageString: "ic_info_team",
-                                       booleanToChange: $navigateToTeamScreen)
+                    NavigationLink(
+                      destination: TeamInformationView(team: team),
+                      isActive: $navigateToTeamScreen,
+                      label: {
+                          ButtonCardTeamView(title: "team_title",
+                                             imageString: "ic_info_team",
+                                             booleanToChange: $navigateToTeamScreen)
+                      }
+                    )
                     NavigationLink(
                       destination: ListPlayersView(listOfPlayers: team.players),
                       isActive: $navigateToPlayersScreen,

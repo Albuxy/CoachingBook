@@ -145,6 +145,13 @@
 "position_pivot" = "Pivot";
 "dorsal_player_title" = "Dorsal";
 
+//Information
+"team_information_title" = "Informacio de l'equip";
+"training_sessions_title" = "Sessions d'entrenament";
+"local_matches_title" = "Partits locals";
+"days_title" = "Dies";
+"hour_title" = "Hores";
+
 //Player
 "player_information_title" = "Informacio del jugador";
 "personal_details_title" = "Detalls personals";
