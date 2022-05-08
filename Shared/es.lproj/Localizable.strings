@@ -161,6 +161,16 @@
 //Stats
 "stats_empty_title" = "No hay estadisticas listas";
 "stats_empty_subtitle" = "Empieza a dar informacion sobre este jugador en entrenamientos y partidos";
+"stats_title" = "Estadisticas";
+"stats_subtitle" = "Aquí puedes ver las estadísticas individuales de este jugador con más detalle.";
+//Attendance
+"attendance_analysis_title" = "Analisis asistencia";
+"match_title" = "Partido";
+"training_title" = "Entreno";
+"attendance_match" = "Asistencia total en partidos jugados";
+"attendance_training" = "Asistencia total en entrenos hechos";
+"attendance_total" = " total";
+
 
 //MARK: Settings
 "settings_account_title" = "Cuenta";

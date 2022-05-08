@@ -47,7 +47,7 @@ struct PlayerInformationView: View {
                       }
                     )
                     NavigationLink(
-                      destination: StatsPlayerEmptyView(),
+                      destination: StatsPlayerView(player: player),
                       isActive: $navigateToIndividualStats,
                       label: {
                           ButtonPlayerInformation(string: "individual_stats_title",

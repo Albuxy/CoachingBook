@@ -7,13 +7,41 @@
 
 import Foundation
 
-//Model for Stats
-struct Stats: Identifiable {
+//Model for Attendance stats
+struct AttendanceStats: Identifiable {
     var id = UUID()
-    var attendMatchPercentage: Int
-    var attendTrainingPercentage: Int
-    var punctualityMatchPercentage: Int
-    var punctualityTrainingPercentage: Int
-    var behaviourMatchPercentage: Int
-    var behaviourTrainingPercentage: Int
+    var percentatgeMatchTotal: Float
+    var percentatgeTrainingTotal: Float
+    var injuriesMatch: Int
+    var injuriesTraining: Int
+    var otherMatch: Int
+    var otherTraining: Int
+    var totalTraining = trainingData.count
+    var totalMatch = matchData.count
+}
+
+//Model for Punctuality stats
+struct PunctualityStats: Identifiable {
+    var id = UUID()
+    var percentatgeMatchTotal: Float
+    var percentatgeTrainingTotal: Float
+    var injuriesMatch: Int
+    var injuriesTraining: Int
+    var otherMatch: Int
+    var otherTraining: Int
+    var totalTraining = trainingData.count
+    var totalMatch = matchData.count
+}
+
+//Model for Behaviour stats
+struct BehaviourStats: Identifiable {
+    var id = UUID()
+    var percentatgeMatchTotal: Float
+    var percentatgeTrainingTotal: Float
+    var injuriesMatch: Int
+    var injuriesTraining: Int
+    var otherMatch: Int
+    var otherTraining: Int
+    var totalTraining = trainingData.count
+    var totalMatch = matchData.count
 }

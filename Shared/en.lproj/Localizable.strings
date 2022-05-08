@@ -167,6 +167,15 @@
 //Stats
 "stats_empty_title" = "No Stats Ready";
 "stats_empty_subtitle" = "Start giving information about this player in training and matches";
+"stats_title" = "Statistics";
+"stats_subtitle" = "Here you can see the individual statistics of this player in more details.";
+//Attendance
+"attendance_analysis_title" = "Atendance analysis";
+"match_title" = "Match";
+"training_title" = "Training";
+"attendance_match" = "Total attendance of games played";
+"attendance_training" = "Total attendance of trainings done";
+"attendance_total" = " total";
 
 //MARK: Settings
 "settings_account_title" = "Account";

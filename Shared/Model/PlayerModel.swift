@@ -20,6 +20,11 @@ struct Player: Identifiable {
     var dorsal: Int
     var isChecked: Bool = false
     
+    //Stats
+    var statsAttendance: AttendanceStats?
+    var statsPunctuality: PunctualityStats?
+    var statsBehaviour: BehaviourStats?
+    
     func getStringForPosition(currentPosition: Position) -> String {
         switch currentPosition {
         case .base:
@@ -65,7 +70,13 @@ let playersData: [Player] = [
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 2),
+           dorsal: 2,
+           statsAttendance: AttendanceStats(percentatgeMatchTotal: 0.4,
+                                            percentatgeTrainingTotal: 0.6,
+                                           injuriesMatch: 1,
+                                           injuriesTraining: 5,
+                                           otherMatch: 13,
+                                           otherTraining: 0)),
     Player(name: "Clara",
            surname: "Suri",
            image: "ic_player",
