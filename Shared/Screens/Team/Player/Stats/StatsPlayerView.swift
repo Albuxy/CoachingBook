@@ -32,6 +32,7 @@ struct StatsPlayerView: View {
                 }
                 TabView(){
                     StatsAttendanceCard(player: player)
+                    StatsPunctualityCard(player: player)
                 }
                 .accentColor(Color("blueColor"))
                 .tabViewStyle(PageTabViewStyle())

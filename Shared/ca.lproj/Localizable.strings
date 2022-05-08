@@ -163,13 +163,17 @@
 "stats_empty_subtitle" = "Comença a donar informació sobre aquest jugador en entrenaments i partits";
 "stats_title" = "Estadístiques";
 "stats_subtitle" = "Aquí podeu veure les estadístiques individuals d'aquest jugador amb més detall";
-//Attendance
-"attendance_analysis_title" = "Assistencia analisis";
 "match_title" = "Partit";
 "training_title" = "Entrenament";
+//Attendance
+"attendance_analysis_title" = "Assistencia analisis";
 "attendance_match" = "Assistencia total en partits jugats";
 "attendance_training" = "Assistencia total en entrenaments fets";
 "attendance_total" = " total";
+//Punctuality
+"punctuality_analysis_title" = "Puntualitat analisis";
+"punctuality_match" = "Puntualitat total en partits jugats";
+"punctuality_training" = "Puntualitat total en entrenaments fets";
 
 
 //MARK: Settings

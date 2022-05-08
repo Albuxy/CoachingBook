@@ -163,13 +163,17 @@
 "stats_empty_subtitle" = "Empieza a dar informacion sobre este jugador en entrenamientos y partidos";
 "stats_title" = "Estadisticas";
 "stats_subtitle" = "Aquí puedes ver las estadísticas individuales de este jugador con más detalle.";
-//Attendance
-"attendance_analysis_title" = "Analisis asistencia";
 "match_title" = "Partido";
 "training_title" = "Entreno";
+//Attendance
+"attendance_analysis_title" = "Analisis asistencia";
 "attendance_match" = "Asistencia total en partidos jugados";
 "attendance_training" = "Asistencia total en entrenos hechos";
 "attendance_total" = " total";
+//Punctuality
+"punctuality_analysis_title" = "Analisis puntualidad";
+"punctuality_match" = "Puntualidad total en partidos jugados";
+"punctuality_training" = "Puntualidad total en entrenos hechos";
 
 
 //MARK: Settings

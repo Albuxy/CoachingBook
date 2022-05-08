@@ -21,7 +21,7 @@ struct StatsAttendanceCard: View {
                     .foregroundColor(Color("darkRedColor"))
                     .bold()
                     .padding(.top, 30)
-                SectionInStats(progress: progressMatchValue,
+                SectionAttendanceInStats(progress: progressMatchValue,
                                title: "match_title",
                                description: "attendance_match",
                                numberInjuries: "\(1)",
@@ -30,7 +30,7 @@ struct StatsAttendanceCard: View {
                 Divider()
                     .frame(width: UIScreen.main.bounds.width / 1.6, alignment: .leading)
                     .background(.black)
-                SectionInStats(progress: progressTrainingValue,
+                SectionAttendanceInStats(progress: progressTrainingValue,
                                title: "training_title",
                                description: "attendance_training",
                                numberInjuries: "\(3)",
@@ -59,6 +59,7 @@ struct PercentatgeWithTitleStats: View {
                 Text(title.localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 21))
+                    .bold()
                 Text(description.localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
@@ -70,7 +71,7 @@ struct PercentatgeWithTitleStats: View {
     
 }
 
-struct SectionInStats: View {
+struct SectionAttendanceInStats: View {
     
     var progress: Float
     var title: String

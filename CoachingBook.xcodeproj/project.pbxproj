@@ -104,6 +104,7 @@
 		84AED8D328199F5800F98A7C /* MatchPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8D228199F5700F98A7C /* MatchPreparationView.swift */; };
 		84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8D528199FEF00F98A7C /* MatchSessionHeaderCard.swift */; };
 		84AED8D82819A08300F98A7C /* CancelMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AED8D72819A08300F98A7C /* CancelMatchView.swift */; };
+		84F114B5282875FD0018E626 /* StatsPunctualityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F114B4282875FD0018E626 /* StatsPunctualityCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,7 @@
 		84AED8D228199F5700F98A7C /* MatchPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPreparationView.swift; sourceTree = "<group>"; };
 		84AED8D528199FEF00F98A7C /* MatchSessionHeaderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionHeaderCard.swift; sourceTree = "<group>"; };
 		84AED8D72819A08300F98A7C /* CancelMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelMatchView.swift; sourceTree = "<group>"; };
+		84F114B4282875FD0018E626 /* StatsPunctualityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPunctualityCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +379,7 @@
 			children = (
 				84841A9228283DDD00B69495 /* StatsPlayerView.swift */,
 				84841A8D282812CA00B69495 /* StatsPlayerEmptyView.swift */,
-				84841A942828406D00B69495 /* StatsAttendanceCard.swift */,
+				84F114B3282875EB0018E626 /* Cards */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -552,6 +554,15 @@
 			path = Preparation;
 			sourceTree = "<group>";
 		};
+		84F114B3282875EB0018E626 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				84841A942828406D00B69495 /* StatsAttendanceCard.swift */,
+				84F114B4282875FD0018E626 /* StatsPunctualityCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,6 +727,7 @@
 			files = (
 				84845E2D2814186E0014E4DA /* CoachModel.swift in Sources */,
 				84AD5A032821CD32007EACDE /* MenuControllerView.swift in Sources */,
+				84F114B5282875FD0018E626 /* StatsPunctualityCard.swift in Sources */,
 				84AED8C62815BA7C00F98A7C /* AssistantPlayersView.swift in Sources */,
 				84841A8C282811C000B69495 /* StatsModel.swift in Sources */,
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
