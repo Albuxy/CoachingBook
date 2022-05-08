@@ -143,6 +143,7 @@
 "position_alero" = "Alero";
 "position_alapivot" = "Ala-pivot";
 "position_pivot" = "Pivot";
+"dorsal_player_title" = "Dorsal";
 
 //Player
 "player_information_title" = "Informacion del jugador";

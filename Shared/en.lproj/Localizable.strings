@@ -144,6 +144,7 @@
 "position_alero" = "Small forward";
 "position_alapivot" = "Power forward";
 "position_pivot" = "Center";
+"dorsal_player_title" = "Dorsal";
 
 //Player
 "player_information_title" = "Player information";

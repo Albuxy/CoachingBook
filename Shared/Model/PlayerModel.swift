@@ -49,6 +49,14 @@ struct Player: Identifiable {
             return Color("pivotColor")
         }
     }
+    
+    func getAllPositionsList() -> [String] {
+        return [getStringForPosition(currentPosition: .base),
+                getStringForPosition(currentPosition: .escolta),
+                getStringForPosition(currentPosition: .alero),
+                getStringForPosition(currentPosition: .alapivot),
+                getStringForPosition(currentPosition: .pivot)]
+    }
 }
 
 let playersData: [Player] = [

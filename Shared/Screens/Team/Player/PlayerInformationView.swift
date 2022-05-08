@@ -38,8 +38,14 @@ struct PlayerInformationView: View {
                                                   booleanToChange: $navigateToPersonalDetail)
                       }
                     )
-                    ButtonPlayerInformation(string: "team_details_title",
-                                            booleanToChange: $navigateToTeamDetail)
+                    NavigationLink(
+                      destination: PlayerTeamDetailView(currentPlayer: player),
+                      isActive: $navigateToTeamDetail,
+                      label: {
+                          ButtonPlayerInformation(string: "team_details_title",
+                                                  booleanToChange: $navigateToTeamDetail)
+                      }
+                    )
                     ButtonPlayerInformation(string: "individual_stats_title",
                                             booleanToChange: $navigateToIndividualStats)
                 }
