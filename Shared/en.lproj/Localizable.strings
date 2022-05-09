@@ -190,6 +190,11 @@
 "attitude_rated" = "You have rated their attitude a total of: ";
 "times_title" = " times";
 
+//Events
+"events_title" = "Events";
+"status_prepared_title" = "Prepared";
+"status_not_prepared_title" = "Pending";
+
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";

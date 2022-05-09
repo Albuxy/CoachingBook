@@ -15,6 +15,8 @@ struct Team: Identifiable {
     var players: [Player]
     var trainingDays: [Session]
     var matchDay: Session
+    var trainingEvents: [Training] = trainingData
+    var matchEvents: [Match] = matchData
 }
 
 struct Session: Identifiable {

@@ -184,6 +184,11 @@
 "attitude_rated" = "Has calificado su actitud con un total de:";
 "times_title" = " veces";
 
+//Events
+"events_title" = "Eventos";
+"status_prepared_title" = "Preparado";
+"status_not_prepared_title" = "Pendiente";
+
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";

@@ -184,6 +184,11 @@
 "attitude_rated" = "Has qualificat la seva actitud amb un total de: ";
 "times_title" = " vegades";
 
+//Events
+"events_title" = "Events";
+"status_prepared_title" = "Preparat";
+"status_not_prepared_title" = "Pendent";
+
 //MARK: Settings
 "settings_account_title" = "Compte";
 "change_password_title" = "Canviar contrasenya";

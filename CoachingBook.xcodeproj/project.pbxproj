@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328328294E9500DCE47E /* StatsBehaviourCard.swift */; };
 		8408328628295A1C00DCE47E /* CircleFillViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328528295A1C00DCE47E /* CircleFillViews.swift */; };
+		8408328928296E6100DCE47E /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328828296E6100DCE47E /* EventsListView.swift */; };
+		8408328B2829731300DCE47E /* EventPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328A2829731300DCE47E /* EventPicker.swift */; };
+		8408328D2829738B00DCE47E /* SwitchEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328C2829738B00DCE47E /* SwitchEventView.swift */; };
+		8408328F2829762B00DCE47E /* EventTrainingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328E2829762B00DCE47E /* EventTrainingCard.swift */; };
+		8408329228297C1100DCE47E /* TrainingEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408329128297C1100DCE47E /* TrainingEventListView.swift */; };
 		841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE062810846B0033EF4C /* DatePickerTextField.swift */; };
@@ -129,6 +134,11 @@
 /* Begin PBXFileReference section */
 		8408328328294E9500DCE47E /* StatsBehaviourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBehaviourCard.swift; sourceTree = "<group>"; };
 		8408328528295A1C00DCE47E /* CircleFillViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFillViews.swift; sourceTree = "<group>"; };
+		8408328828296E6100DCE47E /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
+		8408328A2829731300DCE47E /* EventPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPicker.swift; sourceTree = "<group>"; };
+		8408328C2829738B00DCE47E /* SwitchEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEventView.swift; sourceTree = "<group>"; };
+		8408328E2829762B00DCE47E /* EventTrainingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTrainingCard.swift; sourceTree = "<group>"; };
+		8408329128297C1100DCE47E /* TrainingEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingEventListView.swift; sourceTree = "<group>"; };
 		841BAE022810796B0033EF4C /* CoachInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInformationView.swift; sourceTree = "<group>"; };
 		841BAE062810846B0033EF4C /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		841BAE08281084910033EF4C /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -243,6 +253,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8408328728296D9A00DCE47E /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8408328828296E6100DCE47E /* EventsListView.swift */,
+				8408328A2829731300DCE47E /* EventPicker.swift */,
+				8408328C2829738B00DCE47E /* SwitchEventView.swift */,
+				8408329128297C1100DCE47E /* TrainingEventListView.swift */,
+				840832902829782700DCE47E /* Cards */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		840832902829782700DCE47E /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				8408328E2829762B00DCE47E /* EventTrainingCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		841BAE05281084550033EF4C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +477,7 @@
 				84841A8F282817BF00B69495 /* TeamInformationView.swift */,
 				84AD5A1A282571DE007EACDE /* ListPlayersView.swift */,
 				84AD5A1C28258097007EACDE /* Player */,
+				8408328728296D9A00DCE47E /* Events */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -748,11 +779,14 @@
 				84845E242814004E0014E4DA /* ObjectsNeededView.swift in Sources */,
 				84841A952828406D00B69495 /* StatsAttendanceCard.swift in Sources */,
 				84AD59F72821A4A0007EACDE /* AddContactView.swift in Sources */,
+				8408329228297C1100DCE47E /* TrainingEventListView.swift in Sources */,
 				84359724280225F80013B61B /* CoachingBookApp.swift in Sources */,
 				84AD5A1B282571DE007EACDE /* ListPlayersView.swift in Sources */,
 				84AD5A012821C6EE007EACDE /* MenuButton.swift in Sources */,
 				841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */,
+				8408328B2829731300DCE47E /* EventPicker.swift in Sources */,
 				84AED8D82819A08300F98A7C /* CancelMatchView.swift in Sources */,
+				8408328D2829738B00DCE47E /* SwitchEventView.swift in Sources */,
 				84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
 				84AD5A122822EBDF007EACDE /* RemoveAccountView.swift in Sources */,
 				84841A8E282812CA00B69495 /* StatsPlayerEmptyView.swift in Sources */,
@@ -772,6 +806,7 @@
 				84845DF8281214650014E4DA /* RadioButtonView.swift in Sources */,
 				84845E1E28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */,
 				84845DFC2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */,
+				8408328928296E6100DCE47E /* EventsListView.swift in Sources */,
 				8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
@@ -797,6 +832,7 @@
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
+				8408328F2829762B00DCE47E /* EventTrainingCard.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
 				84AD5A1928255E83007EACDE /* TeamPrincipalView.swift in Sources */,
 				84845E1A281347E80014E4DA /* TrainingSessionHeaderCard.swift in Sources */,
