@@ -30,16 +30,16 @@ struct PlayerNonAssistingCard: View {
                           Text(player.name + " " + player.surname)
                               .font(.system(size: 18))
                               .foregroundColor(.black)
-                          Text("Filled")
-                              .foregroundColor(.black)
+                          Text(player.getStringForJustificationstatus(justification: player.isJustificated ?? .notFilled))
+                              .foregroundColor(player.getColorForJustificationstatus(justification: player.isJustificated ?? .notFilled))
                               .font(.system(size: 14))
                               .padding(5)
                               .padding([.leading, .trailing], 15)
                               .background(
                                   RoundedRectangle(cornerRadius: 14)
-                                      .strokeBorder(Color("greenColor"), lineWidth: 2)
+                                    .strokeBorder(player.getColorForJustificationstatus(justification: player.isJustificated ?? .notFilled), lineWidth: 2)
                                       .background(
-                                          RoundedRectangle(cornerRadius: 14).fill(Color("greenColor").opacity(0.4))
+                                          RoundedRectangle(cornerRadius: 14).fill(player.getColorForJustificationstatus(justification: player.isJustificated ?? .notFilled).opacity(0.3))
                                       )
                                       .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                               )
@@ -67,6 +67,6 @@ struct PlayerNonAssistingCard: View {
 
 struct PlayerNonAssistingCard_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerNonAssistingCard(player: playersData[0], colors: [Color("blueMediumColor"), Color("blueLightColor")])
+        PlayerNonAssistingCard(player: playersNotAssistData[1], colors: [Color("blueMediumColor"), Color("blueLightColor")])
     }
 }

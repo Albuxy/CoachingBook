@@ -32,8 +32,10 @@ struct EventsListView: View {
             }
           }
         }
+        .background(Color("secondLightBlueColor").opacity(0.4))
+        .background(Color.white)
         .navigationBarBackButtonHidden(true)
-        .navigationBarTitle(Text("contacts_title".localized(LocalizationService.shared.language)), displayMode: .inline)
+        .navigationBarTitle(Text("events_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarItems(
           leading: Button(action: { presentation.wrappedValue.dismiss() }) {
               Image("left_arrow")
@@ -55,8 +57,8 @@ struct CustomPickerEventBar: View {
 
   var body: some View {
 
-    let item1 = SegmentEventItem(title: "trainings", selectionIndex: .trainings)
-    let item2 = SegmentEventItem(title: "matchs", selectionIndex: .matchs)
+    let item1 = SegmentEventItem(title: "training_title", selectionIndex: .trainings)
+    let item2 = SegmentEventItem(title: "match_title", selectionIndex: .matchs)
 
     return VStack {
         SegmentEventControl(selection: selection, items: [item1, item2])

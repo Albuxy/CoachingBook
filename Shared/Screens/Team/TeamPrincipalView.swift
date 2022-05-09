@@ -61,9 +61,15 @@ struct TeamPrincipalView: View {
                     ButtonCardTeamView(title: "team_stats_title",
                                        imageString: "ic_stats_team",
                                        booleanToChange: $navigateToStatsScreen)
-                    ButtonCardTeamView(title: "team_events_title",
-                                       imageString: "ic_events_team",
-                                       booleanToChange: $navigateToEventsScreen)
+                    NavigationLink(
+                      destination: EventsListView(team: team),
+                      isActive: $navigateToEventsScreen,
+                      label: {
+                          ButtonCardTeamView(title: "team_events_title",
+                                             imageString: "ic_events_team",
+                                             booleanToChange: $navigateToEventsScreen)
+                      }
+                    )
                 }
             }
         }

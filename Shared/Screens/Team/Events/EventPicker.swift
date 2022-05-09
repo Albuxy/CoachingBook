@@ -26,7 +26,7 @@ struct SegmentEventControl: View {
             )
           }
         }
-        .frame(width: 250, height: 30)
+        .frame(width: 320, height: 30)
         .border(Color.white)
       }
   }
@@ -45,7 +45,7 @@ struct SegmentEventButton: View {
     }) {
       Text(text.localized(LocalizationService.shared.language))
         .font(.system(size: 14))
-        .frame(width: 126, height: 30, alignment: /*@START_MENU_TOKEN@*/ .center /*@END_MENU_TOKEN@*/)
+        .frame(width: 160, height: 30, alignment: /*@START_MENU_TOKEN@*/ .center /*@END_MENU_TOKEN@*/)
     }
     .background(selection.showSection == self.selectionIndex ? Color.white : Color("blueColor"))
     .foregroundColor(selection.showSection == self.selectionIndex ? Color("blueColor") : Color.white)

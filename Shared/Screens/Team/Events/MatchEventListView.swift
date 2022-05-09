@@ -1,5 +1,5 @@
 //
-//  TrainingEventListView.swift
+//  MatchEventListView.swift
 //  CoachingBook (iOS)
 //
 //  Created by Alba Torra Di Capua on 9/5/22.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct TrainingEventListView: View {
+struct MatchEventListView: View {
     
-    var trainingList: [Training]
+    var matchList: [Match]
     
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack(alignment: .center, spacing: 15){
-                ForEach(trainingList) { item in
-                    EventTrainingCard(training: item)
+                ForEach(matchList) { item in
+                    EventMatchCard(match: item)
                 }
             }
             .padding(.top, 20)
@@ -24,8 +24,8 @@ struct TrainingEventListView: View {
     }
 }
 
-struct TrainingEventListView_Previews: PreviewProvider {
+struct MatchEventListView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingEventListView(trainingList: trainingData)
+        MatchEventListView(matchList: matchData)
     }
 }

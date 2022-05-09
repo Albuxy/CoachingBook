@@ -19,6 +19,7 @@ struct Player: Identifiable {
     var position: Position
     var dorsal: Int
     var isChecked: Bool = false
+    var isJustificated: Justification?
     
     //Stats
     var statsAttendance: AttendanceStats?
@@ -61,6 +62,24 @@ struct Player: Identifiable {
                 getStringForPosition(currentPosition: .alero),
                 getStringForPosition(currentPosition: .alapivot),
                 getStringForPosition(currentPosition: .pivot)]
+    }
+    
+    func getStringForJustificationstatus(justification: Justification) -> String {
+        switch justification {
+        case .filled:
+            return "Filled"
+        case .notFilled:
+            return "Not Filled"
+        }
+    }
+    
+    func getColorForJustificationstatus(justification: Justification) -> Color {
+        switch justification {
+        case .filled:
+            return Color("greenColor")
+        case .notFilled:
+            return Color("darkRedColor")
+        }
     }
 }
 
@@ -109,25 +128,32 @@ let playersData: [Player] = [
            dorsal: 9)
 ]
 
+enum Justification {
+    case filled, notFilled
+}
+
 let playersNotAssistData: [Player] = [
     Player(name: "Roberta",
            surname: "Habas",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 16),
+           dorsal: 16,
+           isJustificated: .filled),
     Player(name: "Julia",
            surname: "Polo",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 16),
+           dorsal: 16,
+           isJustificated: .notFilled),
     Player(name: "Maria",
            surname: "Puentes",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 16)
+           dorsal: 16,
+           isJustificated: .filled)
 ]
 
 enum Position {

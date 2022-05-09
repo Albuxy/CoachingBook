@@ -55,6 +55,7 @@ struct NonAssistantPlayersView: View {
             }
         }
         .padding(.top, 40)
+        .padding(.bottom, 15)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
         .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,

@@ -27,7 +27,7 @@ struct SwitchEventView: View {
         case .trainings:
             TrainingEventListView(trainingList: currentTeam.trainingEvents)
         case .matchs:
-            EmptyView()
+            MatchEventListView(matchList: currentTeam.matchEvents)
         }
      }
   }

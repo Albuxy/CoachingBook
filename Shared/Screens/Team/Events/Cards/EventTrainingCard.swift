@@ -18,6 +18,7 @@ struct EventTrainingCard: View {
             HStack(alignment: .top, spacing: 0) {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(training.title)
+                        .bold()
                         .font(.system(size: 18))
                         .foregroundColor(.black)
                     Text(training.date)
@@ -55,7 +56,7 @@ struct EventTrainingCard: View {
                 MediumSmallButtonStyle(textColor: Color("blueColor"), backgroundColor: Color("secondBlueColor").opacity(0.3))
             )
         }
-        .frame(width: 285, height: 125, alignment: .top)
+        .frame(width: 320, height: 125, alignment: .top)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .strokeBorder(Color.clear, lineWidth: 1)
