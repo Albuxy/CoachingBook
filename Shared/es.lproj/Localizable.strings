@@ -174,7 +174,15 @@
 "punctuality_analysis_title" = "Analisis puntualidad";
 "punctuality_match" = "Puntualidad total en partidos jugados";
 "punctuality_training" = "Puntualidad total en entrenos hechos";
-
+//Behaviour & Attitude
+"behaviour_analysis_title" = "Analisis comportamiento";
+"behaviour_title" = "Comportamiento";
+"behaviour_subtitle" = "Este es el comportamiento promedio sobre 10";
+"attitude_title" = "Actitud";
+"attitude_subtitle" = "Esta es la actitud promedio sobre 10";
+"behaviour_rated" = "Ha calificado su comportamiento con un total de:";
+"attitude_rated" = "Has calificado su actitud con un total de:";
+"times_title" = " veces";
 
 //MARK: Settings
 "settings_account_title" = "Cuenta";

@@ -15,7 +15,7 @@ struct StatsAttendanceCard: View {
     
     var body: some View {
         ZStack{
-            VStack(spacing: 30){
+            VStack(spacing: 20){
                 Text("attendance_analysis_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 26))
                     .foregroundColor(Color("darkRedColor"))
@@ -28,7 +28,7 @@ struct StatsAttendanceCard: View {
                                numberOther: "\(5)",
                                totalNumber: "\(20)")
                 Divider()
-                    .frame(width: UIScreen.main.bounds.width / 1.6, alignment: .leading)
+                    .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
                     .background(.black)
                 SectionAttendanceInStats(progress: progressTrainingValue,
                                title: "training_title",
@@ -38,37 +38,11 @@ struct StatsAttendanceCard: View {
                                totalNumber: "\(30)")
                 
             }
-            .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.40, alignment: .top)
+            .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.55, alignment: .top)
             .background(Color("redLightColor"))
             .cornerRadius(24)
         }
     }
-}
-
-struct PercentatgeWithTitleStats: View {
-    
-    var progress: Float
-    var title: String
-    var description: String
-    var color: Color
-    
-    var body: some View {
-        HStack(spacing: 40){
-            CircleProgressView(progressValue: progress, color: color, colorBackground: .white)
-            VStack(alignment: .leading, spacing: 10){
-                Text(title.localized(LocalizationService.shared.language))
-                    .foregroundColor(.black)
-                    .font(.system(size: 21))
-                    .bold()
-                Text(description.localized(LocalizationService.shared.language))
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.leading)
-                    .font(.system(size: 18))
-            }
-        }
-        .frame(width: UIScreen.main.bounds.width / 1.2, height: 100)
-    }
-    
 }
 
 struct SectionAttendanceInStats: View {
@@ -81,7 +55,7 @@ struct SectionAttendanceInStats: View {
     var totalNumber: String
     
     var body: some View {
-        VStack(spacing: 40){
+        VStack(spacing: 20){
             PercentatgeWithTitleStats(progress: progress,
                                       title: title,
                                       description: description,
@@ -89,37 +63,14 @@ struct SectionAttendanceInStats: View {
             VStack(alignment: .leading, spacing: 15){
                 Text("• Injuries:  " + numberInjuries + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
-                    .font(.system(size: 21))
+                    .font(.system(size: 18))
                 Text("• Other:  " + numberOther + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
-                    .font(.system(size: 21))
+                    .font(.system(size: 18))
             }
             .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
         }
         .frame(width: UIScreen.main.bounds.width / 1.2, height: 220, alignment: .leading)
-    }
-}
-
-struct CircleProgressView: View {
-    var progressValue: Float
-    var color: Color
-    var colorBackground: Color
-        
-    var body: some View {
-        ZStack {
-            Circle()
-                .stroke(lineWidth: 8.0)
-                .foregroundColor(colorBackground)
-            Circle()
-                .trim(from: 0.0, to: CGFloat(self.progressValue))
-                .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round, lineJoin: .round))
-                .foregroundColor(color)
-            Text("\(Int(progressValue * 100))" + " %")
-                .font(.system(size: 21))
-                .foregroundColor(color)
-                .bold()
-        }
-        .frame(width: 80, height: 80)
     }
 }
 

@@ -174,7 +174,15 @@
 "punctuality_analysis_title" = "Puntualitat analisis";
 "punctuality_match" = "Puntualitat total en partits jugats";
 "punctuality_training" = "Puntualitat total en entrenaments fets";
-
+//Behaviour & Attitude
+"behaviour_analysis_title" = "Anàlisi comportament";
+"behaviour_title" = "Comportament";
+"behaviour_subtitle" = "Aquest és el comportament mitjà de 10";
+"attitude_title" = "Actitut";
+"attitude_subtitle" = "Aquesta és l'actitud mitjana de 10";
+"behaviour_rated" = "Ha qualificat el seu comportament amb un total de: ";
+"attitude_rated" = "Has qualificat la seva actitud amb un total de: ";
+"times_title" = " vegades";
 
 //MARK: Settings
 "settings_account_title" = "Compte";

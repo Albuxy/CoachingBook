@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328328294E9500DCE47E /* StatsBehaviourCard.swift */; };
+		8408328628295A1C00DCE47E /* CircleFillViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328528295A1C00DCE47E /* CircleFillViews.swift */; };
 		841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE062810846B0033EF4C /* DatePickerTextField.swift */; };
@@ -125,6 +127,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8408328328294E9500DCE47E /* StatsBehaviourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBehaviourCard.swift; sourceTree = "<group>"; };
+		8408328528295A1C00DCE47E /* CircleFillViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFillViews.swift; sourceTree = "<group>"; };
 		841BAE022810796B0033EF4C /* CoachInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInformationView.swift; sourceTree = "<group>"; };
 		841BAE062810846B0033EF4C /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		841BAE08281084910033EF4C /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				84AED8C72818360500F98A7C /* CheckBoxView.swift */,
 				8481AF0C28215CC900D59063 /* SearchBarView.swift */,
 				84AD5A212825A121007EACDE /* ViewModifier.swift */,
+				8408328528295A1C00DCE47E /* CircleFillViews.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 			children = (
 				84841A942828406D00B69495 /* StatsAttendanceCard.swift */,
 				84F114B4282875FD0018E626 /* StatsPunctualityCard.swift */,
+				8408328328294E9500DCE47E /* StatsBehaviourCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -751,6 +757,7 @@
 				84AD5A122822EBDF007EACDE /* RemoveAccountView.swift in Sources */,
 				84841A8E282812CA00B69495 /* StatsPlayerEmptyView.swift in Sources */,
 				84845E172813472E0014E4DA /* TrainingPreparationView.swift in Sources */,
+				8408328628295A1C00DCE47E /* CircleFillViews.swift in Sources */,
 				84845E272814033C0014E4DA /* ObjectCard.swift in Sources */,
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
 				84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */,
@@ -770,6 +777,7 @@
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84AD5A1E282580AE007EACDE /* PlayerInformationView.swift in Sources */,
 				84AED8CC281848A900F98A7C /* PlayerNonAssistingCard.swift in Sources */,
+				8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */,
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,

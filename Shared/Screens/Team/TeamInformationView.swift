@@ -17,7 +17,7 @@ struct TeamInformationView: View {
     @State var removeTeam = false
     
     var body: some View {
-        VStack(spacing: 30){
+        VStack(spacing: 20){
             ZStack(alignment: .top){
                 Rectangle()
                     .foregroundColor(Color("thirdLightBlueColor"))
@@ -61,7 +61,7 @@ struct TeamInformationView: View {
                     }
                 }
                 .padding([.leading, .trailing], 30)
-                .frame(width: 300, height: 120, alignment: .topLeading)
+                .frame(width: 320, height: 120, alignment: .topLeading)
                 
                 Text("local_matches_title".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
@@ -93,10 +93,10 @@ struct TeamInformationView: View {
                     }
                 }
                 .padding([.leading, .trailing], 30)
-                .frame(width: 300, height: 350, alignment: .topLeading)
+                .frame(width: 320, height: 350, alignment: .topLeading)
             }
             .padding(.top, 20)
-            .frame(width: 300, height: 340, alignment: .top)
+            .frame(width: 320, height: 340, alignment: .top)
             .background(
                 RoundedRectangle(cornerRadius: 15)
                     .strokeBorder(Color.clear, lineWidth: 3)
@@ -106,6 +106,7 @@ struct TeamInformationView: View {
                     .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
             )
             RemoveButton(stringButton: "button_remove_team", booleanToChange: $removeTeam)
+                .padding(.top, 20)
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
         .background(Color("fourthLightBlueColor"))
@@ -149,7 +150,7 @@ struct TeamPrincipalInfoCard: View {
             }
         }
         .padding(.top, 20)
-        .frame(width: 300, height: 250, alignment: .top)
+        .frame(width: 320, height: 250, alignment: .top)
         .background(
             RoundedRectangle(cornerRadius: 15)
                 .strokeBorder(Color.clear, lineWidth: 3)

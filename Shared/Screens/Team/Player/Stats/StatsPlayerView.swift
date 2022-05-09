@@ -33,11 +33,12 @@ struct StatsPlayerView: View {
                 TabView(){
                     StatsAttendanceCard(player: player)
                     StatsPunctualityCard(player: player)
+                    StatsBehaviourCard(player: player)
                 }
                 .accentColor(Color("blueColor"))
                 .tabViewStyle(PageTabViewStyle())
             }
-            .padding(.top, 20)
+            .padding(.top, 50)
             .padding([.leading, .trailing], 20)
             .background(Color("cremaColor"))
         }

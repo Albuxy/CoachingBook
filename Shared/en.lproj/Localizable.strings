@@ -180,6 +180,15 @@
 "punctuality_analysis_title" = "Punctuality analysis";
 "punctuality_match" = "Total punctuality of games played";
 "punctuality_training" = "Total punctuality of trainings done";
+//Behaviour & Attitude
+"behaviour_analysis_title" = "Behaviour analysis";
+"behaviour_title" = "Behavior";
+"behaviour_subtitle" = "This is the average behavior out of 10";
+"attitude_title" = "Attitude";
+"attitude_subtitle" = "This is the average attitude out of 10";
+"behaviour_rated" = "You have rated their behavior a total of: ";
+"attitude_rated" = "You have rated their attitude a total of: ";
+"times_title" = " times";
 
 //MARK: Settings
 "settings_account_title" = "Account";

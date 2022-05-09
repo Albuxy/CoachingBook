@@ -15,7 +15,7 @@ struct StatsPunctualityCard: View {
 
     var body: some View {
         ZStack{
-            VStack(spacing: 30){
+            VStack(spacing: 20){
                 Text("punctuality_analysis_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 26))
                     .foregroundColor(Color("baseColor"))
@@ -29,7 +29,7 @@ struct StatsPunctualityCard: View {
                                moreThan: "\(6)",
                                totalNumber: "\(20)")
                 Divider()
-                    .frame(width: UIScreen.main.bounds.width / 1.6, alignment: .leading)
+                    .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
                     .background(.black)
                 SectionPunctualityInStats(progress: progressTrainingValue,
                                title: "training_title",
@@ -40,7 +40,7 @@ struct StatsPunctualityCard: View {
                                totalNumber: "\(6)")
                 
             }
-            .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.40, alignment: .top)
+            .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.55, alignment: .top)
             .background(Color("greenBackgroundLightColor"))
             .cornerRadius(24)
         }
@@ -58,7 +58,7 @@ struct SectionPunctualityInStats: View {
     var totalNumber: String
     
     var body: some View {
-        VStack(spacing: 30){
+        VStack(spacing: 20){
             PercentatgeWithTitleStats(progress: progress,
                                       title: title,
                                       description: description,
@@ -66,13 +66,13 @@ struct SectionPunctualityInStats: View {
             VStack(alignment: .leading, spacing: 15){
                 Text("•   - than 5 min:  1/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
-                    .font(.system(size: 21))
+                    .font(.system(size: 18))
                 Text("•   - than 15 min:  3/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
-                    .font(.system(size: 21))
+                    .font(.system(size: 18))
                 Text("•   + than 15 min:  5/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
-                    .font(.system(size: 21))
+                    .font(.system(size: 18))
             }
             .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
         }
