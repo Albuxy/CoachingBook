@@ -47,6 +47,15 @@
 		844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A15282180DE003FE836 /* CustomPickerContacts.swift */; };
 		844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A19282188E3003FE836 /* ContactInformationView.swift */; };
 		844B6A1C28218926003FE836 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1B28218926003FE836 /* ContactCard.swift */; };
+		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
+		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
+		846F733B282ECC1800FF3FB5 /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F733A282ECC1800FF3FB5 /* FilesView.swift */; };
+		846F733D282ECEF600FF3FB5 /* FileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F733C282ECEF600FF3FB5 /* FileRowView.swift */; };
+		846F733F282ED06A00FF3FB5 /* ImagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F733E282ED06A00FF3FB5 /* ImagesListView.swift */; };
+		846F7342282ED13400FF3FB5 /* DocumentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7341282ED13400FF3FB5 /* DocumentsListView.swift */; };
+		846F7344282ED1CB00FF3FB5 /* VideosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7343282ED1CB00FF3FB5 /* VideosListView.swift */; };
+		846F7347282ED50800FF3FB5 /* SwitchFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7346282ED50800FF3FB5 /* SwitchFileView.swift */; };
+		846F7349282ED59100FF3FB5 /* CustomPickerFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7348282ED59100FF3FB5 /* CustomPickerFile.swift */; };
 		8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF03281E8D9200D59063 /* EntriesMatchView.swift */; };
 		8481AF07282046DF00D59063 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF06282046DE00D59063 /* ContactModel.swift */; };
 		8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF0A2820497600D59063 /* ContactsListView.swift */; };
@@ -174,6 +183,15 @@
 		844B6A15282180DE003FE836 /* CustomPickerContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerContacts.swift; sourceTree = "<group>"; };
 		844B6A19282188E3003FE836 /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
 		844B6A1B28218926003FE836 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
+		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
+		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
+		846F733A282ECC1800FF3FB5 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		846F733C282ECEF600FF3FB5 /* FileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRowView.swift; sourceTree = "<group>"; };
+		846F733E282ED06A00FF3FB5 /* ImagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListView.swift; sourceTree = "<group>"; };
+		846F7341282ED13400FF3FB5 /* DocumentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListView.swift; sourceTree = "<group>"; };
+		846F7343282ED1CB00FF3FB5 /* VideosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosListView.swift; sourceTree = "<group>"; };
+		846F7346282ED50800FF3FB5 /* SwitchFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFileView.swift; sourceTree = "<group>"; };
+		846F7348282ED59100FF3FB5 /* CustomPickerFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerFile.swift; sourceTree = "<group>"; };
 		8481AF03281E8D9200D59063 /* EntriesMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesMatchView.swift; sourceTree = "<group>"; };
 		8481AF06282046DE00D59063 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		8481AF0A2820497600D59063 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
@@ -420,6 +438,37 @@
 			path = "Contact Information";
 			sourceTree = "<group>";
 		};
+		846F7335282EC5A000FF3FB5 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				846F733A282ECC1800FF3FB5 /* FilesView.swift */,
+				846F733C282ECEF600FF3FB5 /* FileRowView.swift */,
+				846F7340282ED07000FF3FB5 /* Lists */,
+				846F7345282ED4D000FF3FB5 /* Controller */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		846F7340282ED07000FF3FB5 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				846F7341282ED13400FF3FB5 /* DocumentsListView.swift */,
+				846F733E282ED06A00FF3FB5 /* ImagesListView.swift */,
+				846F7343282ED1CB00FF3FB5 /* VideosListView.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		846F7345282ED4D000FF3FB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846F7346282ED50800FF3FB5 /* SwitchFileView.swift */,
+				846F7348282ED59100FF3FB5 /* CustomPickerFile.swift */,
+				846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8481AF052820464800D59063 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +590,7 @@
 				84359745280363C60013B61B /* Coach */,
 				84AD59F82821B5C3007EACDE /* Team */,
 				84AD5A172825588E007EACDE /* Calendar */,
+				846F7335282EC5A000FF3FB5 /* Files */,
 				84AD5A042822900E007EACDE /* Settings */,
 				841BAE05281084550033EF4C /* CustomViews */,
 			);
@@ -568,6 +618,7 @@
 				84845E292814039E0014E4DA /* ObjectsModel.swift */,
 				8481AF06282046DE00D59063 /* ContactModel.swift */,
 				84841A8B282811C000B69495 /* StatsModel.swift */,
+				846F7338282ECB0700FF3FB5 /* FilesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -788,11 +839,14 @@
 				84845E2D2814186E0014E4DA /* CoachModel.swift in Sources */,
 				84AD5A032821CD32007EACDE /* MenuControllerView.swift in Sources */,
 				84F114B5282875FD0018E626 /* StatsPunctualityCard.swift in Sources */,
+				846F733F282ED06A00FF3FB5 /* ImagesListView.swift in Sources */,
 				84AED8C62815BA7C00F98A7C /* AssistantPlayersView.swift in Sources */,
 				84841A8C282811C000B69495 /* StatsModel.swift in Sources */,
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
+				846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */,
 				84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
+				846F7349282ED59100FF3FB5 /* CustomPickerFile.swift in Sources */,
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
 				840832962829819F00DCE47E /* MatchEventListView.swift in Sources */,
 				84AED8D328199F5800F98A7C /* MatchPreparationView.swift in Sources */,
@@ -802,7 +856,9 @@
 				84841A8A28280C0300B69495 /* PlayerTeamDetailView.swift in Sources */,
 				84083298282ADF0B00DCE47E /* AddPlayerView.swift in Sources */,
 				84845E242814004E0014E4DA /* ObjectsNeededView.swift in Sources */,
+				846F733B282ECC1800FF3FB5 /* FilesView.swift in Sources */,
 				84841A952828406D00B69495 /* StatsAttendanceCard.swift in Sources */,
+				846F733D282ECEF600FF3FB5 /* FileRowView.swift in Sources */,
 				84AD59F72821A4A0007EACDE /* AddContactView.swift in Sources */,
 				8408329228297C1100DCE47E /* TrainingEventListView.swift in Sources */,
 				84359724280225F80013B61B /* CoachingBookApp.swift in Sources */,
@@ -833,11 +889,13 @@
 				84845E1E28136A9F0014E4DA /* MiniMatchSessionCard.swift in Sources */,
 				84845DFC2812EF0A0014E4DA /* MiniTrainingSessionCard.swift in Sources */,
 				8408328928296E6100DCE47E /* EventsListView.swift in Sources */,
+				846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */,
 				8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84AD5A1E282580AE007EACDE /* PlayerInformationView.swift in Sources */,
 				84AED8CC281848A900F98A7C /* PlayerNonAssistingCard.swift in Sources */,
+				846F7342282ED13400FF3FB5 /* DocumentsListView.swift in Sources */,
 				8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */,
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
@@ -851,6 +909,7 @@
 				84AED8CA281846D500F98A7C /* NonAssistantPlayersView.swift in Sources */,
 				844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */,
 				84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */,
+				846F7344282ED1CB00FF3FB5 /* VideosListView.swift in Sources */,
 				8435973C2802D0300013B61B /* LoginView.swift in Sources */,
 				844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */,
 				8481AF0F282179B300D59063 /* FavouritesContactsView.swift in Sources */,
@@ -860,6 +919,7 @@
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
+				846F7347282ED50800FF3FB5 /* SwitchFileView.swift in Sources */,
 				8408328F2829762B00DCE47E /* EventTrainingCard.swift in Sources */,
 				8435973F2802D6480013B61B /* Styles.swift in Sources */,
 				84AD5A1928255E83007EACDE /* TeamPrincipalView.swift in Sources */,

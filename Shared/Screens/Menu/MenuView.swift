@@ -23,23 +23,23 @@ struct MenuView: View {
 
     var body: some View {
       NavigationView {
-        VStack(alignment: .center, spacing: 30) {
+        VStack(alignment: .center, spacing: 20) {
             VStack(spacing: 20){
                 Image("ic_coachImage")
                     .resizable()
                     .frame(width: 85, height: 85)
                     .cornerRadius(50)
                 VStack(alignment: .center, spacing: 10) {
-                  Text("Coach name")
+                  Text("Alba Torra")
                     .bold()
                     .foregroundColor(.white)
                     .font(.system(size: 21))
-                  Text("correo@gmailpuntocom")
+                  Text(verbatim: "alba.torra@gmail.com")
                     .foregroundColor(Color("lightGrayColor"))
                     .font(.system(size: 18))
                 }
             }
-            .padding(.top, 35)
+            .padding(.top, 50)
 
           VStack(alignment: .center, spacing: 8) {
               menuButtonEntry(
@@ -56,7 +56,7 @@ struct MenuView: View {
                 entryMenu: .calendar)
               menuButtonEntry(
                 name: "menu_files", image: "ic_gallery", imageSelected: "ic_gallery", isDisabled: false,
-                entryMenu: .calendar)
+                entryMenu: .files)
               menuButtonEntry(
                 name: "menu_settings", image: "ic_settings", imageSelected: "ic_settings",
                 isDisabled: false,

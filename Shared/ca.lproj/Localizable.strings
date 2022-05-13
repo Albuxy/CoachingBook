@@ -16,7 +16,7 @@
 "menu_profile" = "Perfil";
 "menu_team" = "Equip";
 "menu_calendar" = "Calendari";
-"menu_files" = "Archius";
+"menu_files" = "Arxius";
 "menu_settings" = "Configuracio";
 "menu_logout" = "Sortir";
 
@@ -192,6 +192,17 @@
 "events_title" = "Events";
 "status_prepared_title" = "Preparat";
 "status_not_prepared_title" = "Pendent";
+
+//MARK: Documents
+"documents_title" = "Documents";
+"images_title" = "Images";
+"videos_title" = "Videos";
+"type_files_title" = "Tipus d'arxius";
+"list_files_title" = "Llista d'arxius seleccionats";
+"upload_title" = "Pujats: ";
+"upload_date_title" = "Data de pujada: ";
+"remove_file" = "Eliminar arxiu";
+"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
 
 //MARK: Settings
 "settings_account_title" = "Compte";

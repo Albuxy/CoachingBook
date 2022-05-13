@@ -199,6 +199,17 @@
 "status_prepared_title" = "Prepared";
 "status_not_prepared_title" = "Pending";
 
+//MARK: Documents
+"documents_title" = "Documents";
+"images_title" = "Images";
+"videos_title" = "Videos";
+"type_files_title" = "Type of files";
+"list_files_title" = "List of files selected";
+"upload_title" = "Upload: ";
+"upload_date_title" = "Upload date: ";
+"remove_file" = "Remove file";
+"confirmation_remove_file" = "Are you sure you want to remove this file?";
+
 //MARK: Settings
 "settings_account_title" = "Account";
 "change_password_title" = "Change password";

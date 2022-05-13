@@ -71,8 +71,8 @@ struct RemoveAccountView: View {
               isPresented: $showAlert,
               content: {
                 Alert(
-                  title: Text("Remove account"),
-                  message: Text("confirmation_remove_account"),
+                    title: Text("remove_account_title".localized(LocalizationService.shared.language)),
+                  message: Text("confirmation_remove_account".localized(LocalizationService.shared.language)),
                   primaryButton: .cancel(
                     Text("button_cancel"),
                     action: {}),

@@ -193,6 +193,17 @@
 "status_prepared_title" = "Preparado";
 "status_not_prepared_title" = "Pendiente";
 
+//MARK: Documents
+"documents_title" = "Documentos";
+"images_title" = "Imagenes";
+"videos_title" = "Videos";
+"type_files_title" = "Tipo de archivos";
+"list_files_title" = "Lista de archivos seleccionados";
+"upload_title" = "Subidos: ";
+"upload_date_title" = "Fecha de subida: ";
+"remove_file" = "Eliminar archivo";
+"confirmation_remove_file" = "Estas seguro que deseas eliminar este archivo?";
+
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";
