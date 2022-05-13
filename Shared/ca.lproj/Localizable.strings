@@ -16,13 +16,14 @@
 "menu_profile" = "Perfil";
 "menu_team" = "Equip";
 "menu_calendar" = "Calendari";
+"menu_files" = "Archius";
 "menu_settings" = "Configuracio";
 "menu_logout" = "Sortir";
 
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
-"coach_dashboard" = "Panel";
-"coach_feedback_events" = "Events feedback";
+"coach_dashboard" = "Preparació";
+"coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contactes";
 "coach_logout" = "Sortir";
 "remove_account" = "Eliminar compte";
@@ -137,6 +138,7 @@
 "team_stats_title" = "Estadistiques";
 "team_events_title" = "Events";
 "list_of_players_title" = "Llista de jugadors";
+"position" = "Posició";
 "position_title" = "Posició: ";
 "position_base" = "Base";
 "position_escolta" = "Escolta";
@@ -157,6 +159,8 @@
 "personal_details_title" = "Detalls personals";
 "team_details_title" = "Detalls amb l'equip";
 "individual_stats_title" = "Estadistiques individuals";
+//Add player
+"add_player_title" = "Afegir jugador";
 
 //Stats
 "stats_empty_title" = "No hi ha estadistiques llestes";
@@ -211,6 +215,7 @@
 //MARK: General
 "reason_other_title" = "Altre";
 "write_title" = "Escriu";
+"comparate_title" = " de ";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";

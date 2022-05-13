@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum MenuEntries {
-  case home, profile, team, calendar, settings, logout
+  case home, profile, team, calendar, files, settings, logout
 }
 
 class MenuViewModel: ObservableObject {
@@ -52,6 +52,11 @@ struct MenuSwitchView: View {
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
+      case .files:
+        EmptyView()
+              .navigationBarItems(
+                leading:
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_files"))
       case .settings:
         SettingsView()
               .navigationBarItems(

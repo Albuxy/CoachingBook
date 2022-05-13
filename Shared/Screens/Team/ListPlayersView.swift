@@ -12,6 +12,8 @@ struct ListPlayersView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    @State var navigateToAddPlayer = false
+    
     var listOfPlayers: [Player]
     
     var body: some View {
@@ -42,7 +44,22 @@ struct ListPlayersView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-          })
+          }, trailing:
+            NavigationLink(
+              destination: AddPlayerView(),
+              isActive: $navigateToAddPlayer,
+              label: {
+                  Button(action: {
+                      navigateToAddPlayer.toggle()
+                  }) {
+                    Image(systemName: "person.fill.badge.plus")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.black)
+                }
+              }
+            )
+        )
     }
 }
 

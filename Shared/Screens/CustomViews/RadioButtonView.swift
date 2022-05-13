@@ -57,6 +57,13 @@ struct RadioButtonField: View {
         .foregroundColor(Color.white)
         .padding()
         .frame(width: 150)
-        .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+        .background(
+            RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(Color("lightGrayColor"), lineWidth: 1)
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(Color.white)
+                )
+        )
     }
 }

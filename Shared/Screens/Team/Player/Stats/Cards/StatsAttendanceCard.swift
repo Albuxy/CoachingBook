@@ -61,10 +61,12 @@ struct SectionAttendanceInStats: View {
                                       description: description,
                                       color: Color("darkRedColor"))
             VStack(alignment: .leading, spacing: 15){
-                Text("• Injuries:  " + numberInjuries + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("• " + "reason_injuries_title".localized(LocalizationService.shared.language) + ": ")
+                + Text(numberInjuries + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
-                Text("• Other:  " + numberOther + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("• " + "reason_other_title".localized(LocalizationService.shared.language) + ": ")
+                + Text(numberOther + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
             }

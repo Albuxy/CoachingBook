@@ -16,13 +16,14 @@
 "menu_profile" = "Perfil";
 "menu_team" = "Equipo";
 "menu_calendar" = "Calendario";
+"menu_files" = "Archivos";
 "menu_settings" = "Ajustes";
 "menu_logout" = "Salir";
 
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
-"coach_dashboard" = "Panel";
-"coach_feedback_events" = "Eventos feedback";
+"coach_dashboard" = "Preparacion";
+"coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contactos";
 "coach_logout" = "Salir";
 "remove_account" = "Eliminar cuenta";
@@ -137,6 +138,7 @@
 "team_stats_title" = "Estadisticas";
 "team_events_title" = "Eventos";
 "list_of_players_title" = "Lista de jugadores";
+"position" = "Posicion";
 "position_title" = "Posicion: ";
 "position_base" = "Base";
 "position_escolta" = "Escolta";
@@ -157,6 +159,8 @@
 "personal_details_title" = "Detalles personales";
 "team_details_title" = "Detalles con el equipo";
 "individual_stats_title" = "Estadisticas individuales";
+//Add player
+"add_player_title" = "Añadir jugador";
 
 //Stats
 "stats_empty_title" = "No hay estadisticas listas";
@@ -212,6 +216,7 @@
 //MARK: General
 "reason_other_title" = "Otro";
 "write_title" = "Escribe";
+"comparate_title" = " de ";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";

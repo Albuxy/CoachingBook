@@ -64,13 +64,13 @@ struct SectionPunctualityInStats: View {
                                       description: description,
                                       color: Color("baseColor"))
             VStack(alignment: .leading, spacing: 15){
-                Text("•   - than 5 min:  1/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("•  -") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("5 min:  1/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
-                Text("•   - than 15 min:  3/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("•  -") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("15 min:  3/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
-                Text("•   + than 15 min:  5/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("•  +") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("15 min:  5/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
             }

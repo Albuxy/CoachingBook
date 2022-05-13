@@ -16,13 +16,14 @@
 "menu_profile" = "Profile";
 "menu_team" = "Team";
 "menu_calendar" = "Calendar";
+"menu_files" = "Files";
 "menu_settings" = "Settings";
 "menu_logout" = "Logout";
 
 //MARK: - Coach Screen
 "coach_profile" = "Profile";
-"coach_dashboard" = "Dashboard";
-"coach_feedback_events" = "Feedback Events";
+"coach_dashboard" = "Preparation";
+"coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contacts";
 "coach_logout" = "Logout";
 "remove_account" = "Remove account";
@@ -138,6 +139,7 @@
 "team_stats_title" = "Stats";
 "team_events_title" = "Events";
 "list_of_players_title" = "List of players";
+"position" = "Position";
 "position_title" = "Position: ";
 "position_base" = "Point guard";
 "position_escolta" = "Shooting guard";
@@ -163,6 +165,8 @@
 "personal_details_title" = "Personal detail";
 "team_details_title" = "Team detail";
 "individual_stats_title" = "Individual stats";
+//Add player
+"add_player_title" = "Add player";
 
 //Stats
 "stats_empty_title" = "No Stats Ready";
@@ -216,6 +220,7 @@
 
 //MARK: General
 "reason_other_title" = "Other";
+"comparate_title" = " than ";
 "write_title" = "Write";
 
 //MARK: Buttons

@@ -16,6 +16,9 @@
 		8408329228297C1100DCE47E /* TrainingEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408329128297C1100DCE47E /* TrainingEventListView.swift */; };
 		8408329428297F7200DCE47E /* EventMatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408329328297F7200DCE47E /* EventMatchCard.swift */; };
 		840832962829819F00DCE47E /* MatchEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840832952829819F00DCE47E /* MatchEventListView.swift */; };
+		84083298282ADF0B00DCE47E /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84083297282ADF0B00DCE47E /* AddPlayerView.swift */; };
+		8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84083299282AE2EF00DCE47E /* ProfileAddPlayerView.swift */; };
+		840832A1282BEF2A00DCE47E /* TeamAddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840832A0282BEF2A00DCE47E /* TeamAddPlayerView.swift */; };
 		841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE042810796B0033EF4C /* CoachInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE022810796B0033EF4C /* CoachInformationView.swift */; };
 		841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BAE062810846B0033EF4C /* DatePickerTextField.swift */; };
@@ -143,6 +146,9 @@
 		8408329128297C1100DCE47E /* TrainingEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingEventListView.swift; sourceTree = "<group>"; };
 		8408329328297F7200DCE47E /* EventMatchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMatchCard.swift; sourceTree = "<group>"; };
 		840832952829819F00DCE47E /* MatchEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEventListView.swift; sourceTree = "<group>"; };
+		84083297282ADF0B00DCE47E /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
+		84083299282AE2EF00DCE47E /* ProfileAddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddPlayerView.swift; sourceTree = "<group>"; };
+		840832A0282BEF2A00DCE47E /* TeamAddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAddPlayerView.swift; sourceTree = "<group>"; };
 		841BAE022810796B0033EF4C /* CoachInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInformationView.swift; sourceTree = "<group>"; };
 		841BAE062810846B0033EF4C /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		841BAE08281084910033EF4C /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -277,6 +283,16 @@
 				8408329328297F7200DCE47E /* EventMatchCard.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		8408329B282AE40A00DCE47E /* Add Player */ = {
+			isa = PBXGroup;
+			children = (
+				84083297282ADF0B00DCE47E /* AddPlayerView.swift */,
+				84083299282AE2EF00DCE47E /* ProfileAddPlayerView.swift */,
+				840832A0282BEF2A00DCE47E /* TeamAddPlayerView.swift */,
+			);
+			path = "Add Player";
 			sourceTree = "<group>";
 		};
 		841BAE05281084550033EF4C /* CustomViews */ = {
@@ -569,6 +585,7 @@
 				84AD5A1D282580AE007EACDE /* PlayerInformationView.swift */,
 				84AD5A1F28259D01007EACDE /* PersonalDetailView.swift */,
 				84841A8928280C0200B69495 /* PlayerTeamDetailView.swift */,
+				8408329B282AE40A00DCE47E /* Add Player */,
 				84841A9128283DBF00B69495 /* Stats */,
 			);
 			path = Player;
@@ -783,6 +800,7 @@
 				84841A9328283DDD00B69495 /* StatsPlayerView.swift in Sources */,
 				84AD59FF2821C6A3007EACDE /* MenuView.swift in Sources */,
 				84841A8A28280C0300B69495 /* PlayerTeamDetailView.swift in Sources */,
+				84083298282ADF0B00DCE47E /* AddPlayerView.swift in Sources */,
 				84845E242814004E0014E4DA /* ObjectsNeededView.swift in Sources */,
 				84841A952828406D00B69495 /* StatsAttendanceCard.swift in Sources */,
 				84AD59F72821A4A0007EACDE /* AddContactView.swift in Sources */,
@@ -824,6 +842,7 @@
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
+				8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */,
 				84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
 				84AD5A222825A121007EACDE /* ViewModifier.swift in Sources */,
@@ -836,6 +855,7 @@
 				844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */,
 				8481AF0F282179B300D59063 /* FavouritesContactsView.swift in Sources */,
 				844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */,
+				840832A1282BEF2A00DCE47E /* TeamAddPlayerView.swift in Sources */,
 				84AD5A06282290F9007EACDE /* SettingsView.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
