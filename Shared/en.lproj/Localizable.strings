@@ -159,6 +159,8 @@
 "wednesday_title" = "Wednesday";
 "thursday_title" = "Thursday";
 "friday_title" = "Friday";
+"saturday_title" = "Saturday";
+"sunday_title" = "Sunday";
 
 //Player
 "player_information_title" = "Player information";
@@ -167,8 +169,7 @@
 "individual_stats_title" = "Individual stats";
 //Add player
 "add_player_title" = "Add player";
-
-//Stats
+//Stats Player
 "stats_empty_title" = "No Stats Ready";
 "stats_empty_subtitle" = "Start giving information about this player in training and matches";
 "stats_title" = "Statistics";
@@ -198,6 +199,18 @@
 "events_title" = "Events";
 "status_prepared_title" = "Prepared";
 "status_not_prepared_title" = "Pending";
+
+//Stats team
+"stats_team_title" = "Stats of your team";
+"stats_team_subtitle" = "Improve all these numbers of your team";
+"stats_perc_attendance" = "Percentatge attendancce";
+"stats_perc_punctuality" = "Percentatge punctuality";
+"stats_general_title" = "General stats";
+"stats_unit_general_title" = "Unit: total events";
+"total_ranking_stats" = "Total Ranking";
+"attendance_name" = "Attendance";
+"behaviour_name" = "Behaviour";
+"punctuality_name" = "Punctuality";
 
 //MARK: Documents
 "documents_title" = "Documents";

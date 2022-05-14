@@ -153,6 +153,13 @@
 "local_matches_title" = "Partits locals";
 "days_title" = "Dies";
 "hour_title" = "Hores";
+"monday_title" = "Dilluns";
+"tuesday_title" = "Dimarts";
+"wednesday_title" = "Dimecres";
+"thursday_title" = "Dijous";
+"friday_title" = "Divendres";
+"saturday_title" = "Dissabte";
+"sunday_title" = "Diumenge";
 
 //Player
 "player_information_title" = "Informacio del jugador";
@@ -192,6 +199,18 @@
 "events_title" = "Events";
 "status_prepared_title" = "Preparat";
 "status_not_prepared_title" = "Pendent";
+
+//Stats team
+"stats_team_title" = "Estadistiques del teu equip";
+"stats_team_subtitle" = "Millora tots aquests numeros del teu equip";
+"stats_perc_attendance" = "Percentatge asistencia";
+"stats_perc_punctuality" = "Percentatge puntualitat";
+"stats_general_title" = "Estadistiques generals";
+"stats_unit_general_title" = "Unitat: events totals";
+"total_ranking_stats" = "Ranking Total";
+"attendance_name" = "Asistencia";
+"behaviour_name" = "Comportament";
+"punctuality_name" = "Puntualitat";
 
 //MARK: Documents
 "documents_title" = "Documents";

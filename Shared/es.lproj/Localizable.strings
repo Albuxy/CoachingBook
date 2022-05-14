@@ -153,6 +153,13 @@
 "local_matches_title" = "Partidos locales";
 "days_title" = "Dias";
 "hour_title" = "Horas";
+"monday_title" = "Lunes";
+"tuesday_title" = "Martes";
+"wednesday_title" = "Miercoles";
+"thursday_title" = "Jueves";
+"friday_title" = "Viernes";
+"saturday_title" = "Sabado";
+"sunday_title" = "Domingo";
 
 //Player
 "player_information_title" = "Informacion del jugador";
@@ -192,6 +199,18 @@
 "events_title" = "Eventos";
 "status_prepared_title" = "Preparado";
 "status_not_prepared_title" = "Pendiente";
+
+//Stats team
+"stats_team_title" = "Estadisticas de tu equipo";
+"stats_team_subtitle" = "Mejora todos estos numeros de tu equipo";
+"stats_perc_attendance" = "Porcentaje asistencia";
+"stats_perc_punctuality" = "Porcentaje puntualidad";
+"stats_general_title" = "Estadisticas generales";
+"stats_unit_general_title" = "Unidad: \neventos totales";
+"total_ranking_stats" = "Ranking Total";
+"attendance_name" = "Asistencia";
+"behaviour_name" = "Comportamiento";
+"punctuality_name" = "Puntualidad";
 
 //MARK: Documents
 "documents_title" = "Documentos";

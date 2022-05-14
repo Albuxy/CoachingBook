@@ -58,9 +58,15 @@ struct TeamPrincipalView: View {
                     )
                 }
                 HStack(spacing: 40){
-                    ButtonCardTeamView(title: "team_stats_title",
-                                       imageString: "ic_stats_team",
-                                       booleanToChange: $navigateToStatsScreen)
+                    NavigationLink(
+                      destination: StatsTeamView(currentTeam: team),
+                      isActive: $navigateToStatsScreen,
+                      label: {
+                          ButtonCardTeamView(title: "team_stats_title",
+                                             imageString: "ic_stats_team",
+                                             booleanToChange: $navigateToStatsScreen)
+                      }
+                    )
                     NavigationLink(
                       destination: EventsListView(team: team),
                       isActive: $navigateToEventsScreen,

@@ -36,12 +36,16 @@ struct Session: Identifiable {
             return "thursday_title".localized(LocalizationService.shared.language)
         case .friday:
             return "friday_title".localized(LocalizationService.shared.language)
+        case .saturday:
+            return "saturday_title".localized(LocalizationService.shared.language)
+        case .sunday:
+            return "sunday_title".localized(LocalizationService.shared.language)
         }
     }
 }
 
 enum Day {
-    case monday, tuesday, wednesday, thursday, friday
+    case monday, tuesday, wednesday, thursday, friday, saturday, sunday
 }
 
 var teamsData: [Team] = [
@@ -49,14 +53,14 @@ var teamsData: [Team] = [
          logoString: "ic_example_team",
          category: "Mini Mixto",
          players: playersData,
-         trainingDays: [Session(day: .monday, hour: "18:00"),
-                        Session(day: .thursday, hour: "19:00")],
-         matchDay: Session(day: .monday, hour: "18:00")),
+         trainingDays: [Session(day: .monday, hour: "18:30"),
+                        Session(day: .thursday, hour: "20:30")],
+         matchDay: Session(day: .saturday, hour: "17:45")),
     Team(name: "Team 2",
          logoString: "ic_example_team",
          category: "Junior Femenino",
          players: playersNotAssistData,
-         trainingDays: [Session(day: .monday, hour: "18:00"),
-                        Session(day: .thursday, hour: "19:00")],
-         matchDay: Session(day: .monday, hour: "18:00"))
+         trainingDays: [Session(day: .tuesday, hour: "18:00"),
+                        Session(day: .friday, hour: "19:00")],
+         matchDay: Session(day: .sunday, hour: "18:00"))
 ]
