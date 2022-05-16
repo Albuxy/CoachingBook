@@ -34,15 +34,21 @@ struct EventMatchCard: View {
             }
             Divider()
                 .background(Color.black)
-            Button(action: {
-                navigateToInformation.toggle()
-            }) {
-                Text("View details".localized(LocalizationService.shared.language))
-                    .font(.system(size: 13))
-                    .bold()
-            }
-            .buttonStyle(
-                MediumSmallButtonStyle(textColor: Color("blueColor"), backgroundColor: Color("secondBlueColor").opacity(0.3))
+            NavigationLink(
+              destination: MatchInformationView(currentMatch: match),
+              isActive: $navigateToInformation,
+              label: {
+                  Button(action: {
+                      navigateToInformation.toggle()
+                  }) {
+                      Text("View details".localized(LocalizationService.shared.language))
+                          .font(.system(size: 13))
+                          .bold()
+                  }
+                  .buttonStyle(
+                      MediumSmallButtonStyle(textColor: Color("blueColor"), backgroundColor: Color("secondBlueColor").opacity(0.3))
+                  )
+              }
             )
         }
         .frame(width: 320, height: 205, alignment: .top)

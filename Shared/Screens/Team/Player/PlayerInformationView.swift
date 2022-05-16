@@ -46,14 +46,25 @@ struct PlayerInformationView: View {
                                                   booleanToChange: $navigateToTeamDetail)
                       }
                     )
-                    NavigationLink(
-                      destination: StatsPlayerView(player: player),
-                      isActive: $navigateToIndividualStats,
-                      label: {
-                          ButtonPlayerInformation(string: "individual_stats_title",
-                                                  booleanToChange: $navigateToIndividualStats)
-                      }
-                    )
+                    if player.hasStats {
+                        NavigationLink(
+                          destination: StatsPlayerView(player: player),
+                          isActive: $navigateToIndividualStats,
+                          label: {
+                              ButtonPlayerInformation(string: "individual_stats_title",
+                                                      booleanToChange: $navigateToIndividualStats)
+                          }
+                        )
+                    } else {
+                        NavigationLink(
+                          destination: StatsPlayerEmptyView(),
+                          isActive: $navigateToIndividualStats,
+                          label: {
+                              ButtonPlayerInformation(string: "individual_stats_title",
+                                                      booleanToChange: $navigateToIndividualStats)
+                          }
+                        )
+                    }
                 }
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)

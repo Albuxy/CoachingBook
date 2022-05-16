@@ -59,6 +59,7 @@
 		846F734C282FC7D900FF3FB5 /* StatsTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F734B282FC7D800FF3FB5 /* StatsTeamView.swift */; };
 		846F734E282FF36000FF3FB5 /* GeneralStatsTeamCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F734D282FF36000FF3FB5 /* GeneralStatsTeamCard.swift */; };
 		846F735028311D2700FF3FB5 /* TotalRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F734F28311D2600FF3FB5 /* TotalRankingView.swift */; };
+		846F735428353FB200FF3FB5 /* MatchInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F735328353FB200FF3FB5 /* MatchInformationView.swift */; };
 		8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF03281E8D9200D59063 /* EntriesMatchView.swift */; };
 		8481AF07282046DF00D59063 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF06282046DE00D59063 /* ContactModel.swift */; };
 		8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481AF0A2820497600D59063 /* ContactsListView.swift */; };
@@ -198,6 +199,7 @@
 		846F734B282FC7D800FF3FB5 /* StatsTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTeamView.swift; sourceTree = "<group>"; };
 		846F734D282FF36000FF3FB5 /* GeneralStatsTeamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStatsTeamCard.swift; sourceTree = "<group>"; };
 		846F734F28311D2600FF3FB5 /* TotalRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalRankingView.swift; sourceTree = "<group>"; };
+		846F735328353FB200FF3FB5 /* MatchInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchInformationView.swift; sourceTree = "<group>"; };
 		8481AF03281E8D9200D59063 /* EntriesMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesMatchView.swift; sourceTree = "<group>"; };
 		8481AF06282046DE00D59063 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		8481AF0A2820497600D59063 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
@@ -293,9 +295,9 @@
 				8408328828296E6100DCE47E /* EventsListView.swift */,
 				8408328A2829731300DCE47E /* EventPicker.swift */,
 				8408328C2829738B00DCE47E /* SwitchEventView.swift */,
-				8408329128297C1100DCE47E /* TrainingEventListView.swift */,
-				840832952829819F00DCE47E /* MatchEventListView.swift */,
 				840832902829782700DCE47E /* Cards */,
+				846F735128353F3600FF3FB5 /* Match */,
+				846F735228353F4900FF3FB5 /* Training */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -483,6 +485,23 @@
 				846F734F28311D2600FF3FB5 /* TotalRankingView.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		846F735128353F3600FF3FB5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				840832952829819F00DCE47E /* MatchEventListView.swift */,
+				846F735328353FB200FF3FB5 /* MatchInformationView.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		846F735228353F4900FF3FB5 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				8408329128297C1100DCE47E /* TrainingEventListView.swift */,
+			);
+			path = Training;
 			sourceTree = "<group>";
 		};
 		8481AF052820464800D59063 /* Contacts */ = {
@@ -936,6 +955,7 @@
 				840832A1282BEF2A00DCE47E /* TeamAddPlayerView.swift in Sources */,
 				84AD5A06282290F9007EACDE /* SettingsView.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
+				846F735428353FB200FF3FB5 /* MatchInformationView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
 				846F7347282ED50800FF3FB5 /* SwitchFileView.swift in Sources */,

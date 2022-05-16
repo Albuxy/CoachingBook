@@ -199,6 +199,12 @@
 "events_title" = "Events";
 "status_prepared_title" = "Preparat";
 "status_not_prepared_title" = "Pendent";
+"details_title" = "Informació partit";
+"current_title" = "ACTUAL";
+"status_title" = "ESTAT";
+"info_button_title" = "Informació";
+"location_button_title" = "Ubicació";
+"referee_button_title" = "Arbitres";
 
 //Stats team
 "stats_team_title" = "Estadistiques del teu equip";

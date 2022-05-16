@@ -199,6 +199,12 @@
 "events_title" = "Events";
 "status_prepared_title" = "Prepared";
 "status_not_prepared_title" = "Pending";
+"details_title" = "Match information";
+"current_title" = "CURRENT";
+"status_title" = "STATUS";
+"info_button_title" = "Information";
+"location_button_title" = "Location";
+"referee_button_title" = "Referees";
 
 //Stats team
 "stats_team_title" = "Stats of your team";

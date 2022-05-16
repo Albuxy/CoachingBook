@@ -20,11 +20,13 @@ struct Player: Identifiable {
     var dorsal: Int
     var isChecked: Bool = false
     var isJustificated: Justification?
+    var hasStats: Bool
     
     //Stats
     var statsAttendance: AttendanceStats?
     var statsPunctuality: PunctualityStats?
     var statsBehaviour: BehaviourStats?
+    var totalStat: Float
     
     func getStringForPosition(currentPosition: Position) -> String {
         switch currentPosition {
@@ -89,43 +91,57 @@ let playersData: [Player] = [
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 2),
+           dorsal: 2,
+           hasStats: true,
+           totalStat: 3.9),
     Player(name: "Clara",
            surname: "Suri",
            image: "ic_player",
            date: "11-08-2001",
            position: .pivot,
-           dorsal: 3),
+           dorsal: 3,
+           hasStats: false,
+           totalStat: 6.7),
     Player(name: "Sofia",
            surname: "Torres",
            image: "ic_player",
            date: "11-08-2001",
            position: .alero,
-           dorsal: 4),
+           dorsal: 4,
+           hasStats: true,
+           totalStat: 8.2),
     Player(name: "Laura",
            surname: "Malino",
            image: "ic_player",
            date: "11-08-2001",
            position: .escolta,
-           dorsal: 6),
+           dorsal: 6,
+           hasStats: true,
+           totalStat: 9.5),
     Player(name: "Natalia",
            surname: "Habas",
            image: "ic_player",
            date: "11-08-2001",
            position: .alapivot,
-           dorsal: 7),
+           dorsal: 7,
+           hasStats: false,
+           totalStat: 5.9),
     Player(name: "Ana",
            surname: "Rodriguez",
            image: "ic_player",
            date: "11-08-2001",
            position: .pivot,
-           dorsal: 8),
+           dorsal: 8,
+           hasStats: false,
+           totalStat: 5.8),
     Player(name: "Nuria",
            surname: "Polo",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
-           dorsal: 9)
+           dorsal: 9,
+           hasStats: true,
+           totalStat: 7.6)
 ]
 
 enum Justification {
@@ -139,21 +155,27 @@ let playersNotAssistData: [Player] = [
            date: "11-08-2001",
            position: .base,
            dorsal: 16,
-           isJustificated: .filled),
+           isJustificated: .filled,
+           hasStats: true,
+           totalStat: 5.4),
     Player(name: "Julia",
            surname: "Polo",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
            dorsal: 16,
-           isJustificated: .notFilled),
+           isJustificated: .notFilled,
+           hasStats: false,
+           totalStat: 8.6),
     Player(name: "Maria",
            surname: "Puentes",
            image: "ic_player",
            date: "11-08-2001",
            position: .base,
            dorsal: 16,
-           isJustificated: .filled)
+           isJustificated: .filled,
+           hasStats: false,
+           totalStat: 2.9)
 ]
 
 enum Position {

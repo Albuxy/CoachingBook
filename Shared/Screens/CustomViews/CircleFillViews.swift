@@ -102,6 +102,8 @@ struct StatsBehaviourCard1_Previews: PreviewProvider {
                                           image: "",
                                           date: "",
                                           position: .base,
-                                          dorsal: 5))
+                                          dorsal: 5,
+                                          hasStats: true,
+                                          totalStat: 4.6))
     }
 }

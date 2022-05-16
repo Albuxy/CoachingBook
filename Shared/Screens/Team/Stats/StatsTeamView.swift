@@ -54,7 +54,8 @@ struct StatsTeamView: View {
                 }
                 GeneralStatsTeamCard()
                 TotalRankingButton(imageString: "ic_bullet_green",
-                                   titleString: "total_ranking_stats")
+                                   titleString: "total_ranking_stats",
+                                   team: currentTeam)
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
              .background(Color("fourthLightBlueColor"))
@@ -120,31 +121,45 @@ struct TotalRankingButton: View {
 
     var imageString: String
     var titleString: String
+    var team: Team
+    
+    @State var navigateToRanking = false
 
     var body: some View {
-        HStack(alignment: .center, spacing: 15) {
-            Image(imageString)
-                .resizable()
-                .frame(width: 20, height: 20)
-            Text(titleString.localized(LocalizationService.shared.language))
-                .font(.system(size: 18))
-                .bold()
-                .foregroundColor(.black)
-            Spacer()
-            Image("right_arrow")
-                .resizable()
-                .frame(width: 30, height: 30)
-        }
-        .padding([.leading, .trailing], 20)
-        .frame(width: 340, height: 60, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color.clear, lineWidth: 3)
-                .background(
-                    RoundedRectangle(cornerRadius: 10).fill(Color.white)
-                )
-                .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
+        NavigationLink(
+          destination: TotalRankingView(currentTeam: team),
+          isActive: $navigateToRanking,
+          label: {
+              Button {
+                  navigateToRanking.toggle()
+              } label: {
+                  HStack(alignment: .center, spacing: 15) {
+                      Image(imageString)
+                          .resizable()
+                          .frame(width: 20, height: 20)
+                      Text(titleString.localized(LocalizationService.shared.language))
+                          .font(.system(size: 18))
+                          .bold()
+                          .foregroundColor(.black)
+                      Spacer()
+                      Image("right_arrow")
+                          .resizable()
+                          .frame(width: 30, height: 30)
+                  }
+                  .padding([.leading, .trailing], 20)
+                  .frame(width: 340, height: 60, alignment: .leading)
+                  .background(
+                      RoundedRectangle(cornerRadius: 10)
+                          .strokeBorder(Color.clear, lineWidth: 3)
+                          .background(
+                              RoundedRectangle(cornerRadius: 10).fill(Color.white)
+                          )
+                          .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
+                  )
+              }
+          }
         )
+        
     }
 }
 
