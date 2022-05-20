@@ -200,11 +200,18 @@
 "status_prepared_title" = "Prepared";
 "status_not_prepared_title" = "Pending";
 "details_title" = "Match information";
+"training_information_title" = "Training information";
 "current_title" = "CURRENT";
 "status_title" = "STATUS";
+"match_title1" = "MATCH ";
+"category_title" = "Category";
+"adress_title" = "Adress";
 "info_button_title" = "Information";
 "location_button_title" = "Location";
 "referee_button_title" = "Referees";
+"status_subtitle" = "Status: ";
+"train_title" = "TRAINNING ";
+"infor_title" = " INFORMATION";
 
 //Stats team
 "stats_team_title" = "Stats of your team";
@@ -267,6 +274,7 @@
 "button_remove_match" = "Remove match";
 "button_remove_contact" = "Remove contact";
 "button_remove_team" = "Remove team";
+"button_view_details" = "View details";
 
 //Messages
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";

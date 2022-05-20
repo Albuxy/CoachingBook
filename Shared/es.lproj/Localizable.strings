@@ -200,11 +200,18 @@
 "status_prepared_title" = "Preparado";
 "status_not_prepared_title" = "Pendiente";
 "details_title" = "Informacion partido";
+"training_information_title" = "Informacion entrenamiento";
 "current_title" = "ACTUAL";
 "status_title" = "ESTADO";
+"match_title1" = " PARTIDO ";
+"category_title" = "Categoria";
+"adress_title" = "Dirección";
 "info_button_title" = "Informacion";
 "location_button_title" = "Ubicacion";
 "referee_button_title" = "Arbitros";
+"status_subtitle" = "Estado: ";
+"train_title" = "INFORMACION ";
+"infor_title" = " ENTRENAMIENTO";
 
 //Stats team
 "stats_team_title" = "Estadisticas de tu equipo";
@@ -268,6 +275,7 @@
 "button_remove_match" = "Eliminar partido";
 "button_remove_contact" = "Eliminar contacto";
 "button_remove_team" = "Eliminar equipo";
+"button_view_details" = "Ver detalles";
 
 //Messages
 "confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";

@@ -200,11 +200,18 @@
 "status_prepared_title" = "Preparat";
 "status_not_prepared_title" = "Pendent";
 "details_title" = "Informació partit";
+"training_information_title" = "Informació entrenament";
 "current_title" = "ACTUAL";
 "status_title" = "ESTAT";
+"match_title1" = " PARTIT";
+"category_title" = "Categoria";
+"adress_title" = "Adreça";
 "info_button_title" = "Informació";
 "location_button_title" = "Ubicació";
 "referee_button_title" = "Arbitres";
+"status_subtitle" = "Estat: ";
+"train_title" = "INFORMACIO ";
+"infor_title" = " ENTRENAMENT";
 
 //Stats team
 "stats_team_title" = "Estadistiques del teu equip";
@@ -267,6 +274,7 @@
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";
 "button_remove_team" = "Eliminar equip";
+"button_view_details" = "Veure detalls";
 
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";

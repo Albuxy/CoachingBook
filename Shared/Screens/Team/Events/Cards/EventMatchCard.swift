@@ -41,7 +41,7 @@ struct EventMatchCard: View {
                   Button(action: {
                       navigateToInformation.toggle()
                   }) {
-                      Text("View details".localized(LocalizationService.shared.language))
+                      Text("button_view_details".localized(LocalizationService.shared.language))
                           .font(.system(size: 13))
                           .bold()
                   }

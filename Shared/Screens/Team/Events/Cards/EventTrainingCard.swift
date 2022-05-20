@@ -45,15 +45,21 @@ struct EventTrainingCard: View {
             .padding(.top)
             Divider()
                 .background(Color.black)
-            Button(action: {
-                navigateToInformation.toggle()
-            }) {
-                Text("View details".localized(LocalizationService.shared.language))
-                    .font(.system(size: 13))
-                    .bold()
-            }
-            .buttonStyle(
-                MediumSmallButtonStyle(textColor: Color("blueColor"), backgroundColor: Color("secondBlueColor").opacity(0.3))
+            NavigationLink(
+              destination: TrainingInformationView(currentTraining: training),
+              isActive: $navigateToInformation,
+              label: {
+                  Button(action: {
+                      navigateToInformation.toggle()
+                  }) {
+                      Text("button_view_details".localized(LocalizationService.shared.language))
+                          .font(.system(size: 13))
+                          .bold()
+                  }
+                  .buttonStyle(
+                      MediumSmallButtonStyle(textColor: Color("blueColor"), backgroundColor: Color("secondBlueColor").opacity(0.3))
+                  )
+              }
             )
         }
         .frame(width: 320, height: 125, alignment: .top)

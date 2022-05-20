@@ -25,7 +25,7 @@ struct MatchInformationView: View {
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
             .background(Color("secondLightBlueColor"))
         }
-        .padding(.top, 50)
+        .padding(.top, 40)
         .navigationBarTitle(Text("details_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
@@ -40,9 +40,6 @@ struct MatchInformationView: View {
 struct HeaderInfoMatch: View {
     
     var currentMatch: Match
-    var gradient = LinearGradient(gradient: Gradient(colors: [Color("greenMediumColor"),            Color("greenLightColor")]),
-                                  startPoint: .topLeading,
-                                  endPoint: .bottomTrailing)
     
     var body: some View {
         VStack(alignment: .center, spacing: 0){
@@ -92,16 +89,16 @@ struct InfoMatchReadyCard: View {
 
     var body: some View {
         VStack(spacing: 35){
-            Text("MATCH ")
+            Text("match_title1".localized(LocalizationService.shared.language))
                 .bold()
                 .foregroundColor(Color("blueColor"))
                 .font(.system(size: 21))
             +
-            Text(" INFORMATION")
+            Text("infor_title".localized(LocalizationService.shared.language))
                 .foregroundColor(Color("blueColor").opacity(0.8))
                 .font(.system(size: 21))
             VStack(spacing: 20){
-                ImageWithTitleLineView(title: "Category",
+                ImageWithTitleLineView(title: "category_title",
                                        imageString: "ic_ball_basket")
                 Text("Pre-Infantil Femenino - Grupo B")
                     .foregroundColor(Color("blueColor"))
@@ -110,7 +107,7 @@ struct InfoMatchReadyCard: View {
                 
             }
             VStack(spacing: 20){
-                ImageWithTitleLineView(title: "Adress",
+                ImageWithTitleLineView(title: "adress_title",
                                        imageString: "ic_ubi")
                 HStack(spacing: 15){
                     Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.395306, longitude: 2.105181), span: MKCoordinateSpan(latitudeDelta: 0.4, longitudeDelta: 0.4))), interactionModes: [])
@@ -122,7 +119,7 @@ struct InfoMatchReadyCard: View {
                 }.frame(width: UIScreen.main.bounds.width / 1.30, alignment: .leading)
             }
             VStack(spacing: 20){
-                ImageWithTitleLineView(title: "Referees",
+                ImageWithTitleLineView(title: "referee_button_title",
                                        imageString: "ic_referee")
                 VStack(spacing: 8){
                     Text(currentMatch.referee1)

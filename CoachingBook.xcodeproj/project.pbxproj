@@ -103,6 +103,8 @@
 		84845E2E2814186E0014E4DA /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E2C2814186D0014E4DA /* CoachModel.swift */; };
 		84845E3128159FB50014E4DA /* CancelTrainningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E3028159FB50014E4DA /* CancelTrainningView.swift */; };
 		84845E3228159FB50014E4DA /* CancelTrainningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84845E3028159FB50014E4DA /* CancelTrainningView.swift */; };
+		849D4C8D2835748600B478FA /* TrainingInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D4C8C2835748600B478FA /* TrainingInformationView.swift */; };
+		849D4C8E2835748700B478FA /* TrainingInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D4C8C2835748600B478FA /* TrainingInformationView.swift */; };
 		84AD59F72821A4A0007EACDE /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD59F62821A4A0007EACDE /* AddContactView.swift */; };
 		84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD59F92821B601007EACDE /* TeamModel.swift */; };
 		84AD59FD2821C4FC007EACDE /* MenuEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD59FC2821C4FB007EACDE /* MenuEntries.swift */; };
@@ -227,6 +229,7 @@
 		84845E292814039E0014E4DA /* ObjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsModel.swift; sourceTree = "<group>"; };
 		84845E2C2814186D0014E4DA /* CoachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachModel.swift; sourceTree = "<group>"; };
 		84845E3028159FB50014E4DA /* CancelTrainningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTrainningView.swift; sourceTree = "<group>"; };
+		849D4C8C2835748600B478FA /* TrainingInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInformationView.swift; sourceTree = "<group>"; };
 		84AD59F62821A4A0007EACDE /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		84AD59F92821B601007EACDE /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		84AD59FC2821C4FB007EACDE /* MenuEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuEntries.swift; sourceTree = "<group>"; };
@@ -500,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				8408329128297C1100DCE47E /* TrainingEventListView.swift */,
+				849D4C8C2835748600B478FA /* TrainingInformationView.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -934,6 +938,7 @@
 				846F7342282ED13400FF3FB5 /* DocumentsListView.swift in Sources */,
 				8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */,
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
+				849D4C8D2835748600B478FA /* TrainingInformationView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */,
@@ -976,6 +981,7 @@
 				84845E1228133CA70014E4DA /* MatchDashboardCard.swift in Sources */,
 				84845DF62811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84845E2B2814039E0014E4DA /* ObjectsModel.swift in Sources */,
+				849D4C8E2835748700B478FA /* TrainingInformationView.swift in Sources */,
 				84845E182813472E0014E4DA /* TrainingPreparationView.swift in Sources */,
 				84845E002812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84845E1528133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
