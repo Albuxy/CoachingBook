@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 enum MenuEntries {
-  case home, profile, team, calendar, settings, logout
+  case home, profile, team, calendar, files, settings, logout
 }
 
 class MenuViewModel: ObservableObject {
-  @Published var selectedMenu = "Profile"
+  @Published var selectedMenu = "menu_profile"
   @Published var showMenu = false
   @Published var showSection: MenuEntries = .profile
 }
@@ -24,6 +24,8 @@ struct MenuSwitchView: View {
   @Environment(\.presentationMode) var presentation
 
   @StateObject var menuModel = MenuViewModel()
+    
+  @State var coach = coachData
 
   @Binding var userMenuEntry: MenuEntries
 
@@ -36,12 +38,12 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_home"))
       case .profile:
-        ProfileCoachView()
+          ProfileCoachView(coach: $coach)
           .navigationBarItems(
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-        EmptyView()
+          TeamPrincipalView(team: coach.teams[0])
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))
@@ -50,6 +52,11 @@ struct MenuSwitchView: View {
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
+      case .files:
+        FilesView()
+              .navigationBarItems(
+                leading:
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_files"))
       case .settings:
         SettingsView()
               .navigationBarItems(

@@ -49,15 +49,24 @@ struct CoachInformationScreen: View {
                         VStack(alignment: .leading, spacing: 5){
                             Text("coach_dateOfBirth"
                                     .localized(LocalizationService.shared.language))
+                                .foregroundColor(.black)
                             DatePickerTextField(placeholder: "Choose".lowercased().localized(LocalizationService.shared.language),
                                                 date: self.$date)
                                 .padding(.leading, 10)
                                 .frame(width: 320, height: 50, alignment: .center)
-                                .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+                                .background(
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .strokeBorder(Color("lightGrayColor"), lineWidth: 1)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 5)
+                                                .fill(Color.white)
+                                        )
+                                )
                         }
                         VStack(alignment: .leading, spacing: 5){
                             Text("coach_gender"
                                     .localized(LocalizationService.shared.language))
+                                .foregroundColor(.black)
                             HStack(spacing: 18){
                                 RadioButtonField(
                                     id: "Male",
@@ -69,6 +78,7 @@ struct CoachInformationScreen: View {
                                         self.gender = selected
                                     }
                                 )
+                                .background(.white)
                                 RadioButtonField(
                                     id: "Female",
                                     label: "coach_gender_female",
@@ -79,6 +89,7 @@ struct CoachInformationScreen: View {
                                         self.gender = selected
                                     }
                                 )
+                                .background(.white)
                             }
                         }
                     }
@@ -103,11 +114,12 @@ struct CoachInformationScreen: View {
                 .ignoresSafeArea()
                 .padding(.top, 30)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .topLeading)
+                .background(Color("secondLightBlueColor"))
             }
             .overlay(
                 ZStack{
                     Rectangle()
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color("secondLightBlueColor"))
                         .frame(width: UIScreen.main.bounds.width,
                                height: 120)
                     // MARK: - Button
@@ -142,9 +154,20 @@ struct TextFieldWithTitleGeneral: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             Text(defaultTextFiled.localized(LocalizationService.shared.language))
+                .foregroundColor(.black)
             TextField("", text: $stringTextField)
+                .foregroundColor(.black)
+                .placeholder(Text("write_title".localized(LocalizationService.shared.language))
+                .foregroundColor(.gray), show: stringTextField.isEmpty)
                 .padding()
-                .overlay(RoundedRectangle(cornerRadius: 6.0).strokeBorder(Color("lightGrayColor"), style: StrokeStyle(lineWidth: 1.0)))
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .strokeBorder(Color("lightGrayColor"), lineWidth: 1)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .fill(Color.white)
+                        )
+                )
                 .overlay(
                     HStack {
                         if !self.stringTextField.isEmpty {

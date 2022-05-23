@@ -21,11 +21,13 @@ struct NonAssistantPlayersView: View {
                 VStack(alignment: .leading, spacing: 30){
                     Text("non_player_selection_title".localized(LocalizationService.shared.language))
                         .font(.system(size: 22))
+                        .foregroundColor(.black)
                         .bold()
                         .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
                     
                     Text("non_player_selection_subtitle".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
                         .frame(width: UIScreen.main.bounds.width / 1.20, alignment: .leading)
@@ -53,6 +55,7 @@ struct NonAssistantPlayersView: View {
             }
         }
         .padding(.top, 40)
+        .padding(.bottom, 15)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
         .background(LinearGradient(gradient: Gradient(colors: [colors[0], colors[1]]),
                                    startPoint: .topLeading,

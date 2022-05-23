@@ -13,7 +13,7 @@ struct ContactsListView: View {
     @Environment(\.presentationMode) var presentation
 
     @State private var searchText = ""
-    
+
     var contacts: [Contact]
 
     var body: some View {

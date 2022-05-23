@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Model for Trainings
+//Model for Contact
 struct Contact: Identifiable {
     var id = UUID()
     var full_name: String

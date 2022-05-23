@@ -19,10 +19,12 @@ struct ObjectsNeededView: View {
             VStack(spacing: 20){
                 VStack(spacing: 10){
                     Text("objects_selection_title".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 23))
                         .bold()
                     Text("objects_selection_subtitle".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
                         .lineSpacing(8)
                         .frame(width: UIScreen.main.bounds.width / 1.15, alignment: .leading)

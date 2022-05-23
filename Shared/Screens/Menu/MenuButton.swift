@@ -36,11 +36,11 @@ struct MenuButton: View {
             if selectedMenu == name {
                 Image(imageSelected)
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 28, height: 28)
             } else {
               Image(image)
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 28, height: 28)
             }
               Text(name.localized(LocalizationService.shared.language))
                  .foregroundColor(.white)

@@ -45,7 +45,7 @@ struct CoachCard: View {
                                 )
                         )
                     VStack(alignment: .center, spacing: 10) {
-                        Text(coach.full_name + coach.surname)
+                        Text(coach.full_name + " " + coach.surname)
                             .font(.system(size: 20))
                             .foregroundColor(.black)
                         Text(coach.email)
@@ -70,7 +70,8 @@ struct CoachCard: View {
 }
 
 struct CoachCard_Previews: PreviewProvider {
+    @State static var value = coachData
     static var previews: some View {
-        ProfileCoachView()
+        ProfileCoachView(coach: $value)
     }
 }

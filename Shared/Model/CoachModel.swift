@@ -23,12 +23,12 @@ struct Coach: Identifiable {
 }
 
 var coachData: Coach {
-    Coach(surname: "Coach",
-          full_name: "name",
+    Coach(surname: "Torra",
+          full_name: "Alba",
           imageString: "ic_women",
           dateOfBirth: Date(),
           gender: "Women",
           mobileNumber: "753627674",
-          email: "coachName@gmail.com",
+          email: "alba.torra@gmail.com",
           teams: teamsData)
 }

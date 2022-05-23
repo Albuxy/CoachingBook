@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_team.png",
+      "filename" : "ic_team-removebg-preview-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_team-1.png",
+      "filename" : "ic_team-removebg-preview-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_team-2.png",
+      "filename" : "ic_team-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -42,7 +42,8 @@ struct ContactInformationView: View {
                 }
                 CustomRowInformationContact(title: "contact_phone_title",
                                             subtitle: currentContact.phoneNumber)
-            }.frame(width: UIScreen.main.bounds.width / 1.4,
+            }
+            .frame(width: UIScreen.main.bounds.width / 1.4,
                     height: UIScreen.main.bounds.height / 2,
                     alignment: .topLeading)
             //Button Remove COntact
@@ -73,6 +74,7 @@ struct ContactInformationView: View {
                     )
             )
         }
+        .background(.white)
         .navigationBarTitle(Text("contact_information_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
@@ -86,11 +88,11 @@ struct ContactInformationView: View {
     func getGenderInString(gender: Gender) -> String {
         switch gender {
         case .male:
-            return "coach_gender_male"
+            return "coach_gender_male".localized(LocalizationService.shared.language)
         case .female:
-            return "coach_gender_female"
+            return "coach_gender_female".localized(LocalizationService.shared.language)
         case .other:
-            return "reason_other_title"
+            return "reason_other_title".localized(LocalizationService.shared.language)
         }
     }
 }

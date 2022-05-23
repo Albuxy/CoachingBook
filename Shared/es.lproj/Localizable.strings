@@ -16,13 +16,14 @@
 "menu_profile" = "Perfil";
 "menu_team" = "Equipo";
 "menu_calendar" = "Calendario";
+"menu_files" = "Archivos";
 "menu_settings" = "Ajustes";
 "menu_logout" = "Salir";
 
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
-"coach_dashboard" = "Panel";
-"coach_feedback_events" = "Eventos feedback";
+"coach_dashboard" = "Preparacion";
+"coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contactos";
 "coach_logout" = "Salir";
 "remove_account" = "Eliminar cuenta";
@@ -131,6 +132,110 @@
 "mother_title" = "Madre";
 "related_to_title" = "No definido";
 
+//MARK: Team
+"team_title" = "Equipo";
+"team_players_title" = "Jugadores";
+"team_stats_title" = "Estadisticas";
+"team_events_title" = "Eventos";
+"list_of_players_title" = "Lista de jugadores";
+"position" = "Posicion";
+"position_title" = "Posicion: ";
+"position_base" = "Base";
+"position_escolta" = "Escolta";
+"position_alero" = "Alero";
+"position_alapivot" = "Ala-pivot";
+"position_pivot" = "Pivot";
+"dorsal_player_title" = "Dorsal";
+
+//Information
+"team_information_title" = "Informacion del equipo";
+"training_sessions_title" = "Sesiones de entrenamiento";
+"local_matches_title" = "Partidos locales";
+"days_title" = "Dias";
+"hour_title" = "Horas";
+"monday_title" = "Lunes";
+"tuesday_title" = "Martes";
+"wednesday_title" = "Miercoles";
+"thursday_title" = "Jueves";
+"friday_title" = "Viernes";
+"saturday_title" = "Sabado";
+"sunday_title" = "Domingo";
+
+//Player
+"player_information_title" = "Informacion del jugador";
+"personal_details_title" = "Detalles personales";
+"team_details_title" = "Detalles con el equipo";
+"individual_stats_title" = "Estadisticas individuales";
+//Add player
+"add_player_title" = "Añadir jugador";
+
+//Stats
+"stats_empty_title" = "No hay estadisticas listas";
+"stats_empty_subtitle" = "Empieza a dar informacion sobre este jugador en entrenamientos y partidos";
+"stats_title" = "Estadisticas";
+"stats_subtitle" = "Aquí puedes ver las estadísticas individuales de este jugador con más detalle.";
+"match_title" = "Partido";
+"training_title" = "Entreno";
+//Attendance
+"attendance_analysis_title" = "Analisis asistencia";
+"attendance_match" = "Asistencia total en partidos jugados";
+"attendance_training" = "Asistencia total en entrenos hechos";
+"attendance_total" = " total";
+//Punctuality
+"punctuality_analysis_title" = "Analisis puntualidad";
+"punctuality_match" = "Puntualidad total en partidos jugados";
+"punctuality_training" = "Puntualidad total en entrenos hechos";
+//Behaviour & Attitude
+"behaviour_analysis_title" = "Analisis comportamiento";
+"behaviour_title" = "Comportamiento";
+"behaviour_subtitle" = "Este es el comportamiento promedio sobre 10";
+"attitude_title" = "Actitud";
+"attitude_subtitle" = "Esta es la actitud promedio sobre 10";
+"behaviour_rated" = "Ha calificado su comportamiento con un total de:";
+"attitude_rated" = "Has calificado su actitud con un total de:";
+"times_title" = " veces";
+
+//Events
+"events_title" = "Eventos";
+"status_prepared_title" = "Preparado";
+"status_not_prepared_title" = "Pendiente";
+"details_title" = "Informacion partido";
+"training_information_title" = "Informacion entrenamiento";
+"current_title" = "ACTUAL";
+"status_title" = "ESTADO";
+"match_title1" = " PARTIDO ";
+"category_title" = "Categoria";
+"adress_title" = "Dirección";
+"info_button_title" = "Informacion";
+"location_button_title" = "Ubicacion";
+"referee_button_title" = "Arbitros";
+"status_subtitle" = "Estado: ";
+"train_title" = "INFORMACION ";
+"infor_title" = " ENTRENAMIENTO";
+
+//Stats team
+"stats_team_title" = "Estadisticas de tu equipo";
+"stats_team_subtitle" = "Mejora todos estos numeros de tu equipo";
+"stats_perc_attendance" = "Porcentaje asistencia";
+"stats_perc_punctuality" = "Porcentaje puntualidad";
+"stats_general_title" = "Estadisticas generales";
+"stats_unit_general_title" = "Unidad: \neventos totales";
+"total_ranking_stats" = "Ranking Total";
+"attendance_name" = "Asistencia";
+"behaviour_name" = "Comportamiento";
+"punctuality_name" = "Puntualidad";
+
+//MARK: Documents
+"documents_title" = "Documentos";
+"images_title" = "Imagenes";
+"videos_title" = "Videos";
+"type_files_title" = "Tipo de archivos";
+"list_files_title" = "Lista de archivos seleccionados";
+"upload_title" = "Subidos: ";
+"upload_date_title" = "Fecha de subida: ";
+"remove_file" = "Eliminar archivo";
+"confirmation_remove_file" = "Estas seguro que deseas eliminar este archivo?";
+
 //MARK: Settings
 "settings_account_title" = "Cuenta";
 "change_password_title" = "Cambiar contraseña";
@@ -153,6 +258,8 @@
 
 //MARK: General
 "reason_other_title" = "Otro";
+"write_title" = "Escribe";
+"comparate_title" = " de ";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";
@@ -167,6 +274,8 @@
 "button_remove_session" = "Eliminar sesion";
 "button_remove_match" = "Eliminar partido";
 "button_remove_contact" = "Eliminar contacto";
+"button_remove_team" = "Eliminar equipo";
+"button_view_details" = "Ver detalles";
 
 //Messages
 "confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";

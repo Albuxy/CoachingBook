@@ -16,13 +16,14 @@
 "menu_profile" = "Perfil";
 "menu_team" = "Equip";
 "menu_calendar" = "Calendari";
+"menu_files" = "Arxius";
 "menu_settings" = "Configuracio";
 "menu_logout" = "Sortir";
 
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
-"coach_dashboard" = "Panel";
-"coach_feedback_events" = "Events feedback";
+"coach_dashboard" = "Preparació";
+"coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contactes";
 "coach_logout" = "Sortir";
 "remove_account" = "Eliminar compte";
@@ -131,6 +132,110 @@
 "mother_title" = "Mare";
 "related_to_title" = "No definit";
 
+//MARK: Team
+"team_title" = "Equip";
+"team_players_title" = "Jugadors";
+"team_stats_title" = "Estadistiques";
+"team_events_title" = "Events";
+"list_of_players_title" = "Llista de jugadors";
+"position" = "Posició";
+"position_title" = "Posició: ";
+"position_base" = "Base";
+"position_escolta" = "Escolta";
+"position_alero" = "Aler";
+"position_alapivot" = "Ala-pivot";
+"position_pivot" = "Pivot";
+"dorsal_player_title" = "Dorsal";
+
+//Information
+"team_information_title" = "Informacio de l'equip";
+"training_sessions_title" = "Sessions d'entrenament";
+"local_matches_title" = "Partits locals";
+"days_title" = "Dies";
+"hour_title" = "Hores";
+"monday_title" = "Dilluns";
+"tuesday_title" = "Dimarts";
+"wednesday_title" = "Dimecres";
+"thursday_title" = "Dijous";
+"friday_title" = "Divendres";
+"saturday_title" = "Dissabte";
+"sunday_title" = "Diumenge";
+
+//Player
+"player_information_title" = "Informacio del jugador";
+"personal_details_title" = "Detalls personals";
+"team_details_title" = "Detalls amb l'equip";
+"individual_stats_title" = "Estadistiques individuals";
+//Add player
+"add_player_title" = "Afegir jugador";
+
+//Stats
+"stats_empty_title" = "No hi ha estadistiques llestes";
+"stats_empty_subtitle" = "Comença a donar informació sobre aquest jugador en entrenaments i partits";
+"stats_title" = "Estadístiques";
+"stats_subtitle" = "Aquí podeu veure les estadístiques individuals d'aquest jugador amb més detall";
+"match_title" = "Partit";
+"training_title" = "Entrenament";
+//Attendance
+"attendance_analysis_title" = "Assistencia analisis";
+"attendance_match" = "Assistencia total en partits jugats";
+"attendance_training" = "Assistencia total en entrenaments fets";
+"attendance_total" = " total";
+//Punctuality
+"punctuality_analysis_title" = "Puntualitat analisis";
+"punctuality_match" = "Puntualitat total en partits jugats";
+"punctuality_training" = "Puntualitat total en entrenaments fets";
+//Behaviour & Attitude
+"behaviour_analysis_title" = "Anàlisi comportament";
+"behaviour_title" = "Comportament";
+"behaviour_subtitle" = "Aquest és el comportament mitjà de 10";
+"attitude_title" = "Actitut";
+"attitude_subtitle" = "Aquesta és l'actitud mitjana de 10";
+"behaviour_rated" = "Ha qualificat el seu comportament amb un total de: ";
+"attitude_rated" = "Has qualificat la seva actitud amb un total de: ";
+"times_title" = " vegades";
+
+//Events
+"events_title" = "Events";
+"status_prepared_title" = "Preparat";
+"status_not_prepared_title" = "Pendent";
+"details_title" = "Informació partit";
+"training_information_title" = "Informació entrenament";
+"current_title" = "ACTUAL";
+"status_title" = "ESTAT";
+"match_title1" = " PARTIT";
+"category_title" = "Categoria";
+"adress_title" = "Adreça";
+"info_button_title" = "Informació";
+"location_button_title" = "Ubicació";
+"referee_button_title" = "Arbitres";
+"status_subtitle" = "Estat: ";
+"train_title" = "INFORMACIO ";
+"infor_title" = " ENTRENAMENT";
+
+//Stats team
+"stats_team_title" = "Estadistiques del teu equip";
+"stats_team_subtitle" = "Millora tots aquests numeros del teu equip";
+"stats_perc_attendance" = "Percentatge asistencia";
+"stats_perc_punctuality" = "Percentatge puntualitat";
+"stats_general_title" = "Estadistiques generals";
+"stats_unit_general_title" = "Unitat: events totals";
+"total_ranking_stats" = "Ranking Total";
+"attendance_name" = "Asistencia";
+"behaviour_name" = "Comportament";
+"punctuality_name" = "Puntualitat";
+
+//MARK: Documents
+"documents_title" = "Documents";
+"images_title" = "Images";
+"videos_title" = "Videos";
+"type_files_title" = "Tipus d'arxius";
+"list_files_title" = "Llista d'arxius seleccionats";
+"upload_title" = "Pujats: ";
+"upload_date_title" = "Data de pujada: ";
+"remove_file" = "Eliminar arxiu";
+"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
+
 //MARK: Settings
 "settings_account_title" = "Compte";
 "change_password_title" = "Canviar contrasenya";
@@ -152,6 +257,8 @@
 
 //MARK: General
 "reason_other_title" = "Altre";
+"write_title" = "Escriu";
+"comparate_title" = " de ";
 
 //MARK: Buttons
 "button_remove" = "Eliminar";
@@ -166,6 +273,8 @@
 "button_remove_session" = "Eliminar sessio";
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";
+"button_remove_team" = "Eliminar equip";
+"button_view_details" = "Veure detalls";
 
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";

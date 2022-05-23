@@ -20,6 +20,7 @@ struct ObjectCard: View {
                     .resizable()
                     .frame(width: 41, height: 41)
                 Text(item.titleObject.localized(LocalizationService.shared.language))
+                    .foregroundColor(.black)
                 Spacer()
                 Button {
                     isSelected.toggle()
@@ -38,6 +39,7 @@ struct ObjectCard: View {
                         .font(.system(size: 14))
                         .foregroundColor(.black)
                     TextField("0", text: $number_selected)
+                        .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                         .frame(width: 30, height: 30)
                         .keyboardType(.numberPad)
