@@ -41,7 +41,7 @@ struct PrepareMatchCard: View {
             }
             .frame(width: 200, height: 100,alignment: .leading)
             NavigationLink(
-                destination: DashboardOnBoardingView(),
+              destination: DashboardOnBoardingView(),
               isActive: $navigateToPreparation,
               label: {
                   ButtonWithNavigation(boolean: $navigateToPreparation,

@@ -51,6 +51,7 @@
 		844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A15282180DE003FE836 /* CustomPickerContacts.swift */; };
 		844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A19282188E3003FE836 /* ContactInformationView.swift */; };
 		844B6A1C28218926003FE836 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1B28218926003FE836 /* ContactCard.swift */; };
+		8462B964283D29AA00AEF1B0 /* GetBehaviourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B963283D29AA00AEF1B0 /* GetBehaviourCard.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -198,6 +199,7 @@
 		844B6A15282180DE003FE836 /* CustomPickerContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerContacts.swift; sourceTree = "<group>"; };
 		844B6A19282188E3003FE836 /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
 		844B6A1B28218926003FE836 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
+		8462B963283D29AA00AEF1B0 /* GetBehaviourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBehaviourCard.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				84493C75283BF42A00B3EBF1 /* PrepareTrainingCard.swift */,
 				84077EE1283D218B00611015 /* PrepareMatchCard.swift */,
 				84077EE3283D23E400611015 /* GetAssitanceCard.swift */,
+				8462B963283D29AA00AEF1B0 /* GetBehaviourCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */,
 				8481AF0F282179B300D59063 /* FavouritesContactsView.swift in Sources */,
 				844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */,
+				8462B964283D29AA00AEF1B0 /* GetBehaviourCard.swift in Sources */,
 				846F734C282FC7D900FF3FB5 /* StatsTeamView.swift in Sources */,
 				840832A1282BEF2A00DCE47E /* TeamAddPlayerView.swift in Sources */,
 				84AD5A06282290F9007EACDE /* SettingsView.swift in Sources */,

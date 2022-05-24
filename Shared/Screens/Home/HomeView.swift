@@ -13,7 +13,7 @@ struct HomeView: View {
     @Environment(\.presentationMode) var presentation
 
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             ZStack(alignment: .top){
                 Image("backgroundHome")
                     .resizable()
@@ -43,9 +43,15 @@ struct HomeView: View {
                 .padding([.leading, .trailing], 30)
                 .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .leading)
             }
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
-            .background(Color("fourthLightBlueColor"))
+            TabView(){
+                PrepareTrainingCard()
+                PrepareMatchCard()
+            }
+            .accentColor(Color("blueColor"))
+            .tabViewStyle(PageTabViewStyle())
        }
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
+        .background(Color("fourthLightBlueColor"))
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  GetInformationCard.swift
+//  GetBehaviourCard.swift
 //  CoachingBook (iOS)
 //
 //  Created by Alba Torra Di Capua on 24/5/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GetAssitanceCard: View {
+struct GetBehaviourCard: View {
 
     @State var navigateToSeeStats = false
     
@@ -17,17 +17,17 @@ struct GetAssitanceCard: View {
                 ZStack {
                     Circle()
                         .stroke(lineWidth: 3.0)
-                        .foregroundColor(Color.init(hex: "B3BA72"))
-                   Image("ic_teams")
+                        .foregroundColor(Color.init(hex: "A9AB91"))
+                   Image("ic_behaviour")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 35, height: 35)
                 }
                 .frame(width: 60, height: 60)
                 VStack(alignment: .leading, spacing: 10){
                     Text("home_get_info".localized(LocalizationService.shared.language))
                         .font(.system(size: 14))
                         .foregroundColor(.white)
-                    Text("home_information_assistance".localized(LocalizationService.shared.language))
+                    Text("home_information_behaviour".localized(LocalizationService.shared.language))
                         .font(.system(size: 18))
                         .bold()
                         .foregroundColor(.white)
@@ -41,7 +41,7 @@ struct GetAssitanceCard: View {
               label: {
                   ButtonWithNavigation(boolean: $navigateToSeeStats,
                                        title: "home_see_stats",
-                                       color: Color.init(hex: "989F46"))
+                                       color: Color.init(hex: "3E4025"))
               }
             )
         }
@@ -51,7 +51,7 @@ struct GetAssitanceCard: View {
             RoundedRectangle(cornerRadius: 5)
                 .strokeBorder(Color.clear, lineWidth: 1)
                 .background(
-                    Image("greenBackground")
+                    Image("greenDarkBackground")
                         .resizable()
                         .frame(width: 303, height: 160)
                         .cornerRadius(15)
@@ -61,8 +61,8 @@ struct GetAssitanceCard: View {
     }
 }
 
-struct GetInformationCard_Previews: PreviewProvider {
+struct GetBehaviourCard_Previews: PreviewProvider {
     static var previews: some View {
-        GetAssitanceCard()
+        GetBehaviourCard()
     }
 }
