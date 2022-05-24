@@ -20,6 +20,20 @@
 "menu_settings" = "Ajustes";
 "menu_logout" = "Salir";
 
+//MARK: - Home
+"home_title" = "Hola,\nAlba";
+"home_description" = "Tienes 2 actividades hoy:";
+"home_session_desc" = "Prepárate para el entreno y sácale partido";
+"home_match_desc" = "Prepárate para el juego y haz tu mejor esfuerzo";
+"home_continue_preparation" = "Continua la preparacion";
+"home_preparation_progress" = "En proceso:";
+"home_preparation_training" = "Prepara \nTus entrenamientos";
+"home_preparation_match" = "Prepara \nTus partidos";
+"home_information_assistance" = "Asistencia General";
+"home_information_behaviour" = "Comportamiento General";
+"home_see_stats" = "Ver estadisticas";
+"home_get_info" = "Ver informacion:";
+
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
 "coach_dashboard" = "Preparacion";

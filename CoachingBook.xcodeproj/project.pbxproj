@@ -42,11 +42,14 @@
 		84359748280363DD0013B61B /* CoachCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359746280363DD0013B61B /* CoachCard.swift */; };
 		8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
 		8435974B280B32E90013B61B /* ProfileCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84359749280B32E80013B61B /* ProfileCoachView.swift */; };
+		84493C73283BE7D900B3EBF1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84493C72283BE7D900B3EBF1 /* HomeView.swift */; };
+		84493C76283BF42A00B3EBF1 /* PrepareTrainingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84493C75283BF42A00B3EBF1 /* PrepareTrainingCard.swift */; };
 		844B6A1228217DEB003FE836 /* GeneralContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1128217DEB003FE836 /* GeneralContactView.swift */; };
 		844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1328217E4E003FE836 /* SwitchContactView.swift */; };
 		844B6A16282180DE003FE836 /* CustomPickerContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A15282180DE003FE836 /* CustomPickerContacts.swift */; };
 		844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A19282188E3003FE836 /* ContactInformationView.swift */; };
 		844B6A1C28218926003FE836 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1B28218926003FE836 /* ContactCard.swift */; };
+		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
 		846F733B282ECC1800FF3FB5 /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F733A282ECC1800FF3FB5 /* FilesView.swift */; };
@@ -184,11 +187,14 @@
 		843597412802DFAA0013B61B /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		84359746280363DD0013B61B /* CoachCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCard.swift; sourceTree = "<group>"; };
 		84359749280B32E80013B61B /* ProfileCoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoachView.swift; sourceTree = "<group>"; };
+		84493C72283BE7D900B3EBF1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		84493C75283BF42A00B3EBF1 /* PrepareTrainingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareTrainingCard.swift; sourceTree = "<group>"; };
 		844B6A1128217DEB003FE836 /* GeneralContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralContactView.swift; sourceTree = "<group>"; };
 		844B6A1328217E4E003FE836 /* SwitchContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchContactView.swift; sourceTree = "<group>"; };
 		844B6A15282180DE003FE836 /* CustomPickerContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerContacts.swift; sourceTree = "<group>"; };
 		844B6A19282188E3003FE836 /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
 		844B6A1B28218926003FE836 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
+		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
 		846F733A282ECC1800FF3FB5 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
@@ -421,6 +427,14 @@
 			path = Coach;
 			sourceTree = "<group>";
 		};
+		84493C74283BF41200B3EBF1 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				84493C75283BF42A00B3EBF1 /* PrepareTrainingCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		844B6A17282181F5003FE836 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +461,16 @@
 				84AD59F62821A4A0007EACDE /* AddContactView.swift */,
 			);
 			path = "Contact Information";
+			sourceTree = "<group>";
+		};
+		84653883283BE09F00E4A6AA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84493C72283BE7D900B3EBF1 /* HomeView.swift */,
+				84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */,
+				84493C74283BF41200B3EBF1 /* Cards */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		846F7335282EC5A000FF3FB5 /* Files */ = {
@@ -627,6 +651,7 @@
 			children = (
 				84359744280363B30013B61B /* Login */,
 				84AD59FB2821C4D8007EACDE /* Menu */,
+				84653883283BE09F00E4A6AA /* Home */,
 				84359745280363C60013B61B /* Coach */,
 				84AD59F82821B5C3007EACDE /* Team */,
 				84AD5A172825588E007EACDE /* Calendar */,
@@ -894,6 +919,7 @@
 				84841A9328283DDD00B69495 /* StatsPlayerView.swift in Sources */,
 				84AD59FF2821C6A3007EACDE /* MenuView.swift in Sources */,
 				84841A8A28280C0300B69495 /* PlayerTeamDetailView.swift in Sources */,
+				84493C73283BE7D900B3EBF1 /* HomeView.swift in Sources */,
 				84083298282ADF0B00DCE47E /* AddPlayerView.swift in Sources */,
 				84845E242814004E0014E4DA /* ObjectsNeededView.swift in Sources */,
 				846F733B282ECC1800FF3FB5 /* FilesView.swift in Sources */,
@@ -932,9 +958,11 @@
 				846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */,
 				8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
+				84493C76283BF42A00B3EBF1 /* PrepareTrainingCard.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,
 				84AD5A1E282580AE007EACDE /* PlayerInformationView.swift in Sources */,
 				84AED8CC281848A900F98A7C /* PlayerNonAssistingCard.swift in Sources */,
+				84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */,
 				846F7342282ED13400FF3FB5 /* DocumentsListView.swift in Sources */,
 				8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */,
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,

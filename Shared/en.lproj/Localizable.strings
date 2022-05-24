@@ -20,6 +20,20 @@
 "menu_settings" = "Settings";
 "menu_logout" = "Logout";
 
+//MARK: - Home
+"home_title" = "Hello,\nAlba";
+"home_description" = "You have 2 activities today:";
+"home_session_desc" = "Get ready for training, and get the most out of it";
+"home_match_desc" = "Get ready for the game, and try your best";
+"home_continue_preparation" = "Continue Preparation";
+"home_preparation_progress" = "In progress:";
+"home_preparation_training" = "Prepare \nYours trainings";
+"home_preparation_match" = "Prepare \nYours matches";
+"home_information_assistance" = "General Assistance";
+"home_information_behaviour" = "General Behaviour";
+"home_see_stats" = "See stadistics";
+"home_get_info" = "Get information:";
+
 //MARK: - Coach Screen
 "coach_profile" = "Profile";
 "coach_dashboard" = "Preparation";
