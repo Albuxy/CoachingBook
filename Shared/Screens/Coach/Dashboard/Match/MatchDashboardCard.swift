@@ -16,6 +16,7 @@ struct MatchDashboardCard: View {
             VStack {
                 VStack(alignment: .leading, spacing: 16){
                     Text("games_uppercased".localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 28))
                         .bold()
                         .frame(width: 280, height: 20, alignment: .leading)

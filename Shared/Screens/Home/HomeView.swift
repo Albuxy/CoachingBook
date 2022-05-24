@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeView: View {
     
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
+
+    init() {
+       UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color("blueColor"))
+       UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+    }
 
     var body: some View {
         VStack(spacing: 0){
@@ -20,12 +26,12 @@ struct HomeView: View {
                     .frame(width: UIScreen.main.bounds.width,
                            height: 300)
                 VStack(alignment: .leading, spacing: 15){
-                    Text("home_title")
+                    Text("home_title".localized(LocalizationService.shared.language))
                         .foregroundColor(.white)
                         .font(.system(size: 38))
                         .multilineTextAlignment(.leading)
                         .frame(height: 100)
-                    Text("home_description")
+                    Text("home_description".localized(LocalizationService.shared.language))
                         .foregroundColor(.white)
                         .font(.system(size: 18))
                     HStack(spacing: 30){
@@ -47,11 +53,21 @@ struct HomeView: View {
                 PrepareTrainingCard()
                 PrepareMatchCard()
             }
-            .accentColor(Color("blueColor"))
+            .background(Color("secondLightBlueColor"))
             .tabViewStyle(PageTabViewStyle())
+            .frame(height: 240, alignment: .top)
+            TabView(){
+                GetAssitanceCard()
+                GetBehaviourCard()
+            }
+            .background(Color("secondLightBlueColor"))
+            .tabViewStyle(PageTabViewStyle())
+            .frame(height: 240, alignment: .top)
+            .padding(.top, -20)
        }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
-        .background(Color("fourthLightBlueColor"))
+        .padding(.top, 90)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
+        .background(Color("secondLightBlueColor"))
     }
 }
 

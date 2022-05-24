@@ -17,6 +17,7 @@ struct TrainingDashboardCard: View {
                 VStack(alignment: .leading, spacing: 16){
                     Text("training_uppercased"
                             .localized(LocalizationService.shared.language))
+                        .foregroundColor(.black)
                         .font(.system(size: 28))
                         .bold()
                         .frame(width: 280, height: 20, alignment: .leading)

@@ -13,9 +13,9 @@ enum MenuEntries {
 }
 
 class MenuViewModel: ObservableObject {
-  @Published var selectedMenu = "menu_profile"
+  @Published var selectedMenu = "menu_home"
   @Published var showMenu = false
-  @Published var showSection: MenuEntries = .profile
+  @Published var showSection: MenuEntries = .home
 }
 
 struct MenuSwitchView: View {
@@ -33,7 +33,7 @@ struct MenuSwitchView: View {
     VStack {
       switch self.userMenuEntry {
       case .home:
-        EmptyView()
+        HomeView()
           .navigationBarItems(
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_home"))
