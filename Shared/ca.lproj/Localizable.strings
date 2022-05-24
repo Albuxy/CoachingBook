@@ -20,6 +20,32 @@
 "menu_settings" = "Configuracio";
 "menu_logout" = "Sortir";
 
+//MARK: - Home
+"home_title" = "Hola,\nAlba";
+"home_description" = "Tens 2 activitats avui:";
+"home_session_desc" = "Preparat per entrenar i treure'n el màxim profit";
+"home_match_desc" = "Preparat per al joc i haz el teu millor esforç";
+"home_continue_preparation" = "Continua la preparació";
+"home_preparation_progress" = "En proces:";
+"home_preparation_training" = "Prepara \nEls entrenaments";
+"home_preparation_match" = "Prepara \nEls partits";
+"home_information_assistance" = "Assistencia \nGeneral";
+"home_information_behaviour" = "Comportament \nGeneral";
+"home_see_stats" = "Veure estadistiques";
+"home_get_info" = "Veure informació:";
+
+//MARK: - Home
+"home_title" = "Hello,\nAlba";
+"home_description" = "You have 3 activities today";
+"home_continue_preparation" = "Continue Preparation";
+"home_preparation_progress" = "In progress:";
+"home_preparation_training" = "Prepare \nYours trainings";
+"home_preparation_match" = "Prepare \nYours matches";
+"home_information_assistance" = "General Assistance";
+"home_information_behaviour" = "General Behaviour";
+"home_see_stats" = "See stadistics";
+"home_get_info" = "Get information:";
+
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
 "coach_dashboard" = "Preparació";

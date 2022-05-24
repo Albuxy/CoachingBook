@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct DashboardOnBoardingView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
+    
+    init() {
+       UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color("blueColor"))
+       UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+    }
 
     var body: some View {
         ZStack {

@@ -60,7 +60,6 @@ struct ProfileCoachView: View {
                                         booleanToChange: $navigateToLogout)
                 }
             }
-            .padding(.top, 90)
             .alert(
               isPresented: $navigateToLogout,
               content: {
@@ -77,6 +76,9 @@ struct ProfileCoachView: View {
                     }))
               })
         }
+        .padding(.top, 90)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
+        .background(Color("thirdLightBlueColor"))
     }
 }
 
