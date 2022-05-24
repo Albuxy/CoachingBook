@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84077EE2283D218B00611015 /* PrepareMatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84077EE1283D218B00611015 /* PrepareMatchCard.swift */; };
+		84077EE4283D23E400611015 /* GetAssitanceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84077EE3283D23E400611015 /* GetAssitanceCard.swift */; };
 		8408328428294E9500DCE47E /* StatsBehaviourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328328294E9500DCE47E /* StatsBehaviourCard.swift */; };
 		8408328628295A1C00DCE47E /* CircleFillViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328528295A1C00DCE47E /* CircleFillViews.swift */; };
 		8408328928296E6100DCE47E /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408328828296E6100DCE47E /* EventsListView.swift */; };
@@ -155,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84077EE1283D218B00611015 /* PrepareMatchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareMatchCard.swift; sourceTree = "<group>"; };
+		84077EE3283D23E400611015 /* GetAssitanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssitanceCard.swift; sourceTree = "<group>"; };
 		8408328328294E9500DCE47E /* StatsBehaviourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBehaviourCard.swift; sourceTree = "<group>"; };
 		8408328528295A1C00DCE47E /* CircleFillViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFillViews.swift; sourceTree = "<group>"; };
 		8408328828296E6100DCE47E /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
@@ -431,6 +435,8 @@
 			isa = PBXGroup;
 			children = (
 				84493C75283BF42A00B3EBF1 /* PrepareTrainingCard.swift */,
+				84077EE1283D218B00611015 /* PrepareMatchCard.swift */,
+				84077EE3283D23E400611015 /* GetAssitanceCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -918,6 +924,7 @@
 				8481AF0D28215CC900D59063 /* SearchBarView.swift in Sources */,
 				84841A9328283DDD00B69495 /* StatsPlayerView.swift in Sources */,
 				84AD59FF2821C6A3007EACDE /* MenuView.swift in Sources */,
+				84077EE2283D218B00611015 /* PrepareMatchCard.swift in Sources */,
 				84841A8A28280C0300B69495 /* PlayerTeamDetailView.swift in Sources */,
 				84493C73283BE7D900B3EBF1 /* HomeView.swift in Sources */,
 				84083298282ADF0B00DCE47E /* AddPlayerView.swift in Sources */,
@@ -991,6 +998,7 @@
 				846F735428353FB200FF3FB5 /* MatchInformationView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,
+				84077EE4283D23E400611015 /* GetAssitanceCard.swift in Sources */,
 				846F7347282ED50800FF3FB5 /* SwitchFileView.swift in Sources */,
 				8408328F2829762B00DCE47E /* EventTrainingCard.swift in Sources */,
 				846F735028311D2700FF3FB5 /* TotalRankingView.swift in Sources */,
