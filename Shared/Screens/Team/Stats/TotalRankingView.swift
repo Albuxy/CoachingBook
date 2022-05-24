@@ -18,13 +18,27 @@ struct TotalRankingView: View {
     
     var body: some View {
         VStack(spacing: 23){
+            VStack(spacing: 10){
+                Text("total_ranking_stats_title"
+                        .localized(LocalizationService.shared.language))
+                    .font(.system(size: 26))
+                    .foregroundColor(.black)
+                    .bold()
+                Text("total_ranking_stats_subtitle"
+                        .localized(LocalizationService.shared.language))
+                    .font(.system(size: 18))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(8)
+            }
+            .padding([.leading, .trailing], 40)
             PodiumView()
             ForEach(Array(listSorted), id: \.offset) { index, player in
                 PositionRankingRow(namePlayer: player.name,
                                    currentPosition: index + 1)
             }
         }
-        .padding(.top, 40)
+        .padding(.top, 25)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
          .background(Color("fourthLightBlueColor"))
          .navigationBarTitle(Text("total_ranking_stats".localized(LocalizationService.shared.language)), displayMode: .inline)

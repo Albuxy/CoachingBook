@@ -243,6 +243,8 @@
 "stats_general_title" = "Estadisticas generales";
 "stats_unit_general_title" = "Unidad: \neventos totales";
 "total_ranking_stats" = "Ranking Total";
+"total_ranking_stats_title" = "Ranking";
+"total_ranking_stats_subtitle" = "Este es el ranking de tus jugadores de la semana.";
 "attendance_name" = "Asistencia";
 "behaviour_name" = "Comportamiento";
 "punctuality_name" = "Puntualidad";

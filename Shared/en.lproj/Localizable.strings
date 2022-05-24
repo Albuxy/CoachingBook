@@ -243,6 +243,8 @@
 "stats_general_title" = "General stats";
 "stats_unit_general_title" = "Unit: total events";
 "total_ranking_stats" = "Total Ranking";
+"total_ranking_stats_title" = "Ranking";
+"total_ranking_stats_subtitle" = "This is the ranking of your players of the week.";
 "attendance_name" = "Attendance";
 "behaviour_name" = "Behaviour";
 "punctuality_name" = "Punctuality";

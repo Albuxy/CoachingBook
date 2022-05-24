@@ -255,6 +255,8 @@
 "stats_general_title" = "Estadistiques generals";
 "stats_unit_general_title" = "Unitat: events totals";
 "total_ranking_stats" = "Ranking Total";
+"total_ranking_stats_title" = "Ranking";
+"total_ranking_stats_subtitle" = "Aquest és el ranking dels teus jugadors de la setmana.";
 "attendance_name" = "Asistencia";
 "behaviour_name" = "Comportament";
 "punctuality_name" = "Puntualitat";
