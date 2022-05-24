@@ -126,6 +126,13 @@
 "match_entries_title" = "Salidas del partido";
 "match_entries_subtitle" = "Prepara las salidas para el partido. \nSelecciona 5 jugadores para cada uno de los periodos.";
 
+//Feedback
+"feedback_title" = "Feedback";
+"punctuality_upper_title" = "PUNTUALIDAD";
+"behaviour_upper_title" = "COMPORTAMIENTO";
+"attitude_upper_title" = "ACTITUD";
+"give_upper_title" = "DAR";
+
 //Contacts
 "contacts_title" = "Contactos";
 "list_of_contacts_title" = "Lista de contactos";

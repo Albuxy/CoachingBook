@@ -52,6 +52,8 @@
 		844B6A1A282188E3003FE836 /* ContactInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A19282188E3003FE836 /* ContactInformationView.swift */; };
 		844B6A1C28218926003FE836 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B6A1B28218926003FE836 /* ContactCard.swift */; };
 		8462B964283D29AA00AEF1B0 /* GetBehaviourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B963283D29AA00AEF1B0 /* GetBehaviourCard.swift */; };
+		8462B968283D666300AEF1B0 /* PunctualityFeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B967283D666300AEF1B0 /* PunctualityFeedbackCard.swift */; };
+		8462B96A283D6AFC00AEF1B0 /* MiniCardsFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B969283D6AFC00AEF1B0 /* MiniCardsFeedback.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -200,6 +202,8 @@
 		844B6A19282188E3003FE836 /* ContactInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationView.swift; sourceTree = "<group>"; };
 		844B6A1B28218926003FE836 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
 		8462B963283D29AA00AEF1B0 /* GetBehaviourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBehaviourCard.swift; sourceTree = "<group>"; };
+		8462B967283D666300AEF1B0 /* PunctualityFeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunctualityFeedbackCard.swift; sourceTree = "<group>"; };
+		8462B969283D6AFC00AEF1B0 /* MiniCardsFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardsFeedback.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				84359749280B32E80013B61B /* ProfileCoachView.swift */,
 				841BAE022810796B0033EF4C /* CoachInformationView.swift */,
 				84845DFA2812EEA00014E4DA /* Dashboard */,
+				8462B966283D32E800AEF1B0 /* Feedback */,
 				8481AF052820464800D59063 /* Contacts */,
 			);
 			path = Coach;
@@ -470,6 +475,15 @@
 				84AD59F62821A4A0007EACDE /* AddContactView.swift */,
 			);
 			path = "Contact Information";
+			sourceTree = "<group>";
+		};
+		8462B966283D32E800AEF1B0 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				8462B969283D6AFC00AEF1B0 /* MiniCardsFeedback.swift */,
+				8462B967283D666300AEF1B0 /* PunctualityFeedbackCard.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		84653883283BE09F00E4A6AA /* Home */ = {
@@ -940,6 +954,7 @@
 				84359724280225F80013B61B /* CoachingBookApp.swift in Sources */,
 				84AD5A1B282571DE007EACDE /* ListPlayersView.swift in Sources */,
 				84AD5A012821C6EE007EACDE /* MenuButton.swift in Sources */,
+				8462B96A283D6AFC00AEF1B0 /* MiniCardsFeedback.swift in Sources */,
 				841BAE032810796B0033EF4C /* CoachInformationView.swift in Sources */,
 				8408328B2829731300DCE47E /* EventPicker.swift in Sources */,
 				84AED8D82819A08300F98A7C /* CancelMatchView.swift in Sources */,
@@ -967,6 +982,7 @@
 				8408328928296E6100DCE47E /* EventsListView.swift in Sources */,
 				846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */,
 				8481AF04281E8D9200D59063 /* EntriesMatchView.swift in Sources */,
+				8462B968283D666300AEF1B0 /* PunctualityFeedbackCard.swift in Sources */,
 				84845E0A28133B5D0014E4DA /* MatchModel.swift in Sources */,
 				84493C76283BF42A00B3EBF1 /* PrepareTrainingCard.swift in Sources */,
 				84845DFF2812F8C40014E4DA /* TrainingDashboardCard.swift in Sources */,

@@ -127,6 +127,13 @@
 "match_entries_title" = "Entries match";
 "match_entries_subtitle" = "Prepare the exits for your party. \nSelect 5 players in each of the periods.";
 
+//Feedback
+"feedback_title" = "Feedback";
+"punctuality_upper_title" = "PUNCTUALITY";
+"behaviour_upper_title" = "BEHAVIOUR";
+"attitude_upper_title" = "ATTITUDE";
+"give_upper_title" = "GIVE";
+
 //Contacts
 "contacts_title" = "Contacts";
 "list_of_contacts_title" = "List of contacts";

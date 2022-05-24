@@ -138,6 +138,13 @@
 "match_entries_title" = "Sortides del partit";
 "match_entries_subtitle" = "Prepara les sortides pel partit. \nSelecciona 5 jugadors per a cada uno dels periodes.";
 
+//Feedback
+"feedback_title" = "Feedback";
+"punctuality_upper_title" = "PUNTUALITAT";
+"behaviour_upper_title" = "COMPORTAMENT";
+"attitude_upper_title" = "ACTITUT";
+"give_upper_title" = "DONA";
+
 //Contacts
 "contacts_title" = "Contactes";
 "list_of_contacts_title" = "Llista de contactes";
