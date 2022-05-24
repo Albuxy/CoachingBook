@@ -140,6 +140,7 @@
 
 //Feedback
 "feedback_title" = "Feedback";
+"feedback_subtitle" = "Comença a donar feedback per poder observar les estadístiques";
 "punctuality_upper_title" = "PUNTUALITAT";
 "behaviour_upper_title" = "COMPORTAMENT";
 "attitude_upper_title" = "ACTITUT";

@@ -28,10 +28,15 @@ struct PunctualityFeedbackCard: View {
             }
         }
         .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.40, alignment: .top)
-        .background(LinearGradient(gradient: Gradient(colors: [Color.init(hex: "EADDFF"), Color.init(hex: "FDE0DC")]),
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing))
-        .cornerRadius(24)
+        .background(
+            RoundedRectangle(cornerRadius: 24)
+                .strokeBorder(Color.black, lineWidth: 1)
+                .background(
+                    RoundedRectangle(cornerRadius: 24).fill(LinearGradient(gradient: Gradient(colors: [Color.init(hex: "EADDFF"), Color.init(hex: "FDE0DC")]),
+                                                                           startPoint: .topLeading,
+                                                                           endPoint: .bottomTrailing))
+                )
+        )
     }
 }
 

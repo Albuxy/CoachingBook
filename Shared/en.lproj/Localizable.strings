@@ -129,6 +129,7 @@
 
 //Feedback
 "feedback_title" = "Feedback";
+"feedback_subtitle" = "Start giving feedback to be able to observe the statistics";
 "punctuality_upper_title" = "PUNCTUALITY";
 "behaviour_upper_title" = "BEHAVIOUR";
 "attitude_upper_title" = "ATTITUDE";
