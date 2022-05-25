@@ -145,6 +145,16 @@
 "behaviour_upper_title" = "COMPORTAMENT";
 "attitude_upper_title" = "ACTITUT";
 "give_upper_title" = "DONA";
+"on_time_title" = "Puntual";
+"punctuality_title_low" = "Puntualitat";
+"behaviour_title_low" = "Comportament";
+"attitude_title_low" = "Actitut";
+"punctuality_give_title" = "Selecciona puntualitat";
+"punctuality_give_subtitle" = "Selecciona com de tard ha arribat cada jugador";
+"behaviour_give_title" = "Seleccciona comportament";
+"behaviour_give_subtitle" = "Puntua de l'1 al 10, com de bo ha estat el comportament dels teus jugadors";
+"attitude_give_title" = "Seleccciona actitut";
+"attitude_give_subtitle" = "Puntua de l'1 al 10, com de bo ha estat l'actitut dels teus jugadors";
 
 //Contacts
 "contacts_title" = "Contactes";

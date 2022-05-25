@@ -21,6 +21,7 @@ struct Player: Identifiable {
     var isChecked: Bool = false
     var isJustificated: Justification?
     var hasStats: Bool
+    var tardance: String
     
     //Stats
     var statsAttendance: AttendanceStats?
@@ -93,6 +94,7 @@ let playersData: [Player] = [
            position: .base,
            dorsal: 2,
            hasStats: true,
+           tardance: "",
            totalStat: 3.9),
     Player(name: "Clara",
            surname: "Suri",
@@ -101,6 +103,7 @@ let playersData: [Player] = [
            position: .pivot,
            dorsal: 3,
            hasStats: false,
+           tardance: "",
            totalStat: 6.7),
     Player(name: "Sofia",
            surname: "Torres",
@@ -109,6 +112,7 @@ let playersData: [Player] = [
            position: .alero,
            dorsal: 4,
            hasStats: true,
+           tardance: "",
            totalStat: 8.2),
     Player(name: "Laura",
            surname: "Malino",
@@ -117,6 +121,7 @@ let playersData: [Player] = [
            position: .escolta,
            dorsal: 6,
            hasStats: true,
+           tardance: "",
            totalStat: 9.5),
     Player(name: "Natalia",
            surname: "Habas",
@@ -125,6 +130,7 @@ let playersData: [Player] = [
            position: .alapivot,
            dorsal: 7,
            hasStats: false,
+           tardance: "",
            totalStat: 5.9),
     Player(name: "Ana",
            surname: "Rodriguez",
@@ -133,6 +139,7 @@ let playersData: [Player] = [
            position: .pivot,
            dorsal: 8,
            hasStats: false,
+           tardance: "",
            totalStat: 5.8),
     Player(name: "Nuria",
            surname: "Polo",
@@ -141,6 +148,7 @@ let playersData: [Player] = [
            position: .base,
            dorsal: 9,
            hasStats: true,
+           tardance: "",
            totalStat: 7.6)
 ]
 
@@ -157,6 +165,7 @@ let playersNotAssistData: [Player] = [
            dorsal: 16,
            isJustificated: .filled,
            hasStats: true,
+           tardance: "",
            totalStat: 5.4),
     Player(name: "Julia",
            surname: "Polo",
@@ -166,6 +175,7 @@ let playersNotAssistData: [Player] = [
            dorsal: 16,
            isJustificated: .notFilled,
            hasStats: false,
+           tardance: "",
            totalStat: 8.6),
     Player(name: "Maria",
            surname: "Puentes",
@@ -175,6 +185,7 @@ let playersNotAssistData: [Player] = [
            dorsal: 16,
            isJustificated: .filled,
            hasStats: false,
+           tardance: "",
            totalStat: 2.9)
 ]
 

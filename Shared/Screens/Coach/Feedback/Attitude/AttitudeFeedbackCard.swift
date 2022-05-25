@@ -1,5 +1,5 @@
 //
-//  PunctualityFeedbackCard.swift
+//  AttitudeFeedbackCard.swift
 //  CoachingBook (iOS)
 //
 //  Created by Alba Torra Di Capua on 24/5/22.
@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-struct PunctualityFeedbackCard: View {
+struct AttitudeFeedbackCard: View {
     var body: some View {
         VStack(spacing: 15){
             VStack(alignment: .center){
-                Text("punctuality_upper_title".localized(LocalizationService.shared.language))
+                Text("attitude_upper_title".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 28))
                     .bold()
-                Image("ic_punctuality")
+                Image("ic_attitude")
                     .resizable()
                     .frame(width: 100, height: 100)
             }
             .padding(.top, 30)
             .frame(width: UIScreen.main.bounds.width / 1.2, height: 200, alignment: .top)
             VStack(alignment: .center, spacing: 15){
-                MiniTrainingSessionGiveCard(currentTrainingSession: trainingData[0])
-                MiniMatchSessionGiveCard(currentMatchSession: matchData[0])
-                MiniTrainingSessionGiveCard(currentTrainingSession: trainingData[1])
+                MiniTrainingSessionGiveAttCard(currentTrainingSession: trainingData[3])
+                MiniMatchSessionGiveAttCard(currentMatchSession: matchData[3])
+                MiniMatchSessionGiveAttCard(currentMatchSession: matchData[4])
             }
         }
         .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.40, alignment: .top)
@@ -32,7 +32,7 @@ struct PunctualityFeedbackCard: View {
             RoundedRectangle(cornerRadius: 24)
                 .strokeBorder(Color.black, lineWidth: 1)
                 .background(
-                    RoundedRectangle(cornerRadius: 24).fill(LinearGradient(gradient: Gradient(colors: [Color.init(hex: "EADDFF"), Color.init(hex: "FDE0DC")]),
+                    RoundedRectangle(cornerRadius: 24).fill(LinearGradient(gradient: Gradient(colors: [Color.init(hex: "FFF0DA"), Color.init(hex: "DEFEE5")]),
                                                                            startPoint: .topLeading,
                                                                            endPoint: .bottomTrailing))
                 )
@@ -40,8 +40,8 @@ struct PunctualityFeedbackCard: View {
     }
 }
 
-struct PunctualityFeedbackCard_Previews: PreviewProvider {
+struct AttitudeFeedbackCard_Previews: PreviewProvider {
     static var previews: some View {
-        PunctualityFeedbackCard()
+        AttitudeFeedbackCard()
     }
 }

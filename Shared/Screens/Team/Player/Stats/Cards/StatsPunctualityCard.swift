@@ -100,6 +100,7 @@ struct StatsPunctualityCard_Previews: PreviewProvider {
                                             position: .base,
                                             dorsal: 5,
                                             hasStats: true,
+                                            tardance: "",
                                             totalStat: 9.8))
     }
 }

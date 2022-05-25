@@ -87,6 +87,7 @@ struct StatsAttendanceCard_Previews: PreviewProvider {
                                            position: .base,
                                            dorsal: 5,
                                            hasStats: true,
+                                           tardance: "",
                                            totalStat: 7.8))
     }
 }

@@ -57,6 +57,9 @@
 		8462B96C283D6BBD00AEF1B0 /* BehaviourFeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B96B283D6BBD00AEF1B0 /* BehaviourFeedbackCard.swift */; };
 		8462B96E283D6C5D00AEF1B0 /* AttitudeFeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B96D283D6C5D00AEF1B0 /* AttitudeFeedbackCard.swift */; };
 		8462B970283D6D8500AEF1B0 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B96F283D6D8500AEF1B0 /* FeedbackView.swift */; };
+		8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */; };
+		8462B979283E945600AEF1B0 /* GiveBehaviourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */; };
+		8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -210,6 +213,9 @@
 		8462B96B283D6BBD00AEF1B0 /* BehaviourFeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourFeedbackCard.swift; sourceTree = "<group>"; };
 		8462B96D283D6C5D00AEF1B0 /* AttitudeFeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttitudeFeedbackCard.swift; sourceTree = "<group>"; };
 		8462B96F283D6D8500AEF1B0 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePunctualityView.swift; sourceTree = "<group>"; };
+		8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveBehaviourView.swift; sourceTree = "<group>"; };
+		8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveAttitudeView.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -488,11 +494,38 @@
 			children = (
 				8462B96F283D6D8500AEF1B0 /* FeedbackView.swift */,
 				8462B969283D6AFC00AEF1B0 /* MiniCardsFeedback.swift */,
-				8462B967283D666300AEF1B0 /* PunctualityFeedbackCard.swift */,
-				8462B96B283D6BBD00AEF1B0 /* BehaviourFeedbackCard.swift */,
-				8462B96D283D6C5D00AEF1B0 /* AttitudeFeedbackCard.swift */,
+				8462B971283D770000AEF1B0 /* Punctuality */,
+				8462B972283D770C00AEF1B0 /* Behaviour */,
+				8462B973283D771C00AEF1B0 /* Attitude */,
 			);
 			path = Feedback;
+			sourceTree = "<group>";
+		};
+		8462B971283D770000AEF1B0 /* Punctuality */ = {
+			isa = PBXGroup;
+			children = (
+				8462B967283D666300AEF1B0 /* PunctualityFeedbackCard.swift */,
+				8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */,
+			);
+			path = Punctuality;
+			sourceTree = "<group>";
+		};
+		8462B972283D770C00AEF1B0 /* Behaviour */ = {
+			isa = PBXGroup;
+			children = (
+				8462B96B283D6BBD00AEF1B0 /* BehaviourFeedbackCard.swift */,
+				8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */,
+			);
+			path = Behaviour;
+			sourceTree = "<group>";
+		};
+		8462B973283D771C00AEF1B0 /* Attitude */ = {
+			isa = PBXGroup;
+			children = (
+				8462B96D283D6C5D00AEF1B0 /* AttitudeFeedbackCard.swift */,
+				8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */,
+			);
+			path = Attitude;
 			sourceTree = "<group>";
 		};
 		84653883283BE09F00E4A6AA /* Home */ = {
@@ -940,6 +973,7 @@
 				84AED8C62815BA7C00F98A7C /* AssistantPlayersView.swift in Sources */,
 				84841A8C282811C000B69495 /* StatsModel.swift in Sources */,
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
+				8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */,
 				846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */,
 				84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
@@ -978,6 +1012,7 @@
 				841BAE09281084910033EF4C /* CustomButtons.swift in Sources */,
 				84AED8C82818360500F98A7C /* CheckBoxView.swift in Sources */,
 				8481AF07282046DF00D59063 /* ContactModel.swift in Sources */,
+				8462B979283E945600AEF1B0 /* GiveBehaviourView.swift in Sources */,
 				8408329428297F7200DCE47E /* EventMatchCard.swift in Sources */,
 				844B6A1C28218926003FE836 /* ContactCard.swift in Sources */,
 				84841A90282817BF00B69495 /* TeamInformationView.swift in Sources */,
@@ -1005,6 +1040,7 @@
 				844B6A1428217E4E003FE836 /* SwitchContactView.swift in Sources */,
 				849D4C8D2835748600B478FA /* TrainingInformationView.swift in Sources */,
 				843597422802DFAA0013B61B /* CustomViews.swift in Sources */,
+				8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */,
 				84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */,

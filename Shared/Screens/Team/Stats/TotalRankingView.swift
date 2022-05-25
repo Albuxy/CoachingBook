@@ -38,7 +38,7 @@ struct TotalRankingView: View {
                                    currentPosition: index + 1)
             }
         }
-        .padding(.top, 25)
+        .padding(.top, 35)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
          .background(Color("fourthLightBlueColor"))
          .navigationBarTitle(Text("total_ranking_stats".localized(LocalizationService.shared.language)), displayMode: .inline)

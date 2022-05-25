@@ -133,6 +133,16 @@
 "behaviour_upper_title" = "COMPORTAMIENTO";
 "attitude_upper_title" = "ACTITUD";
 "give_upper_title" = "DAR";
+"on_time_title" = "Puntual";
+"punctuality_title_low" = "Puntualidad";
+"behaviour_title_low" = "Comportamiento";
+"attitude_title_low" = "Actitud";
+"punctuality_give_title" = "Selecciona puntualidad";
+"punctuality_give_subtitle" = "Selecciona como de tarde ha llegado cada jugador";
+"behaviour_give_title" = "Seleccciona comportamiento";
+"behaviour_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido el comportamiento de tus jugadores";
+"attitude_give_title" = "Seleccciona actitud";
+"attitude_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido la actitud de tus jugadores";
 
 //Contacts
 "contacts_title" = "Contactos";

@@ -22,9 +22,9 @@ struct BehaviourFeedbackCard: View {
             .padding(.top, 30)
             .frame(width: UIScreen.main.bounds.width / 1.2, height: 200, alignment: .top)
             VStack(alignment: .center, spacing: 15){
-                MiniMatchSessionGiveCard(currentMatchSession: matchData[1])
-                MiniMatchSessionGiveCard(currentMatchSession: matchData[2])
-                MiniTrainingSessionGiveCard(currentTrainingSession: trainingData[2])
+                MiniMatchSessionGiveBehaCard(currentMatchSession: matchData[1])
+                MiniMatchSessionGiveBehaCard(currentMatchSession: matchData[2])
+                MiniTrainingSessionGiveBehaCard(currentTrainingSession: trainingData[2])
             }
         }
         .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.40, alignment: .top)

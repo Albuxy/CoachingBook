@@ -134,6 +134,16 @@
 "behaviour_upper_title" = "BEHAVIOUR";
 "attitude_upper_title" = "ATTITUDE";
 "give_upper_title" = "GIVE";
+"on_time_title" = "On time";
+"punctuality_title_low" = "Punctuality";
+"behaviour_title_low" = "Behaviour";
+"attitude_title_low" = "Attitude";
+"punctuality_give_title" = "Give punctuality";
+"punctuality_give_subtitle" = "Select how late has arrived each player";
+"behaviour_give_title" = "Give behaviour";
+"behaviour_give_subtitle" = "Rate from 1 to 10, how good the behavior of your players has been";
+"attitude_give_title" = "Give attitude";
+"attitude_give_subtitle" = "Rate from 1 to 10, how good the attitude of your players has been";
 
 //Contacts
 "contacts_title" = "Contacts";

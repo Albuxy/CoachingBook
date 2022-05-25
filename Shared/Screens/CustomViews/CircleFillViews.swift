@@ -104,6 +104,7 @@ struct StatsBehaviourCard1_Previews: PreviewProvider {
                                           position: .base,
                                           dorsal: 5,
                                           hasStats: true,
+                                          tardance: "",
                                           totalStat: 4.6))
     }
 }
