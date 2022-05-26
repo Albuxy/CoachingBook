@@ -62,6 +62,8 @@ struct SectionAttendanceInStats: View {
                                       color: Color("darkRedColor"))
             VStack(alignment: .leading, spacing: 15){
                 Text("• " + "reason_injuries_title".localized(LocalizationService.shared.language) + ": ")
+                    .foregroundColor(.black)
+                    .font(.system(size: 18))
                 + Text(numberInjuries + "/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
@@ -85,6 +87,7 @@ struct StatsAttendanceCard_Previews: PreviewProvider {
                                            position: .base,
                                            dorsal: 5,
                                            hasStats: true,
+                                           tardance: "",
                                            totalStat: 7.8))
     }
 }

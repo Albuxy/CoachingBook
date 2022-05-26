@@ -64,10 +64,21 @@ struct SectionPunctualityInStats: View {
                                       description: description,
                                       color: Color("baseColor"))
             VStack(alignment: .leading, spacing: 15){
-                Text("•  -") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("5 min:  1/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                Text("•  -")
                     .foregroundColor(.black)
                     .font(.system(size: 18))
-                Text("•  -") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("15 min:  3/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                + Text("comparate_title".localized(LocalizationService.shared.language))                    .foregroundColor(.black)
+                    .font(.system(size: 18))
+                + Text("5 min:  1/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
+                    .foregroundColor(.black)
+                    .font(.system(size: 18))
+                Text("•  -")
+                    .foregroundColor(.black)
+                    .font(.system(size: 18))
+                + Text("comparate_title".localized(LocalizationService.shared.language))
+                    .foregroundColor(.black)
+                    .font(.system(size: 18))
+                + Text("15 min:  3/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 18))
                 Text("•  +") + Text("comparate_title".localized(LocalizationService.shared.language)) + Text("15 min:  5/" + totalNumber + "attendance_total".localized(LocalizationService.shared.language))
@@ -89,6 +100,7 @@ struct StatsPunctualityCard_Previews: PreviewProvider {
                                             position: .base,
                                             dorsal: 5,
                                             hasStats: true,
+                                            tardance: "",
                                             totalStat: 9.8))
     }
 }

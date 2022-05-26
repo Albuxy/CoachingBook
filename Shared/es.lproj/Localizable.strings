@@ -10,6 +10,7 @@
 "user_login" = "Usuario";
 "password_login" = "Contraseña";
 "login_signIn" = "Entrar";
+"register_signIn" = "Quiero registrarme";
 
 //MARK: - Menu
 "menu_home" = "Principal";
@@ -126,6 +127,24 @@
 "match_entries_title" = "Salidas del partido";
 "match_entries_subtitle" = "Prepara las salidas para el partido. \nSelecciona 5 jugadores para cada uno de los periodos.";
 
+//Feedback
+"feedback_title" = "Feedback";
+"feedback_subtitle" = "Empieza a dar feedback para poder observar las estadisticas";
+"punctuality_upper_title" = "PUNTUALIDAD";
+"behaviour_upper_title" = "COMPORTAMIENTO";
+"attitude_upper_title" = "ACTITUD";
+"give_upper_title" = "DAR";
+"on_time_title" = "Puntual";
+"punctuality_title_low" = "Puntualidad";
+"behaviour_title_low" = "Comportamiento";
+"attitude_title_low" = "Actitud";
+"punctuality_give_title" = "Selecciona puntualidad";
+"punctuality_give_subtitle" = "Selecciona como de tarde ha llegado cada jugador";
+"behaviour_give_title" = "Seleccciona comportamiento";
+"behaviour_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido el comportamiento de tus jugadores";
+"attitude_give_title" = "Seleccciona actitud";
+"attitude_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido la actitud de tus jugadores";
+
 //Contacts
 "contacts_title" = "Contactos";
 "list_of_contacts_title" = "Lista de contactos";
@@ -235,6 +254,8 @@
 "stats_general_title" = "Estadisticas generales";
 "stats_unit_general_title" = "Unidad: \neventos totales";
 "total_ranking_stats" = "Ranking Total";
+"total_ranking_stats_title" = "Ranking";
+"total_ranking_stats_subtitle" = "Este es el ranking de tus jugadores de la semana.";
 "attendance_name" = "Asistencia";
 "behaviour_name" = "Comportamiento";
 "punctuality_name" = "Puntualidad";
