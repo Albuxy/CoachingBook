@@ -60,6 +60,7 @@ struct LoginView: View {
                 .navigationAppearance(
                     backgroundColor: .white, foregroundColor: .black
                 )
+                .preferredColorScheme(.light)
             }
         }
         .navigationBarHidden(true)
