@@ -10,6 +10,7 @@
 "user_login" = "Usuari";
 "password_login" = "Contrasenya";
 "login_signIn" = "Entra";
+"register_signIn" = "Vull registrarme";
 
 //MARK: - Menu
 "menu_home" = "Principal";
@@ -270,6 +271,17 @@
 "attendance_name" = "Asistencia";
 "behaviour_name" = "Comportament";
 "punctuality_name" = "Puntualitat";
+
+//MARK: - Calendar
+"calendar_events_today" = "Events per avui";
+"calendar_monday" = "DIL";
+"calendar_tuesday" = "DIMA";
+"calendar_wednesday" = "DIME";
+"calendar_thursday" = "DIJ";
+"calendar_friday" = "DIV";
+"calendar_saturday" = "DIS";
+"calendar_sunday" = "DIU";
+"calendar_no_events_today" = "No hi han events per avui";
 
 //MARK: Documents
 "documents_title" = "Documents";

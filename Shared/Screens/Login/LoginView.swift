@@ -15,23 +15,33 @@ struct LoginView: View {
     @State private var keyboardHeight: CGFloat = 0
     
     @State var openApp = false
+    @State var registerOption = false
 
     var body: some View {
         NavigationView {
             GeometryReader { _ in
-                VStack(spacing: 60){
+                VStack(spacing: 50){
                     Image("Logo")
                         .resizable()
                         .frame(width: 300, height: 130)
                     
-                    VStack(spacing: 30) {
+                    VStack(spacing: 35) {
 
                         // MARK: - Fields Login
                         TextFieldGeneral(defaultTextFiled: "user_login",
                                          stringTextField: $user)
                         
-                        SecureFieldGeneral(defaultTextFiled: "password_login",
-                                           stringTextField: $password)
+                        VStack(spacing: 15){
+                            SecureFieldGeneral(defaultTextFiled: "password_login",
+                                               stringTextField: $password)
+                            Button {
+                                registerOption.toggle()
+                            } label: {
+                                Text("register_signIn".localized(LocalizationService.shared.language))
+                                    .foregroundColor(Color.blue.opacity(0.6))
+                            }
+                        }
+
 
                         // MARK: - Button
 

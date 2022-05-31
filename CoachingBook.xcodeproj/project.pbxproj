@@ -60,6 +60,13 @@
 		8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */; };
 		8462B979283E945600AEF1B0 /* GiveBehaviourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */; };
 		8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */; };
+		8462B97D28452E3300AEF1B0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97C28452E3200AEF1B0 /* CalendarView.swift */; };
+		8462B97F28452E8400AEF1B0 /* CustomCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */; };
+		8462B9812845340900AEF1B0 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9802845340900AEF1B0 /* CalendarModel.swift */; };
+		8462B9832846237A00AEF1B0 /* ListEventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */; };
+		8462B9852846244400AEF1B0 /* CustomDayCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */; };
+		8462B9872846254300AEF1B0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */; };
+		8462B98928462D2F00AEF1B0 /* MatchCalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -216,6 +223,13 @@
 		8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePunctualityView.swift; sourceTree = "<group>"; };
 		8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveBehaviourView.swift; sourceTree = "<group>"; };
 		8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveAttitudeView.swift; sourceTree = "<group>"; };
+		8462B97C28452E3200AEF1B0 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarPicker.swift; sourceTree = "<group>"; };
+		8462B9802845340900AEF1B0 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsCalendarView.swift; sourceTree = "<group>"; };
+		8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDayCalendarView.swift; sourceTree = "<group>"; };
+		8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCalendarCard.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -749,6 +763,7 @@
 				8481AF06282046DE00D59063 /* ContactModel.swift */,
 				84841A8B282811C000B69495 /* StatsModel.swift */,
 				846F7338282ECB0700FF3FB5 /* FilesModel.swift */,
+				8462B9802845340900AEF1B0 /* CalendarModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -756,6 +771,12 @@
 		84AD5A172825588E007EACDE /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				8462B97C28452E3200AEF1B0 /* CalendarView.swift */,
+				8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */,
+				8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */,
+				8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */,
+				8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */,
+				8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -975,11 +996,14 @@
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
 				8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */,
 				846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */,
+				8462B98928462D2F00AEF1B0 /* MatchCalendarCard.swift in Sources */,
 				84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
 				846F7349282ED59100FF3FB5 /* CustomPickerFile.swift in Sources */,
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
+				8462B97F28452E8400AEF1B0 /* CustomCalendarPicker.swift in Sources */,
 				840832962829819F00DCE47E /* MatchEventListView.swift in Sources */,
+				8462B97D28452E3300AEF1B0 /* CalendarView.swift in Sources */,
 				84AED8D328199F5800F98A7C /* MatchPreparationView.swift in Sources */,
 				8481AF0D28215CC900D59063 /* SearchBarView.swift in Sources */,
 				84841A9328283DDD00B69495 /* StatsPlayerView.swift in Sources */,
@@ -1004,6 +1028,7 @@
 				8408328D2829738B00DCE47E /* SwitchEventView.swift in Sources */,
 				84845E1428133FF50014E4DA /* DashboardOnBoardingView.swift in Sources */,
 				84AD5A122822EBDF007EACDE /* RemoveAccountView.swift in Sources */,
+				8462B9872846254300AEF1B0 /* CalendarHeaderView.swift in Sources */,
 				8462B970283D6D8500AEF1B0 /* FeedbackView.swift in Sources */,
 				84841A8E282812CA00B69495 /* StatsPlayerEmptyView.swift in Sources */,
 				84845E172813472E0014E4DA /* TrainingPreparationView.swift in Sources */,
@@ -1043,10 +1068,12 @@
 				8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */,
+				8462B9812845340900AEF1B0 /* CalendarModel.swift in Sources */,
 				84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
 				84AD5A222825A121007EACDE /* ViewModifier.swift in Sources */,
 				84AED8C22815B5DF00F98A7C /* PlayerModel.swift in Sources */,
+				8462B9852846244400AEF1B0 /* CustomDayCalendarView.swift in Sources */,
 				84AD5A2028259D02007EACDE /* PersonalDetailView.swift in Sources */,
 				84AED8CA281846D500F98A7C /* NonAssistantPlayersView.swift in Sources */,
 				846F734E282FF36000FF3FB5 /* GeneralStatsTeamCard.swift in Sources */,
@@ -1063,6 +1090,7 @@
 				840832A1282BEF2A00DCE47E /* TeamAddPlayerView.swift in Sources */,
 				84AD5A06282290F9007EACDE /* SettingsView.swift in Sources */,
 				8435974A280B32E90013B61B /* ProfileCoachView.swift in Sources */,
+				8462B9832846237A00AEF1B0 /* ListEventsCalendarView.swift in Sources */,
 				846F735428353FB200FF3FB5 /* MatchInformationView.swift in Sources */,
 				8481AF0B2820497600D59063 /* ContactsListView.swift in Sources */,
 				84AED8D628199FEF00F98A7C /* MatchSessionHeaderCard.swift in Sources */,

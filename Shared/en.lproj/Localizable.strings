@@ -10,6 +10,7 @@
 "user_login" = "User";
 "password_login" = "Password";
 "login_signIn" = "Sign in";
+"register_signIn" = "I want to register";
 
 //MARK: - Menu
 "menu_home" = "Home";
@@ -258,6 +259,17 @@
 "attendance_name" = "Attendance";
 "behaviour_name" = "Behaviour";
 "punctuality_name" = "Punctuality";
+
+//MARK: - Calendar
+"calendar_events_today" = "Events for today";
+"calendar_monday" = "MON";
+"calendar_tuesday" = "TUE";
+"calendar_wednesday" = "WED";
+"calendar_thursday" = "THU";
+"calendar_friday" = "FRI";
+"calendar_saturday" = "SAT";
+"calendar_sunday" = "SUN";
+"calendar_no_events_today" = "No events for today";
 
 //MARK: Documents
 "documents_title" = "Documents";
