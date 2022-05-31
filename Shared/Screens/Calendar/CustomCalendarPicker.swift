@@ -11,7 +11,7 @@ struct CustomCalendarPicker: View {
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             VStack(spacing: 15){
                 let columns = Array(repeating: GridItem(.flexible()), count: 7)
 
@@ -45,7 +45,10 @@ struct CustomCalendarPicker: View {
                 currentDate = getCurrentMonth()
             }
             ListEventsCalendarView(currentDate: $currentDate)
-                .padding([.leading, .trailing], 20)
+                .padding([.leading, .trailing, .top], 20)
+                .frame(width: UIScreen.main.bounds.width, height: 470, alignment: .top)
+                .background(Color("secondLightBlueColor"))
+            
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
     }
@@ -87,12 +90,18 @@ struct CustomCalendarPicker: View {
 
 struct DayPicker: View {
 
-    let days: [String] = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+    let days: [String] = ["calendar_monday",
+                          "calendar_tuesday",
+                          "calendar_wednesday",
+                          "calendar_thursday",
+                          "calendar_friday",
+                          "calendar_saturday",
+                          "calendar_sunday"]
 
     var body: some View {
         HStack(spacing: 0){
             ForEach(days, id: \.self) { day in
-                Text(day)
+                Text(day.localized(LocalizationService.shared.language))
                     .font(.callout)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity)

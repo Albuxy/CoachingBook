@@ -13,7 +13,7 @@ struct ListEventsCalendarView: View {
     
     var body: some View {
         VStack(spacing: 20){
-            Text("Events for today")
+            Text("calendar_events_today".localized(LocalizationService.shared.language))
                 .font(.title2)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if let matchs = matchCalendar.first(where: { match in
@@ -31,10 +31,11 @@ struct ListEventsCalendarView: View {
                 }
             }
             else {
-                Text("No Events Found")
+                Text("calendar_no_events_today".localized(LocalizationService.shared.language))
                     .padding(.top, 20)
             }
         }
+
     }
 
     func isSameDay(date1: Date, date2: Date) -> Bool {

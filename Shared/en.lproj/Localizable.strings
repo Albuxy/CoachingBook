@@ -260,6 +260,17 @@
 "behaviour_name" = "Behaviour";
 "punctuality_name" = "Punctuality";
 
+//MARK: - Calendar
+"calendar_events_today" = "Events for today";
+"calendar_monday" = "MON";
+"calendar_tuesday" = "TUE";
+"calendar_wednesday" = "WED";
+"calendar_thursday" = "THU";
+"calendar_friday" = "FRI";
+"calendar_saturday" = "SAT";
+"calendar_sunday" = "SUN";
+"calendar_no_events_today" = "No events for today";
+
 //MARK: Documents
 "documents_title" = "Documents";
 "images_title" = "Images";
