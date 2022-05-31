@@ -60,6 +60,9 @@
 		8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */; };
 		8462B979283E945600AEF1B0 /* GiveBehaviourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */; };
 		8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */; };
+		8462B97D28452E3300AEF1B0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97C28452E3200AEF1B0 /* CalendarView.swift */; };
+		8462B97F28452E8400AEF1B0 /* CustomCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */; };
+		8462B9812845340900AEF1B0 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9802845340900AEF1B0 /* DateValue.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -216,6 +219,9 @@
 		8462B974283D7A0300AEF1B0 /* GivePunctualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GivePunctualityView.swift; sourceTree = "<group>"; };
 		8462B978283E945600AEF1B0 /* GiveBehaviourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveBehaviourView.swift; sourceTree = "<group>"; };
 		8462B97A283FD49F00AEF1B0 /* GiveAttitudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveAttitudeView.swift; sourceTree = "<group>"; };
+		8462B97C28452E3200AEF1B0 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarPicker.swift; sourceTree = "<group>"; };
+		8462B9802845340900AEF1B0 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -749,6 +755,7 @@
 				8481AF06282046DE00D59063 /* ContactModel.swift */,
 				84841A8B282811C000B69495 /* StatsModel.swift */,
 				846F7338282ECB0700FF3FB5 /* FilesModel.swift */,
+				8462B9802845340900AEF1B0 /* DateValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -756,6 +763,8 @@
 		84AD5A172825588E007EACDE /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				8462B97C28452E3200AEF1B0 /* CalendarView.swift */,
+				8462B97E28452E8400AEF1B0 /* CustomCalendarPicker.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -979,7 +988,9 @@
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
 				846F7349282ED59100FF3FB5 /* CustomPickerFile.swift in Sources */,
 				84359726280225F80013B61B /* ContentView.swift in Sources */,
+				8462B97F28452E8400AEF1B0 /* CustomCalendarPicker.swift in Sources */,
 				840832962829819F00DCE47E /* MatchEventListView.swift in Sources */,
+				8462B97D28452E3300AEF1B0 /* CalendarView.swift in Sources */,
 				84AED8D328199F5800F98A7C /* MatchPreparationView.swift in Sources */,
 				8481AF0D28215CC900D59063 /* SearchBarView.swift in Sources */,
 				84841A9328283DDD00B69495 /* StatsPlayerView.swift in Sources */,
@@ -1043,6 +1054,7 @@
 				8462B97B283FD4A000AEF1B0 /* GiveAttitudeView.swift in Sources */,
 				84845E052812FC720014E4DA /* TrainingModel.swift in Sources */,
 				8408329A282AE2EF00DCE47E /* ProfileAddPlayerView.swift in Sources */,
+				8462B9812845340900AEF1B0 /* DateValue.swift in Sources */,
 				84AD59FA2821B601007EACDE /* TeamModel.swift in Sources */,
 				841BAE072810846B0033EF4C /* DatePickerTextField.swift in Sources */,
 				84AD5A222825A121007EACDE /* ViewModifier.swift in Sources */,

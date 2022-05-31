@@ -26,6 +26,7 @@ struct Match: Identifiable {
     var imageSession = "Match_session"
     var referee1 = "1. Juan Carlos Gonzalez - Principal"
     var referee2 = "2. Rosa Perez Picon - Secundario"
+    var time: Date = Date()
     
     func getStringOfStatus(currentStatus: PreparationStatus) -> String {
         switch currentStatus {
@@ -61,7 +62,7 @@ let matchData: [Match] = [
           hour: "17:30",
           stringTeam1: "Team 1",
           stringTeam2: "Team 2",
-          statusPreparation: .prepared,
+          statusPreparation: .notPrepared,
           playersAssisting: playersData,
           playersNonAssisting: [],
           importanceLevel: "High"),
