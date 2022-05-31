@@ -69,6 +69,7 @@
 		8462B9872846254300AEF1B0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */; };
 		8462B98928462D2F00AEF1B0 /* MatchCalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */; };
 		8462B98C2846861800AEF1B0 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B98B2846861500AEF1B0 /* SplashView.swift */; };
+		8462B99228468CCF00AEF1B0 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8462B99128468CCF00AEF1B0 /* splashAnimation.json */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -236,6 +237,7 @@
 		8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCalendarCard.swift; sourceTree = "<group>"; };
 		8462B98B2846861500AEF1B0 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		8462B99128468CCF00AEF1B0 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -354,7 +356,6 @@
 				C2FD52E92959C628253B9FEF /* Pods-CoachingBook (macOS).debug.xcconfig */,
 				DA6AEF3F19E47DBDB386F264 /* Pods-CoachingBook (macOS).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -580,6 +581,7 @@
 		8462B98A284685BF00AEF1B0 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				8462B99128468CCF00AEF1B0 /* splashAnimation.json */,
 				8462B98B2846861500AEF1B0 /* SplashView.swift */,
 			);
 			path = Splash;
@@ -1000,6 +1002,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84359728280225F80013B61B /* Assets.xcassets in Resources */,
+				8462B99228468CCF00AEF1B0 /* splashAnimation.json in Resources */,
 				84AD5A072822A3AD007EACDE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
