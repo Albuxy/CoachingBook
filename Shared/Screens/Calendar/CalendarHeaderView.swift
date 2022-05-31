@@ -15,7 +15,7 @@ struct CalendarHeaderView: View {
     var body: some View {
         HStack{
             HStack(spacing: 10) {
-                Text(extraDate()[1])
+                Text(extraDate()[1].capitalized)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)

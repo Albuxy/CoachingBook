@@ -1,5 +1,5 @@
 //
-//  DateValue.swift
+//  CalendarModel.swift
 //  CoachingBook (iOS)
 //
 //  Created by Alba Torra Di Capua on 30/5/22.
@@ -34,4 +34,16 @@ var matchCalendar: [MatchMetaData] = [
                   matchDate: getSampleDate(offset: -3)),
     MatchMetaData(match: [matchData[4], matchData[1]],
                   matchDate: getSampleDate(offset: -8)),
+    MatchMetaData(match: [matchData[2]],
+                  matchDate: getSampleDate(offset: 5)),
+    MatchMetaData(match: [matchData[3], matchData[1]],
+                  matchDate: getSampleDate(offset: -20)),
+    MatchMetaData(match: [matchData[0]],
+                  matchDate: getSampleDate(offset: -10)),
+    MatchMetaData(match: [matchData[2], matchData[4], matchData[3]],
+                  matchDate: getSampleDate(offset: 10)),
+    MatchMetaData(match: [matchData[3], matchData[1], matchData[0], matchData[1]],
+                  matchDate: getSampleDate(offset: -13)),
+    MatchMetaData(match: [matchData[4]],
+                  matchDate: getSampleDate(offset: -28)),
 ]
