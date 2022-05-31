@@ -48,7 +48,7 @@ struct MenuSwitchView: View {
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))
       case .calendar:
-        EmptyView()
+        CalendarView()
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
