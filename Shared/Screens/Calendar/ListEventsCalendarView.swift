@@ -21,8 +21,8 @@ struct ListEventsCalendarView: View {
             }){
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(matchs.match){ match in
-                        VStack(alignment: .leading, spacing: 10){
-                            EventMatchCard(match: match)
+                        VStack(alignment: .leading, spacing: 15){
+                            MatchCalendarCard(match: match)
                         }
                         .padding(.leading, 10)
                         .padding(.horizontal)

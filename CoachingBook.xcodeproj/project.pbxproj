@@ -66,6 +66,7 @@
 		8462B9832846237A00AEF1B0 /* ListEventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */; };
 		8462B9852846244400AEF1B0 /* CustomDayCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */; };
 		8462B9872846254300AEF1B0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */; };
+		8462B98928462D2F00AEF1B0 /* MatchCalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */; };
 		84653885283BE2A700E4A6AA /* MiniCardTrainingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */; };
 		846F7337282EC5BF00FF3FB5 /* TypeOfFileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */; };
 		846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F7338282ECB0700FF3FB5 /* FilesModel.swift */; };
@@ -228,6 +229,7 @@
 		8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsCalendarView.swift; sourceTree = "<group>"; };
 		8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDayCalendarView.swift; sourceTree = "<group>"; };
 		8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCalendarCard.swift; sourceTree = "<group>"; };
 		84653884283BE2A700E4A6AA /* MiniCardTrainingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardTrainingHome.swift; sourceTree = "<group>"; };
 		846F7336282EC5BF00FF3FB5 /* TypeOfFileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFileCard.swift; sourceTree = "<group>"; };
 		846F7338282ECB0700FF3FB5 /* FilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesModel.swift; sourceTree = "<group>"; };
@@ -774,6 +776,7 @@
 				8462B9862846254300AEF1B0 /* CalendarHeaderView.swift */,
 				8462B9822846237900AEF1B0 /* ListEventsCalendarView.swift */,
 				8462B9842846244400AEF1B0 /* CustomDayCalendarView.swift */,
+				8462B98828462D2F00AEF1B0 /* MatchCalendarCard.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -993,6 +996,7 @@
 				84359747280363DD0013B61B /* CoachCard.swift in Sources */,
 				8462B975283D7A0300AEF1B0 /* GivePunctualityView.swift in Sources */,
 				846F7339282ECB0700FF3FB5 /* FilesModel.swift in Sources */,
+				8462B98928462D2F00AEF1B0 /* MatchCalendarCard.swift in Sources */,
 				84845DF52811C7AC0014E4DA /* ExtensionsView.swift in Sources */,
 				84845E2A2814039E0014E4DA /* ObjectsModel.swift in Sources */,
 				846F7349282ED59100FF3FB5 /* CustomPickerFile.swift in Sources */,
