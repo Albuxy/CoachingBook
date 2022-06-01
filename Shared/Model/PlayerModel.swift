@@ -24,9 +24,7 @@ struct Player: Identifiable {
     var tardance: String
     
     //Stats
-    var statsAttendance: AttendanceStats?
-    var statsPunctuality: PunctualityStats?
-    var statsBehaviour: BehaviourStats?
+    var stats: [Stats]?
     var totalStat: Float
     
     func getStringForPosition(currentPosition: Position) -> String {

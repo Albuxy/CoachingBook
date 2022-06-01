@@ -43,16 +43,16 @@ struct StatsTeamView: View {
                         HStack(spacing: 22){
                             LitleGeneralStatCard(imageString: "ic_team_attendance",
                                                  titleString: "stats_perc_attendance",
-                                                 percentatge: "87 %",
+                                                 percentatge: currentTeam.generalStats[0].percTotal,
                                                  primaryColor: Color("darkRedColor"))
                             LitleGeneralStatCard(imageString: "ic_team_punctuality",
                                                  titleString: "stats_perc_punctuality",
-                                                 percentatge: "64 %",
+                                                 percentatge: currentTeam.generalStats[1].percTotal,
                                                  primaryColor: Color("baseColor"))
                         }
                     }
                 }
-                GeneralStatsTeamCard()
+                GeneralStatsTeamCard(generalStats: currentTeam.generalStats)
                 TotalRankingButton(imageString: "ic_bullet_green",
                                    titleString: "total_ranking_stats",
                                    team: currentTeam)
@@ -76,7 +76,7 @@ struct LitleGeneralStatCard: View {
 
     var imageString: String
     var titleString: String
-    var percentatge: String
+    var percentatge: Float
     var primaryColor: Color
 
     var body: some View {
@@ -93,7 +93,7 @@ struct LitleGeneralStatCard: View {
                         )
                 )
             VStack(alignment: .center, spacing: 10) {
-                Text(percentatge)
+                Text("\(percentatge * 100)" + " %")
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(primaryColor)
