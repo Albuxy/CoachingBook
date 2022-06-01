@@ -93,7 +93,7 @@ struct LitleGeneralStatCard: View {
                         )
                 )
             VStack(alignment: .center, spacing: 10) {
-                Text("\(percentatge * 100)" + " %")
+                Text("\(Int(percentatge * 100))" + " %")
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(primaryColor)

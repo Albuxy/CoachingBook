@@ -20,6 +20,9 @@ struct Player: Identifiable {
     var dorsal: Int
     var isChecked: Bool = false
     var isJustificated: Justification?
+    var attendanceStats: AttendanceStats = attendanceStatData
+    var punctualityStats: PunctualityStats = punctualityStatData
+    var behaviourStats: BehaviourStats = behaviourStatData
     var hasStats: Bool
     var tardance: String
     

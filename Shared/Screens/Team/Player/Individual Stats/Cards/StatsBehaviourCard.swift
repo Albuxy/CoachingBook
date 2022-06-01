@@ -9,9 +9,7 @@ import SwiftUI
 
 struct StatsBehaviourCard: View {
     
-    var player: Player
-    var progressMatchValue: Float = 0.4
-    var progressTrainingValue: Float = 0.7
+    var stats: BehaviourStats
 
     var body: some View {
         ZStack{
@@ -21,17 +19,17 @@ struct StatsBehaviourCard: View {
                     .foregroundColor(Color("blueColor"))
                     .bold()
                     .padding(.top, 30)
-                SectionBehaviourInStats(progress: progressMatchValue,
+                SectionBehaviourInStats(progress: stats.mediaBehaviour,
                                title: "behaviour_title",
                                description: "behaviour_subtitle",
-                               totalTimes: "\(9)")
+                                        totalTimes: "\(stats.puntuateTotalBehaviour)")
                 Divider()
                     .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
                     .background(.black)
-                SectionBehaviourInStats(progress: progressTrainingValue,
+                SectionBehaviourInStats(progress: stats.mediaAttitude,
                                title: "attitude_title",
                                description: "attitude_subtitle",
-                               totalTimes: "\(4)")
+                                        totalTimes: "\(stats.puntuateTotalAttitude)")
             }
             .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.55, alignment: .top)
             .background(Color("secondDarkBlueColor"))
@@ -42,14 +40,14 @@ struct StatsBehaviourCard: View {
 
 struct SectionBehaviourInStats: View {
     
-    var progress: Float
+    var progress: Int
     var title: String
     var description: String
     var totalTimes: String
     
     var body: some View {
         VStack(spacing: 20){
-            CircleWithTitlesStats(progressValue: progress,
+            CircleWithTitlesStats(progressValue: Float(progress) * 0.1,
                                       title: title,
                                       description: description,
                                   color: Color("blueColor"))
@@ -100,14 +98,6 @@ struct SectionAttitudeInStats: View {
 
 struct StatsBehaviourCard_Previews: PreviewProvider {
     static var previews: some View {
-        StatsBehaviourCard(player: Player(name: "",
-                                          surname: "",
-                                          image: "",
-                                          date: "",
-                                          position: .base,
-                                          dorsal: 5,
-                                          hasStats: true,
-                                          tardance: "",
-                                          totalStat: 6.5))
+        StatsBehaviourCard(stats: behaviourStatData)
     }
 }

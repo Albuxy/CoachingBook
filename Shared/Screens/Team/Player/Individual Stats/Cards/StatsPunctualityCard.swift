@@ -9,9 +9,7 @@ import SwiftUI
 
 struct StatsPunctualityCard: View {
     
-    var player: Player
-    var progressMatchValue: Float = 0.1
-    var progressTrainingValue: Float = 0.72
+    var stats: PunctualityStats
 
     var body: some View {
         ZStack{
@@ -21,23 +19,23 @@ struct StatsPunctualityCard: View {
                     .foregroundColor(Color("baseColor"))
                     .bold()
                     .padding(.top, 30)
-                SectionPunctualityInStats(progress: progressMatchValue,
-                               title: "match_title",
-                               description: "punctuality_match",
-                               lessThan: "\(1)",
-                               equalTo: "\(13)",
-                               moreThan: "\(6)",
-                               totalNumber: "\(20)")
+                SectionPunctualityInStats(progress: stats.percMatchTotal,
+                                          title: "match_title",
+                                          description: "punctuality_match",
+                                          lessThan: "\(stats.LowMatch)",
+                                          equalTo: "\(stats.MediumMatch)",
+                                          moreThan: "\(stats.HighMatch)",
+                                          totalNumber: "\(12)")
                 Divider()
                     .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
                     .background(.black)
-                SectionPunctualityInStats(progress: progressTrainingValue,
-                               title: "training_title",
-                               description: "punctuality_training",
-                               lessThan: "\(1)",
-                               equalTo: "\(3)",
-                               moreThan: "\(2)",
-                               totalNumber: "\(6)")
+                SectionPunctualityInStats(progress: stats.percTrainingTotal,
+                                          title: "training_title",
+                                          description: "punctuality_training",
+                                          lessThan: "\(stats.LowTraining)",
+                                          equalTo: "\(stats.MediumTraining)",
+                                          moreThan: "\(stats.HighTraining)",
+                                          totalNumber: "\(20)")
                 
             }
             .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.55, alignment: .top)
@@ -93,14 +91,6 @@ struct SectionPunctualityInStats: View {
 
 struct StatsPunctualityCard_Previews: PreviewProvider {
     static var previews: some View {
-        StatsPunctualityCard(player: Player(name: "",
-                                            surname: "",
-                                            image: "",
-                                            date: "",
-                                            position: .base,
-                                            dorsal: 5,
-                                            hasStats: true,
-                                            tardance: "",
-                                            totalStat: 9.8))
+        StatsPunctualityCard(stats: punctualityStatData)
     }
 }

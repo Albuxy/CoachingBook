@@ -667,14 +667,14 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		84841A9128283DBF00B69495 /* Stats */ = {
+		84841A9128283DBF00B69495 /* Individual Stats */ = {
 			isa = PBXGroup;
 			children = (
 				84841A9228283DDD00B69495 /* StatsPlayerView.swift */,
 				84841A8D282812CA00B69495 /* StatsPlayerEmptyView.swift */,
 				84F114B3282875EB0018E626 /* Cards */,
 			);
-			path = Stats;
+			path = "Individual Stats";
 			sourceTree = "<group>";
 		};
 		84845DFA2812EEA00014E4DA /* Dashboard */ = {
@@ -834,7 +834,7 @@
 				84AD5A1F28259D01007EACDE /* PersonalDetailView.swift */,
 				84841A8928280C0200B69495 /* PlayerTeamDetailView.swift */,
 				8408329B282AE40A00DCE47E /* Add Player */,
-				84841A9128283DBF00B69495 /* Stats */,
+				84841A9128283DBF00B69495 /* Individual Stats */,
 			);
 			path = Player;
 			sourceTree = "<group>";

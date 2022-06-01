@@ -9,9 +9,7 @@ import SwiftUI
 
 struct StatsAttendanceCard: View {
     
-    var player: Player
-    var progressMatchValue: Float = 0.6
-    var progressTrainingValue: Float = 0.34
+    var stats: AttendanceStats
     
     var body: some View {
         ZStack{
@@ -21,21 +19,21 @@ struct StatsAttendanceCard: View {
                     .foregroundColor(Color("darkRedColor"))
                     .bold()
                     .padding(.top, 30)
-                SectionAttendanceInStats(progress: progressMatchValue,
-                               title: "match_title",
-                               description: "attendance_match",
-                               numberInjuries: "\(1)",
-                               numberOther: "\(5)",
-                               totalNumber: "\(20)")
+                SectionAttendanceInStats(progress: stats.percMatchTotal,
+                                         title: "match_title",
+                                         description: "attendance_match",
+                                         numberInjuries: "\(stats.injuriesMatch)",
+                                         numberOther: "\(stats.otherMatch)",
+                                         totalNumber: "\(12)")
                 Divider()
                     .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
                     .background(.black)
-                SectionAttendanceInStats(progress: progressTrainingValue,
-                               title: "training_title",
-                               description: "attendance_training",
-                               numberInjuries: "\(3)",
-                               numberOther: "\(0)",
-                               totalNumber: "\(30)")
+                SectionAttendanceInStats(progress: stats.percTrainingTotal,
+                                         title: "training_title",
+                                         description: "attendance_training",
+                                         numberInjuries: "\(stats.injuriesTraining)",
+                                         numberOther: "\(stats.otherTraining)",
+                                         totalNumber: "\(20)")
                 
             }
             .frame(width: UIScreen.main.bounds.width / 1.2, height: UIScreen.main.bounds.height / 1.55, alignment: .top)
@@ -80,14 +78,6 @@ struct SectionAttendanceInStats: View {
 
 struct StatsAttendanceCard_Previews: PreviewProvider {
     static var previews: some View {
-        StatsAttendanceCard(player: Player(name: "",
-                                           surname: "",
-                                           image: "",
-                                           date: "",
-                                           position: .base,
-                                           dorsal: 5,
-                                           hasStats: true,
-                                           tardance: "",
-                                           totalStat: 7.8))
+        StatsAttendanceCard(stats: attendanceStatData)
     }
 }

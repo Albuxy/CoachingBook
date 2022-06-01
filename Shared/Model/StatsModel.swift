@@ -20,7 +20,7 @@ struct Stats: Identifiable {
 
 var statsGeneralData: [Stats] = [
     Stats(type: .attendance,
-          percTotal: 0.87),
+          percTotal: 0.34),
     Stats(type: .punctuality,
           percTotal: 0.87),
     Stats(type: .behaviour,
@@ -40,6 +40,13 @@ struct AttendanceStats: Identifiable {
     var otherTraining: Int
 }
 
+var attendanceStatData = AttendanceStats(percMatchTotal: 0.61,
+                                         percTrainingTotal: 0.34,
+                                         injuriesMatch: 1,
+                                         injuriesTraining: 3,
+                                         otherMatch: 5,
+                                         otherTraining: 0)
+
 //Model for Punctuality
 struct PunctualityStats: Identifiable {
     var id = UUID()
@@ -53,10 +60,27 @@ struct PunctualityStats: Identifiable {
     var HighTraining: Int
 }
 
+
+var punctualityStatData = PunctualityStats(percMatchTotal: 0.12,
+                                           percTrainingTotal: 0.74,
+                                           LowMatch: 1,
+                                           MediumMatch: 3,
+                                           HighMatch: 5,
+                                           LowTraining: 2,
+                                           MediumTraining: 4,
+                                           HighTraining: 8)
+
 //Model for Behaviour
 struct BehaviourStats: Identifiable {
     var id = UUID()
     var mediaBehaviour: Int
     var mediaAttitude: Int
-    var puntuateTotal: Int
+    var puntuateTotalBehaviour: Int
+    var puntuateTotalAttitude: Int
 }
+
+var behaviourStatData = BehaviourStats(mediaBehaviour: 4,
+                                       mediaAttitude: 7,
+                                       puntuateTotalBehaviour: 9,
+                                       puntuateTotalAttitude: 4
+)
