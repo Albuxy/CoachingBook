@@ -21,11 +21,11 @@ struct SettingsView: View {
     
     var body: some View {
         ZStack {
-            VStack(spacing: 40) {
+            VStack(spacing: 50) {
                 VStack(spacing: 20) {
                     TitleWithLineSettings(imageString: "ic_account_blue",
                                           title: "settings_account_title".localized(language))
-                    VStack(spacing: 20) {
+                    VStack(spacing: 35) {
                         NavigationLink(
                           destination: ChangePasswordView(),
                           isActive: $navigateToChangePassword,
@@ -46,22 +46,9 @@ struct SettingsView: View {
                                              language: getStringForLanguage(language: language))
                     }
                 }
-                VStack(spacing: 20) {
-                    TitleWithLineSettings(imageString: "ic_notifications",
-                                          title: "settings_notifications_title".localized(language))
-                    VStack(spacing: 20) {
-                        ToggleWithTitle(title: "settings_news_title".localized(language),
-                                        boolToChange: $toggleNews)
-                        ToggleWithTitle(title: "settings_account_acitivity_title".localized(language),
-                                        boolToChange: $toggleActivity)
-                        ToggleWithTitle(title: "settings_update_matches_title".localized(language),
-                                        boolToChange: $toggleUpdate)
-                        
-                    }
-                }
             }
         }
-        .padding(.top, 120)
+        .padding(.top, 140)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height ,alignment: .top)
         .background(Color("lightBlueColor"))
     }
