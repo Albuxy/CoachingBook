@@ -28,6 +28,8 @@ struct MenuSwitchView: View {
   @State var coach = coachData
 
   @Binding var userMenuEntry: MenuEntries
+    
+  @ObservedObject var listOfPlayers = PlayersListModel()
 
   var body: some View {
     VStack {
@@ -43,7 +45,7 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-          TeamPrincipalView(team: coach.teams[0])
+          TeamPrincipalView(team: coach.teams[0], listOfPlayers: listOfPlayers)
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))

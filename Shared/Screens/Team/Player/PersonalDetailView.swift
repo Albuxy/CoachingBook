@@ -12,6 +12,8 @@ struct PersonalDetailView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    @ObservedObject var listOfPlayers: PlayersListModel
+    
     var currentPlayer: Player
     
     @State var nameVariable = ""
@@ -52,6 +54,17 @@ struct PersonalDetailView: View {
                                       currentString: currentPlayer.date,
                                       saveVariable: $dateOfBirthVariable)
                 }
+                // MARK: - Button save details
+                Button(action: {
+                    saveDetails()
+                    presentation.wrappedValue.dismiss()
+                }) {
+                    Text("button_save_details".localized(LocalizationService.shared.language))
+                        .font(.system(size: 16))
+                        .bold()
+                }.buttonStyle(
+                    MediumButtonStyle(textColor: Color.white, backgroundColor: Color("blueColor"))
+                ).padding(.top, 80)
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
             .background(Color("fourthLightBlueColor"))
@@ -65,6 +78,19 @@ struct PersonalDetailView: View {
                   .resizable()
                   .frame(width: 35, height: 35)
           })
+    }
+    
+    func saveDetails(){
+        let index = listOfPlayers.playersList.firstIndex(where: {$0.dorsal == currentPlayer.dorsal})
+        if nameVariable != "" {
+            listOfPlayers.playersList[index!].name = nameVariable
+        }
+        if surnameVariable != "" {
+            listOfPlayers.playersList[index!].surname = surnameVariable
+        }
+        if dateOfBirthVariable != "" {
+            listOfPlayers.playersList[index!].date = dateOfBirthVariable
+        }
     }
 }
 
@@ -97,6 +123,6 @@ struct SectionPlayerView: View {
 
 struct PersonalDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalDetailView(currentPlayer: playersData[0])
+        PersonalDetailView(listOfPlayers: PlayersListModel(), currentPlayer: playersData[0])
     }
 }

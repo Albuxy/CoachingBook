@@ -12,6 +12,8 @@ struct PlayerTeamDetailView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    @ObservedObject var listOfPlayers: PlayersListModel
+    
     var currentPlayer: Player
     
     @State var contactNumber = ""
@@ -45,7 +47,7 @@ struct PlayerTeamDetailView: View {
                     SectionPlayerView(string: "coach_mobile_number",
                                       currentString: currentPlayer.contactNumber ?? "Write",
                                       saveVariable: $contactNumber)
-                        .keyboardType(.namePhonePad)
+                        .keyboardType(.numbersAndPunctuation)
                     DropDownOptionsListView(title: "position_title",
                                          placeholder: currentPlayer.getStringForPosition(currentPosition: currentPlayer.position).isEmpty
                                          ? "contact_team_title"
@@ -55,8 +57,19 @@ struct PlayerTeamDetailView: View {
                     SectionPlayerView(string: "dorsal_player_title",
                                       currentString: "\(currentPlayer.dorsal)",
                                       saveVariable: $dorsalVariable)
-                        .keyboardType(.numberPad)
+                        .keyboardType(.numbersAndPunctuation)
                 }
+                // MARK: - Button save details
+                Button(action: {
+                    saveDetails()
+                    presentation.wrappedValue.dismiss()
+                }) {
+                    Text("button_save_details".localized(LocalizationService.shared.language))
+                        .font(.system(size: 16))
+                        .bold()
+                }.buttonStyle(
+                    MediumButtonStyle(textColor: Color.white, backgroundColor: Color("blueColor"))
+                ).padding(.top, 80)
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
             .background(Color("fourthLightBlueColor"))
@@ -70,6 +83,33 @@ struct PlayerTeamDetailView: View {
                   .resizable()
                   .frame(width: 35, height: 35)
           })
+    }
+    
+    func saveDetails(){
+        let index = listOfPlayers.playersList.firstIndex(where: {$0.name == currentPlayer.name})
+        if contactNumber != "" {
+            listOfPlayers.playersList[index!].contactNumber = contactNumber
+        }
+        if dorsalVariable != "" {
+            listOfPlayers.playersList[index!].dorsal = Int(dorsalVariable) ?? 0
+        }
+        if positionVariable != "" {
+            listOfPlayers.playersList[index!].position = getPositionFromString(position: positionVariable)
+        }
+    }
+    
+    func getPositionFromString(position: String) -> Position {
+        if position == "position_base".localized(LocalizationService.shared.language) {
+            return .base
+        } else if position == "position_escolta".localized(LocalizationService.shared.language) {
+            return .escolta
+        } else if position == "position_alero".localized(LocalizationService.shared.language) {
+            return .alero
+        } else if position == "position_alapivot".localized(LocalizationService.shared.language) {
+            return .alapivot
+        } else {
+            return .pivot
+        }
     }
 }
 
@@ -120,6 +160,6 @@ struct DropDownOptionsListView: View {
 
 struct PlayerTeamDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerTeamDetailView(currentPlayer: playersData[0])
+        PlayerTeamDetailView(listOfPlayers: PlayersListModel(), currentPlayer: playersData[0])
     }
 }

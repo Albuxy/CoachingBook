@@ -50,7 +50,7 @@ struct AddPlayerView: View {
                     let newPlayer = Player(name: name,
                                            surname: surname,
                                            image: "ic_player",
-                                           date: (dateOfBirth?.formatted())!,
+                                           date: (dateOfBirth?.formatted()) ?? "",
                                            position: changeToPosition(position: position),
                                            dorsal: Int(dorsal) ?? 0,
                                            hasStats: false,

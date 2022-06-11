@@ -35,7 +35,7 @@ struct PlayerInformationView: View {
                 }
                 VStack(alignment: .center, spacing: 35) {
                     NavigationLink(
-                      destination: PersonalDetailView(currentPlayer: player),
+                        destination: PersonalDetailView(listOfPlayers: listOfPlayers, currentPlayer: player),
                       isActive: $navigateToPersonalDetail,
                       label: {
                           ButtonPlayerInformation(string: "personal_details_title",
@@ -43,7 +43,7 @@ struct PlayerInformationView: View {
                       }
                     )
                     NavigationLink(
-                      destination: PlayerTeamDetailView(currentPlayer: player),
+                        destination: PlayerTeamDetailView(listOfPlayers: listOfPlayers, currentPlayer: player),
                       isActive: $navigateToTeamDetail,
                       label: {
                           ButtonPlayerInformation(string: "team_details_title",

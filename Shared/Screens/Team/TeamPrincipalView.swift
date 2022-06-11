@@ -10,7 +10,8 @@ import SwiftUI
 struct TeamPrincipalView: View {
 
     var team: Team
-    @ObservedObject var listOfPlayers = PlayersListModel()
+
+    @ObservedObject var listOfPlayers: PlayersListModel
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
@@ -122,6 +123,6 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(team: teamsData[0])
+        TeamPrincipalView(team: teamsData[0], listOfPlayers: PlayersListModel())
     }
 }
