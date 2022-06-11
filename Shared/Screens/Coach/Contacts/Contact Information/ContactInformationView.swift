@@ -12,10 +12,9 @@ struct ContactInformationView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
-    @State var listOfContacts = contactsData
     var currentContact: Contact
     
-    @State var removeContact = false
+    @ObservedObject var contactsViewModel: ContactsDetailModel
     
     var body: some View {
         VStack(spacing: 30){
@@ -48,9 +47,8 @@ struct ContactInformationView: View {
                     alignment: .topLeading)
             //Button Remove COntact
             Button(action: {
-                listOfContacts.removeAll { contact in
-                    contact.full_name == currentContact.full_name
-                }
+                let index = contactsViewModel.contactsList.firstIndex(where: {$0.full_name == currentContact.full_name})
+                contactsViewModel.contactsList.remove(at: index!)
                 presentation.wrappedValue.dismiss()
             }) {
                 HStack (spacing: 38){
@@ -117,6 +115,6 @@ struct CustomRowInformationContact: View {
 
 struct ContactInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactInformationView(currentContact: contactsData[0])
+        ContactInformationView(currentContact: contactsData[0], contactsViewModel: ContactsDetailModel())
     }
 }

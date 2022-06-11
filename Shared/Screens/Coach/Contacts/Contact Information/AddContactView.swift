@@ -12,7 +12,7 @@ struct AddContactView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
-    @Binding var coach: Coach
+    @ObservedObject var contactsViewModel: ContactsDetailModel
     
     //Fields
     @State var name = ""
@@ -79,10 +79,11 @@ struct AddContactView: View {
                 Button {
                     let newContact = Contact(full_name: name,
                                              gender: changeToGender(gender: gender),
+                                             image: getImageFromGender(gender: changeToGender(gender: gender)),
                                              phoneNumber: phoneNumber,
                                              relation: changeToRelation(relation: relation),
                                              playerRelated: lookForPlayer(playerName: playerName))
-                    coach.contacts.append(newContact)
+                    contactsViewModel.addItem(item: newContact)
                     presentation.wrappedValue.dismiss()
                 } label: {
                     Text("button_save_contact".localized(LocalizationService.shared.language))
@@ -106,19 +107,30 @@ struct AddContactView: View {
     }
                        
     func changeToGender(gender: String) -> Gender {
-        if gender == "coach_gender_male".localized(LocalizationService.shared.language) {
+        if gender == "coach_gender_male" {
             return .male
-        } else if gender == "coach_gender_female".localized(LocalizationService.shared.language) {
+        } else if gender == "coach_gender_female" {
             return .female
         } else {
             return .other
         }
     }
     
+    func getImageFromGender(gender: Gender) -> String {
+        switch gender {
+        case .male:
+            return "ic_men"
+        case .female:
+            return "ic_women"
+        case .other:
+            return "ic_men"
+        }
+    }
+    
     func changeToRelation(relation: String) -> RelationTypeWithContact {
-        if relation == "father_title".localized(LocalizationService.shared.language) {
+        if relation == "father_title" {
             return .father
-        } else if relation == "mother_title".localized(LocalizationService.shared.language) {
+        } else if relation == "mother_title" {
             return .mother
         } else {
             return .other
@@ -225,6 +237,6 @@ struct DropDownOptionsField: View {
 struct AddContactView_Previews: PreviewProvider {
     @State static var coach = coachData
     static var previews: some View {
-        AddContactView(coach: $coach)
+        AddContactView(contactsViewModel: ContactsDetailModel())
     }
 }

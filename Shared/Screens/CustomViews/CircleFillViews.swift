@@ -92,19 +92,4 @@ struct PercentatgeWithTitleStats: View {
         }
         .frame(width: UIScreen.main.bounds.width / 1.2, height: 100)
     }
-    
-}
-
-struct StatsBehaviourCard1_Previews: PreviewProvider {
-    static var previews: some View {
-        StatsBehaviourCard(player: Player(name: "",
-                                          surname: "",
-                                          image: "",
-                                          date: "",
-                                          position: .base,
-                                          dorsal: 5,
-                                          hasStats: true,
-                                          tardance: "",
-                                          totalStat: 4.6))
-    }
 }

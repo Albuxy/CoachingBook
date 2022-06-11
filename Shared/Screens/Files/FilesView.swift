@@ -25,7 +25,7 @@ struct FilesView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 21))
                 GeometryReader { _ in
-                    SwitchFileView(userScreenEntry: $fileModel.showSection)
+                    SwitchFileView(userScreenEntry: $fileModel.showSection, viewModel: fileModel)
                 }
                 .frame(width: 340, height: 480, alignment: .top)
             }
@@ -33,6 +33,9 @@ struct FilesView: View {
         .padding(.top, 120)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
+        .onChange(of: documentsData) { _ in
+            documentsData.shuffle()
+                }
     }
 }
 

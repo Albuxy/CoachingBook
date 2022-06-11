@@ -20,13 +20,14 @@ struct Player: Identifiable {
     var dorsal: Int
     var isChecked: Bool = false
     var isJustificated: Justification?
+    var attendanceStats: AttendanceStats = attendanceStatData
+    var punctualityStats: PunctualityStats = punctualityStatData
+    var behaviourStats: BehaviourStats = behaviourStatData
     var hasStats: Bool
     var tardance: String
     
     //Stats
-    var statsAttendance: AttendanceStats?
-    var statsPunctuality: PunctualityStats?
-    var statsBehaviour: BehaviourStats?
+    var stats: [Stats]?
     var totalStat: Float
     
     func getStringForPosition(currentPosition: Position) -> String {

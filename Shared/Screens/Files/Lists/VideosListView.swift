@@ -9,15 +9,13 @@ import SwiftUI
 
 struct VideosListView: View {
     
-    var videosList = videosData
+    @ObservedObject var videosList: VideoModelList
     
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(videosData) { video in
-                    FileRowView(imageString: video.image,
-                                nameString: video.name,
-                                dateString: video.date)
+                ForEach(videosList.videos) { video in
+                    FileVideoRowView(item: video)
                 }
             }
         }
@@ -27,6 +25,6 @@ struct VideosListView: View {
 
 struct VideosListView_Previews: PreviewProvider {
     static var previews: some View {
-        VideosListView()
+        VideosListView(videosList: VideoModelList())
     }
 }

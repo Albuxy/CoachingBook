@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 //Model for Contact
-struct Contact: Identifiable {
+struct Contact: Identifiable, Equatable {
+    static func == (lhs: Contact, rhs: Contact) -> Bool {
+        return true
+    }
+    
     var id = UUID()
     var full_name: String
     var gender: Gender
@@ -16,7 +21,7 @@ struct Contact: Identifiable {
     var phoneNumber: String
     var city: String?
     var email: String?
-    var isFavourite: Bool = false
+    @State var isFavourite: Bool = false
     var relation: RelationTypeWithContact
     var playerRelated: Player
 }

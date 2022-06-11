@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GeneralStatsTeamCard: View {
+    
+    var generalStats: [Stats]
 
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
@@ -29,13 +31,13 @@ struct GeneralStatsTeamCard: View {
             CombinedCircleView()
             HStack(spacing: 20){
                 LitleTextWithPercentatge(title: "attendance_name",
-                                         percentatge: "23,53%",
+                                         percentatge: generalStats[3].percTotal,
                                          color: Color("darkRedColor"))
                 LitleTextWithPercentatge(title: "behaviour_name",
-                                         percentatge: "48,28%",
+                                         percentatge: generalStats[2].percTotal,
                                          color: Color("blueColor"))
                 LitleTextWithPercentatge(title: "punctuality_name",
-                                         percentatge: "32,40%",
+                                         percentatge: 0.3240,
                                          color: Color("baseColor"))
             }
         }
@@ -83,7 +85,7 @@ struct CombinedCircleView: View {
 struct LitleTextWithPercentatge: View {
 
     var title: String
-    var percentatge: String
+    var percentatge: Float
     var color: Color
 
     var body: some View {
@@ -95,7 +97,7 @@ struct LitleTextWithPercentatge: View {
                 Text(title.localized(LocalizationService.shared.language))
                     .font(.system(size: 12))
                     .foregroundColor(.black.opacity(0.6))
-                Text(percentatge)
+                Text("\(percentatge * 100)" + " %")
                     .font(.system(size: 11))
                     .foregroundColor(.black)
             }
@@ -105,6 +107,6 @@ struct LitleTextWithPercentatge: View {
 
 struct GeneralStatsTeamCard_Previews: PreviewProvider {
     static var previews: some View {
-        GeneralStatsTeamCard()
+        GeneralStatsTeamCard(generalStats: teamsData[0].generalStats)
     }
 }

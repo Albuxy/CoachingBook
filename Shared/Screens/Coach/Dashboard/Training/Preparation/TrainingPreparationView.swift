@@ -96,6 +96,13 @@ struct TrainingPreparationView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
+        }, trailing:
+            Button(action: {
+                presentation.wrappedValue.dismiss()
+            }) {
+            Text("button_save".localized(LocalizationService.shared.language))
+              .foregroundColor(.black)
+              .bold()
         })
     }
 }

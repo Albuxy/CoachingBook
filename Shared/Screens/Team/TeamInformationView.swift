@@ -13,8 +13,23 @@ struct TeamInformationView: View {
     @Environment(\.presentationMode) var presentation
     
     var team: Team
+    var weeksDay: [String] = ["monday_title".localized(LocalizationService.shared.language),
+                              "tuesday_title".localized(LocalizationService.shared.language),
+                              "wednesday_title".localized(LocalizationService.shared.language),
+                              "thursday_title".localized(LocalizationService.shared.language),
+                              "friday_title".localized(LocalizationService.shared.language)]
+    
+    var weeks2Day: [String] = ["friday_title".localized(LocalizationService.shared.language),
+                              "saturday_title".localized(LocalizationService.shared.language)]
     
     @State var removeTeam = false
+    @State var trainingVariable1 = ""
+    @State var trainingVariable2 = ""
+    @State var matchVariable = ""
+    
+    @State var newHourTraining1 = ""
+    @State var newHourTraining2 = ""
+    @State var newHourMatch = ""
     
     var body: some View {
         VStack(spacing: 20){
@@ -31,21 +46,17 @@ struct TeamInformationView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 19))
                 HStack{
-                    VStack(alignment: .leading, spacing: 20){
+                    VStack(alignment: .leading, spacing: 15){
                         Text("days_title".localized(LocalizationService.shared.language))
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        ForEach(team.trainingDays){ item in
-                            HStack(spacing: 15){
-                                Text("•")
-                                    .font(.system(size: 18))
-                                    .foregroundColor(.black)
-                                Text(item.getStringsForDay(currentDay: item.day))
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 18))
-                            }
-                        }
+                        OptionsListView(placeholder: team.trainingDays[0].getStringsForDay(currentDay: team.trainingDays[0].day),
+                                        dropDownList: weeksDay,
+                                        value: $trainingVariable1)
+                        OptionsListView(placeholder: team.trainingDays[1].getStringsForDay(currentDay: team.trainingDays[1].day),
+                                        dropDownList: weeksDay,
+                                        value: $trainingVariable2)
                     }
                     Spacer()
                     VStack(alignment: .leading, spacing: 25){
@@ -53,11 +64,16 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        ForEach(team.trainingDays){ item in
-                            Text(item.hour)
-                                .font(.system(size: 18))
-                                .foregroundColor(.black)
-                        }
+                        TextField(team.trainingDays[0].hour, text: $newHourTraining1)
+                            .keyboardType(.numberPad)
+                            .foregroundColor(.black)
+                            .font(.system(size: 20))
+                            .frame(width: 60, height: 30, alignment: .center)
+                        TextField(team.trainingDays[1].hour, text: $newHourTraining2)
+                            .keyboardType(.numberPad)
+                            .foregroundColor(.black)
+                            .font(.system(size: 20))
+                            .frame(width: 60, height: 30, alignment: .center)
                     }
                 }
                 .padding([.leading, .trailing], 30)
@@ -72,14 +88,9 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        HStack(spacing: 15){
-                            Text("•")
-                                .foregroundColor(.black)
-                                .font(.system(size: 18))
-                            Text(team.matchDay.getStringsForDay(currentDay: team.matchDay.day))
-                                .foregroundColor(.black)
-                                .font(.system(size: 18))
-                        }
+                        OptionsListView(placeholder: team.matchDay.getStringsForDay(currentDay: team.matchDay.day),
+                                        dropDownList: weeks2Day,
+                                        value: $matchVariable)
                     }
                     Spacer()
                     VStack(alignment: .leading, spacing: 25){
@@ -87,9 +98,11 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        Text(team.matchDay.hour)
+                        TextField(team.matchDay.hour, text: $newHourMatch)
+                            .keyboardType(.numberPad)
                             .foregroundColor(.black)
-                            .font(.system(size: 18))
+                            .font(.system(size: 20))
+                            .frame(width: 60, height: 30, alignment: .center)
                     }
                 }
                 .padding([.leading, .trailing], 30)
@@ -124,20 +137,22 @@ struct TeamInformationView: View {
 struct TeamPrincipalInfoCard: View {
 
     var team: Team
+    @State var newCategory = ""
 
     var body: some View {
-        VStack(spacing: 15){
+        VStack(alignment: .center, spacing: 15){
             Image(team.logoString)
                 .resizable()
                 .frame(width: 100, height: 100)
-            VStack(spacing: 8){
+            VStack(alignment: .center, spacing: 8){
                 Text(team.name)
                     .font(.system(size: 21))
                     .foregroundColor(.black)
                     .bold()
-                Text(team.category)
-                    .font(.system(size: 21))
+                TextField(team.category, text: $newCategory)
                     .foregroundColor(.black)
+                    .font(.system(size: 20))
+                    .frame(width: 90, height: 30, alignment: .center)
             }
             HStack(spacing: 12){
                 Image(systemName: "person.fill")
@@ -159,6 +174,44 @@ struct TeamPrincipalInfoCard: View {
                 )
                 .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
         )
+    }
+}
+
+struct OptionsListView: View {
+
+    var placeholder: String
+    var dropDownList: [String]
+    @Binding var value: String
+
+    var body: some View {
+        Menu {
+            ForEach(dropDownList, id: \.self){ option in
+                Button(option.localized(LocalizationService.shared.language)) {
+                    self.value = option
+                }
+            }
+        } label: {
+            VStack(spacing: 5){
+                HStack{
+                    Text(value.isEmpty ? placeholder.localized(LocalizationService.shared.language) : value.localized(LocalizationService.shared.language))
+                        .foregroundColor(value.isEmpty ? .gray : .black)
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(Color.black)
+                        .font(Font.system(size: 18))
+                }
+                .padding(.horizontal)
+            }
+            .frame(width: 150, height: 35, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .strokeBorder(Color.gray, lineWidth: 1)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(Color.white)
+                    )
+            )
+        }
     }
 }
 

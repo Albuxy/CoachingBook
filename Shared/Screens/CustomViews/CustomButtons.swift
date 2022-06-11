@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct RemoveButton: View {
+    
+    //MARK: - Presentation Propertiers
+    @Environment(\.presentationMode) var presentation
 
     var stringButton: String
     @Binding var booleanToChange: Bool
@@ -16,6 +19,7 @@ struct RemoveButton: View {
     var body: some View {
         Button(action: {
             booleanToChange.toggle()
+            presentation.wrappedValue.dismiss()
         }) {
             HStack (spacing: 38){
                 Image("ic_cancel_red")

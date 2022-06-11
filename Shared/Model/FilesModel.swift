@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct DocumentModel: Identifiable {
+struct DocumentModel: Identifiable, Equatable {
     var id = UUID()
     var name: String
     var date: String
     var image: String = "ic_document"
+}
+
+class DocumentModelList: ObservableObject {
+    @Published var documents = documentsData
 }
 
 var documentsData: [DocumentModel] = [
@@ -21,11 +25,15 @@ var documentsData: [DocumentModel] = [
     DocumentModel(name: "Documento acta 2", date: "3 March 2020"),
 ]
 
-struct ImageModel: Identifiable {
+struct ImageModel: Identifiable, Equatable {
     var id = UUID()
     var name: String
     var date: String
     var image: String = "ic_image"
+}
+
+class ImageModelList: ObservableObject {
+    @Published var images = imagesData
 }
 
 var imagesData: [ImageModel] = [
@@ -37,11 +45,15 @@ var imagesData: [ImageModel] = [
     ImageModel(name: "Image entreno 8", date: "23 December 2020"),
 ]
 
-struct VideoModel: Identifiable {
+struct VideoModel: Identifiable, Equatable{
     var id = UUID()
     var name: String
     var date: String
     var image: String = "ic_video"
+}
+
+class VideoModelList: ObservableObject {
+    @Published var videos = videosData
 }
 
 var videosData: [VideoModel] = [
