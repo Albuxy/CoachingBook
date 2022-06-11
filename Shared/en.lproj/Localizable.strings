@@ -227,6 +227,9 @@
 "behaviour_rated" = "You have rated their behavior a total of: ";
 "attitude_rated" = "You have rated their attitude a total of: ";
 "times_title" = " times";
+//Alert
+"remove_player" = "Remove player";
+"confirmation_remove_player" = "Are you sure you want to remove this player?";
 
 //Events
 "events_title" = "Events";

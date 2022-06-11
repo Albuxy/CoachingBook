@@ -87,6 +87,14 @@ struct Player: Identifiable {
     }
 }
 
+class PlayersListModel: ObservableObject {
+  @Published var playersList = playersData
+    
+    func addItem(item: Player){
+        playersList.append(item)
+    }
+}
+
 let playersData: [Player] = [
     Player(name: "Maria",
            surname: "Jolen",

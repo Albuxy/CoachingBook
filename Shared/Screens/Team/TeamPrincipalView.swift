@@ -10,6 +10,7 @@ import SwiftUI
 struct TeamPrincipalView: View {
 
     var team: Team
+    @ObservedObject var listOfPlayers = PlayersListModel()
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
@@ -48,7 +49,7 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                      destination: ListPlayersView(listOfPlayers: team.players),
+                      destination: ListPlayersView(listOfPlayers: listOfPlayers),
                       isActive: $navigateToPlayersScreen,
                       label: {
                           ButtonCardTeamView(title: "team_players_title",

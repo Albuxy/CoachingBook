@@ -239,6 +239,9 @@
 "behaviour_rated" = "Ha qualificat el seu comportament amb un total de: ";
 "attitude_rated" = "Has qualificat la seva actitud amb un total de: ";
 "times_title" = " vegades";
+//Alert
+"remove_player" = "Eliminar jugador";
+"confirmation_remove_player" = "Estas segur que vols eliminar aquest jugador?";
 
 //Events
 "events_title" = "Events";

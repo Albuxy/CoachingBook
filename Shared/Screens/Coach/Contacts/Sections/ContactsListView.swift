@@ -39,7 +39,7 @@ struct ContactsListView: View {
 struct CustomRowContact: View {
 
     @ObservedObject var viewModel: ContactsDetailModel
-    var contact: Contact
+    @State var contact: Contact
 
     @State var navigateToContactInformation = false
 
