@@ -46,7 +46,7 @@ struct ListPlayersView: View {
                   .frame(width: 35, height: 35)
           }, trailing:
             NavigationLink(
-              destination: AddPlayerView(),
+              destination: AddPlayerView(listOfPlayers: listOfPlayers),
               isActive: $navigateToAddPlayer,
               label: {
                   Button(action: {

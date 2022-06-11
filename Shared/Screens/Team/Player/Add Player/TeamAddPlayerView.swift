@@ -83,10 +83,7 @@ struct DropDownWithOptionsListView: View {
 }
 
 struct TeamAddPlayerView_Previews: PreviewProvider {
-    @State static var value1 = ""
-    @State static var value2 = ""
-    @State static var value3 = ""
     static var previews: some View {
-        AddPlayerView()
+        AddPlayerView(listOfPlayers: PlayersListModel())
     }
 }
