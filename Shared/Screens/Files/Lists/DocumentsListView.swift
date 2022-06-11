@@ -9,15 +9,13 @@ import SwiftUI
 
 struct DocumentsListView: View {
     
-    var documentsList = documentsData
+    @ObservedObject var documentsList: DocumentModelList
     
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(documentsList) { document in
-                    FileRowView(imageString: document.image,
-                                nameString: document.name,
-                                dateString: document.date)
+                ForEach(documentsList.documents) { document in
+                    FileDocumentRowView(item: document)
                 }
             }
         }
@@ -27,6 +25,6 @@ struct DocumentsListView: View {
 
 struct DocumentsListView_Previews: PreviewProvider {
     static var previews: some View {
-        DocumentsListView()
+        DocumentsListView(documentsList: DocumentModelList())
     }
 }

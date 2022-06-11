@@ -14,7 +14,7 @@ struct ContactsListView: View {
 
     @State private var searchText = ""
 
-    var contacts: [Contact]
+    @ObservedObject var contacts = ContactsDetailModel()
 
     var body: some View {
         ZStack{
@@ -23,8 +23,8 @@ struct ContactsListView: View {
                     .padding(.top, 20)
                 ScrollView {
                     VStack(spacing: 25){
-                        ForEach(contacts.sorted(by: { $0.full_name < $1.full_name })) { contact in
-                            CustomRowContact(contact: contact)
+                        ForEach(contacts.contactsList.sorted(by: { $0.full_name < $1.full_name })) { contact in
+                            CustomRowContact(viewModel: contacts, contact: contact)
                         }
                     }
                 }
@@ -38,60 +38,66 @@ struct ContactsListView: View {
 
 struct CustomRowContact: View {
 
+    @ObservedObject var viewModel: ContactsDetailModel
     var contact: Contact
 
     @State var navigateToContactInformation = false
 
     var body: some View {
-        NavigationLink(
-          destination: ContactInformationView(currentContact: contact),
-          isActive: $navigateToContactInformation,
-          label: {
-              Button {
-                  navigateToContactInformation.toggle()
-              } label: {
-                  HStack(spacing: 20){
-                      Image(getStringForGender(gender: contact.gender))
-                          .resizable()
-                          .frame(width: 40, height: 40)
-                          .padding(5)
-                          .background(
-                              RoundedRectangle(cornerRadius: 25)
-                                  .strokeBorder(Color("blueColor"), lineWidth: 1)
-                                  .background(
-                                      RoundedRectangle(cornerRadius: 25).fill(Color.white)
-                                  )
-                          )
-                      VStack(alignment: .leading, spacing: 10){
-                          Text(contact.full_name)
-                              .font(.system(size: 21))
-                              .foregroundColor(.black)
-                          HStack(spacing: 5){
-                              Text(getStringForRelation(relation: contact.relation).localized(LocalizationService.shared.language))
-                                  .font(.system(size: 18))
-                                  .foregroundColor(.gray)
-                              Text(contact.playerRelated.name)
-                                  .font(.system(size: 18))
-                                  .foregroundColor(.gray)
-                          }
-                      }
-                      .frame(width: 200, alignment: .leading)
-                      Spacer()
-                      HStack(spacing: 0){
-                          if contact.isFavourite {
-                              Image(systemName: "star.fill")
-                                  .resizable()
-                                  .frame(width: 16, height: 16)
-                                  .foregroundColor(Color.yellow)
-                          }
+        HStack(spacing: 20){
+            Image(getStringForGender(gender: contact.gender))
+                .resizable()
+                .frame(width: 40, height: 40)
+                .padding(5)
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .strokeBorder(Color("blueColor"), lineWidth: 1)
+                        .background(
+                            RoundedRectangle(cornerRadius: 25).fill(Color.white)
+                        )
+                )
+            VStack(alignment: .leading, spacing: 10){
+                Text(contact.full_name)
+                    .font(.system(size: 21))
+                    .foregroundColor(.black)
+                HStack(spacing: 5){
+                    Text(getStringForRelation(relation: contact.relation).localized(LocalizationService.shared.language))
+                        .font(.system(size: 18))
+                        .foregroundColor(.gray)
+                    Text(contact.playerRelated.name)
+                        .font(.system(size: 18))
+                        .foregroundColor(.gray)
+                }
+            }
+            .frame(width: 200, alignment: .leading)
+            Spacer()
+            HStack(spacing: 0){
+                Button {
+                    contact.isFavourite.toggle()
+                } label: {
+                    Image(systemName: contact.isFavourite ? "star.fill" : "star")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(Color.yellow)
+                }
+                NavigationLink(
+                  destination: ContactInformationView(currentContact: contact, contactsViewModel: viewModel),
+                  isActive: $navigateToContactInformation,
+                  label: {
+                      Button {
+                          navigateToContactInformation.toggle()
+                      } label: {
                           Image("ic_arrow_right")
                               .resizable()
                               .frame(width: 22, height: 22)
+
                       }
                   }
-              }
-          }
-        )
+                )
+            }.onChange(of: contact.isFavourite) { newValue in
+                contactsData.shuffle()
+            }
+        }
     }
 
     func getStringForRelation(relation: RelationTypeWithContact) -> String {
@@ -119,6 +125,6 @@ struct CustomRowContact: View {
 
 struct ContactsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsListView(contacts: coachData.contacts)
+        ContactsListView(contacts: ContactsDetailModel())
     }
 }

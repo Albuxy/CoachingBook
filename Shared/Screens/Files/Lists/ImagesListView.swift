@@ -9,15 +9,13 @@ import SwiftUI
 
 struct ImagesListView: View {
     
-    var imagesList = imagesData
+    @ObservedObject var imagesList: ImageModelList
     
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(imagesList) { image in
-                    FileRowView(imageString: image.image,
-                                nameString: image.name,
-                                dateString: image.date)
+                ForEach(imagesList.images) { image in
+                    FileImageRowView(item: image)
                 }
             }
         }
@@ -27,6 +25,6 @@ struct ImagesListView: View {
 
 struct ImagesListView_Previews: PreviewProvider {
     static var previews: some View {
-        ImagesListView()
+        ImagesListView(imagesList: ImageModelList())
     }
 }

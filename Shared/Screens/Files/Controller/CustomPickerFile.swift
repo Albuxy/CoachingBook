@@ -19,9 +19,9 @@ struct CustomPickerFileView: View {
 
     @StateObject var selection = FilesModel()
       
-    let listOfItems = [FileItem(titleString: "documents_title", imageString: "ic_document", numberInt: documentsData.count, selectionIndex: .documents),
-                       FileItem(titleString: "images_title", imageString: "ic_image", numberInt: imagesData.count, selectionIndex: .images),
-                       FileItem(titleString: "videos_title", imageString: "ic_video", numberInt: videosData.count, selectionIndex: .videos)]
+    let listOfItems = [FileItem(titleString: "documents_title".localized(LocalizationService.shared.language), imageString: "ic_document", numberInt: documentsData.count, selectionIndex: .documents),
+                       FileItem(titleString: "images_title".localized(LocalizationService.shared.language), imageString: "ic_image", numberInt: imagesData.count, selectionIndex: .images),
+                       FileItem(titleString: "videos_title".localized(LocalizationService.shared.language), imageString: "ic_video", numberInt: videosData.count, selectionIndex: .videos)]
 
   var body: some View {
       HStack(spacing: 23){

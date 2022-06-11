@@ -27,8 +27,7 @@ struct GeneralContactView: View {
                   CustomPickerContactBar(selection: contactModel)
                 )
             GeometryReader { _ in
-                SwitchContactView(userScreenEntry: $contactModel.showSection,
-                                  currentCoach: coach)
+                SwitchContactView(userScreenEntry: $contactModel.showSection, viewModel: contactModel)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -43,7 +42,7 @@ struct GeneralContactView: View {
                   .frame(width: 35, height: 35)
           }, trailing:
             NavigationLink(
-              destination: AddContactView(coach: $coach),
+              destination: AddContactView(contactsViewModel: contactModel),
               isActive: $navigateToAddContact,
               label: {
                   Button(action: {
@@ -68,4 +67,13 @@ struct GeneralContactView_Previews: PreviewProvider {
 
 class ContactsDetailModel: ObservableObject {
   @Published var showSection: ContactEntries = .contacts
+  @Published var contactsList = contactsData
+    
+    func addItem(item: Contact){
+        contactsList.append(item)
+    }
+    
+    func removeItem(item: Contact){
+        contactsList.remove(object: item)
+    }
 }

@@ -14,16 +14,15 @@ enum ContactEntries {
 struct SwitchContactView: View {
 
   @Binding var userScreenEntry: ContactEntries
-
-  @State var currentCoach: Coach
+  @ObservedObject var viewModel: ContactsDetailModel
 
   var body: some View {
      VStack {
         switch self.userScreenEntry {
         case .contacts:
-            ContactsListView(contacts: currentCoach.contacts)
+            ContactsListView(contacts: viewModel)
         case .favourites:
-            FavouritesContactsView(contacts: currentCoach.contacts)
+            FavouritesContactsView(contacts: viewModel)
         }
      }
   }
@@ -32,6 +31,6 @@ struct SwitchContactView: View {
 struct SwitchContactView_Previews: PreviewProvider {
     @State static var value: ContactEntries = .contacts
     static var previews: some View {
-        SwitchContactView(userScreenEntry: $value, currentCoach: coachData)
+        SwitchContactView(userScreenEntry: $value, viewModel: ContactsDetailModel())
     }
 }

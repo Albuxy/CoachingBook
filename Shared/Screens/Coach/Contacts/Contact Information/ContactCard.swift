@@ -15,7 +15,7 @@ struct ContactCard: View {
     
     var body: some View {
         ZStack{
-            VStack(alignment: .trailing, spacing: -10){
+            VStack(alignment: .center, spacing: -10){
                 NavigationLink(
                   destination: EmptyView(),
                   isActive: $navigateToContactInformation,

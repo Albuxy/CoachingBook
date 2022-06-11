@@ -9,8 +9,9 @@ import SwiftUI
 
 struct FavouritesContactsView: View {
 
-    var contacts: [Contact]
     @State var navigateToContactInformation = false
+    
+    @ObservedObject var contacts = ContactsDetailModel()
 
     var body: some View {
         ZStack{
@@ -19,10 +20,10 @@ struct FavouritesContactsView: View {
                     .padding(.top, 20)
                 ScrollView {
                     VStack(spacing: 25){
-                        ForEach(contacts
+                        ForEach(contacts.contactsList
                                     .filter({$0.isFavourite})
                                     .sorted(by: { $0.full_name < $1.full_name })) { contact in
-                            CustomRowFavouriteContact(contact: contact)
+                            CustomRowFavouriteContact(viewModel: contacts, contact: contact)
                         }
                     }
                 }
@@ -35,13 +36,15 @@ struct FavouritesContactsView: View {
 }
 
 struct CustomRowFavouriteContact: View {
-
+    
+    @ObservedObject var viewModel: ContactsDetailModel
     var contact: Contact
+    
     @State var navigateToContactInformation = false
 
     var body: some View {
         NavigationLink(
-            destination: ContactInformationView(currentContact: contact),
+            destination: ContactInformationView(currentContact: contact, contactsViewModel: viewModel),
           isActive: $navigateToContactInformation,
           label: {
               Button {
@@ -108,6 +111,6 @@ struct CustomRowFavouriteContact: View {
 
 struct FavouritesContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouritesContactsView(contacts: coachData.contacts)
+        FavouritesContactsView(contacts: ContactsDetailModel())
     }
 }
