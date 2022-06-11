@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoachCard: View {
 
-    @Binding var coach: Coach
+    @ObservedObject var coach: CoachListModel
 
     @State var navigateToPersonalInformation = false
 
@@ -17,7 +17,7 @@ struct CoachCard: View {
         ZStack{
             VStack(alignment: .trailing, spacing: -5){
                 NavigationLink(
-                  destination: CoachInformationScreen(),
+                  destination: CoachInformationScreen(coach: coach),
                   isActive: $navigateToPersonalInformation,
                   label: {
                       Button(action: {
@@ -33,7 +33,7 @@ struct CoachCard: View {
                   }
                 )
                 VStack(alignment: .center, spacing: 15) {
-                    Image(coach.imageString)
+                    Image(coach.coachList.imageString)
                         .resizable()
                         .frame(width: 50, height: 50)
                         .padding(6)
@@ -45,10 +45,10 @@ struct CoachCard: View {
                                 )
                         )
                     VStack(alignment: .center, spacing: 10) {
-                        Text(coach.full_name + " " + coach.surname)
+                        Text(coach.coachList.full_name + " " + coach.coachList.surname)
                             .font(.system(size: 20))
                             .foregroundColor(.black)
-                        Text(coach.email)
+                        Text(coach.coachList.email)
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(.gray)
@@ -70,8 +70,7 @@ struct CoachCard: View {
 }
 
 struct CoachCard_Previews: PreviewProvider {
-    @State static var value = coachData
     static var previews: some View {
-        ProfileCoachView(coach: $value)
+        ProfileCoachView(coachModel: CoachListModel())
     }
 }

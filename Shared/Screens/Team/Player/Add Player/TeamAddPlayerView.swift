@@ -25,13 +25,13 @@ struct TeamAddPlayerView: View {
 
     var body: some View {
         VStack(spacing: 25){
-            TextFieldWithTitleGeneral(defaultTextFiled: "coach_mobile_number",
+            TextFieldWithTitleGeneral(defaultTextFiled: "coach_mobile_number", placeHolder: "write_title".localized(LocalizationService.shared.language),
                                       stringTextField: $contactNumber)
             DropDownWithOptionsListView(title: "position",
                                     placeholder: "choose_title",
                                     dropDownList: dropDownOptions,
                                     value: $position)
-            TextFieldWithTitleGeneral(defaultTextFiled: "dorsal_player_title",
+            TextFieldWithTitleGeneral(defaultTextFiled: "dorsal_player_title", placeHolder: "write_title".localized(LocalizationService.shared.language),
                                       stringTextField: $dorsal)
         }
     }

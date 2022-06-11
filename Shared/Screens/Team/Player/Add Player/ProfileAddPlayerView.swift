@@ -34,9 +34,9 @@ struct ProfileAddPlayerView: View {
                         )
                 )
 
-            TextFieldWithTitleGeneral(defaultTextFiled: "contact_name_title",
+            TextFieldWithTitleGeneral(defaultTextFiled: "contact_name_title", placeHolder: "write_title".localized(LocalizationService.shared.language),
                                       stringTextField: $name)
-            TextFieldWithTitleGeneral(defaultTextFiled: "coach_surname",
+            TextFieldWithTitleGeneral(defaultTextFiled: "coach_surname", placeHolder: "write_title".localized(LocalizationService.shared.language),
                                       stringTextField: $surname)
             VStack(alignment: .leading, spacing: 5){
                 Text("coach_dateOfBirth"
