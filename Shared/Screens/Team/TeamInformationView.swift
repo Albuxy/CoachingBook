@@ -12,6 +12,7 @@ struct TeamInformationView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    var currentTeam: Team
     @ObservedObject var team: TeamListModel
     
     @State var newCategory = ""
@@ -29,7 +30,7 @@ struct TeamInformationView: View {
                     .foregroundColor(Color("thirdLightBlueColor"))
                     .frame(width: UIScreen.main.bounds.width,
                            height: 240)
-                TeamPrincipalInfoCard(newCategory: $newCategory, team: team)
+                TeamPrincipalInfoCard(newCategory: $newCategory, currentTeam: currentTeam)
                     .padding(.top, 55)
             }
             VStack(spacing: 20){
@@ -158,19 +159,19 @@ struct TeamInformationView: View {
 struct TeamPrincipalInfoCard: View {
 
     @Binding var newCategory: String
-    @ObservedObject var team: TeamListModel
+    var currentTeam: Team
 
     var body: some View {
         VStack(alignment: .center, spacing: 15){
-            Image(team.teamsList[0].logoString)
+            Image(currentTeam.logoString)
                 .resizable()
                 .frame(width: 100, height: 100)
             VStack(alignment: .center, spacing: 8){
-                Text(team.teamsList[0].name)
+                Text(currentTeam.name)
                     .font(.system(size: 21))
                     .foregroundColor(.black)
                     .bold()
-                TextField(team.teamsList[0].category, text: $newCategory)
+                TextField(currentTeam.category, text: $newCategory)
                     .foregroundColor(.black)
                     .font(.system(size: 20))
                     .frame(width: 90, height: 30, alignment: .center)
@@ -180,7 +181,7 @@ struct TeamPrincipalInfoCard: View {
                     .resizable()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.black)
-                Text("\(team.teamsList[0].players.count)" + " players")
+                Text("\(currentTeam.players.count)" + " players")
                     .font(.system(size: 16))
                     .foregroundColor(.black)
             }
@@ -238,6 +239,6 @@ struct OptionsListView: View {
 
 struct TeamInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamInformationView(team: TeamListModel())
+        TeamInformationView(currentTeam: teamsData[0], team: TeamListModel())
     }
 }

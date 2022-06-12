@@ -14,6 +14,7 @@ struct StatsTeamView: View {
 
     @State var navigateToTotalRanking = false
 
+    var currentTeam: Team
     @ObservedObject var team: TeamListModel
 
     var body: some View {
@@ -43,19 +44,19 @@ struct StatsTeamView: View {
                         HStack(spacing: 22){
                             LitleGeneralStatCard(imageString: "ic_team_attendance",
                                                  titleString: "stats_perc_attendance",
-                                                 percentatge: team.teamsList[0].generalStats[0].percTotal,
+                                                 percentatge: currentTeam.generalStats[0].percTotal,
                                                  primaryColor: Color("darkRedColor"))
                             LitleGeneralStatCard(imageString: "ic_team_punctuality",
                                                  titleString: "stats_perc_punctuality",
-                                                 percentatge: team.teamsList[0].generalStats[1].percTotal,
+                                                 percentatge: currentTeam.generalStats[1].percTotal,
                                                  primaryColor: Color("baseColor"))
                         }
                     }
                 }
-                GeneralStatsTeamCard(generalStats: team.teamsList[0].generalStats)
+                GeneralStatsTeamCard(generalStats: currentTeam.generalStats)
                 TotalRankingButton(imageString: "ic_bullet_green",
                                    titleString: "total_ranking_stats",
-                                   team: team.teamsList[0])
+                                   team: currentTeam)
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
              .background(Color("fourthLightBlueColor"))
@@ -165,6 +166,6 @@ struct TotalRankingButton: View {
 
 struct StatsTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsTeamView(team: TeamListModel())
+        StatsTeamView(currentTeam: teamsData[0], team: TeamListModel())
     }
 }

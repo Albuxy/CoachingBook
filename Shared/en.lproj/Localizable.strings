@@ -328,6 +328,7 @@
 "button_remove_contact" = "Remove contact";
 "button_remove_team" = "Remove team";
 "button_view_details" = "View details";
+"button_select" = "SELECT";
 
 //Messages
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";

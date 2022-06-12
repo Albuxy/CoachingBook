@@ -12,6 +12,7 @@ struct EventsListView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    var currentTeam: Team
     @ObservedObject var eventsModel = EventsListModel()
     @ObservedObject var team: TeamListModel
 
@@ -47,7 +48,7 @@ struct EventsListView: View {
 
 struct EventsListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventsListView(team: TeamListModel())
+        EventsListView(currentTeam: teamsData[0], team: TeamListModel())
     }
 }
 

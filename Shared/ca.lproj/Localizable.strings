@@ -340,6 +340,7 @@
 "button_remove_contact" = "Eliminar contacte";
 "button_remove_team" = "Eliminar equip";
 "button_view_details" = "Veure detalls";
+"button_select" = "SELECCIONAR";
 
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";

@@ -52,7 +52,7 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-          TeamPrincipalView(team: teamModel, listOfPlayers: listOfPlayers)
+          ListTeamView(team: teamModel, playersList: listOfPlayers)
               .navigationBarItems(
                 leading:
                     NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"),

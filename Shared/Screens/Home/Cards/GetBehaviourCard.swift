@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GetBehaviourCard: View {
 
+    var currentTeam: Team
     @State var navigateToSeeStats = false
     @ObservedObject var team: TeamListModel
     
@@ -37,7 +38,7 @@ struct GetBehaviourCard: View {
             }
             .frame(width: 200, height: 100,alignment: .leading)
             NavigationLink(
-              destination: StatsTeamView(team: team),
+                destination: StatsTeamView(currentTeam: currentTeam, team: team),
               isActive: $navigateToSeeStats,
               label: {
                   ButtonWithNavigation(boolean: $navigateToSeeStats,
@@ -64,6 +65,6 @@ struct GetBehaviourCard: View {
 
 struct GetBehaviourCard_Previews: PreviewProvider {
     static var previews: some View {
-        GetBehaviourCard(team: TeamListModel())
+        GetBehaviourCard(currentTeam: teamsData[0], team: TeamListModel())
     }
 }

@@ -42,9 +42,6 @@ struct FilesView: View {
         .padding(.top, 120)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
-        .onChange(of: documentsData) { _ in
-            documentsData.shuffle()
-                }
     }
 }
 

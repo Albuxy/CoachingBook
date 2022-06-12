@@ -59,8 +59,8 @@ struct HomeView: View {
             .tabViewStyle(PageTabViewStyle())
             .frame(height: 240, alignment: .top)
             TabView(){
-                GetAssitanceCard(team: team)
-                GetBehaviourCard(team: team)
+                GetAssitanceCard(currentTeam: team.teamsList[0], team: team)
+                GetBehaviourCard(currentTeam: team.teamsList[0], team: team)
             }
             .background(Color("secondLightBlueColor"))
             .tabViewStyle(PageTabViewStyle())

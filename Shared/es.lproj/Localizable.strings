@@ -329,6 +329,7 @@
 "button_remove_contact" = "Eliminar contacto";
 "button_remove_team" = "Eliminar equipo";
 "button_view_details" = "Ver detalles";
+"button_select" = "SELECCIONAR";
 
 //Messages
 "confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";

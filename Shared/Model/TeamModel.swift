@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Team: Identifiable {
+struct Team: Identifiable, Equatable {
+    static func == (lhs: Team, rhs: Team) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
     var id = UUID()
     var name: String
     var logoString: String
@@ -94,8 +98,8 @@ var teamsData: [Team] = [
                         Session(day: .thursday, hour: "20:30")],
          matchDay: Session(day: .saturday, hour: "17:45")),
     Team(name: "Team 2",
-         logoString: "ic_example_team",
-         category: "Junior Femenino",
+         logoString: "ic_example_team2",
+         category: "Junior Fem",
          players: playersNotAssistData,
          trainingDays: [Session(day: .tuesday, hour: "18:00"),
                         Session(day: .friday, hour: "19:00")],
