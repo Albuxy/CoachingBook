@@ -20,6 +20,24 @@ struct Team: Identifiable {
     var generalStats = statsGeneralData
 }
 
+class TeamListModel: ObservableObject {
+  @Published var teamsList = teamsData
+    
+  var daysWeek: [String] = ["monday_title".localized(LocalizationService.shared.language),
+                          "tuesday_title".localized(LocalizationService.shared.language),
+                          "wednesday_title".localized(LocalizationService.shared.language),
+                          "thursday_title".localized(LocalizationService.shared.language),
+                          "friday_title".localized(LocalizationService.shared.language)]
+
+  var dayWeekend: [String] = ["friday_title".localized(LocalizationService.shared.language),
+                              "saturday_title".localized(LocalizationService.shared.language),
+                              "sunday_title".localized(LocalizationService.shared.language)]
+    
+  func addItem(item: Team){
+    teamsList.append(item)
+  }
+}
+
 struct Session: Identifiable {
     var id = UUID()
     var day: Day

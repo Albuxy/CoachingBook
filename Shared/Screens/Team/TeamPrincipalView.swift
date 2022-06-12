@@ -9,8 +9,7 @@ import SwiftUI
 
 struct TeamPrincipalView: View {
 
-    var team: Team
-
+    @ObservedObject var team: TeamListModel
     @ObservedObject var listOfPlayers: PlayersListModel
     
     @State var navigateToTeamScreen = false
@@ -22,15 +21,15 @@ struct TeamPrincipalView: View {
         VStack(spacing: 60){
             HStack(spacing: 100){
                 VStack(alignment: .leading, spacing: 20){
-                    Text(team.name)
+                    Text(team.teamsList[0].name)
                         .foregroundColor(.black)
                         .font(.system(size: 30))
                         .bold()
-                    Text(team.category)
+                    Text(team.teamsList[0].category)
                         .foregroundColor(.black)
                         .font(.system(size: 21))
                 }
-                Image(team.logoString)
+                Image(team.teamsList[0].logoString)
                     .resizable()
                     .frame(width: 100, height: 100)
             }
@@ -61,7 +60,7 @@ struct TeamPrincipalView: View {
                 }
                 HStack(spacing: 40){
                     NavigationLink(
-                      destination: StatsTeamView(currentTeam: team),
+                        destination: StatsTeamView(team: team),
                       isActive: $navigateToStatsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_stats_title",
@@ -123,6 +122,6 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(team: teamsData[0], listOfPlayers: PlayersListModel())
+        TeamPrincipalView(team: TeamListModel(), listOfPlayers: PlayersListModel())
     }
 }

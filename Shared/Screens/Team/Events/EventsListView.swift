@@ -13,7 +13,7 @@ struct EventsListView: View {
     @Environment(\.presentationMode) var presentation
     
     @ObservedObject var eventsModel = EventsListModel()
-    @State var team: Team
+    @ObservedObject var team: TeamListModel
 
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
@@ -26,7 +26,7 @@ struct EventsListView: View {
                 )
             GeometryReader { _ in
                 SwitchEventView(userScreenEntry: $eventsModel.showSection,
-                                currentTeam: team)
+                                team: team)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -47,7 +47,7 @@ struct EventsListView: View {
 
 struct EventsListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventsListView(team: teamsData[0])
+        EventsListView(team: TeamListModel())
     }
 }
 

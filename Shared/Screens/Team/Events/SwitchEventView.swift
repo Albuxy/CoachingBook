@@ -19,15 +19,15 @@ enum EventEntries {
 struct SwitchEventView: View {
 
   @Binding var userScreenEntry: EventEntries
-  var currentTeam: Team
+  @ObservedObject var team: TeamListModel
 
   var body: some View {
      VStack {
         switch self.userScreenEntry {
         case .trainings:
-            TrainingEventListView(trainingList: currentTeam.trainingEvents)
+            TrainingEventListView(trainingList: team.teamsList[0].trainingEvents)
         case .matchs:
-            MatchEventListView(matchList: currentTeam.matchEvents)
+            MatchEventListView(matchList: team.teamsList[0].matchEvents)
         }
      }
   }

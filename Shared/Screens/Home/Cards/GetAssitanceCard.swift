@@ -10,6 +10,7 @@ import SwiftUI
 struct GetAssitanceCard: View {
 
     @State var navigateToSeeStats = false
+    @ObservedObject var team: TeamListModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
@@ -36,7 +37,7 @@ struct GetAssitanceCard: View {
             }
             .frame(width: 200, height: 100,alignment: .leading)
             NavigationLink(
-              destination: StatsTeamView(currentTeam: teamsData[0]),
+              destination: StatsTeamView(team: team),
               isActive: $navigateToSeeStats,
               label: {
                   ButtonWithNavigation(boolean: $navigateToSeeStats,
@@ -63,6 +64,6 @@ struct GetAssitanceCard: View {
 
 struct GetInformationCard_Previews: PreviewProvider {
     static var previews: some View {
-        GetAssitanceCard()
+        GetAssitanceCard(team: TeamListModel())
     }
 }

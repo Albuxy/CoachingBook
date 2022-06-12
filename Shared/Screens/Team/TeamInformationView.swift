@@ -12,25 +12,16 @@ struct TeamInformationView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
-    var team: Team
-    var weeksDay: [String] = ["monday_title".localized(LocalizationService.shared.language),
-                              "tuesday_title".localized(LocalizationService.shared.language),
-                              "wednesday_title".localized(LocalizationService.shared.language),
-                              "thursday_title".localized(LocalizationService.shared.language),
-                              "friday_title".localized(LocalizationService.shared.language)]
+    @ObservedObject var team: TeamListModel
     
-    var weeks2Day: [String] = ["friday_title".localized(LocalizationService.shared.language),
-                              "saturday_title".localized(LocalizationService.shared.language)]
-    
-    @State var removeTeam = false
+    @State var newCategory = ""
     @State var trainingVariable1 = ""
     @State var trainingVariable2 = ""
     @State var matchVariable = ""
-    
     @State var newHourTraining1 = ""
     @State var newHourTraining2 = ""
     @State var newHourMatch = ""
-    
+
     var body: some View {
         VStack(spacing: 20){
             ZStack(alignment: .top){
@@ -38,7 +29,7 @@ struct TeamInformationView: View {
                     .foregroundColor(Color("thirdLightBlueColor"))
                     .frame(width: UIScreen.main.bounds.width,
                            height: 240)
-                TeamPrincipalInfoCard(team: team)
+                TeamPrincipalInfoCard(newCategory: $newCategory, team: team)
                     .padding(.top, 55)
             }
             VStack(spacing: 20){
@@ -51,11 +42,11 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        OptionsListView(placeholder: team.trainingDays[0].getStringsForDay(currentDay: team.trainingDays[0].day),
-                                        dropDownList: weeksDay,
+                        OptionsListView(placeholder: team.teamsList[0].trainingDays[0].getStringsForDay(currentDay: team.teamsList[0].trainingDays[0].day),
+                                        dropDownList: team.daysWeek,
                                         value: $trainingVariable1)
-                        OptionsListView(placeholder: team.trainingDays[1].getStringsForDay(currentDay: team.trainingDays[1].day),
-                                        dropDownList: weeksDay,
+                        OptionsListView(placeholder: team.teamsList[0].trainingDays[1].getStringsForDay(currentDay: team.teamsList[0].trainingDays[1].day),
+                                        dropDownList: team.daysWeek,
                                         value: $trainingVariable2)
                     }
                     Spacer()
@@ -64,12 +55,12 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        TextField(team.trainingDays[0].hour, text: $newHourTraining1)
+                        TextField(team.teamsList[0].trainingDays[0].hour, text: $newHourTraining1)
                             .keyboardType(.numberPad)
                             .foregroundColor(.black)
                             .font(.system(size: 20))
                             .frame(width: 60, height: 30, alignment: .center)
-                        TextField(team.trainingDays[1].hour, text: $newHourTraining2)
+                        TextField(team.teamsList[0].trainingDays[1].hour, text: $newHourTraining2)
                             .keyboardType(.numberPad)
                             .foregroundColor(.black)
                             .font(.system(size: 20))
@@ -88,8 +79,8 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        OptionsListView(placeholder: team.matchDay.getStringsForDay(currentDay: team.matchDay.day),
-                                        dropDownList: weeks2Day,
+                        OptionsListView(placeholder: team.teamsList[0].matchDay.getStringsForDay(currentDay: team.teamsList[0].matchDay.day),
+                                        dropDownList: team.dayWeekend,
                                         value: $matchVariable)
                     }
                     Spacer()
@@ -98,7 +89,7 @@ struct TeamInformationView: View {
                             .foregroundColor(.black)
                             .font(.system(size: 19))
                             .underline()
-                        TextField(team.matchDay.hour, text: $newHourMatch)
+                        TextField(team.teamsList[0].matchDay.hour, text: $newHourMatch)
                             .keyboardType(.numberPad)
                             .foregroundColor(.black)
                             .font(.system(size: 20))
@@ -118,8 +109,17 @@ struct TeamInformationView: View {
                     )
                     .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
             )
-            RemoveButton(stringButton: "button_remove_team", booleanToChange: $removeTeam)
-                .padding(.top, 20)
+            // MARK: - Button save details
+            Button(action: {
+                saveDetails()
+                presentation.wrappedValue.dismiss()
+            }) {
+                Text("button_save_details".localized(LocalizationService.shared.language))
+                    .font(.system(size: 16))
+                    .bold()
+            }.buttonStyle(
+                MediumButtonStyle(textColor: Color.white, backgroundColor: Color("blueColor"))
+            ).padding(.top, 50)
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
         .background(Color("fourthLightBlueColor"))
@@ -132,24 +132,63 @@ struct TeamInformationView: View {
                   .frame(width: 35, height: 35)
           })
     }
+
+    func saveDetails(){
+        if trainingVariable1 != "" {
+            team.teamsList[0].trainingDays[0].day = changeToDay(day: trainingVariable1)
+        }
+        if trainingVariable2 != "" {
+            team.teamsList[0].trainingDays[1].day = changeToDay(day: trainingVariable2)
+        }
+        if newHourTraining1 != "" {
+            team.teamsList[0].trainingDays[0].hour = newHourTraining1
+        }
+        if newHourTraining2 != "" {
+            team.teamsList[0].trainingDays[1].hour = newHourTraining2
+        }
+        if matchVariable != "" {
+            team.teamsList[0].matchDay.day = changeToDay(day: matchVariable)
+        }
+        if newHourMatch != "" {
+            team.teamsList[0].matchDay.hour = newHourMatch
+        }
+    }
+    
+    func changeToDay(day: String) -> Day {
+        if day == "monday_title".localized(LocalizationService.shared.language) {
+            return .monday
+        } else if day == "tuesday_title".localized(LocalizationService.shared.language) {
+            return .tuesday
+        } else if day == "wednesday_title".localized(LocalizationService.shared.language) {
+            return .wednesday
+        } else if day == "thursday_title".localized(LocalizationService.shared.language) {
+            return .thursday
+        } else if day == "friday_title".localized(LocalizationService.shared.language) {
+            return .friday
+        } else if day == "saturday_title".localized(LocalizationService.shared.language) {
+            return .saturday
+        } else {
+            return .sunday
+        }
+    }
 }
 
 struct TeamPrincipalInfoCard: View {
 
-    var team: Team
-    @State var newCategory = ""
+    @Binding var newCategory: String
+    @ObservedObject var team: TeamListModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 15){
-            Image(team.logoString)
+            Image(team.teamsList[0].logoString)
                 .resizable()
                 .frame(width: 100, height: 100)
             VStack(alignment: .center, spacing: 8){
-                Text(team.name)
+                Text(team.teamsList[0].name)
                     .font(.system(size: 21))
                     .foregroundColor(.black)
                     .bold()
-                TextField(team.category, text: $newCategory)
+                TextField(team.teamsList[0].category, text: $newCategory)
                     .foregroundColor(.black)
                     .font(.system(size: 20))
                     .frame(width: 90, height: 30, alignment: .center)
@@ -159,7 +198,7 @@ struct TeamPrincipalInfoCard: View {
                     .resizable()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.black)
-                Text("\(team.players.count)" + " players")
+                Text("\(team.teamsList[0].players.count)" + " players")
                     .font(.system(size: 16))
                     .foregroundColor(.black)
             }
@@ -217,6 +256,6 @@ struct OptionsListView: View {
 
 struct TeamInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamInformationView(team: teamsData[0])
+        TeamInformationView(team: TeamListModel())
     }
 }

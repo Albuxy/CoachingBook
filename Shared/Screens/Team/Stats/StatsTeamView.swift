@@ -14,7 +14,7 @@ struct StatsTeamView: View {
 
     @State var navigateToTotalRanking = false
 
-    var currentTeam: Team
+    @ObservedObject var team: TeamListModel
 
     var body: some View {
         ZStack{
@@ -43,19 +43,19 @@ struct StatsTeamView: View {
                         HStack(spacing: 22){
                             LitleGeneralStatCard(imageString: "ic_team_attendance",
                                                  titleString: "stats_perc_attendance",
-                                                 percentatge: currentTeam.generalStats[0].percTotal,
+                                                 percentatge: team.teamsList[0].generalStats[0].percTotal,
                                                  primaryColor: Color("darkRedColor"))
                             LitleGeneralStatCard(imageString: "ic_team_punctuality",
                                                  titleString: "stats_perc_punctuality",
-                                                 percentatge: currentTeam.generalStats[1].percTotal,
+                                                 percentatge: team.teamsList[0].generalStats[1].percTotal,
                                                  primaryColor: Color("baseColor"))
                         }
                     }
                 }
-                GeneralStatsTeamCard(generalStats: currentTeam.generalStats)
+                GeneralStatsTeamCard(generalStats: team.teamsList[0].generalStats)
                 TotalRankingButton(imageString: "ic_bullet_green",
                                    titleString: "total_ranking_stats",
-                                   team: currentTeam)
+                                   team: team.teamsList[0])
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
              .background(Color("fourthLightBlueColor"))
@@ -165,6 +165,6 @@ struct TotalRankingButton: View {
 
 struct StatsTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsTeamView(currentTeam: teamsData[0])
+        StatsTeamView(team: TeamListModel())
     }
 }
