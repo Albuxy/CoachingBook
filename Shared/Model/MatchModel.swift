@@ -47,6 +47,10 @@ struct Match: Identifiable {
     }
 }
 
+class MatchListModel: ObservableObject {
+  @Published var matchList = matchData
+}
+
 let matchData: [Match] = [
     Match(title: "Match Game 1",
           date: "30/05/2022",

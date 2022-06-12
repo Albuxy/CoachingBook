@@ -17,6 +17,15 @@ struct LoginView: View {
     @State var openApp = false
     @State var registerOption = false
 
+    @ObservedObject var listOfPlayers = PlayersListModel()
+    @ObservedObject var coachModel = CoachListModel()
+    @ObservedObject var teamModel = TeamListModel()
+    @ObservedObject var eventsModel = EventsListModel()
+    @ObservedObject var fileModel = FilesModel()
+    @ObservedObject var documentsList = DocumentModelList()
+    @ObservedObject var imagesList = ImageModelList()
+    @ObservedObject var videoslist = VideoModelList()
+
     var body: some View {
         NavigationView {
             GeometryReader { _ in
@@ -46,7 +55,15 @@ struct LoginView: View {
                         // MARK: - Button
 
                         NavigationLink(
-                          destination: MenuControllerView(), isActive: self.$openApp
+                            destination: MenuControllerView(listOfPlayers: listOfPlayers,
+                                                            coachModel: coachModel,
+                                                            teamModel: teamModel,
+                                                            eventsModel: eventsModel,
+                                                            fileModel: fileModel,
+                                                            documentsList: documentsList,
+                                                            imagesList: imagesList,
+                                                            videoslist: videoslist),
+                            isActive: self.$openApp
                         ) {
                             Button(action: {
                                 self.openApp.toggle()

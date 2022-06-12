@@ -13,7 +13,7 @@ struct EventsListView: View {
     @Environment(\.presentationMode) var presentation
     
     var currentTeam: Team
-    @ObservedObject var eventsModel = EventsListModel()
+    @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var team: TeamListModel
 
     var body: some View {
@@ -26,8 +26,7 @@ struct EventsListView: View {
                   CustomPickerEventBar(selection: eventsModel)
                 )
             GeometryReader { _ in
-                SwitchEventView(userScreenEntry: $eventsModel.showSection,
-                                team: team)
+                SwitchEventView(userScreenEntry: $eventsModel.showSection, team: team)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -48,7 +47,7 @@ struct EventsListView: View {
 
 struct EventsListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventsListView(currentTeam: teamsData[0], team: TeamListModel())
+        EventsListView(currentTeam: teamsData[0], eventsModel: EventsListModel(), team: TeamListModel())
     }
 }
 

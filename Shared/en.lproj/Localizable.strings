@@ -227,9 +227,6 @@
 "behaviour_rated" = "You have rated their behavior a total of: ";
 "attitude_rated" = "You have rated their attitude a total of: ";
 "times_title" = " times";
-//Alert
-"remove_player" = "Remove player";
-"confirmation_remove_player" = "Are you sure you want to remove this player?";
 
 //Events
 "events_title" = "Events";
@@ -282,8 +279,6 @@
 "list_files_title" = "List of files selected";
 "upload_title" = "Upload: ";
 "upload_date_title" = "Upload date: ";
-"remove_file" = "Remove file";
-"confirmation_remove_file" = "Are you sure you want to remove this file?";
 "documents_empty_title" = "There are no documents yet";
 "images_empty_title" = "There are no images yet";
 "videos_empty_title" = "There are no videos yet";
@@ -330,6 +325,16 @@
 "button_view_details" = "View details";
 "button_select" = "SELECT";
 
-//Messages
+//Alerts
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";
 "confirmation_log_out" = "Are you sure you want to log out";
+"remove_training" = "Remove training";
+"confirmation_remove_training" = "Are you sure you want to remove this training?";
+"remove_training" = "Remove match";
+"confirmation_remove_training" = "Are you sure you want to remove this match?";
+"remove_player" = "Remove player";
+"confirmation_remove_player" = "Are you sure you want to remove this player?";
+"remove_team" = "Remove team";
+"confirmation_remove_team" = "Are you sure you want to remove this team?";
+"remove_file" = "Remove file";
+"confirmation_remove_file" = "Are you sure you want to remove this file?";

@@ -30,13 +30,14 @@ struct MenuSwitchView: View {
 
   @Binding var userMenuEntry: MenuEntries
     
-  @ObservedObject var listOfPlayers = PlayersListModel()
-  @ObservedObject var coachModel = CoachListModel()
-  @ObservedObject var teamModel = TeamListModel()
-  @ObservedObject var fileModel = FilesModel()
-  @ObservedObject var documentsList = DocumentModelList()
-  @ObservedObject var imagesList = ImageModelList()
-  @ObservedObject var videoslist = VideoModelList()
+    @ObservedObject var listOfPlayers: PlayersListModel
+    @ObservedObject var coachModel: CoachListModel
+    @ObservedObject var teamModel: TeamListModel
+    @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var fileModel: FilesModel
+    @ObservedObject var documentsList: DocumentModelList
+    @ObservedObject var imagesList: ImageModelList
+    @ObservedObject var videoslist: VideoModelList
 
   var body: some View {
     VStack {
@@ -52,7 +53,7 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-          ListTeamView(team: teamModel, playersList: listOfPlayers)
+          ListTeamView(team: teamModel, playersList: listOfPlayers, eventsModel: eventsModel)
               .navigationBarItems(
                 leading:
                     NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"),

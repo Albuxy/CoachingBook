@@ -239,9 +239,6 @@
 "behaviour_rated" = "Ha qualificat el seu comportament amb un total de: ";
 "attitude_rated" = "Has qualificat la seva actitud amb un total de: ";
 "times_title" = " vegades";
-//Alert
-"remove_player" = "Eliminar jugador";
-"confirmation_remove_player" = "Estas segur que vols eliminar aquest jugador?";
 
 //Events
 "events_title" = "Events";
@@ -294,8 +291,6 @@
 "list_files_title" = "Llista d'arxius seleccionats";
 "upload_title" = "Pujats: ";
 "upload_date_title" = "Data de pujada: ";
-"remove_file" = "Eliminar arxiu";
-"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
 "documents_empty_title" = "No hi han documents encara";
 "images_empty_title" = "No hi han imatges encara";
 "videos_empty_title" = "No hi han videos encara";
@@ -345,3 +340,13 @@
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";
 "confirmation_log_out" = "Estàs segur que vols sortir?";
+"remove_training" = "Eliminar entreno";
+"confirmation_remove_training" = "Estas segur que vols eliminar aquest entreno?";
+"remove_training" = "Eliminar partit";
+"confirmation_remove_training" = "Estas segur que vols eliminar aquest partit?";
+"remove_player" = "Eliminar jugador";
+"confirmation_remove_player" = "Estas segur que vols eliminar aquest jugador?";
+"remove_team" = "Eliminar equip";
+"confirmation_remove_team" = "Estas segur que vols eliminar aquest equip?";
+"remove_file" = "Eliminar arxiu";
+"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";

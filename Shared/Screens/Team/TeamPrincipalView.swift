@@ -15,11 +15,13 @@ struct TeamPrincipalView: View {
     var currentTeam: Team
     @ObservedObject var teamList: TeamListModel
     @ObservedObject var listOfPlayers: PlayersListModel
+    @ObservedObject var eventsModel: EventsListModel
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
     @State var navigateToStatsScreen = false
     @State var navigateToEventsScreen = false
+    @State var showAlert = false
 
     var body: some View {
         VStack(spacing: 60){
@@ -73,7 +75,7 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                        destination: EventsListView(currentTeam: currentTeam, team: teamList),
+                        destination: EventsListView(currentTeam: currentTeam, eventsModel: eventsModel, team: teamList),
                       isActive: $navigateToEventsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_events_title",
@@ -83,8 +85,26 @@ struct TeamPrincipalView: View {
                     )
                 }
             }
+            .alert(
+              isPresented: $showAlert,
+              content: {
+                Alert(
+                    title: Text("remove_team".localized(LocalizationService.shared.language)),
+                  message: Text("confirmation_remove_team".localized(LocalizationService.shared.language)),
+                  primaryButton: .cancel(
+                    Text("button_cancel".localized(LocalizationService.shared.language)),
+                    action: {}),
+                  secondaryButton: .destructive(
+                    Text("button_remove".localized(LocalizationService.shared.language)),
+                    action: {
+                        let index = teamList.teamsList.firstIndex(where: {$0.name == currentTeam.name})
+                        teamList.teamsList.remove(at: index!)
+                        presentation.wrappedValue.dismiss()
+                    })
+                )
+              })
         }
-        .padding(.top, 65)
+        .padding(.top, 62)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
         .navigationBarTitle(Text(currentTeam.name), displayMode: .inline)
@@ -94,7 +114,16 @@ struct TeamPrincipalView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-          })
+          }, trailing:
+            Button(action: {
+                showAlert.toggle()
+            }) {
+              Image(systemName: "trash")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                .foregroundColor(.black)
+                
+            })
     }
 }
 
@@ -134,6 +163,6 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(currentTeam: teamsData[0], teamList: TeamListModel(), listOfPlayers: PlayersListModel())
+        TeamPrincipalView(currentTeam: teamsData[0], teamList: TeamListModel(), listOfPlayers: PlayersListModel(), eventsModel: EventsListModel())
     }
 }
