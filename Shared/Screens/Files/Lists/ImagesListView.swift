@@ -14,8 +14,15 @@ struct ImagesListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(imagesList.images) { image in
-                    FileImageRowView(item: image)
+                if imagesList.images.count == 0 {
+                    Text("images_empty_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 18))
+                        .foregroundColor(.black).opacity(0.8)
+                        .padding(.top, 10)
+                } else {
+                    ForEach(imagesList.images) { image in
+                        FileImageRowView(image: image, listImages: imagesList)
+                    }
                 }
             }
         }

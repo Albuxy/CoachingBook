@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FilesView: View {
 
-    @ObservedObject var fileModel = FilesModel()
+    @ObservedObject var fileModel: FilesModel
+    @ObservedObject var documentsList: DocumentModelList
+    @ObservedObject var imagesList: ImageModelList
+    @ObservedObject var videoslist: VideoModelList
     
     var body: some View {
         VStack(alignment: .center, spacing: 35){
@@ -17,7 +20,10 @@ struct FilesView: View {
                 Text("type_files_title")
                     .foregroundColor(.black)
                     .font(.system(size: 21))
-                CustomPickerFileView(selection: fileModel)
+                CustomPickerFileView(selection: fileModel,
+                                     documentsList: documentsList,
+                                     imagesList: imagesList,
+                                     videoslist: videoslist)
                 
             }
             VStack(alignment: .leading, spacing: 25){
@@ -25,7 +31,10 @@ struct FilesView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 21))
                 GeometryReader { _ in
-                    SwitchFileView(userScreenEntry: $fileModel.showSection, viewModel: fileModel)
+                    SwitchFileView(userScreenEntry: $fileModel.showSection,
+                                   documentsList: documentsList,
+                                   imagesList: imagesList,
+                                   videoslist: videoslist)
                 }
                 .frame(width: 340, height: 480, alignment: .top)
             }
@@ -41,6 +50,9 @@ struct FilesView: View {
 
 struct FilesView_Previews: PreviewProvider {
     static var previews: some View {
-        FilesView()
+        FilesView(fileModel: FilesModel(),
+                  documentsList: DocumentModelList(),
+                  imagesList: ImageModelList(),
+                  videoslist: VideoModelList())
     }
 }

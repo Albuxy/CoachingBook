@@ -284,6 +284,9 @@
 "upload_date_title" = "Fecha de subida: ";
 "remove_file" = "Eliminar archivo";
 "confirmation_remove_file" = "Estas seguro que deseas eliminar este archivo?";
+"documents_empty_title" = "No hay documentos aún";
+"images_empty_title" = "No hay imagenes aún";
+"videos_empty_title" = "No hay videos aún";
 
 //MARK: Settings
 "settings_account_title" = "Cuenta";

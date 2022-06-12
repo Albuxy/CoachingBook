@@ -14,8 +14,15 @@ struct DocumentsListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(documentsList.documents) { document in
-                    FileDocumentRowView(item: document)
+                if documentsList.documents.count == 0 {
+                    Text("documents_empty_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 18))
+                        .foregroundColor(.black).opacity(0.8)
+                        .padding(.top, 10)
+                } else {
+                    ForEach(documentsList.documents) { document in
+                        FileDocumentRowView(document: document, listDocuments: documentsList )
+                    }
                 }
             }
         }

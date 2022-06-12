@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-struct TypeOfFileCard: View {
+struct FileItemCard: View {
     
-    var titleString: String
-    var imageString: String
-    var numberInt: Int
+    var item: FileItem
     
     var selectionIndex: FileEntries
 
@@ -23,7 +21,7 @@ struct TypeOfFileCard: View {
                 self.selection.showSection = self.selectionIndex
             } label: {
                 VStack(alignment: .center, spacing: 10) {
-                    Image(imageString)
+                    Image(item.imageString)
                         .resizable()
                         .frame(width: 30, height: 30)
                         .padding(10)
@@ -35,7 +33,7 @@ struct TypeOfFileCard: View {
                                 )
                         )
                     VStack(alignment: .center, spacing: 6) {
-                        Text(titleString.localized(LocalizationService.shared.language))
+                        Text(item.title.localized(LocalizationService.shared.language))
                             .font(.system(size: 15))
                             .foregroundColor(selection.showSection == self.selectionIndex
                                              ? .white : .black)
@@ -43,7 +41,7 @@ struct TypeOfFileCard: View {
                             .font(.system(size: 13))
                             .foregroundColor(selection.showSection == self.selectionIndex
                                              ? .white.opacity(0.8) : .black.opacity(0.8))
-                        + Text("\(numberInt)")
+                        + Text("\(item.numberInt)")
                             .font(.system(size: 13))
                             .foregroundColor(selection.showSection == self.selectionIndex
                                              ? .white.opacity(0.8) : .black.opacity(0.8))
@@ -69,9 +67,10 @@ struct TypeOfFileCard: View {
 struct TypeOfFileCard_Previews: PreviewProvider {
     @State static var value = false
     static var previews: some View {
-        TypeOfFileCard(titleString: "documents_title",
-                       imageString: "ic_document",
-                       numberInt: 3,
-                       selectionIndex: .documents)
+        FileItemCard(item: FileItem(title: "",
+                                    imageString: "",
+                                    numberInt: 0,
+                                    selectionIndex: .documents),
+                     selectionIndex: .documents)
     }
 }

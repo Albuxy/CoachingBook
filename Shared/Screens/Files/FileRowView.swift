@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct FileDocumentRowView: View {
-    var item: DocumentModel
+    var document: DocumentModel
+    @ObservedObject var listDocuments: DocumentModelList
     
     @State var showAlert = false
     
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
-            Image(item.image)
+            Image(document.image)
                 .resizable()
                 .frame(width: 25, height: 25)
                 .padding(9)
@@ -26,13 +27,13 @@ struct FileDocumentRowView: View {
                         )
                 )
             VStack(alignment: .leading, spacing: 5) {
-                Text(item.name.localized(LocalizationService.shared.language))
+                Text(document.name.localized(LocalizationService.shared.language))
                     .font(.system(size: 16))
                     .foregroundColor(.black)
                 Text("upload_date_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
-                + Text(item.date)
+                + Text(document.date)
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
             }
@@ -59,7 +60,8 @@ struct FileDocumentRowView: View {
               secondaryButton: .destructive(
                 Text("button_remove".localized(LocalizationService.shared.language)),
                 action: {
-                    documentsData.remove(object: item)
+                    let index = listDocuments.documents.firstIndex(where: {$0.name == document.name})
+                    listDocuments.documents.remove(at: index ?? 0)
                 })
             )
           })
@@ -76,13 +78,15 @@ struct FileDocumentRowView: View {
 }
 
 struct FileImageRowView: View {
-    var item: ImageModel
+    
+    var image: ImageModel
+    @ObservedObject var listImages: ImageModelList
     
     @State var showAlert = false
     
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
-            Image(item.image)
+            Image(image.image)
                 .resizable()
                 .frame(width: 25, height: 25)
                 .padding(9)
@@ -94,13 +98,13 @@ struct FileImageRowView: View {
                         )
                 )
             VStack(alignment: .leading, spacing: 5) {
-                Text(item.name.localized(LocalizationService.shared.language))
+                Text(image.name.localized(LocalizationService.shared.language))
                     .font(.system(size: 16))
                     .foregroundColor(.black)
                 Text("upload_date_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
-                + Text(item.date)
+                + Text(image.date)
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
             }
@@ -127,7 +131,8 @@ struct FileImageRowView: View {
               secondaryButton: .destructive(
                 Text("button_remove".localized(LocalizationService.shared.language)),
                 action: {
-                    imagesData.remove(object: item)
+                    let index = listImages.images.firstIndex(where: {$0.name == image.name})
+                    listImages.images.remove(at: index!)
                 })
             )
           })
@@ -144,13 +149,15 @@ struct FileImageRowView: View {
 }
 
 struct FileVideoRowView: View {
-    var item: VideoModel
+    
+    var video: VideoModel
+    @ObservedObject var listVideos: VideoModelList
     
     @State var showAlert = false
     
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
-            Image(item.image)
+            Image(video.image)
                 .resizable()
                 .frame(width: 25, height: 25)
                 .padding(9)
@@ -162,13 +169,13 @@ struct FileVideoRowView: View {
                         )
                 )
             VStack(alignment: .leading, spacing: 5) {
-                Text(item.name.localized(LocalizationService.shared.language))
+                Text(video.name.localized(LocalizationService.shared.language))
                     .font(.system(size: 16))
                     .foregroundColor(.black)
                 Text("upload_date_title".localized(LocalizationService.shared.language))
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
-                + Text(item.date)
+                + Text(video.date)
                     .font(.system(size: 11))
                     .foregroundColor(.black.opacity(0.8))
             }
@@ -195,7 +202,8 @@ struct FileVideoRowView: View {
               secondaryButton: .destructive(
                 Text("button_remove".localized(LocalizationService.shared.language)),
                 action: {
-                    videosData.remove(object: item)
+                    let index = listVideos.videos.firstIndex(where: {$0.name == video.name})
+                    listVideos.videos.remove(at: index!)
                 })
             )
           })
@@ -213,6 +221,8 @@ struct FileVideoRowView: View {
 
 struct FileRowView_Previews: PreviewProvider {
     static var previews: some View {
-        FileImageRowView(item: imagesData[0])
+        FileImageRowView(image: ImageModel(name: "",
+                                           date: ""),
+                         listImages: ImageModelList())
     }
 }

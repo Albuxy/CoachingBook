@@ -296,6 +296,9 @@
 "upload_date_title" = "Data de pujada: ";
 "remove_file" = "Eliminar arxiu";
 "confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
+"documents_empty_title" = "No hi han documents encara";
+"images_empty_title" = "No hi han imatges encara";
+"videos_empty_title" = "No hi han videos encara";
 
 //MARK: Settings
 "settings_account_title" = "Compte";
