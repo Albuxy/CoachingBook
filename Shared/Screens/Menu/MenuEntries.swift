@@ -26,6 +26,7 @@ struct MenuSwitchView: View {
   @StateObject var menuModel = MenuViewModel()
     
   @State var coach = coachData
+  @State var navigateToAddTeam = false
 
   @Binding var userMenuEntry: MenuEntries
     
@@ -54,7 +55,23 @@ struct MenuSwitchView: View {
           TeamPrincipalView(team: teamModel, listOfPlayers: listOfPlayers)
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))
+                    NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"),
+                trailing:
+                    NavigationLink(
+                      destination: AddTeamView(team: teamModel),
+                      isActive: $navigateToAddTeam,
+                      label: {
+                          Button(action: {
+                              navigateToAddTeam.toggle()
+                          }, label: {
+                              Image(systemName: "plus")
+                                  .resizable()
+                                  .frame(width: 20, height: 20)
+                                  .foregroundColor(.black)
+                          })
+                      }
+                    )
+              )
       case .calendar:
         CalendarView()
               .navigationBarItems(

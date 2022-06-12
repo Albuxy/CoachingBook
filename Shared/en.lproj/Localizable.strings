@@ -320,6 +320,7 @@
 "button_save" = "Save";
 "button_go_uppercased" = "GO";
 "button_save_details" = "Save details";
+"button_add_team" = "Add team";
 "button_save_reason" = "Save reason";
 "button_save_contact" = "Save contact";
 "button_remove_session" = "Remove session";

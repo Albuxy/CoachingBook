@@ -322,6 +322,7 @@
 "button_go_uppercased" = "VAMOS";
 "button_save_details" = "Guardar detalles";
 "button_save_reason" = "Guardar razon";
+"button_add_team" = "Añadir equipo";
 "button_save_contact" = "Guardar contacto";
 "button_remove_session" = "Eliminar sesion";
 "button_remove_match" = "Eliminar partido";

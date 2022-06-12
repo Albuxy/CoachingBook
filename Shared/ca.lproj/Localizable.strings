@@ -334,6 +334,7 @@
 "button_save_details" = "Guardar detalls";
 "button_save_reason" = "Guardar raó";
 "button_save_contact" = "Guardar contacto";
+"button_add_team" = "Afegir equip";
 "button_remove_session" = "Eliminar sessio";
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";

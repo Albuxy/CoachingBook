@@ -36,6 +36,24 @@ class TeamListModel: ObservableObject {
   func addItem(item: Team){
     teamsList.append(item)
   }
+
+  func getDayFromString(day: String) -> Day {
+    if day == "monday_title".localized(LocalizationService.shared.language) {
+          return .monday
+      } else if day == "tuesday_title".localized(LocalizationService.shared.language) {
+          return .tuesday
+      } else if day == "wednesday_title".localized(LocalizationService.shared.language) {
+          return .wednesday
+      } else if day == "thursday_title".localized(LocalizationService.shared.language) {
+          return .thursday
+      } else if day == "friday_title".localized(LocalizationService.shared.language) {
+          return .friday
+      } else if day == "saturday_title".localized(LocalizationService.shared.language) {
+          return .saturday
+      } else {
+          return .sunday
+      }
+  }
 }
 
 struct Session: Identifiable {

@@ -135,10 +135,10 @@ struct TeamInformationView: View {
 
     func saveDetails(){
         if trainingVariable1 != "" {
-            team.teamsList[0].trainingDays[0].day = changeToDay(day: trainingVariable1)
+            team.teamsList[0].trainingDays[0].day = team.getDayFromString(day: trainingVariable1)
         }
         if trainingVariable2 != "" {
-            team.teamsList[0].trainingDays[1].day = changeToDay(day: trainingVariable2)
+            team.teamsList[0].trainingDays[1].day = team.getDayFromString(day: trainingVariable2)
         }
         if newHourTraining1 != "" {
             team.teamsList[0].trainingDays[0].hour = newHourTraining1
@@ -147,28 +147,10 @@ struct TeamInformationView: View {
             team.teamsList[0].trainingDays[1].hour = newHourTraining2
         }
         if matchVariable != "" {
-            team.teamsList[0].matchDay.day = changeToDay(day: matchVariable)
+            team.teamsList[0].matchDay.day = team.getDayFromString(day: matchVariable)
         }
         if newHourMatch != "" {
             team.teamsList[0].matchDay.hour = newHourMatch
-        }
-    }
-    
-    func changeToDay(day: String) -> Day {
-        if day == "monday_title".localized(LocalizationService.shared.language) {
-            return .monday
-        } else if day == "tuesday_title".localized(LocalizationService.shared.language) {
-            return .tuesday
-        } else if day == "wednesday_title".localized(LocalizationService.shared.language) {
-            return .wednesday
-        } else if day == "thursday_title".localized(LocalizationService.shared.language) {
-            return .thursday
-        } else if day == "friday_title".localized(LocalizationService.shared.language) {
-            return .friday
-        } else if day == "saturday_title".localized(LocalizationService.shared.language) {
-            return .saturday
-        } else {
-            return .sunday
         }
     }
 }
