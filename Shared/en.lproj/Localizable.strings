@@ -270,6 +270,15 @@
 "calendar_saturday" = "SAT";
 "calendar_sunday" = "SUN";
 "calendar_no_events_today" = "No events for today";
+//Add match
+"add_match_title" = "Add match information";
+"add_match_title_match" = "Title match";
+"add_match_teams_info" = "Teams information";
+"add_match_team1" = "Team 1 name";
+"add_match_team2" = "Team 2 name";
+"add_match_date_info" = "Date information";
+"add_match_date_match" = "Date match";
+"add_match_hour_match" = "Hour match";
 
 //MARK: Documents
 "documents_title" = "Documents";
@@ -316,6 +325,7 @@
 "button_go_uppercased" = "GO";
 "button_save_details" = "Save details";
 "button_add_team" = "Add team";
+"button_add_match" = "Add match";
 "button_save_reason" = "Save reason";
 "button_save_contact" = "Save contact";
 "button_remove_session" = "Remove session";

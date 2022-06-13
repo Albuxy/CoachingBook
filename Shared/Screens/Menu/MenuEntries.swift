@@ -27,6 +27,7 @@ struct MenuSwitchView: View {
     
   @State var coach = coachData
   @State var navigateToAddTeam = false
+  @State var navigateToAddMatch = false
 
   @Binding var userMenuEntry: MenuEntries
     
@@ -79,7 +80,23 @@ struct MenuSwitchView: View {
         CalendarView(matchModel: matchModel)
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"),
+                trailing:
+                    NavigationLink(
+                      destination: AddMatchView(matchModel: matchModel),
+                      isActive: $navigateToAddMatch,
+                      label: {
+                          Button(action: {
+                              navigateToAddMatch.toggle()
+                          }, label: {
+                              Image(systemName: "plus")
+                                  .resizable()
+                                  .frame(width: 20, height: 20)
+                                  .foregroundColor(.black)
+                          })
+                      }
+                    )
+              )
       case .files:
         FilesView(fileModel: fileModel,
                   documentsList: documentsList,

@@ -49,6 +49,10 @@ struct Match: Identifiable {
 
 class MatchListModel: ObservableObject {
   @Published var matchList = matchData
+    
+  func addItem(item: Match){
+    matchList.append(item)
+  }
 }
 
 let matchData: [Match] = [

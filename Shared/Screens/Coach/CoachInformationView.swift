@@ -50,7 +50,7 @@ struct CoachInformationScreen: View {
                             Text("coach_dateOfBirth"
                                     .localized(LocalizationService.shared.language))
                                 .foregroundColor(.black)
-                            DatePickerTextField(placeholder: "Choose".lowercased().localized(LocalizationService.shared.language),
+                            DatePickerTextField(placeholder: "choose_title".localized(LocalizationService.shared.language),
                                                 date: self.$date)
                                 .padding(.leading, 10)
                                 .frame(width: 320, height: 50, alignment: .center)

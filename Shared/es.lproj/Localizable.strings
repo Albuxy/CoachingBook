@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   CoachingBook
 
@@ -23,7 +23,7 @@
 
 //MARK: - Home
 "home_title" = "Hola,\nAlba";
-"home_description" = "Tienes 2 actividades hoy:";
+"home_description" = "Tienes 2 actividades hóy:";
 "home_session_desc" = "Prepárate para el entreno y sácale partido";
 "home_match_desc" = "Prepárate para el juego y haz tu mejor esfuerzo";
 "home_continue_preparation" = "Continua la preparacion";
@@ -32,58 +32,58 @@
 "home_preparation_match" = "Prepara \nTus partidos";
 "home_information_assistance" = "Asistencia \nGeneral";
 "home_information_behaviour" = "Comportamiento \nGeneral";
-"home_see_stats" = "Ver estadisticas";
-"home_get_info" = "Ver informacion:";
+"home_see_stats" = "Ver estadísticas";
+"home_get_info" = "Ver información:";
 
 //MARK: - Coach Screen
 "coach_profile" = "Perfil";
-"coach_dashboard" = "Preparacion";
+"coach_dashboard" = "Preparación";
 "coach_feedback_events" = "Feedback";
 "coach_contacts" = "Contactos";
 "coach_logout" = "Salir";
 "remove_account" = "Eliminar cuenta";
 
 //Coach Information
-"coach_information" = "Informacion entrenador";
-"coach_basic_information" = "Informacion basica";
+"coach_information" = "Información entrenador";
+"coach_basic_information" = "Información básica";
 "coach_surname" = "Apellido";
 "coach_full_name" = "Nombre completo";
 "coach_dateOfBirth" = "Año de nacimiento";
 "choose_title" = "Escoger";
-"coach_gender" = "Genero";
+"coach_gender" = "Género";
 "coach_gender_male" = "Hombre";
 "coach_gender_female" = "Mujer";
 "coach_contact_detail" = "Detalles de contacto";
-"coach_mobile_number" = "Numero de telefono";
+"coach_mobile_number" = "Número de teléfono";
 "coach_email" = "Email";
 
-"coach_dashboard_title" = "Empieza tu preparacion";
+"coach_dashboard_title" = "Empieza tu preparación";
 "coach_dashboard_subtitle" = "Empieza a preparar tus sesiones para estar preparado para la fecha.";
 
 //Training
-"training_preparation" = "Preparacion entrenamiento";
+"training_preparation" = "Preparación entrenamiento";
 "games_uppercased" = "PARTIDOS";
 "sessions_uppercased" = "SESIONES";
 "training_uppercased" = "ENTRENAMIENTOS";
-"training_information" = "Informacion";
+"training_information" = "Información";
 "training_objects_needed" = "Objetos necesarios";
-"training_information_title" = "Informacion";
+"training_information_title" = "Información";
 "objects_needed_title" = "Objetos necesarios";
 "Indoor_Outdoor_title" ="Indoor/Outdoor";
 "players_title" ="Jugadores: ";
 "Indoor_title" ="Indoor";
 "Outdoor_title" ="Outdoor";
 "importance_level_title" = "Nivel de importancia";
-"training_players_information" = "Informacion de jugadores";
-"assistant_players_title" = "Jugadores que asistiran";
-"non_assistant_players_title" = "Jugadores que no asistiran";
+"training_players_information" = "Información de jugadores";
+"assistant_players_title" = "Jugadores que asistirán";
+"non_assistant_players_title" = "Jugadores que no asistirán";
 "actions_title" = "Acciones";
-"cancel_session_title" = "Cancelar sesion";
+"cancel_session_title" = "Cancelar sesión";
 
 //Objects needed
-"objects_selection_title" = "Seleccion de objetos";
-"objects_selection_subtitle" = "Selecciona todos los objetos que necesitaras para la sesion de entrenamiento. \nEscribe el numero que necesitaras.";
-"objects_select_numer" = "Write the number needed";
+"objects_selection_title" = "Selección de objetos";
+"objects_selection_subtitle" = "Selecciona todos los objetos que necesitaras para la sesión de entrenamiento. \nEscribe el numero que necesitaras.";
+"objects_select_numer" = "Escribe el número necesario:";
 "object_cone_title" = "Conos";
 "object_bench_title" = "Bancos";
 "object_ladder_title" = "Escaleras";
@@ -92,17 +92,17 @@
 "object_bibs_vest_title" = "Chalecos";
 
 //Player selection
-"assistant_players_title" = "Jugadores que asistiran";
-"player_selection_title" = "Seleccion de jugadores";
-"player_selection_subtitle" = "Marca con un tick los jugadores que van a asistir a la sesion";
-"non_assistant_players_title" = "Jugadores que no asistiran";
-"non_player_selection_title" = "Jugadores que no asistiran a la sesion";
-"non_player_selection_subtitle" = "Introduce la razon por la cual no asistirán uno por uno.";
+"assistant_players_title" = "Jugadores que asistirán";
+"player_selection_title" = "Selección de jugadores";
+"player_selection_subtitle" = "Marca con un tick los jugadores que van a asistir a la sesión";
+"non_assistant_players_title" = "Jugadores que no asistirán";
+"non_player_selection_title" = "Jugadores que no asistirán a la sesión";
+"non_player_selection_subtitle" = "Introduce la razón por la cual no asistirán uno por uno.";
 
 //Reason for non attending
-"for_non_attendance_reason_title" = "Razon por no atender";
-"non_attendance_reason_title" = "Razon por no atender";
-"non_attendance_reason_subtitle" = "Selecciona la razon o explica el porque el jugador no asistirá.";
+"for_non_attendance_reason_title" = "Razón por no atender";
+"non_attendance_reason_title" = "Razón por no atender";
+"non_attendance_reason_subtitle" = "Selecciona la razón o explica el porqué el jugador no asistirá.";
 "reason_injurie" = "Lesion / Enfermedad";
 "reason_appointment" = "Cita";
 "reason_without_explanation" = "Sin explicación";
@@ -110,26 +110,26 @@
 //Cancel training
 "cancel_training_title" = "Cancel entrenamiento";
 "training_cancellation_title" = "Cancelación de entrenamiento";
-"training_cancellation_subtitle" = "Escoge la razon por la cual el entrenamiento se ha cancelado.";
+"training_cancellation_subtitle" = "Escoge la razón por la cual el entrenamiento se ha cancelado.";
 "reason_rain_title" = "Lluvia";
 "reason_vacation_title" = "Vacaciones";
 "reason_injuries_title" = "Lesiones";
-"write_reason_title" = "Escribe la razon";
+"write_reason_title" = "Escribe la razón";
 
 //Match
-"match_preparation" = "Preparacion del partido";
-"select_number_periods" = "Selecciona el numero de periodos";
+"match_preparation" = "Preparación del partido";
+"select_number_periods" = "Selecciona el número de periodos";
 "cancel_match_title" = "Cancelar partido";
 "match_cancellation_title" = "Cancelación partido";
 "match_cancellation_team" = "Escoge el equipo que ha cancelado el partido:";
-"match_cancellation_reason" = "Selecciona la razon por la cual se ha cancelado:";
+"match_cancellation_reason" = "Selecciona la razón por la cual se ha cancelado:";
 "prepare_entries_title" = "Preparar salidas";
 "match_entries_title" = "Salidas del partido";
 "match_entries_subtitle" = "Prepara las salidas para el partido. \nSelecciona 5 jugadores para cada uno de los periodos.";
 
 //Feedback
 "feedback_title" = "Feedback";
-"feedback_subtitle" = "Empieza a dar feedback para poder observar las estadisticas";
+"feedback_subtitle" = "Empieza a dar feedback para poder observar las estadísticas";
 "punctuality_upper_title" = "PUNTUALIDAD";
 "behaviour_upper_title" = "COMPORTAMIENTO";
 "attitude_upper_title" = "ACTITUD";
@@ -140,25 +140,25 @@
 "attitude_title_low" = "Actitud";
 "punctuality_give_title" = "Selecciona puntualidad";
 "punctuality_give_subtitle" = "Selecciona como de tarde ha llegado cada jugador";
-"behaviour_give_title" = "Seleccciona comportamiento";
-"behaviour_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido el comportamiento de tus jugadores";
-"attitude_give_title" = "Seleccciona actitud";
-"attitude_give_subtitle" = "Puntua del 1 al 10, como de bueno ha sido la actitud de tus jugadores";
+"behaviour_give_title" = "Selecciona comportamiento";
+"behaviour_give_subtitle" = "Puntúa del 1 al 10, como de bueno ha sido el comportamiento de tus jugadores";
+"attitude_give_title" = "Selecciona actitud";
+"attitude_give_subtitle" = "Puntúa del 1 al 10, como de bueno ha sido la actitud de tus jugadores";
 
 //Contacts
 "contacts_title" = "Contactos";
 "list_of_contacts_title" = "Lista de contactos";
 "favourites_title" = "Favoritos";
 "list_of_favourites_title" = "Lista de favoritos";
-"contact_information_title" = "Informacion de contacto";
+"contact_information_title" = "Información de contacto";
 "add_contact_title" = "Añadir contacto";
 "relation_player_title" = "Relación con el jugador";
 "contact_name_title" = "Nombre";
-"contact_phone_title" = "Numero de telefono";
-"contact_gender_title" = "Genero";
+"contact_phone_title" = "Número de teléfono";
+"contact_gender_title" = "Género";
 "contact_city_title" = "Ciudad";
 "contact_email_title" = "Email";
-"contact_relation_title" = "Selecciona el tipo de relacion";
+"contact_relation_title" = "Selecciona el tipo de relación";
 "contact_team_title" = "Selecciona equipo";
 "contact_player_title" = "Selecciona jugador";
 "father_title" = "Padre";
@@ -168,11 +168,11 @@
 //MARK: Team
 "team_title" = "Equipo";
 "team_players_title" = "Jugadores";
-"team_stats_title" = "Estadisticas";
+"team_stats_title" = "Estadísticas";
 "team_events_title" = "Eventos";
 "list_of_players_title" = "Lista de jugadores";
 "position" = "Posicion";
-"position_title" = "Posicion: ";
+"position_title" = "Posición: ";
 "position_base" = "Base";
 "position_escolta" = "Escolta";
 "position_alero" = "Alero";
@@ -181,45 +181,45 @@
 "dorsal_player_title" = "Dorsal";
 
 //Information
-"team_information_title" = "Informacion del equipo";
+"team_information_title" = "Información del equipo";
 "training_sessions_title" = "Sesiones de entrenamiento";
 "local_matches_title" = "Partidos locales";
 "days_title" = "Dias";
 "hour_title" = "Horas";
 "monday_title" = "Lunes";
 "tuesday_title" = "Martes";
-"wednesday_title" = "Miercoles";
+"wednesday_title" = "Miércoles";
 "thursday_title" = "Jueves";
 "friday_title" = "Viernes";
-"saturday_title" = "Sabado";
+"saturday_title" = "Sábado";
 "sunday_title" = "Domingo";
 
 //Player
-"player_information_title" = "Informacion del jugador";
+"player_information_title" = "Información del jugador";
 "personal_details_title" = "Detalles personales";
 "team_details_title" = "Detalles con el equipo";
-"individual_stats_title" = "Estadisticas individuales";
+"individual_stats_title" = "Estadísticas individuales";
 //Add player
 "add_player_title" = "Añadir jugador";
 
 //Stats
-"stats_empty_title" = "No hay estadisticas listas";
-"stats_empty_subtitle" = "Empieza a dar informacion sobre este jugador en entrenamientos y partidos";
-"stats_title" = "Estadisticas";
+"stats_empty_title" = "No hay estadísticas listas";
+"stats_empty_subtitle" = "Empieza a dar información sobre este jugador en entrenamientos y partidos";
+"stats_title" = "Estadísticas";
 "stats_subtitle" = "Aquí puedes ver las estadísticas individuales de este jugador con más detalle.";
 "match_title" = "Partido";
 "training_title" = "Entreno";
 //Attendance
-"attendance_analysis_title" = "Analisis asistencia";
+"attendance_analysis_title" = "Análisis asistencia";
 "attendance_match" = "Asistencia total en partidos jugados";
 "attendance_training" = "Asistencia total en entrenos hechos";
 "attendance_total" = " total";
 //Punctuality
-"punctuality_analysis_title" = "Analisis puntualidad";
+"punctuality_analysis_title" = "Análisis puntualidad";
 "punctuality_match" = "Puntualidad total en partidos jugados";
 "punctuality_training" = "Puntualidad total en entrenos hechos";
 //Behaviour & Attitude
-"behaviour_analysis_title" = "Analisis comportamiento";
+"behaviour_analysis_title" = "Análisis comportamiento";
 "behaviour_title" = "Comportamiento";
 "behaviour_subtitle" = "Este es el comportamiento promedio sobre 10";
 "attitude_title" = "Actitud";
@@ -232,26 +232,26 @@
 "events_title" = "Eventos";
 "status_prepared_title" = "Preparado";
 "status_not_prepared_title" = "Pendiente";
-"details_title" = "Informacion partido";
-"training_information_title" = "Informacion entrenamiento";
+"details_title" = "Información partido";
+"training_information_title" = "Información entrenamiento";
 "current_title" = "ACTUAL";
 "status_title" = "ESTADO";
 "match_title1" = " PARTIDO ";
-"category_title" = "Categoria";
+"category_title" = "Categoría";
 "adress_title" = "Dirección";
-"info_button_title" = "Informacion";
-"location_button_title" = "Ubicacion";
+"info_button_title" = "Información";
+"location_button_title" = "Ubicación";
 "referee_button_title" = "Arbitros";
 "status_subtitle" = "Estado: ";
 "train_title" = "INFORMACION ";
-"infor_title" = " ENTRENAMIENTO";
+"infor_title" ="  ENTRENAMIENTO";
 
 //Stats team
-"stats_team_title" = "Estadisticas de tu equipo";
-"stats_team_subtitle" = "Mejora todos estos numeros de tu equipo";
+"stats_team_title" = "Estadísticas de tu equipo";
+"stats_team_subtitle" = "Mejora todos estos números de tu equipo";
 "stats_perc_attendance" = "Porcentaje asistencia";
 "stats_perc_punctuality" = "Porcentaje puntualidad";
-"stats_general_title" = "Estadisticas generales";
+"stats_general_title" = "Estadísticas generales";
 "stats_unit_general_title" = "Unidad: \neventos totales";
 "total_ranking_stats" = "Ranking Total";
 "total_ranking_stats_title" = "Ranking";
@@ -270,17 +270,26 @@
 "calendar_saturday" = "SAB";
 "calendar_sunday" = "DOM";
 "calendar_no_events_today" = "No hay eventos para hoy";
+//Add match
+"add_match_title" = "Añadir información partido";
+"add_match_title_match" = "Título partido";
+"add_match_teams_info" = "Información equipo";
+"add_match_team1" = "Nombre equipo 1";
+"add_match_team2" = "Nombre equipo 2";
+"add_match_date_info" = "Información fecha";
+"add_match_date_match" = "Fecha partido";
+"add_match_hour_match" = "Hora partido";
 
 //MARK: Documents
 "documents_title" = "Documentos";
-"images_title" = "Imagenes";
+"images_title" = "Imágenes";
 "videos_title" = "Videos";
 "type_files_title" = "Tipo de archivos";
 "list_files_title" = "Lista de archivos seleccionados";
 "upload_title" = "Subidos: ";
 "upload_date_title" = "Fecha de subida: ";
 "documents_empty_title" = "No hay documentos aún";
-"images_empty_title" = "No hay imagenes aún";
+"images_empty_title" = "No hay imágenes aún";
 "videos_empty_title" = "No hay videos aún";
 
 //MARK: Settings
@@ -297,7 +306,7 @@
 "settings_language_title" = "Cambiar idioma";
 "settings_news_title" = "Novedades para ti";
 "settings_account_acitivity_title" = "Actividad de la cuenta";
-"settings_update_matches_title" = "Actualizacion en partidos";
+"settings_update_matches_title" = "Actualización en partidos";
 
 //Language
 "settings_language" = "Idioma";
@@ -316,10 +325,11 @@
 "button_save" = "Guardar";
 "button_go_uppercased" = "VAMOS";
 "button_save_details" = "Guardar detalles";
-"button_save_reason" = "Guardar razon";
+"button_save_reason" = "Guardar razón";
 "button_add_team" = "Añadir equipo";
+"button_add_match" = "Añadir partido";
 "button_save_contact" = "Guardar contacto";
-"button_remove_session" = "Eliminar sesion";
+"button_remove_session" = "Eliminar sesión";
 "button_remove_match" = "Eliminar partido";
 "button_remove_contact" = "Eliminar contacto";
 "button_remove_team" = "Eliminar equipo";
@@ -327,15 +337,15 @@
 "button_select" = "SELECCIONAR";
 
 //Messages
-"confirmation_remove_account" = "Estas seguro de que quiere eliminar tu cuenta y toda la informacion en ella?";
-"confirmation_log_out" = "Estas seguro que quieres salir?";
+"confirmation_remove_account" = "Estás seguro de que quiere eliminar tu cuenta y toda la información en ella?";
+"confirmation_log_out" = "Estás seguro que quieres salir?";
 "remove_training" = "Eliminar entreno";
-"confirmation_remove_training" = "Estas seguro que quieres eliminar este entreno?";
+"confirmation_remove_training" = "Estás seguro que quieres eliminar este entreno?";
 "remove_match" = "Eliminar partido";
-"confirmation_remove_match" = "Estas seguro que quieres eliminar este partido?";
+"confirmation_remove_match" = "Estás seguro que quieres eliminar este partido?";
 "remove_player" = "Eliminar jugador";
-"confirmation_remove_player" = "Estas seguro que quieres eliminar este jugador?";
+"confirmation_remove_player" = "Estás seguro que quieres eliminar este jugador?";
 "remove_team" = "Eliminar equipo";
-"confirmation_remove_team" = "Estas seguro que quieres eliminar este equipo?";
+"confirmation_remove_team" = "Estás seguro que quieres eliminar este equipo?";
 "remove_file" = "Eliminar archivo";
-"confirmation_remove_file" = "Estas seguro que deseas eliminar este archivo?";
+"confirmation_remove_file" = "Estás seguro que deseas eliminar este archivo?";

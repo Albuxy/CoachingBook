@@ -282,6 +282,15 @@
 "calendar_saturday" = "DIS";
 "calendar_sunday" = "DIU";
 "calendar_no_events_today" = "No hi han events per avui";
+//Add match
+"add_match_title" = "Afegir informació partit";
+"add_match_title_match" = "Titul partit";
+"add_match_teams_info" = "Informació equip";
+"add_match_team1" = "Nom equip 1";
+"add_match_team2" = "Nom equip 2";
+"add_match_date_info" = "Informació data";
+"add_match_date_match" = "Data partit";
+"add_match_hour_match" = "Hora partit";
 
 //MARK: Documents
 "documents_title" = "Documents";
@@ -330,6 +339,7 @@
 "button_save_reason" = "Guardar raó";
 "button_save_contact" = "Guardar contacto";
 "button_add_team" = "Afegir equip";
+"button_add_match" = "Afegir partit";
 "button_remove_session" = "Eliminar sessio";
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";
