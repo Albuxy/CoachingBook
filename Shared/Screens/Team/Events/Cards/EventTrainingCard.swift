@@ -10,6 +10,7 @@ import SwiftUI
 struct EventTrainingCard: View {
     
     var training: Training
+    @ObservedObject var trainingModel: TrainingListModel
     
     @State var navigateToInformation = false
     
@@ -46,7 +47,7 @@ struct EventTrainingCard: View {
             Divider()
                 .background(Color.black)
             NavigationLink(
-              destination: TrainingInformationView(currentTraining: training),
+                destination: TrainingInformationView(currentTraining: training, trainingModel: trainingModel),
               isActive: $navigateToInformation,
               label: {
                   Button(action: {
@@ -76,6 +77,6 @@ struct EventTrainingCard: View {
 
 struct EventTrainingCard_Previews: PreviewProvider {
     static var previews: some View {
-        EventTrainingCard(training: trainingData[0])
+        EventTrainingCard(training: trainingData[0], trainingModel: TrainingListModel())
     }
 }

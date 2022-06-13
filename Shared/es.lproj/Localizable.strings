@@ -331,8 +331,8 @@
 "confirmation_log_out" = "Estas seguro que quieres salir?";
 "remove_training" = "Eliminar entreno";
 "confirmation_remove_training" = "Estas seguro que quieres eliminar este entreno?";
-"remove_training" = "Eliminar partido";
-"confirmation_remove_training" = "Estas seguro que quieres eliminar este partido?";
+"remove_match" = "Eliminar partido";
+"confirmation_remove_match" = "Estas seguro que quieres eliminar este partido?";
 "remove_player" = "Eliminar jugador";
 "confirmation_remove_player" = "Estas seguro que quieres eliminar este jugador?";
 "remove_team" = "Eliminar equipo";

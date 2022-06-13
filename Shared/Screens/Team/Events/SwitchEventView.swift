@@ -21,12 +21,13 @@ struct SwitchEventView: View {
   @Binding var userScreenEntry: EventEntries
   @ObservedObject var team: TeamListModel
   @ObservedObject var matchModel: MatchListModel
+  @ObservedObject var trainingModel: TrainingListModel
 
   var body: some View {
      VStack {
         switch self.userScreenEntry {
         case .trainings:
-            TrainingEventListView(trainingList: team.teamsList[0].trainingEvents)
+            TrainingEventListView(trainingModel: trainingModel)
         case .matchs:
             MatchEventListView(matchModel: matchModel)
         }

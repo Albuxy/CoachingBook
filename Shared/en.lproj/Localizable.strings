@@ -330,8 +330,8 @@
 "confirmation_log_out" = "Are you sure you want to log out";
 "remove_training" = "Remove training";
 "confirmation_remove_training" = "Are you sure you want to remove this training?";
-"remove_training" = "Remove match";
-"confirmation_remove_training" = "Are you sure you want to remove this match?";
+"remove_match" = "Remove match";
+"confirmation_remove_match" = "Are you sure you want to remove this match?";
 "remove_player" = "Remove player";
 "confirmation_remove_player" = "Are you sure you want to remove this player?";
 "remove_team" = "Remove team";

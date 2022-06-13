@@ -15,6 +15,7 @@ struct MenuControllerView: View {
     @ObservedObject var teamModel: TeamListModel
     @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
     @ObservedObject var fileModel: FilesModel
     @ObservedObject var documentsList: DocumentModelList
     @ObservedObject var imagesList: ImageModelList
@@ -30,6 +31,7 @@ struct MenuControllerView: View {
                              teamModel: teamModel,
                              eventsModel: eventsModel,
                              matchModel: matchModel,
+                             trainingModel: trainingModel,
                              fileModel: fileModel,
                              documentsList:documentsList,
                              imagesList: imagesList,
@@ -59,6 +61,7 @@ struct MenuControllerView_Previews: PreviewProvider {
                            teamModel: TeamListModel(),
                            eventsModel: EventsListModel(),
                            matchModel: MatchListModel(),
+                           trainingModel: TrainingListModel(),
                            fileModel: FilesModel(),
                            documentsList: DocumentModelList(),
                            imagesList: ImageModelList(),

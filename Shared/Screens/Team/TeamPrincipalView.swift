@@ -17,6 +17,7 @@ struct TeamPrincipalView: View {
     @ObservedObject var listOfPlayers: PlayersListModel
     @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
@@ -76,7 +77,11 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                        destination: EventsListView(currentTeam: currentTeam, eventsModel: eventsModel, team: teamList, matchModel: matchModel),
+                        destination: EventsListView(currentTeam: currentTeam,
+                                                    eventsModel: eventsModel,
+                                                    team: teamList,
+                                                    matchModel: matchModel,
+                                                   trainingModel: trainingModel),
                       isActive: $navigateToEventsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_events_title",
@@ -105,7 +110,7 @@ struct TeamPrincipalView: View {
                 )
               })
         }
-        .padding(.top, 62)
+        .padding(.top, 64)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
         .navigationBarTitle(Text(currentTeam.name), displayMode: .inline)
@@ -164,6 +169,11 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(currentTeam: teamsData[0], teamList: TeamListModel(), listOfPlayers: PlayersListModel(), eventsModel: EventsListModel(), matchModel: MatchListModel())
+        TeamPrincipalView(currentTeam: teamsData[0],
+                          teamList: TeamListModel(),
+                          listOfPlayers: PlayersListModel(),
+                          eventsModel: EventsListModel(),
+                          matchModel: MatchListModel(),
+                          trainingModel: TrainingListModel())
     }
 }

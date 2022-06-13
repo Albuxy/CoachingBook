@@ -16,6 +16,7 @@ struct EventsListView: View {
     @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var team: TeamListModel
     @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
 
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
@@ -27,7 +28,10 @@ struct EventsListView: View {
                   CustomPickerEventBar(selection: eventsModel)
                 )
             GeometryReader { _ in
-                SwitchEventView(userScreenEntry: $eventsModel.showSection, team: team, matchModel: matchModel)
+                SwitchEventView(userScreenEntry: $eventsModel.showSection,
+                                team: team,
+                                matchModel: matchModel,
+                                trainingModel: trainingModel)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -51,7 +55,8 @@ struct EventsListView_Previews: PreviewProvider {
         EventsListView(currentTeam: teamsData[0],
                        eventsModel: EventsListModel(),
                        team: TeamListModel(),
-                       matchModel: MatchListModel())
+                       matchModel: MatchListModel(),
+                       trainingModel: TrainingListModel())
     }
 }
 
