@@ -34,6 +34,7 @@ struct MenuSwitchView: View {
     @ObservedObject var coachModel: CoachListModel
     @ObservedObject var teamModel: TeamListModel
     @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
     @ObservedObject var fileModel: FilesModel
     @ObservedObject var documentsList: DocumentModelList
     @ObservedObject var imagesList: ImageModelList
@@ -53,7 +54,7 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-          ListTeamView(team: teamModel, playersList: listOfPlayers, eventsModel: eventsModel)
+          ListTeamView(team: teamModel, playersList: listOfPlayers, eventsModel: eventsModel, matchModel: matchModel)
               .navigationBarItems(
                 leading:
                     NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"),
@@ -74,7 +75,7 @@ struct MenuSwitchView: View {
                     )
               )
       case .calendar:
-        CalendarView()
+        CalendarView(matchModel: matchModel)
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))

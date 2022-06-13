@@ -20,6 +20,7 @@ struct SwitchEventView: View {
 
   @Binding var userScreenEntry: EventEntries
   @ObservedObject var team: TeamListModel
+  @ObservedObject var matchModel: MatchListModel
 
   var body: some View {
      VStack {
@@ -27,7 +28,7 @@ struct SwitchEventView: View {
         case .trainings:
             TrainingEventListView(trainingList: team.teamsList[0].trainingEvents)
         case .matchs:
-            MatchEventListView(matchList: team.teamsList[0].matchEvents)
+            MatchEventListView(matchModel: matchModel)
         }
      }
   }

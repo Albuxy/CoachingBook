@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CustomCalendarPicker: View {
+
     @Binding var currentDate: Date
     @State var currentMonth: Int = 0
+    @ObservedObject var matchModel: MatchListModel
+
     var body: some View {
         VStack(spacing: 0){
             VStack(spacing: 15){
@@ -44,7 +47,7 @@ struct CustomCalendarPicker: View {
             .onChange(of: currentMonth) { newValue in
                 currentDate = getCurrentMonth()
             }
-            ListEventsCalendarView(currentDate: $currentDate)
+            ListEventsCalendarView(currentDate: $currentDate, matchModel: matchModel)
                 .padding([.leading, .trailing, .top], 20)
                 .frame(width: UIScreen.main.bounds.width, height: 470, alignment: .top)
                 .background(Color("secondLightBlueColor"))
@@ -113,6 +116,6 @@ struct DayPicker: View {
 
 struct CustomCalendarPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(matchModel: MatchListModel())
     }
 }

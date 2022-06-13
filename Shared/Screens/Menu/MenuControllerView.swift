@@ -14,6 +14,7 @@ struct MenuControllerView: View {
     @ObservedObject var coachModel: CoachListModel
     @ObservedObject var teamModel: TeamListModel
     @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
     @ObservedObject var fileModel: FilesModel
     @ObservedObject var documentsList: DocumentModelList
     @ObservedObject var imagesList: ImageModelList
@@ -22,7 +23,17 @@ struct MenuControllerView: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
           GeometryReader { _ in
-              MenuSwitchView(menuModel: menuModel, userMenuEntry: $menuModel.showSection, listOfPlayers: listOfPlayers, coachModel: coachModel, teamModel: teamModel, eventsModel: eventsModel, fileModel: fileModel, documentsList:documentsList, imagesList: imagesList, videoslist: videoslist)
+              MenuSwitchView(menuModel: menuModel,
+                             userMenuEntry: $menuModel.showSection,
+                             listOfPlayers: listOfPlayers,
+                             coachModel: coachModel,
+                             teamModel: teamModel,
+                             eventsModel: eventsModel,
+                             matchModel: matchModel,
+                             fileModel: fileModel,
+                             documentsList:documentsList,
+                             imagesList: imagesList,
+                             videoslist: videoslist)
           }
           .opacity(self.menuModel.showMenu ? 0.1 : 1.0)
           .onTapGesture {
@@ -47,6 +58,7 @@ struct MenuControllerView_Previews: PreviewProvider {
                            coachModel: CoachListModel(),
                            teamModel: TeamListModel(),
                            eventsModel: EventsListModel(),
+                           matchModel: MatchListModel(),
                            fileModel: FilesModel(),
                            documentsList: DocumentModelList(),
                            imagesList: ImageModelList(),

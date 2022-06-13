@@ -16,6 +16,7 @@ struct TeamPrincipalView: View {
     @ObservedObject var teamList: TeamListModel
     @ObservedObject var listOfPlayers: PlayersListModel
     @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
@@ -75,7 +76,7 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                        destination: EventsListView(currentTeam: currentTeam, eventsModel: eventsModel, team: teamList),
+                        destination: EventsListView(currentTeam: currentTeam, eventsModel: eventsModel, team: teamList, matchModel: matchModel),
                       isActive: $navigateToEventsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_events_title",
@@ -163,6 +164,6 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(currentTeam: teamsData[0], teamList: TeamListModel(), listOfPlayers: PlayersListModel(), eventsModel: EventsListModel())
+        TeamPrincipalView(currentTeam: teamsData[0], teamList: TeamListModel(), listOfPlayers: PlayersListModel(), eventsModel: EventsListModel(), matchModel: MatchListModel())
     }
 }

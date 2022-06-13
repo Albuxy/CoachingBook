@@ -14,6 +14,8 @@ struct MatchInformationView: View {
     @Environment(\.presentationMode) var presentation
     
     var currentMatch: Match
+    @ObservedObject var matchModel: MatchListModel
+    @State var showAlert = false
 
     var body: some View {
         ZStack{
@@ -24,6 +26,24 @@ struct MatchInformationView: View {
             .padding(.top, 20)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
             .background(Color("secondLightBlueColor"))
+            .alert(
+              isPresented: $showAlert,
+              content: {
+                Alert(
+                    title: Text("remove_match".localized(LocalizationService.shared.language)),
+                  message: Text("confirmation_remove_match".localized(LocalizationService.shared.language)),
+                  primaryButton: .cancel(
+                    Text("button_cancel".localized(LocalizationService.shared.language)),
+                    action: {}),
+                  secondaryButton: .destructive(
+                    Text("button_remove".localized(LocalizationService.shared.language)),
+                    action: {
+                        let index = matchModel.matchList.firstIndex(where: {$0.title == currentMatch.title})
+                        matchModel.matchList.remove(at: index!)
+                        presentation.wrappedValue.dismiss()
+                    })
+                )
+              })
         }
         .padding(.top, 40)
         .navigationBarTitle(Text("details_title".localized(LocalizationService.shared.language)), displayMode: .inline)
@@ -33,7 +53,17 @@ struct MatchInformationView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-          })
+          }
+          , trailing:
+              Button(action: {
+                  showAlert.toggle()
+              }) {
+                Image(systemName: "trash")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                  .foregroundColor(.black)
+                  
+              })
     }
 }
 
@@ -172,6 +202,6 @@ struct ImageWithTitleLineView: View {
 
 struct MatchInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchInformationView(currentMatch: matchData[0])
+        MatchInformationView(currentMatch: matchData[0], matchModel: MatchListModel())
     }
 }

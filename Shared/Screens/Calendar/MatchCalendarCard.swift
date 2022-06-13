@@ -10,6 +10,7 @@ import SwiftUI
 struct MatchCalendarCard: View {
     
     var match: Match
+    @ObservedObject var matchModel: MatchListModel
     
     @State var navigateToInformation = false
     
@@ -35,7 +36,7 @@ struct MatchCalendarCard: View {
             Divider()
                 .background(Color.black)
             NavigationLink(
-              destination: MatchInformationView(currentMatch: match),
+                destination: MatchInformationView(currentMatch: match, matchModel: matchModel),
               isActive: $navigateToInformation,
               label: {
                   Button(action: {
@@ -102,6 +103,6 @@ struct HeaderMatchCalendarCard: View {
 
 struct MatchCalendarCard_Previews: PreviewProvider {
     static var previews: some View {
-        MatchCalendarCard(match: matchData[0])
+        MatchCalendarCard(match: matchData[0], matchModel: MatchListModel())
     }
 }

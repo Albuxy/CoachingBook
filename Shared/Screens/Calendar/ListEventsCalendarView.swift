@@ -10,6 +10,7 @@ import SwiftUI
 struct ListEventsCalendarView: View {
     
     @Binding var currentDate: Date
+    @ObservedObject var matchModel: MatchListModel
     
     var body: some View {
         VStack(spacing: 20){
@@ -22,7 +23,7 @@ struct ListEventsCalendarView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(matchs.match){ match in
                         VStack(alignment: .leading, spacing: 15){
-                            MatchCalendarCard(match: match)
+                            MatchCalendarCard(match: match, matchModel: matchModel)
                         }
                         .padding(.leading, 10)
                         .padding(.horizontal)
@@ -48,6 +49,6 @@ struct ListEventsCalendarView_Previews: PreviewProvider {
     @State static var value = Date()
 
     static var previews: some View {
-        ListEventsCalendarView(currentDate: $value)
+        ListEventsCalendarView(currentDate: $value, matchModel: MatchListModel())
     }
 }

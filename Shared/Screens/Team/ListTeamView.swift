@@ -15,6 +15,7 @@ struct ListTeamView: View {
     @ObservedObject var team: TeamListModel
     @ObservedObject var playersList: PlayersListModel
     @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
     @State var selectedTeam = teamsData[0]
     
     @State var navigateToTeam = false
@@ -32,7 +33,7 @@ struct ListTeamView: View {
                     }
                 }
                 NavigationLink(
-                    destination: TeamPrincipalView(currentTeam: selectedTeam, teamList: team, listOfPlayers: playersList, eventsModel: eventsModel),
+                    destination: TeamPrincipalView(currentTeam: selectedTeam, teamList: team, listOfPlayers: playersList, eventsModel: eventsModel, matchModel: matchModel),
                   isActive: $navigateToTeam,
                   label: {
                       Button(action: {
@@ -103,6 +104,9 @@ struct TeamCardSelect: View {
 
 struct ListTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        ListTeamView(team: TeamListModel(), playersList: PlayersListModel(), eventsModel: EventsListModel())
+        ListTeamView(team: TeamListModel(),
+                     playersList: PlayersListModel(),
+                     eventsModel: EventsListModel(),
+                     matchModel: MatchListModel())
     }
 }

@@ -21,6 +21,7 @@ struct LoginView: View {
     @ObservedObject var coachModel = CoachListModel()
     @ObservedObject var teamModel = TeamListModel()
     @ObservedObject var eventsModel = EventsListModel()
+    @ObservedObject var matchModel = MatchListModel()
     @ObservedObject var fileModel = FilesModel()
     @ObservedObject var documentsList = DocumentModelList()
     @ObservedObject var imagesList = ImageModelList()
@@ -59,6 +60,7 @@ struct LoginView: View {
                                                             coachModel: coachModel,
                                                             teamModel: teamModel,
                                                             eventsModel: eventsModel,
+                                                            matchModel: matchModel,
                                                             fileModel: fileModel,
                                                             documentsList: documentsList,
                                                             imagesList: imagesList,
