@@ -13,7 +13,7 @@ struct ProfileCoachView: View {
     @Environment(\.presentationMode) var presentation
 
     @ObservedObject var coachModel: CoachListModel
-    @ObservedObject var coachContactsModel = ContactsDetailModel()
+    @ObservedObject var contactModel: ContactsDetailModel
 
     @State var navigateToDashboard = false
     @State var navigateToFeedback = false
@@ -53,7 +53,7 @@ struct ProfileCoachView: View {
                       }
                     )
                     NavigationLink(
-                        destination: GeneralContactView(contactModel: coachContactsModel),
+                        destination: GeneralContactView(contactModel: contactModel),
                       isActive: $navigateToContacts,
                       label: {
                           ButtonProfileScreen(image: "ic_contacts",
@@ -116,6 +116,7 @@ struct ButtonProfileScreen: View {
 
 struct ProfileCoachScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCoachView(coachModel: CoachListModel())
+        ProfileCoachView(coachModel: CoachListModel(),
+                         contactModel: ContactsDetailModel())
     }
 }

@@ -168,6 +168,7 @@
 
 //MARK: Team
 "team_title" = "Team";
+"select_team" = "Select team to start working";
 "team_players_title" = "Players";
 "team_stats_title" = "Stats";
 "team_events_title" = "Events";

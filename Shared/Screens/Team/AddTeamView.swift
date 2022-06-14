@@ -32,7 +32,7 @@ struct AddTeamView: View {
                         TextFieldWithTitleGeneral(defaultTextFiled: "Name team", placeHolder: "write_title".localized(LocalizationService.shared.language),
                                                   stringTextField: $name)
                         TextFieldWithTitleGeneral(defaultTextFiled: "Category", placeHolder: "write_title".localized(LocalizationService.shared.language),
-                                                  stringTextField: $name)
+                                                  stringTextField: $category)
                         VStack(spacing: 80){
                             VStack(spacing: 20){
                                 Text("training_sessions_title".localized(LocalizationService.shared.language))
@@ -58,12 +58,12 @@ struct AddTeamView: View {
                                             .font(.system(size: 19))
                                             .underline()
                                         TextField("00:00", text: $trainingHour1)
-                                            .keyboardType(.numberPad)
+                                            .keyboardType(.numbersAndPunctuation)
                                             .foregroundColor(.black)
                                             .font(.system(size: 20))
                                             .frame(width: 60, height: 30, alignment: .center)
                                         TextField("00:00", text: $trainingHour2)
-                                            .keyboardType(.numberPad)
+                                            .keyboardType(.numbersAndPunctuation)
                                             .foregroundColor(.black)
                                             .font(.system(size: 20))
                                             .frame(width: 60, height: 30, alignment: .center)
@@ -93,7 +93,7 @@ struct AddTeamView: View {
                                             .font(.system(size: 19))
                                             .underline()
                                         TextField("00:00", text: $matchHour)
-                                            .keyboardType(.numberPad)
+                                            .keyboardType(.numbersAndPunctuation)
                                             .foregroundColor(.black)
                                             .font(.system(size: 20))
                                             .frame(width: 60, height: 30, alignment: .center)

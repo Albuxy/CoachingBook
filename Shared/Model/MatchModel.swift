@@ -27,6 +27,7 @@ struct Match: Identifiable {
     var referee1 = "1. Juan Carlos Gonzalez - Principal"
     var referee2 = "2. Rosa Perez Picon - Secundario"
     var time: Date = Date()
+    var currentTeam: Team?
     
     func getStringOfStatus(currentStatus: PreparationStatus) -> String {
         switch currentStatus {
@@ -102,3 +103,11 @@ let matchData: [Match] = [
           playersNonAssisting: [],
           importanceLevel: "Medium")
 ]
+
+var FirstTeam: Team = Team(name: "Team 1",
+                     logoString: "ic_example_team",
+                     category: "Mini Mixto",
+                     players: playersData,
+                     trainingDays: [Session(day: .monday, hour: "18:30"),
+                                    Session(day: .thursday, hour: "20:30")],
+                     matchDay: Session(day: .saturday, hour: "17:45"))

@@ -71,6 +71,7 @@ struct CoachCard: View {
 
 struct CoachCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCoachView(coachModel: CoachListModel())
+        ProfileCoachView(coachModel: CoachListModel(),
+                         contactModel: ContactsDetailModel())
     }
 }

@@ -29,7 +29,7 @@ struct MiniCardTrainingHome: View {
                                     RoundedRectangle(cornerRadius: 40).fill(color)
                                 )
                         )
-                    Text(titleString)
+                    Text(titleString.localized(LocalizationService.shared.language))
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(.black)

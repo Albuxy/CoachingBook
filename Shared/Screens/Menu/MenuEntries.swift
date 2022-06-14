@@ -33,6 +33,7 @@ struct MenuSwitchView: View {
     
     @ObservedObject var listOfPlayers: PlayersListModel
     @ObservedObject var coachModel: CoachListModel
+    @ObservedObject var contactModel: ContactsDetailModel
     @ObservedObject var teamModel: TeamListModel
     @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var matchModel: MatchListModel
@@ -51,7 +52,7 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_home"))
       case .profile:
-          ProfileCoachView(coachModel: coachModel)
+          ProfileCoachView(coachModel: coachModel, contactModel: contactModel)
           .navigationBarItems(
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
