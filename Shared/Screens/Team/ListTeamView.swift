@@ -23,16 +23,20 @@ struct ListTeamView: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 50){
+            VStack(alignment: .leading, spacing: 30){
                 Text("Select team to start working")
                     .font(.system(size: 34))
                     .bold()
                     .foregroundStyle(.black)
-                VStack(spacing: 30){
-                    ForEach(team.teamsList){ currentTeam in
-                        TeamCardSelect(selectedTeam: $selectedTeam, teamList: team, currentTeam: currentTeam)
+                    .padding(.leading, 45)
+                ScrollView{
+                    VStack(spacing: 30){
+                        ForEach(team.teamsList){ currentTeam in
+                            TeamCardSelect(selectedTeam: $selectedTeam, teamList: team, currentTeam: currentTeam)
+                        }
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width, height: 450)
                 NavigationLink(
                     destination: TeamPrincipalView(currentTeam: selectedTeam,
                                                    teamList: team,
@@ -50,13 +54,12 @@ struct ListTeamView: View {
                               .bold()
                       }.buttonStyle(
                           MediumButtonStyle(textColor: Color.white, backgroundColor: Color("baseColor"))
-                      ).padding(.top, 50)
+                      ).padding(.leading, 45)
                   }
                 )
 
             }
             .padding(.top, 140)
-            .padding([.leading, .trailing], 20)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
             .background(Color("fourthLightBlueColor"))
         }
