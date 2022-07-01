@@ -11,9 +11,9 @@ struct ProfileCoachView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
-    
-    @Binding var coach : Coach
-    @StateObject var coachContactsModel = ContactsDetailModel()
+
+    @ObservedObject var coachModel: CoachListModel
+    @ObservedObject var coachContactsModel = ContactsDetailModel()
 
     @State var navigateToDashboard = false
     @State var navigateToFeedback = false
@@ -30,7 +30,7 @@ struct ProfileCoachView: View {
                         .foregroundColor(Color("blueColor"))
                         .frame(width: UIScreen.main.bounds.width,
                                height: 180)
-                    CoachCard(coach: $coach)
+                    CoachCard(coach: coachModel)
                         .padding(.top, 30)
                 }
                 VStack(alignment: .center, spacing: 26) {
@@ -53,7 +53,7 @@ struct ProfileCoachView: View {
                       }
                     )
                     NavigationLink(
-                        destination: GeneralContactView(contactModel: coachContactsModel, coach: coach),
+                        destination: GeneralContactView(contactModel: coachContactsModel),
                       isActive: $navigateToContacts,
                       label: {
                           ButtonProfileScreen(image: "ic_contacts",
@@ -115,8 +115,7 @@ struct ButtonProfileScreen: View {
 }
 
 struct ProfileCoachScreen_Previews: PreviewProvider {
-    @State static var value = coachData
     static var previews: some View {
-        ProfileCoachView(coach: $value)
+        ProfileCoachView(coachModel: CoachListModel())
     }
 }

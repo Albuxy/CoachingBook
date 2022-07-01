@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TrainingEventListView: View {
     
-    var trainingList: [Training]
+    @ObservedObject var trainingModel: TrainingListModel
     
     var body: some View {
         ScrollView{
             VStack(alignment: .center, spacing: 15){
-                ForEach(trainingList) { item in
-                    EventTrainingCard(training: item)
+                ForEach(trainingModel.trainingList) { item in
+                    EventTrainingCard(training: item, trainingModel: trainingModel)
                 }
             }
             .padding(.top, 20)
@@ -26,6 +26,6 @@ struct TrainingEventListView: View {
 
 struct TrainingEventListView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingEventListView(trainingList: trainingData)
+        TrainingEventListView(trainingModel: TrainingListModel())
     }
 }

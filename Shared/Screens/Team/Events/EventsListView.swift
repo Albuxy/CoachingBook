@@ -12,8 +12,11 @@ struct EventsListView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
-    @ObservedObject var eventsModel = EventsListModel()
-    @State var team: Team
+    var currentTeam: Team
+    @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var team: TeamListModel
+    @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
 
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
@@ -26,7 +29,9 @@ struct EventsListView: View {
                 )
             GeometryReader { _ in
                 SwitchEventView(userScreenEntry: $eventsModel.showSection,
-                                currentTeam: team)
+                                team: team,
+                                matchModel: matchModel,
+                                trainingModel: trainingModel)
               .frame(width: 380, alignment: .top)
               .padding([.leading, .trailing], 18)
             }
@@ -47,7 +52,11 @@ struct EventsListView: View {
 
 struct EventsListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventsListView(team: teamsData[0])
+        EventsListView(currentTeam: teamsData[0],
+                       eventsModel: EventsListModel(),
+                       team: TeamListModel(),
+                       matchModel: MatchListModel(),
+                       trainingModel: TrainingListModel())
     }
 }
 

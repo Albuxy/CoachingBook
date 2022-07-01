@@ -15,6 +15,7 @@ struct StatsTeamView: View {
     @State var navigateToTotalRanking = false
 
     var currentTeam: Team
+    @ObservedObject var team: TeamListModel
 
     var body: some View {
         ZStack{
@@ -165,6 +166,6 @@ struct TotalRankingButton: View {
 
 struct StatsTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsTeamView(currentTeam: teamsData[0])
+        StatsTeamView(currentTeam: teamsData[0], team: TeamListModel())
     }
 }

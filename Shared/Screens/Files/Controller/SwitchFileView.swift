@@ -9,10 +9,7 @@ import Foundation
 import SwiftUI
 
 class FilesModel: ObservableObject {
-  @Published var showSection: FileEntries = .documents
-  @ObservedObject var documentsList = DocumentModelList()
-  @ObservedObject var imagesList = ImageModelList()
-  @ObservedObject var videoslist = VideoModelList()
+    @Published var showSection: FileEntries = .documents
 }
 
 enum FileEntries {
@@ -22,18 +19,20 @@ enum FileEntries {
 struct SwitchFileView: View {
 
   @Binding var userScreenEntry: FileEntries
-  @ObservedObject var viewModel: FilesModel
+    @ObservedObject var documentsList: DocumentModelList
+    @ObservedObject var imagesList: ImageModelList
+    @ObservedObject var videoslist: VideoModelList
 
   var body: some View {
      VStack {
-        switch self.userScreenEntry {
-        case .documents:
-            DocumentsListView(documentsList: viewModel.documentsList)
-        case .images:
-            ImagesListView(imagesList: viewModel.imagesList)
-        case .videos:
-            VideosListView(videosList: viewModel.videoslist)
-        }
+         switch self.userScreenEntry {
+         case .documents:
+             DocumentsListView(documentsList: documentsList)
+         case .images:
+             ImagesListView(imagesList: imagesList)
+         case .videos:
+             VideosListView(videosList: videoslist)
+         }
      }
   }
 }
@@ -41,6 +40,6 @@ struct SwitchFileView: View {
 struct SwitchFileView_Previews: PreviewProvider {
     @State static var value: FileEntries = .documents
     static var previews: some View {
-        SwitchFileView(userScreenEntry: $value, viewModel: FilesModel())
+        SwitchFileView(userScreenEntry: $value, documentsList: DocumentModelList(), imagesList: ImageModelList(), videoslist: VideoModelList())
     }
 }

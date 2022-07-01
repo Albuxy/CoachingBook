@@ -11,10 +11,14 @@ struct PlayerInformationView: View {
     
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
+    
+    @ObservedObject var listOfPlayers: PlayersListModel
 
     @State var navigateToPersonalDetail = false
     @State var navigateToTeamDetail = false
     @State var navigateToIndividualStats = false
+    
+    @State var showAlert = false
 
     var player: Player
 
@@ -31,7 +35,7 @@ struct PlayerInformationView: View {
                 }
                 VStack(alignment: .center, spacing: 35) {
                     NavigationLink(
-                      destination: PersonalDetailView(currentPlayer: player),
+                        destination: PersonalDetailView(listOfPlayers: listOfPlayers, currentPlayer: player),
                       isActive: $navigateToPersonalDetail,
                       label: {
                           ButtonPlayerInformation(string: "personal_details_title",
@@ -39,7 +43,7 @@ struct PlayerInformationView: View {
                       }
                     )
                     NavigationLink(
-                      destination: PlayerTeamDetailView(currentPlayer: player),
+                        destination: PlayerTeamDetailView(listOfPlayers: listOfPlayers, currentPlayer: player),
                       isActive: $navigateToTeamDetail,
                       label: {
                           ButtonPlayerInformation(string: "team_details_title",
@@ -69,6 +73,24 @@ struct PlayerInformationView: View {
             }
              .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
              .background(Color("fourthLightBlueColor"))
+             .alert(
+               isPresented: $showAlert,
+               content: {
+                 Alert(
+                     title: Text("remove_player".localized(LocalizationService.shared.language)),
+                   message: Text("confirmation_remove_player".localized(LocalizationService.shared.language)),
+                   primaryButton: .cancel(
+                     Text("button_cancel".localized(LocalizationService.shared.language)),
+                     action: {}),
+                   secondaryButton: .destructive(
+                     Text("button_remove".localized(LocalizationService.shared.language)),
+                     action: {
+                         let index = listOfPlayers.playersList.firstIndex(where: {$0.name == player.name})
+                         listOfPlayers.playersList.remove(at: index!)
+                         presentation.wrappedValue.dismiss()
+                     })
+                 )
+               })
         }
         .navigationBarTitle(Text("player_information_title".localized(LocalizationService.shared.language)), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
@@ -77,7 +99,17 @@ struct PlayerInformationView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-          })
+          }, trailing:
+            Button(action: {
+                showAlert.toggle()
+            }) {
+              Image(systemName: "trash")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                .foregroundColor(.black)
+                
+            }
+        )
     }
 }
 
@@ -159,6 +191,6 @@ struct ButtonPlayerInformation: View {
 
 struct PlayerInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerInformationView(player: playersData[0])
+        PlayerInformationView(listOfPlayers: PlayersListModel(), player: playersData[0])
     }
 }

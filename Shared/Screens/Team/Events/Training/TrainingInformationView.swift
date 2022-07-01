@@ -13,6 +13,8 @@ struct TrainingInformationView: View {
     @Environment(\.presentationMode) var presentation
     
     var currentTraining: Training
+    @ObservedObject var trainingModel: TrainingListModel
+    @State var showAlert = false
     
     var body: some View {
         ZStack{
@@ -22,6 +24,24 @@ struct TrainingInformationView: View {
             }
             .padding(.top, 20)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .top)
+            .alert(
+              isPresented: $showAlert,
+              content: {
+                Alert(
+                    title: Text("remove_training".localized(LocalizationService.shared.language)),
+                  message: Text("confirmation_remove_training".localized(LocalizationService.shared.language)),
+                  primaryButton: .cancel(
+                    Text("button_cancel".localized(LocalizationService.shared.language)),
+                    action: {}),
+                  secondaryButton: .destructive(
+                    Text("button_remove".localized(LocalizationService.shared.language)),
+                    action: {
+                        let index = trainingModel.trainingList.firstIndex(where: {$0.title == currentTraining.title})
+                        trainingModel.trainingList.remove(at: index!)
+                        presentation.wrappedValue.dismiss()
+                    })
+                )
+              })
         }
         .background(Color("greenSuperLight"))
         .padding(.top, 40)
@@ -32,7 +52,16 @@ struct TrainingInformationView: View {
               Image("left_arrow")
                   .resizable()
                   .frame(width: 35, height: 35)
-          })
+          }, trailing:
+            Button(action: {
+                showAlert.toggle()
+            }) {
+              Image(systemName: "trash")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                .foregroundColor(.black)
+                
+            })
     }
 }
 
@@ -180,6 +209,6 @@ struct ButtonWithArrowBlue: View {
 
 struct TrainingInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingInformationView(currentTraining: trainingData[0])
+        TrainingInformationView(currentTraining: trainingData[0], trainingModel: TrainingListModel())
     }
 }

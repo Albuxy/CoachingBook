@@ -9,26 +9,35 @@ import SwiftUI
 
 struct TeamPrincipalView: View {
 
-    var team: Team
+    //MARK: - Presentation Propertiers
+    @Environment(\.presentationMode) var presentation
+
+    var currentTeam: Team
+    @ObservedObject var teamList: TeamListModel
+    @ObservedObject var listOfPlayers: PlayersListModel
+    @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
     
     @State var navigateToTeamScreen = false
     @State var navigateToPlayersScreen = false
     @State var navigateToStatsScreen = false
     @State var navigateToEventsScreen = false
+    @State var showAlert = false
 
     var body: some View {
         VStack(spacing: 60){
             HStack(spacing: 100){
                 VStack(alignment: .leading, spacing: 20){
-                    Text(team.name)
+                    Text(currentTeam.name)
                         .foregroundColor(.black)
                         .font(.system(size: 30))
                         .bold()
-                    Text(team.category)
+                    Text(currentTeam.category)
                         .foregroundColor(.black)
                         .font(.system(size: 21))
                 }
-                Image(team.logoString)
+                Image(currentTeam.logoString)
                     .resizable()
                     .frame(width: 100, height: 100)
             }
@@ -39,7 +48,7 @@ struct TeamPrincipalView: View {
             VStack(spacing: 40){
                 HStack(spacing: 40) {
                     NavigationLink(
-                      destination: TeamInformationView(team: team),
+                        destination: TeamInformationView(currentTeam: currentTeam, team: teamList),
                       isActive: $navigateToTeamScreen,
                       label: {
                           ButtonCardTeamView(title: "team_title",
@@ -48,7 +57,7 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                      destination: ListPlayersView(listOfPlayers: team.players),
+                        destination: ListPlayersView(listOfPlayers: listOfPlayers),
                       isActive: $navigateToPlayersScreen,
                       label: {
                           ButtonCardTeamView(title: "team_players_title",
@@ -59,7 +68,7 @@ struct TeamPrincipalView: View {
                 }
                 HStack(spacing: 40){
                     NavigationLink(
-                      destination: StatsTeamView(currentTeam: team),
+                      destination: StatsTeamView(currentTeam: currentTeam, team: teamList),
                       isActive: $navigateToStatsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_stats_title",
@@ -68,7 +77,11 @@ struct TeamPrincipalView: View {
                       }
                     )
                     NavigationLink(
-                      destination: EventsListView(team: team),
+                        destination: EventsListView(currentTeam: currentTeam,
+                                                    eventsModel: eventsModel,
+                                                    team: teamList,
+                                                    matchModel: matchModel,
+                                                   trainingModel: trainingModel),
                       isActive: $navigateToEventsScreen,
                       label: {
                           ButtonCardTeamView(title: "team_events_title",
@@ -78,10 +91,45 @@ struct TeamPrincipalView: View {
                     )
                 }
             }
+            .alert(
+              isPresented: $showAlert,
+              content: {
+                Alert(
+                    title: Text("remove_team".localized(LocalizationService.shared.language)),
+                  message: Text("confirmation_remove_team".localized(LocalizationService.shared.language)),
+                  primaryButton: .cancel(
+                    Text("button_cancel".localized(LocalizationService.shared.language)),
+                    action: {}),
+                  secondaryButton: .destructive(
+                    Text("button_remove".localized(LocalizationService.shared.language)),
+                    action: {
+                        let index = teamList.teamsList.firstIndex(where: {$0.name == currentTeam.name})
+                        teamList.teamsList.remove(at: index!)
+                        presentation.wrappedValue.dismiss()
+                    })
+                )
+              })
         }
-        .padding(.top, 94)
+        .padding(.top, 64)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top)
         .background(Color("fourthLightBlueColor"))
+        .navigationBarTitle(Text(currentTeam.name), displayMode: .inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(
+          leading: Button(action: { presentation.wrappedValue.dismiss() }) {
+              Image("left_arrow")
+                  .resizable()
+                  .frame(width: 35, height: 35)
+          }, trailing:
+            Button(action: {
+                showAlert.toggle()
+            }) {
+              Image(systemName: "trash")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                .foregroundColor(.black)
+                
+            })
     }
 }
 
@@ -121,6 +169,11 @@ struct ButtonCardTeamView: View {
 
 struct TeamPrincipalView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamPrincipalView(team: teamsData[0])
+        TeamPrincipalView(currentTeam: teamsData[0],
+                          teamList: TeamListModel(),
+                          listOfPlayers: PlayersListModel(),
+                          eventsModel: EventsListModel(),
+                          matchModel: MatchListModel(),
+                          trainingModel: TrainingListModel())
     }
 }

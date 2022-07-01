@@ -17,8 +17,8 @@ struct CoachInformationScreen: View {
     @State private var gender = ""
     @State private var mobile_number = ""
     @State private var email = ""
-    
-    var coach: Coach?
+
+    @ObservedObject var coach: CoachListModel
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
@@ -42,15 +42,15 @@ struct CoachInformationScreen: View {
 
                     VStack(spacing: 20) {
                         //Fields
-                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_surname",
+                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_surname", placeHolder: coach.coachList.surname,
                                          stringTextField: $surname)
-                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_full_name",
+                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_full_name", placeHolder: coach.coachList.full_name,
                                          stringTextField: $full_name)
                         VStack(alignment: .leading, spacing: 5){
                             Text("coach_dateOfBirth"
                                     .localized(LocalizationService.shared.language))
                                 .foregroundColor(.black)
-                            DatePickerTextField(placeholder: "Choose".lowercased().localized(LocalizationService.shared.language),
+                            DatePickerTextField(placeholder: "choose_title".localized(LocalizationService.shared.language),
                                                 date: self.$date)
                                 .padding(.leading, 10)
                                 .frame(width: 320, height: 50, alignment: .center)
@@ -104,10 +104,10 @@ struct CoachInformationScreen: View {
                     
                     VStack(spacing: 20) {
                         //Fields
-                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_mobile_number",
+                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_mobile_number", placeHolder: coach.coachList.mobileNumber,
                                          stringTextField: $mobile_number)
                             .keyboardType(.numberPad)
-                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_email",
+                        TextFieldWithTitleGeneral(defaultTextFiled: "coach_email", placeHolder: coach.coachList.email,
                                          stringTextField: $email)
                     }
                 }
@@ -124,6 +124,7 @@ struct CoachInformationScreen: View {
                                height: 120)
                     // MARK: - Button
                     Button(action: {
+                        saveDetails()
                         presentation.wrappedValue.dismiss()
                     }) {
                         Text("button_save_details".localized(LocalizationService.shared.language))
@@ -144,11 +145,34 @@ struct CoachInformationScreen: View {
                   .frame(width: 35, height: 35)
           })
     }
+
+    func saveDetails(){
+        if surname != "" {
+            coach.coachList.surname = surname
+        }
+        if full_name != "" {
+            coach.coachList.full_name = full_name
+        }
+        if date?.formatted() != "" {
+            coach.coachList.dateOfBirth = date ?? Date()
+        }
+        if gender != "" {
+            coach.coachList.gender = gender
+        }
+        if mobile_number != "" {
+            coach.coachList.mobileNumber = mobile_number
+        }
+        if email != "" {
+            coach.coachList.email = email
+        }
+    }
+    
 }
 
 struct TextFieldWithTitleGeneral: View {
 
     var defaultTextFiled: String
+    var placeHolder: String
     @Binding var stringTextField: String
 
     var body: some View {
@@ -157,8 +181,8 @@ struct TextFieldWithTitleGeneral: View {
                 .foregroundColor(.black)
             TextField("", text: $stringTextField)
                 .foregroundColor(.black)
-                .placeholder(Text("write_title".localized(LocalizationService.shared.language))
-                .foregroundColor(.gray), show: stringTextField.isEmpty)
+                .placeholder(Text(placeHolder)
+                                .foregroundColor(.gray), show: stringTextField.isEmpty)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 6)
@@ -191,6 +215,6 @@ struct TextFieldWithTitleGeneral: View {
 
 struct CoachInformationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CoachInformationScreen()
+        CoachInformationScreen(coach: CoachListModel())
     }
 }

@@ -22,6 +22,10 @@ struct Coach: Identifiable {
     var teams: [Team]
 }
 
+class CoachListModel: ObservableObject {
+  @Published var coachList = coachData
+}
+
 var coachData: Coach {
     Coach(surname: "Torra",
           full_name: "Alba",

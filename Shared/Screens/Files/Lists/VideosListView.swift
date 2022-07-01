@@ -14,8 +14,15 @@ struct VideosListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16){
-                ForEach(videosList.videos) { video in
-                    FileVideoRowView(item: video)
+                if videosList.videos.count == 0 {
+                    Text("videos_empty_title".localized(LocalizationService.shared.language))
+                        .font(.system(size: 18))
+                        .foregroundColor(.black).opacity(0.8)
+                        .padding(.top, 10)
+                } else {
+                    ForEach(videosList.videos) { video in
+                        FileVideoRowView(video: video, listVideos: videosList)
+                    }
                 }
             }
         }

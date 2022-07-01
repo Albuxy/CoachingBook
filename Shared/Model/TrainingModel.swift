@@ -39,6 +39,10 @@ struct Training: Identifiable {
     }
 }
 
+class TrainingListModel: ObservableObject {
+  @Published var trainingList = trainingData
+}
+
 let trainingData: [Training] = [
     Training(title: "Training Session 1",
              date: "30/05/2022",

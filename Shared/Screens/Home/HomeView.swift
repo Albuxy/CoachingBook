@@ -17,6 +17,8 @@ struct HomeView: View {
        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color("blueColor"))
        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
     }
+    
+    @ObservedObject var team = TeamListModel()
 
     var body: some View {
         VStack(spacing: 0){
@@ -57,8 +59,8 @@ struct HomeView: View {
             .tabViewStyle(PageTabViewStyle())
             .frame(height: 240, alignment: .top)
             TabView(){
-                GetAssitanceCard()
-                GetBehaviourCard()
+                GetAssitanceCard(currentTeam: team.teamsList[0], team: team)
+                GetBehaviourCard(currentTeam: team.teamsList[0], team: team)
             }
             .background(Color("secondLightBlueColor"))
             .tabViewStyle(PageTabViewStyle())

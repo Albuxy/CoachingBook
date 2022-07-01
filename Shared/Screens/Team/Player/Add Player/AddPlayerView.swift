@@ -12,6 +12,8 @@ struct AddPlayerView: View {
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
     
+    @ObservedObject var listOfPlayers: PlayersListModel
+    
     // MARK: - Player Information Properties
     @State var name = ""
     @State var surname = ""
@@ -45,6 +47,16 @@ struct AddPlayerView: View {
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.2, alignment: .top)
                 // MARK: - Button
                 Button(action: {
+                    let newPlayer = Player(name: name,
+                                           surname: surname,
+                                           image: "ic_player",
+                                           date: (dateOfBirth?.formatted()) ?? "",
+                                           position: changeToPosition(position: position),
+                                           dorsal: Int(dorsal) ?? 0,
+                                           hasStats: false,
+                                           tardance: "",
+                                           totalStat: 0)
+                    listOfPlayers.addItem(item: newPlayer)
                     presentation.wrappedValue.dismiss()
                 }) {
                     Text("button_save_details".localized(LocalizationService.shared.language))
@@ -69,11 +81,25 @@ struct AddPlayerView: View {
                   .frame(width: 35, height: 35)
           })
     }
+    
+    func changeToPosition(position: String) -> Position {
+        if position == "position_base" {
+            return .base
+        } else if position == "position_alero" {
+            return .alero
+        } else if position == "position_escolta" {
+            return .escolta
+        } else if position == "position_alapivot" {
+            return .alapivot
+        } else {
+            return .pivot
+        }
+    }
 }
 
 struct AddPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPlayerView()
+        AddPlayerView(listOfPlayers: PlayersListModel())
     }
 }
 

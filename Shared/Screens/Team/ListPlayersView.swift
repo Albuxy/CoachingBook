@@ -14,20 +14,20 @@ struct ListPlayersView: View {
     
     @State var navigateToAddPlayer = false
     
-    var listOfPlayers: [Player]
+    @ObservedObject var listOfPlayers: PlayersListModel
     
     var body: some View {
         ZStack{
             VStack(spacing: 20){
-                Text("players_title".localized(LocalizationService.shared.language) + "\(listOfPlayers.count)")
+                Text("players_title".localized(LocalizationService.shared.language) + "\(listOfPlayers.playersList.count)")
                     .foregroundColor(.black)
                     .font(.system(size: 24))
                     .frame(width: UIScreen.main.bounds.width / 1.2, alignment: .leading)
                 
                 ScrollView {
                     VStack(spacing: 20){
-                        ForEach(listOfPlayers) { player in
-                            CardPlayerListView(currentPlayer: player)
+                        ForEach(listOfPlayers.playersList) { player in
+                            CardPlayerListView(currentPlayer: player, listOfPlayers: listOfPlayers)
                         }
                     }
                     .frame(width: UIScreen.main.bounds.width / 1.1)
@@ -46,7 +46,7 @@ struct ListPlayersView: View {
                   .frame(width: 35, height: 35)
           }, trailing:
             NavigationLink(
-              destination: AddPlayerView(),
+              destination: AddPlayerView(listOfPlayers: listOfPlayers),
               isActive: $navigateToAddPlayer,
               label: {
                   Button(action: {
@@ -67,11 +67,13 @@ struct CardPlayerListView: View {
     
     var currentPlayer: Player
     
+    @ObservedObject var listOfPlayers: PlayersListModel
+    
     @State var navigateToPlayerInformation = false
     
     var body: some View {
         NavigationLink(
-          destination: PlayerInformationView(player: currentPlayer),
+            destination: PlayerInformationView(listOfPlayers: listOfPlayers, player: currentPlayer),
           isActive: $navigateToPlayerInformation,
           label: {
               Button {
@@ -125,6 +127,6 @@ struct CardPlayerListView: View {
 
 struct ListPlayersView_Previews: PreviewProvider {
     static var previews: some View {
-        ListPlayersView(listOfPlayers: playersData)
+        ListPlayersView(listOfPlayers: PlayersListModel())
     }
 }

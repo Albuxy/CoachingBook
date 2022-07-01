@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MatchEventListView: View {
     
-    var matchList: [Match]
+    @ObservedObject var matchModel: MatchListModel
     
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 15){
-                ForEach(matchList) { item in
-                    EventMatchCard(match: item)
+                ForEach(matchModel.matchList) { item in
+                    EventMatchCard(match: item, matchModel: matchModel)
                 }
             }
             .padding(.top, 20)
@@ -26,6 +26,6 @@ struct MatchEventListView: View {
 
 struct MatchEventListView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchEventListView(matchList: matchData)
+        MatchEventListView(matchModel: MatchListModel())
     }
 }

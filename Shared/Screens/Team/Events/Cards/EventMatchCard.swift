@@ -10,6 +10,7 @@ import SwiftUI
 struct EventMatchCard: View {
     
     var match: Match
+    @ObservedObject var matchModel: MatchListModel
     
     @State var navigateToInformation = false
     
@@ -35,7 +36,7 @@ struct EventMatchCard: View {
             Divider()
                 .background(Color.black)
             NavigationLink(
-              destination: MatchInformationView(currentMatch: match),
+              destination: MatchInformationView(currentMatch: match, matchModel: matchModel),
               isActive: $navigateToInformation,
               label: {
                   Button(action: {
@@ -99,6 +100,6 @@ struct HeaderMatchCard: View {
 
 struct EventMatchCard_Previews: PreviewProvider {
     static var previews: some View {
-        EventMatchCard(match: matchData[0])
+        EventMatchCard(match: matchData[0], matchModel: MatchListModel())
     }
 }

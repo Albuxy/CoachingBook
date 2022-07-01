@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FileItem: Hashable {
-  var titleString: String
+  var title: String
   var imageString: String
   var numberInt: Int
   var selectionIndex: FileEntries
@@ -17,21 +17,40 @@ struct FileItem: Hashable {
 
 struct CustomPickerFileView: View {
 
-    @StateObject var selection = FilesModel()
-      
-    let listOfItems = [FileItem(titleString: "documents_title".localized(LocalizationService.shared.language), imageString: "ic_document", numberInt: documentsData.count, selectionIndex: .documents),
-                       FileItem(titleString: "images_title".localized(LocalizationService.shared.language), imageString: "ic_image", numberInt: imagesData.count, selectionIndex: .images),
-                       FileItem(titleString: "videos_title".localized(LocalizationService.shared.language), imageString: "ic_video", numberInt: videosData.count, selectionIndex: .videos)]
+  @StateObject var selection = FilesModel()
+    
+  @ObservedObject var documentsList: DocumentModelList
+  @ObservedObject var imagesList: ImageModelList
+  @ObservedObject var videoslist: VideoModelList
 
   var body: some View {
-      HStack(spacing: 23){
-          ForEach(listOfItems, id: \.self) { item in
-              TypeOfFileCard(titleString: item.titleString,
-                             imageString: item.imageString,
-                             numberInt: item.numberInt,
-                             selectionIndex: item.selectionIndex,
-                             selection: self.selection)
+
+      let item1 = FileItem(title: "documents_title", imageString: "ic_document", numberInt: documentsList.documents.count , selectionIndex: .documents)
+      let item2 = FileItem(title: "images_title", imageString: "ic_image", numberInt: imagesList.images.count , selectionIndex: .images)
+      let item3 = FileItem(title: "videos_title", imageString: "ic_video", numberInt: videoslist.videos.count , selectionIndex: .videos)
+
+    return VStack {
+        TypeOfFileCard(selection: selection, items: [item1, item2, item3])
+    }
+  }
+}
+
+struct TypeOfFileCard: View {
+
+  @StateObject var selection = FilesModel()
+  var items: [FileItem]
+
+  var body: some View {
+
+    return
+      VStack {
+        HStack(spacing: 15) {
+          ForEach(items, id: \.self) { item in
+              FileItemCard(item: item,
+                           selectionIndex: item.selectionIndex,
+                           selection: self.selection)
           }
+        }
       }
   }
 }

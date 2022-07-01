@@ -26,8 +26,21 @@ struct MenuSwitchView: View {
   @StateObject var menuModel = MenuViewModel()
     
   @State var coach = coachData
+  @State var navigateToAddTeam = false
+  @State var navigateToAddMatch = false
 
   @Binding var userMenuEntry: MenuEntries
+    
+    @ObservedObject var listOfPlayers: PlayersListModel
+    @ObservedObject var coachModel: CoachListModel
+    @ObservedObject var teamModel: TeamListModel
+    @ObservedObject var eventsModel: EventsListModel
+    @ObservedObject var matchModel: MatchListModel
+    @ObservedObject var trainingModel: TrainingListModel
+    @ObservedObject var fileModel: FilesModel
+    @ObservedObject var documentsList: DocumentModelList
+    @ObservedObject var imagesList: ImageModelList
+    @ObservedObject var videoslist: VideoModelList
 
   var body: some View {
     VStack {
@@ -38,22 +51,57 @@ struct MenuSwitchView: View {
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_home"))
       case .profile:
-          ProfileCoachView(coach: $coach)
+          ProfileCoachView(coachModel: coachModel)
           .navigationBarItems(
             leading:
               NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_profile"))
       case .team:
-          TeamPrincipalView(team: coach.teams[0])
+          ListTeamView(team: teamModel, playersList: listOfPlayers, eventsModel: eventsModel, matchModel: matchModel, trainingModel: trainingModel)
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"))
+                    NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_team"),
+                trailing:
+                    NavigationLink(
+                      destination: AddTeamView(team: teamModel),
+                      isActive: $navigateToAddTeam,
+                      label: {
+                          Button(action: {
+                              navigateToAddTeam.toggle()
+                          }, label: {
+                              Image(systemName: "plus")
+                                  .resizable()
+                                  .frame(width: 20, height: 20)
+                                  .foregroundColor(.black)
+                          })
+                      }
+                    )
+              )
       case .calendar:
-        CalendarView()
+        CalendarView(matchModel: matchModel)
               .navigationBarItems(
                 leading:
-                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"))
+                  NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_calendar"),
+                trailing:
+                    NavigationLink(
+                      destination: AddMatchView(matchModel: matchModel),
+                      isActive: $navigateToAddMatch,
+                      label: {
+                          Button(action: {
+                              navigateToAddMatch.toggle()
+                          }, label: {
+                              Image(systemName: "plus")
+                                  .resizable()
+                                  .frame(width: 20, height: 20)
+                                  .foregroundColor(.black)
+                          })
+                      }
+                    )
+              )
       case .files:
-        FilesView()
+        FilesView(fileModel: fileModel,
+                  documentsList: documentsList,
+                  imagesList: imagesList,
+                  videoslist: videoslist)
               .navigationBarItems(
                 leading:
                   NavigationBarWithMenuIcon(menuModel: menuModel, titleBar: "menu_files"))

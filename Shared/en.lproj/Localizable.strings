@@ -270,6 +270,15 @@
 "calendar_saturday" = "SAT";
 "calendar_sunday" = "SUN";
 "calendar_no_events_today" = "No events for today";
+//Add match
+"add_match_title" = "Add match information";
+"add_match_title_match" = "Title match";
+"add_match_teams_info" = "Teams information";
+"add_match_team1" = "Team 1 name";
+"add_match_team2" = "Team 2 name";
+"add_match_date_info" = "Date information";
+"add_match_date_match" = "Date match";
+"add_match_hour_match" = "Hour match";
 
 //MARK: Documents
 "documents_title" = "Documents";
@@ -279,8 +288,9 @@
 "list_files_title" = "List of files selected";
 "upload_title" = "Upload: ";
 "upload_date_title" = "Upload date: ";
-"remove_file" = "Remove file";
-"confirmation_remove_file" = "Are you sure you want to remove this file?";
+"documents_empty_title" = "There are no documents yet";
+"images_empty_title" = "There are no images yet";
+"videos_empty_title" = "There are no videos yet";
 
 //MARK: Settings
 "settings_account_title" = "Account";
@@ -314,6 +324,8 @@
 "button_save" = "Save";
 "button_go_uppercased" = "GO";
 "button_save_details" = "Save details";
+"button_add_team" = "Add team";
+"button_add_match" = "Add match";
 "button_save_reason" = "Save reason";
 "button_save_contact" = "Save contact";
 "button_remove_session" = "Remove session";
@@ -321,7 +333,18 @@
 "button_remove_contact" = "Remove contact";
 "button_remove_team" = "Remove team";
 "button_view_details" = "View details";
+"button_select" = "SELECT";
 
-//Messages
+//Alerts
 "confirmation_remove_account" = "Are you sure you want to remove your account and all the data in it?";
 "confirmation_log_out" = "Are you sure you want to log out";
+"remove_training" = "Remove training";
+"confirmation_remove_training" = "Are you sure you want to remove this training?";
+"remove_match" = "Remove match";
+"confirmation_remove_match" = "Are you sure you want to remove this match?";
+"remove_player" = "Remove player";
+"confirmation_remove_player" = "Are you sure you want to remove this player?";
+"remove_team" = "Remove team";
+"confirmation_remove_team" = "Are you sure you want to remove this team?";
+"remove_file" = "Remove file";
+"confirmation_remove_file" = "Are you sure you want to remove this file?";

@@ -282,6 +282,15 @@
 "calendar_saturday" = "DIS";
 "calendar_sunday" = "DIU";
 "calendar_no_events_today" = "No hi han events per avui";
+//Add match
+"add_match_title" = "Afegir informació partit";
+"add_match_title_match" = "Titul partit";
+"add_match_teams_info" = "Informació equip";
+"add_match_team1" = "Nom equip 1";
+"add_match_team2" = "Nom equip 2";
+"add_match_date_info" = "Informació data";
+"add_match_date_match" = "Data partit";
+"add_match_hour_match" = "Hora partit";
 
 //MARK: Documents
 "documents_title" = "Documents";
@@ -291,8 +300,9 @@
 "list_files_title" = "Llista d'arxius seleccionats";
 "upload_title" = "Pujats: ";
 "upload_date_title" = "Data de pujada: ";
-"remove_file" = "Eliminar arxiu";
-"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
+"documents_empty_title" = "No hi han documents encara";
+"images_empty_title" = "No hi han imatges encara";
+"videos_empty_title" = "No hi han videos encara";
 
 //MARK: Settings
 "settings_account_title" = "Compte";
@@ -328,12 +338,25 @@
 "button_save_details" = "Guardar detalls";
 "button_save_reason" = "Guardar raó";
 "button_save_contact" = "Guardar contacto";
+"button_add_team" = "Afegir equip";
+"button_add_match" = "Afegir partit";
 "button_remove_session" = "Eliminar sessio";
 "button_remove_match" = "Eliminar partit";
 "button_remove_contact" = "Eliminar contacte";
 "button_remove_team" = "Eliminar equip";
 "button_view_details" = "Veure detalls";
+"button_select" = "SELECCIONAR";
 
 //Messages
 "confirmation_remove_account" = "Estàs segur que vol eliminar el teu compte i tota la informació?";
 "confirmation_log_out" = "Estàs segur que vols sortir?";
+"remove_training" = "Eliminar entreno";
+"confirmation_remove_training" = "Estas segur que vols eliminar aquest entreno?";
+"remove_match" = "Eliminar partit";
+"confirmation_remove_match" = "Estas segur que vols eliminar aquest partit?";
+"remove_player" = "Eliminar jugador";
+"confirmation_remove_player" = "Estas segur que vols eliminar aquest jugador?";
+"remove_team" = "Eliminar equip";
+"confirmation_remove_team" = "Estas segur que vols eliminar aquest equip?";
+"remove_file" = "Eliminar arxiu";
+"confirmation_remove_file" = "Estàs segur que vols eliminar aquest arxiu?";
