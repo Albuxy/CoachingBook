@@ -167,6 +167,7 @@
 
 //MARK: Team
 "team_title" = "Equipo";
+"select_team" = "Selecciona el equipo y empieza a trabajar";
 "team_players_title" = "Jugadores";
 "team_stats_title" = "Estadísticas";
 "team_events_title" = "Eventos";

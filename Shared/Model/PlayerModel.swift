@@ -133,7 +133,7 @@ let playersData: [Player] = [
            hasStats: true,
            tardance: "",
            totalStat: 9.5),
-    Player(name: "Natalia",
+    Player(name: "Celia",
            surname: "Habas",
            image: "ic_player",
            date: "11-08-2001",
@@ -142,7 +142,7 @@ let playersData: [Player] = [
            hasStats: false,
            tardance: "",
            totalStat: 5.9),
-    Player(name: "Ana",
+    Player(name: "Julia",
            surname: "Rodriguez",
            image: "ic_player",
            date: "11-08-2001",
@@ -167,16 +167,6 @@ enum Justification {
 }
 
 let playersNotAssistData: [Player] = [
-    Player(name: "Roberta",
-           surname: "Habas",
-           image: "ic_player",
-           date: "11-08-2001",
-           position: .base,
-           dorsal: 16,
-           isJustificated: .filled,
-           hasStats: true,
-           tardance: "",
-           totalStat: 5.4),
     Player(name: "Julia",
            surname: "Polo",
            image: "ic_player",
@@ -193,7 +183,7 @@ let playersNotAssistData: [Player] = [
            date: "11-08-2001",
            position: .base,
            dorsal: 16,
-           isJustificated: .filled,
+           isJustificated: .notFilled,
            hasStats: false,
            tardance: "",
            totalStat: 2.9)

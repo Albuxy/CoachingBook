@@ -12,6 +12,7 @@ struct MenuControllerView: View {
     @StateObject var menuModel = MenuViewModel()
     @ObservedObject var listOfPlayers: PlayersListModel
     @ObservedObject var coachModel: CoachListModel
+    @ObservedObject var contactModel: ContactsDetailModel
     @ObservedObject var teamModel: TeamListModel
     @ObservedObject var eventsModel: EventsListModel
     @ObservedObject var matchModel: MatchListModel
@@ -28,6 +29,7 @@ struct MenuControllerView: View {
                              userMenuEntry: $menuModel.showSection,
                              listOfPlayers: listOfPlayers,
                              coachModel: coachModel,
+                             contactModel: contactModel,
                              teamModel: teamModel,
                              eventsModel: eventsModel,
                              matchModel: matchModel,
@@ -58,6 +60,7 @@ struct MenuControllerView_Previews: PreviewProvider {
     static var previews: some View {
         MenuControllerView(listOfPlayers: PlayersListModel(),
                            coachModel: CoachListModel(),
+                           contactModel: ContactsDetailModel(),
                            teamModel: TeamListModel(),
                            eventsModel: EventsListModel(),
                            matchModel: MatchListModel(),

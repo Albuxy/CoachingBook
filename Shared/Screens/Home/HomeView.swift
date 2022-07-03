@@ -38,11 +38,11 @@ struct HomeView: View {
                         .font(.system(size: 18))
                     HStack(spacing: 30){
                         MiniCardTrainingHome(imageString: "ic_trainning_icon",
-                                             titleString: "Training",
+                                             titleString: "training_title",
                                              descriptionString: "home_session_desc",
                                              color: Color("greenSuperMedium"))
                         MiniCardTrainingHome(imageString: "ic_match_icon",
-                                             titleString: "Match",
+                                             titleString: "match_title",
                                              descriptionString: "home_match_desc",
                                              color: Color("greenSuperMedium"))
                     }

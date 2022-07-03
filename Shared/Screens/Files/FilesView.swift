@@ -17,7 +17,7 @@ struct FilesView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 35){
             VStack(alignment: .leading, spacing: 25){
-                Text("type_files_title")
+                Text("type_files_title".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 21))
                 CustomPickerFileView(selection: fileModel,
@@ -27,7 +27,7 @@ struct FilesView: View {
                 
             }
             VStack(alignment: .leading, spacing: 25){
-                Text("list_files_title")
+                Text("list_files_title".localized(LocalizationService.shared.language))
                     .foregroundColor(.black)
                     .font(.system(size: 21))
                 GeometryReader { _ in

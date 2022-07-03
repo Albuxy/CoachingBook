@@ -179,6 +179,7 @@
 
 //MARK: Team
 "team_title" = "Equip";
+"select_team" = "Selecciona l'equip i comença a treballar";
 "team_players_title" = "Jugadors";
 "team_stats_title" = "Estadistiques";
 "team_events_title" = "Events";

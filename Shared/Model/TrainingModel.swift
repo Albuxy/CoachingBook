@@ -19,6 +19,7 @@ struct Training: Identifiable {
     var importanceLevel: String = ""
     var imageSession = "Training_session"
     var objectsNeeded: [String : String]?
+    var currentTeam: Team?
     
     func getStringOfStatus(currentStatus: PreparationStatus) -> String {
         switch currentStatus {

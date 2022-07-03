@@ -19,6 +19,7 @@ struct LoginView: View {
 
     @ObservedObject var listOfPlayers = PlayersListModel()
     @ObservedObject var coachModel = CoachListModel()
+    @ObservedObject var contactModel = ContactsDetailModel()
     @ObservedObject var teamModel = TeamListModel()
     @ObservedObject var eventsModel = EventsListModel()
     @ObservedObject var matchModel = MatchListModel()
@@ -59,6 +60,7 @@ struct LoginView: View {
                         NavigationLink(
                             destination: MenuControllerView(listOfPlayers: listOfPlayers,
                                                             coachModel: coachModel,
+                                                            contactModel: contactModel,
                                                             teamModel: teamModel,
                                                             eventsModel: eventsModel,
                                                             matchModel: matchModel,
@@ -72,7 +74,7 @@ struct LoginView: View {
                             Button(action: {
                                 self.openApp.toggle()
                             }) {
-                                Text("login_signIn")
+                                Text("login_signIn".localized(LocalizationService.shared.language))
                                     .font(.system(size: 16))
                                     .bold()
                             }.buttonStyle(

@@ -24,7 +24,8 @@ struct ListTeamView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 30){
-                Text("Select team to start working")
+
+                Text("select_team".localized(LocalizationService.shared.language))
                     .font(.system(size: 34))
                     .bold()
                     .foregroundStyle(.black)

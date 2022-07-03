@@ -11,8 +11,8 @@ struct GeneralContactView: View {
 
     //MARK: - Presentation Propertiers
     @Environment(\.presentationMode) var presentation
-    
-    @ObservedObject var contactModel = ContactsDetailModel()
+
+    @ObservedObject var contactModel: ContactsDetailModel
     
     @State var navigateToAddContact = false
     
@@ -60,7 +60,7 @@ struct GeneralContactView: View {
 
 struct GeneralContactView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneralContactView()
+        GeneralContactView(contactModel: ContactsDetailModel())
     }
 }
 
